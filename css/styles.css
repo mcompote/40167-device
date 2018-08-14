@@ -1,0 +1,94 @@
+/* list of all classes and id's in all .html files */
+
+
+/* ------ popus ------ */
+#popup-opener-map {}
+#popup-opener-write-us {}
+
+
+
+/* visibility classes */
+.hidden {}
+
+/* containers (div,section,article) */
+.main-header {}
+
+.logo-container {}
+.search-container {}
+
+.promo-article {}
+
+.popular {}
+.services {}
+.wrapper-right {}
+.wrapper-left {}
+.brands-gallery {}
+.info {}
+.contacts {}
+.map-container {}
+.main-footer {}
+.footer-social {}
+.footer-copyright {}
+.breadcrumbs {}
+.filter-box {}
+.sorting-box {}
+
+
+/* buttons, button-like behaviour */
+.button
+.button-search {}
+.button-animated {}
+.button-blackened {}
+.social-button {}
+
+
+
+/* sliders */
+.slider {}
+.promo-slider {}
+
+
+
+
+
+
+/* ul, li styles */
+.user-login {}
+.user-cart {}
+.user-cart-item {}
+
+.navigation-list {}
+.navigation-item {}
+
+.promo-list {}
+.promo-item {}
+
+.popular-list {}
+.popular-list-item {}
+.carrier-companies-list {}
+.carrier-item {}
+.breadcrumbs-list {}
+.breadcrumbs-item {}
+
+
+/*  images  */
+.promo-item-pic {}
+
+
+
+/* tables and related things (th,tr,td,etc.) */
+.promo-item-characteristics {}
+.romo-item-characteristic-name {}
+.promo-item-characteristic-value {}
+
+
+/* <p>, <b>, <span> and other decorating stuff */
+.footer-address {}
+.footer-contacts {}
+.close-popup {}
+
+
+
+
+
+
