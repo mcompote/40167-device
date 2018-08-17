@@ -68,7 +68,7 @@
 
 
 .main-header {}
-
+.main-header-navigation {}
 .logo-container {}
 .search-container {}
 
@@ -81,6 +81,7 @@
 .contacts {}
 .map-container {}
 .main-footer {}
+.main-footer-navigation {}
 .footer-social {}
 .footer-copyright {}
 .breadcrumbs {}
