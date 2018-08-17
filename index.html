@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    
-    <title>Интернет-магазин "Device": главная</title>
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8">
+
+  <title>Интернет-магазин "Device": главная</title>
+</head>
+
+<body>
+  <div class="wrapper-full-width">
     <header class="main-header">
       <nav>
         <!-- логотип -->
@@ -15,7 +17,7 @@
             <img src="TODO:add_logo_to_project_folder.jpg" alt="логотип интернет-магазина DEVICE">
           </a>
         </div>
-      
+
         <div class="search-container">
           <input type="text" name="search_keywords" id="search">
           <a class="button search-button" href="#">Найти</a>
@@ -68,8 +70,8 @@
             </a>
           </li>
         </ul>
-      
-      
+
+
         <!-- элементы "регистрация" и "логин" -->
         <ul class="user-login">
           <li>
@@ -79,59 +81,74 @@
             <a href="#">Войти</a>
           </li>
         </ul>
-      
-      
+
+
         <!-- элементы "сравнить" и "корзина" -->
         <ul class="user-cart">
-          <li class="user-cart-item"><a href="#">Корзина</a></li>
-          <li class="user-cart-item"><a href="#">Сравнить</a></li>
+          <li class="user-cart-item">
+            <a href="#">Корзина</a>
+          </li>
+          <li class="user-cart-item">
+            <a href="#">Сравнить</a>
+          </li>
         </ul>
       </nav>
-      
-    </header>
-    
-    <main>
-      <!-- В макете страницы заголовка нет. Мы скроем его позже, при этом оставим видимым для поисковика и читалок. -->
-      <h1 class="hidden">Интернет-магазин модных hi-tech гаджетов и аксессуаров "Device". Главная страница</h1>
 
-      <!-- Слайдер с карточками рекламируемого товара -->
+    </header>
+  </div>
+
+
+  <main>
+    <!-- В макете страницы заголовка нет. Мы скроем его позже, при этом оставим видимым для поисковика и читалок. -->
+    <h1 class="hidden">Интернет-магазин модных hi-tech гаджетов и аксессуаров "Device". Главная страница</h1>
+
+    <!-- Слайдер с карточками рекламируемого товара -->
+    <div class="wrapper-full-width">
       <section class="slider promo-slider">
         <h2 class="hidden">Промоакции</h2>
         <ul class="promo-list">
           <li class="promo-item">
-            <articlle class="promo-article">
-              <b>Делай сэлфи, как Бен Стиллер!</b>
-              <p>
-                Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-              </p>
-              <img  class="promo-item-pic" src="TODO:add_ben_stiller_selfie_stick_pic_to_project_folder.jpg" alt="сэлфи-палка">
-              <table class="promo-item-characteristics">
-                <thead>
-                  <th class="promo-item-characteristic-name">Длина палки</th>
-                  <th class="promo-item-characteristic-name">Вес палки</th>
-                  <th class="promo-item-characteristic-name">Материал</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="promo-item-characteristic-value">8,5 м</td>
-                    <td class="promo-item-characteristic-value">5 кг</td>
-                    <td class="promo-item-characteristic-value">Карбон</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a href="#"><span class="button button-animated">Подробнее</span></a>
-            </articlle>
+            <div class="wrapper-one-half wrapper-right">
+              <article class="promo-article">
+                <b>Делай сэлфи, как Бен Стиллер!</b>
+                <p>
+                  Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+                </p>
+                <img class="promo-item-pic" src="TODO:add_ben_stiller_selfie_stick_pic_to_project_folder.jpg" alt="сэлфи-палка">
+                <table class="promo-item-characteristics">
+                  <thead>
+                    <tr>
+                      <th class="promo-item-characteristic-name">Длина палки</th>
+                      <th class="promo-item-characteristic-name">Вес палки</th>
+                      <th class="promo-item-characteristic-name">Материал</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="promo-item-characteristic-value">8,5 м</td>
+                      <td class="promo-item-characteristic-value">5 кг</td>
+                      <td class="promo-item-characteristic-value">Карбон</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href="#">
+                  <span class="button button-animated">Подробнее</span>
+                </a>
+              </article>
+            </div>
           </li>
           <li class="promo-item">
-            <articlle class="promo-article">
+            <article class="promo-article">
               <b>Худеем правильно!</b>
               <p>
-                  Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+                Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
               </p>
               <img class="promo-item-pic" src="TODO:add_magic_fitness_tracker_pic_to_project_folder.jpg" alt="фитнес-браслет">
               <table class="promo-item-characteristics">
                 <thead>
-                  <th class="promo-item-characteristic-name">Без подзарядки</th>
+                  <tr>
+                    <th class="promo-item-characteristic-name">Без подзарядки</th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -142,19 +159,21 @@
               <a href="#">
                 <span class="button button-animated">Подробнее</span>
               </a>
-            </articlle>
+            </article>
           </li>
           <li class="promo-item">
-            <articlle class="promo-article">
+            <article class="promo-article">
               <b>Порхает как бабочка, жалит как пчела!</b>
               <p>
-                  Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.                  
+                Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
               </p>
               <img class="promo-item-pic" src="TODO:add_dangerous_copter_pic_to_project_folder.jpg" alt="боевой лазерный квадрокоптер">
               <table class="promo-item-characteristics">
                 <thead>
-                  <th class="promo-item-characteristic-name">Дальность полета</th>
-                  <th class="promo-item-characteristic-name">Без подзарядки</th>
+                  <tr>
+                    <th class="promo-item-characteristic-name">Дальность полета</th>
+                    <th class="promo-item-characteristic-name">Без подзарядки</th>
+                  </tr>
                 </thead>
                 <tbody>
                   <tr>
@@ -166,19 +185,20 @@
               <a href="#">
                 <span class="button button-animated">Подробнее</span>
               </a>
-            </articlle>
+            </article>
           </li>
         </ul>
-        
-        
-        
+
+
+
       </section>
+    </div>
 
-
+    <div class="wrapper-full-width">
       <!-- популярные категории товаров -->
       <section class="popular">
         <h2 class="hidden">Самые интересные категории товаров</h2>
-      
+
         <ul class="popular-list">
           <li class="popular-list-item">
             <figure>
@@ -224,30 +244,14 @@
           </li>
         </ul>
       </section>
+    </div>
 
 
-      <!-- Услуги интернет-магазина -->
-      <section class="services">
-        <h2 class="hidden">Сопутствующие услуги</h2>
-        <div class="wrapper-right">
-          <article>
-            <h1>Доставка</h1>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая
-              его на ваш этаж.</p>
-          </article>
-          <article>
-            <h1>Гарантия</h1>
-            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом,
-              конечно же.</p>
-          </article>
-          <article>
-            <h1>Кредит</h1>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные
-              для нашего банка, разумеется.</p>
-          </article>
-        </div>
-      
-        <div class="wrapper-left">
+    <!-- Услуги интернет-магазина -->
+    <section class="services">
+      <h2 class="hidden">Сопутствующие услуги</h2>
+      <div class="wrapper-full-width">
+        <div class="wrapper-one-third wrapper-left">
           <ul>
             <li>
               <a href="#">
@@ -266,71 +270,116 @@
             </li>
           </ul>
         </div>
-      </section>
 
+        <div class="wrapper-two-thirds wrapper-right">
+          <article>
+            <h1>Доставка</h1>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
+              поднимая его на ваш этаж.</p>
+          </article>
+          <article>
+            <h1>Гарантия</h1>
+            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар,
+              не дом, конечно же.</p>
+          </article>
+          <article>
+            <h1>Кредит</h1>
+            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита.
+              Выгодные для нашего банка, разумеется.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="wrapper-full-width">
       <!-- Галерея логотипов брендов -->
       <section class="brands-gallery">
         <h2 class="hidden">Бренды, представленные в нашем магазине</h2>
         <ul>
           <li>
-              <figure>
-                  <img src="TODO:add_brand_dji_to_project_folder.jpg" alt="бренд dji" srcset="">
-                  <figcaption class="hidden">бренд dji</figcaption>
-                </figure>
+            <figure>
+              <img src="TODO:add_brand_dji_to_project_folder.jpg" alt="бренд dji" srcset="">
+              <figcaption class="hidden">бренд dji</figcaption>
+            </figure>
           </li>
           <li>
-              <figure>
-                  <img src="TODO:add_brand_spGadgets_to_project_folder.jpg" alt="бренд SP Gadgets" srcset="">
-                  <figcaption class="hidden">бренд SP Gadgets</figcaption>
-                </figure>
+            <figure>
+              <img src="TODO:add_brand_spGadgets_to_project_folder.jpg" alt="бренд SP Gadgets" srcset="">
+              <figcaption class="hidden">бренд SP Gadgets</figcaption>
+            </figure>
           </li>
           <li>
-              <figure>
-                  <img src="TODO:add_brand_gopro_to_project_folder.jpg" alt="бренд GoPro" srcset="">
-                  <figcaption class="hidden">бренд GoPro</figcaption>
-                </figure>
+            <figure>
+              <img src="TODO:add_brand_gopro_to_project_folder.jpg" alt="бренд GoPro" srcset="">
+              <figcaption class="hidden">бренд GoPro</figcaption>
+            </figure>
           </li>
           <li>
-              <figure>
-                  <img src="TODO:add_brand_vive_to_project_folder.jpg" alt="бренд Vive" srcset="">
-                  <figcaption class="hidden">бренд Vive</figcaption>
-                </figure>
+            <figure>
+              <img src="TODO:add_brand_vive_to_project_folder.jpg" alt="бренд Vive" srcset="">
+              <figcaption class="hidden">бренд Vive</figcaption>
+            </figure>
           </li>
         </ul>
       </section>
+    </div>
 
-      <section class="info">
-        <h2>О нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+    <div class="wrapper-full-width">
+      <div class="wrapper-one-half wrapper-left">
+        <!-- Секция "О нас" -->
+        <section class="info">
+          <h2>О нас</h2>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
           <ul class="carrier-companies-list">
-            <li class="carrier-item"><a href="#">Деловые Линии</a></li>
-            <li class="carrier-item"><a href="#">Автотрейдинг</a></li>
-            <li class="carrier-item"><a href="#">ЖелДорЭкспедиция</a></li>
+            <li class="carrier-item">
+              <a href="#">Деловые Линии</a>
+            </li>
+            <li class="carrier-item">
+              <a href="#">Автотрейдинг</a>
+            </li>
+            <li class="carrier-item">
+              <a href="#">ЖелДорЭкспедиция</a>
+            </li>
           </ul>
-        </p>
-        
-        <a href="#"><span class="button button-animated">Подробнее о нас</span></a>
-      </section>
 
-      <section class="contacts">
-      <h2>Контакты</h2>
-      <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-      <a id="popup-opener-map" href="#">
-          <div class="map-container">
+
+          <a href="#">
+            <span class="button button-animated">Подробнее о нас</span>
+          </a>
+        </section>
+      </div>
+
+      <div class="wrapper-one-half wrapper-right">
+        <!-- Секция "Контакты" -->
+        <section class="contacts">
+          <h2>Контакты</h2>
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
+            бывает.
+          </p>
+          <a id="popup-opener-map" href="#">
+            <div class="map-container">
               <!-- google/whatever maps container -->
               <noscript>
                 <img src="TODO:add_google_maps_img_to_project.jpg" alt="Карта местонахождения магазина" srcset="">
               </noscript>
             </div>
-      </a>
-      <a id="popup-opener-write-us" href="#"><span class="button button-animated">Напишите нам</span></a>  
-      </section>
+          </a>
+          <a id="popup-opener-write-us" href="#">
+            <span class="button button-animated">Напишите нам</span>
+          </a>
+        </section>
+      </div>
+    </div>
 
-    </main>
-    
-    <footer class="main-footer">
-      <nav>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="wrapper-full-width">
+
+      <div class="wrapper-three-tenths wrapper-left">
         <!-- логотип -->
         <div class="logo-container">
           <a href="#">
@@ -338,6 +387,49 @@
           </a>
         </div>
 
+        <p class="footer-address">г. Москва, ул. Строителей, 15</p>
+        <p class="footer-contacts">
+          <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+        </p>
+
+      </div>
+
+      <div class="wrapper-four-tenths">
+        <nav>
+
+          <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+
+        </nav>
+
+
+        <div class="footer-social">
+          <ul>
+            <li>
+              <a class="social-button" href="#">Вконтакте</a>
+            </li>
+            <li>
+              <a class="social-button" href="#">Фейсбук</a>
+            </li>
+            <li>
+              <a class="social-button" href="#">Инстаграм</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="wrapper-three-tenths wrapper-right">
         <!-- элементы "регистрация" и "логин" -->
         <ul class="user-login">
           <li>
@@ -354,61 +446,40 @@
           <li></li>
         </ul>
 
-        <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a href="#">Доставка</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#">Гарантия</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
 
-      </nav>
 
-      <p class="footer-address">. Москва, ул. Строителей, 15</p>
-      <p class="footer-contacts">
-        <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
-      </p>
-
-      <div class="footer-social">
-        <ul>
-          <li>
-            <a class="social-button" href="#">Вконтакте</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">Фейсбук</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">Инстаграм</a>
-          </li>
-        </ul>
+        <p class="footer-copyright">
+          <b class="hidden">Разработчик сайта:</b>
+          <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+        </p>
       </div>
 
-
-      <p class="footer-copyright">
-        <b class="hidden">Разработчик сайта:</b>
-        <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
-      </p>
-    </footer>
-    
+    </div>
+  </footer>
 
 
-    <section class="popup popup-map">
+
+  <section class="popup popup-map">
+    <div class="wrapper-four-fifths">
+
       <h2 class="hidden">Мы на карте</h2>
       <!-- TODO: здесь будет карта -->
       <noscript>
         <img src="TODO:add_larger_google_maps_img_to_project.jpg" alt="фото местонахождения интернет-магазина DEVICE" srcset="">
       </noscript>
-    </section>
 
-    <section class="popup popup-write-us">
+    </div>
+  </section>
+
+  <section class="popup popup-write-us">
+    <div class="wrapper-four-fifths">
+
       <h2 class="hidden">Пишите нам</h2>
       <!-- TODO: здесь будет форма -->
       <span class="close-popup">x</span>
-    </section>
-  </body>
+
+    </div>
+  </section>
+</body>
+
 </html>

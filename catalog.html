@@ -8,93 +8,94 @@
 </head>
 
 <body>
-    <header class="main-header">
-        <nav>
-            <!-- логотип -->
-            <div class="logo-container">
-                <a href="index.html">
-                    <img src="TODO:add_logo_to_project_folder.jpg" alt="логотип интернет-магазина DEVICE">
-                </a>
-            </div>
+    <div class="wrapper-full-width">
+        <header class="main-header">
+            <nav>
+                <!-- логотип -->
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="TODO:add_logo_to_project_folder.jpg" alt="логотип интернет-магазина DEVICE">
+                    </a>
+                </div>
 
-            <div class="search-container">
-                <input type="text" name="search_keywords" id="search">
-                <a class="button search-button" href="#">Найти</a>
-                <!-- Согласно styleguide.psd, кнопка "НАЙТИ" появляется при наборе символов в строке поиска -->
-            </div>
+                <div class="search-container">
+                    <input type="text" name="search_keywords" id="search">
+                    <a class="button search-button" href="#">Найти</a>
+                    <!-- Согласно styleguide.psd, кнопка "НАЙТИ" появляется при наборе символов в строке поиска -->
+                </div>
 
-            <ul class="navigation-list">
-                <li class="navigation-item">
-                    <section class="main-header-catalague">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <section class="main-header-catalague">
+                            <a href="#">
+                                <h2>Каталог товаров</h2>
+                                <span class="catalogue-expand"></span>
+                                <!-- Декоративный плюсик справа от "Каталог товаров" -->
+                            </a>
+                            <ul class="main-header-catalogue-list">
+                                <li class="main-header-catalogue-item">
+                                    <a href="#">Виртуальная реальность</a>
+                                </li>
+                                <li class="main-header-catalogue-item">
+                                    <a href="#">Моноподы для селфи</a>
+                                </li>
+                                <li class="main-header-catalogue-item">
+                                    <a href="#">Экшн-камеры</a>
+                                </li>
+                                <li class="main-header-catalogue-item">
+                                    <a href="#">Фитнес-браслеты</a>
+                                </li>
+                                <li class="main-header-catalogue-item">
+                                    <a href="#">Умные часы</a>
+                                </li>
+                                <li class="main-header-catalogue-item">
+                                    <a href="#">Квадрокоптеры</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li class="navigation-item">
                         <a href="#">
-                            <h2>Каталог товаров</h2>
-                            <span class="catalogue-expand"></span>
-                            <!-- Декоративный плюсик справа от "Каталог товаров" -->
+                            <b>Доставка</b>
                         </a>
-                        <ul class="main-header-catalogue-list">
-                            <li class="main-header-catalogue-item">
-                                <a href="#">Виртуальная реальность</a>
-                            </li>
-                            <li class="main-header-catalogue-item">
-                                <a href="#">Моноподы для селфи</a>
-                            </li>
-                            <li class="main-header-catalogue-item">
-                                <a href="#">Экшн-камеры</a>
-                            </li>
-                            <li class="main-header-catalogue-item">
-                                <a href="#">Фитнес-браслеты</a>
-                            </li>
-                            <li class="main-header-catalogue-item">
-                                <a href="#">Умные часы</a>
-                            </li>
-                            <li class="main-header-catalogue-item">
-                                <a href="#">Квадрокоптеры</a>
-                            </li>
-                        </ul>
-                    </section>
-                </li>
-                <li class="navigation-item">
-                    <a href="#">
-                        <b>Доставка</b>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#">
-                        <b>Гарантия</b>
-                    </a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#">
-                        <b>Контакты</b>
-                    </a>
-                </li>
-            </ul>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#">
+                            <b>Гарантия</b>
+                        </a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#">
+                            <b>Контакты</b>
+                        </a>
+                    </li>
+                </ul>
 
 
-            <!-- элементы "регистрация" и "логин" -->
-            <ul class="user-login">
-                <li>
-                    <a href="#">Регистрация</a>
-                </li>
-                <li>
-                    <a href="#">Войти</a>
-                </li>
-            </ul>
+                <!-- элементы "регистрация" и "логин" -->
+                <ul class="user-login">
+                    <li>
+                        <a href="#">Регистрация</a>
+                    </li>
+                    <li>
+                        <a href="#">Войти</a>
+                    </li>
+                </ul>
 
 
-            <!-- элементы "сравнить" и "корзина" -->
-            <ul class="user-cart">
-                <li class="user-cart-item">
-                    <a href="#">Корзина</a>
-                </li>
-                <li class="user-cart-item">
-                    <a href="#">Сравнить</a>
-                </li>
-            </ul>
-        </nav>
+                <!-- элементы "сравнить" и "корзина" -->
+                <ul class="user-cart">
+                    <li class="user-cart-item">
+                        <a href="#">Корзина</a>
+                    </li>
+                    <li class="user-cart-item">
+                        <a href="#">Сравнить</a>
+                    </li>
+                </ul>
+            </nav>
 
-    </header>
-
+        </header>
+    </div>
 
     <main>
         <!-- В макете страницы заголовка нет. Мы скроем его позже, при этом оставим видимым для поисковика и читалок. -->
@@ -245,86 +246,109 @@
     </main>
 
     <footer class="main-footer">
-        <nav>
-            <!-- логотип -->
-            <div class="logo-container">
-                <a href="index.html">
+            <div class="wrapper-full-width">
+        
+              <div class="wrapper-three-tenths wrapper-left">
+                <!-- логотип -->
+                <div class="logo-container">
+                  <a href="index.html">
                     <img src="TODO:add_logo_to_project_folder.jpg" alt="логотип интернет-магазина DEVICE">
-                </a>
-            </div>
-
-            <!-- элементы "регистрация" и "логин" -->
-            <ul class="user-login">
-                <li>
+                  </a>
+                </div>
+        
+                <p class="footer-address">г. Москва, ул. Строителей, 15</p>
+                <p class="footer-contacts">
+                  <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+                </p>
+        
+              </div>
+        
+              <div class="wrapper-four-tenths">
+                <nav>
+        
+                  <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
+                  <ul class="navigation-list">
+                    <li class="navigation-item">
+                      <a href="#">Доставка</a>
+                    </li>
+                    <li class="navigation-item">
+                      <a href="#">Гарантия</a>
+                    </li>
+                    <li class="navigation-item">
+                      <a href="#">Контакты</a>
+                    </li>
+                  </ul>
+        
+                </nav>
+        
+        
+                <div class="footer-social">
+                  <ul>
+                    <li>
+                      <a class="social-button" href="#">Вконтакте</a>
+                    </li>
+                    <li>
+                      <a class="social-button" href="#">Фейсбук</a>
+                    </li>
+                    <li>
+                      <a class="social-button" href="#">Инстаграм</a>
+                    </li>
+                  </ul>
+                </div>
+        
+              </div>
+        
+              <div class="wrapper-three-tenths wrapper-right">
+                <!-- элементы "регистрация" и "логин" -->
+                <ul class="user-login">
+                  <li>
                     <a href="#">Регистрация</a>
-                </li>
-                <li>
+                  </li>
+                  <li>
                     <a href="#">Войти</a>
-                </li>
-            </ul>
-
-            <!-- элементы "сравнить" и "корзина" -->
-            <ul class="user-cart">
-                <li class="user-cart-item"></li>
-                <li></li>
-            </ul>
-
-            <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
-            <ul class="navigation-list">
-                <li class="navigation-item">
-                    <a href="#">Доставка</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#">Гарантия</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#">Контакты</a>
-                </li>
-            </ul>
-
-        </nav>
-
-        <p class="footer-address">. Москва, ул. Строителей, 15</p>
-        <p class="footer-contacts">
-            <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
-        </p>
-
-        <div class="footer-social">
-            <ul>
-                <li>
-                    <a class="social-button" href="#">Вконтакте</a>
-                </li>
-                <li>
-                    <a class="social-button" href="#">Фейсбук</a>
-                </li>
-                <li>
-                    <a class="social-button" href="#">Инстаграм</a>
-                </li>
-            </ul>
-        </div>
-
-
-        <p class="footer-copyright">
-            <b class="hidden">Разработчик сайта:</b>
-            <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
-        </p>
-    </footer>
-
-
-
-    <section class="popup popup-map">
-        <h2 class="hidden">Мы на карте</h2>
-        <!-- TODO: здесь будет карта -->
-        <noscript>
-            <img src="TODO:add_larger_google_maps_img_to_project.jpg" alt="фото местонахождения интернет-магазина DEVICE" srcset="">
-        </noscript>
-    </section>
-
-    <section class="popup popup-write-us">
-        <h2 class="hidden">Пишите нам</h2>
-        <!-- TODO: здесь будет форма -->
-        <span class="close-popup">x</span>
-    </section>
+                  </li>
+                </ul>
+        
+                <!-- элементы "сравнить" и "корзина" -->
+                <ul class="user-cart">
+                  <li class="user-cart-item"></li>
+                  <li></li>
+                </ul>
+        
+        
+        
+                <p class="footer-copyright">
+                  <b class="hidden">Разработчик сайта:</b>
+                  <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+                </p>
+              </div>
+        
+            </div>
+          </footer>
+        
+        
+        
+          <section class="popup popup-map">
+            <div class="wrapper-four-fifths">
+        
+              <h2 class="hidden">Мы на карте</h2>
+              <!-- TODO: здесь будет карта -->
+              <noscript>
+                <img src="TODO:add_larger_google_maps_img_to_project.jpg" alt="фото местонахождения интернет-магазина DEVICE" srcset="">
+              </noscript>
+        
+            </div>
+          </section>
+        
+          <section class="popup popup-write-us">
+            <div class="wrapper-four-fifths">
+        
+              <h2 class="hidden">Пишите нам</h2>
+              <!-- TODO: здесь будет форма -->
+              <span class="close-popup">x</span>
+        
+            </div>
+          </section>
 </body>
 
 </html>
