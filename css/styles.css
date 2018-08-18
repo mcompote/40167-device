@@ -96,8 +96,11 @@
 
 
 /* buttons, button-like behaviour */
+.button-search      {}
+.button-user-cart   {}
+.button-compare     {}
+
 .button
-.button-search {}
 .button-animated {}
 .button-blackened {}
 .social-button {}
@@ -155,6 +158,7 @@
 .new-item {}
 .log-me-in  {}
 .user-name  {}
+.search-icon {}
 
 
 
