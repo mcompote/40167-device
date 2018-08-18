@@ -28,20 +28,28 @@
                 </div>
     
             </div>
-    
+            
             <!-- класс-обертка для ширины в 1/2 от макетной, блок справа -->
+            <!-- TODO:review user-login <ul> list -->
             <div class="wrapper-one-half wrapper-right">
-    
+            
                 <!-- элементы "регистрация" и "логин" -->
-                <ul class="user-login">
-                    <li>
-                        <a href="#">Регистрация</a>
+                <ul class="user-login-list state-logged-off">
+                    <li class="user-login-item">
+                        <a href="auth/login">
+                            <span class="log-me-in">Войти</span>
+                        </a>
+                        <a href="#">
+                            <span class="user-name">Валентин Петухов</span>
+                        </a>
                     </li>
-                    <li>
-                        <a href="#">Войти</a>
+                    <li class="user-login-item">
+                        <a href="auth/logout">
+                            <span class="logout">Выйти</span>
+                        </a>
                     </li>
                 </ul>
-    
+            
                 <!-- элементы "сравнить" и "корзина" -->
                 <ul class="user-cart">
                     <li class="user-cart-item">
@@ -51,7 +59,7 @@
                         <a href="#">Сравнить</a>
                     </li>
                 </ul>
-    
+            
             </div>
     
             <!-- TODO: review wrappers classes and <nav> structure -->

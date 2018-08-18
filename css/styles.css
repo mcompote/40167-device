@@ -12,10 +12,10 @@
 /* --------------------------------------------------------------- */
 
 /* constantly hidden on the pages, for example, <h1> for screen readers and web spiders */
-.visually-hidden { visibility: hidden; }
+.visually-hidden    { visibility: hidden; }
 
 /* for popups and other temporarily hidden objects on the page */
-.hidden { visibility: hidden; }
+.hidden             { visibility: hidden; }
 
 /* --------------------------------------------------------------- */
 /* ----------    END   OF visibility control classes    ---------- */
@@ -114,14 +114,16 @@
 
 
 /* ul, li styles */
-.user-login {}
-.user-cart {}
-.user-cart-item {}
-
 .navigation-list {}
 .navigation-item {}
 .navigation-secondary-list {}
 .navigation-secondary-item {}
+
+.user-login-list {}
+.user-login-item {}
+.user-cart {}
+.user-cart-item {}
+
 
 .promo-list { list-style: none; }
 .promo-item { display: block; }
@@ -151,6 +153,23 @@
 .close-popup {}
 .currency-sign {}
 .new-item {}
+.log-me-in  {}
+.user-name  {}
+
+
+
+
+
+/* complementary classes (for js)  */
+.state-logged-in    {}
+.state-logged-off   {}
+
+.user-login-list.state-logged-off .log-me-in { display: block; }
+.user-login-list.state-logged-on  .log-me-in { display: none;  }
+.user-login-list.state-logged-off .user-name { display: none;  }
+.user-login-list.state-logged-on  .user-name { display: block; } 
+.user-login-list.state-logged-off .logout    { display: none;  }
+.user-login-list.state-logged-on  .logout    { display: block; }
 
 
 
