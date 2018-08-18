@@ -76,6 +76,7 @@
 .promo-article {}
 
 .popular {}
+.popular-item-image-box {}
 .services {}
 .brands-gallery {}
 .info {}
@@ -136,7 +137,7 @@
 .promo-item { display: block; }
 
 .popular-list {}
-.popular-list-item {}
+.popular-item {}
 .carrier-companies-list {}
 .carrier-item {}
 .breadcrumbs-list {}
