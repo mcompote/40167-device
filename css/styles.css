@@ -120,6 +120,8 @@
 
 .navigation-list {}
 .navigation-item {}
+.navigation-secondary-list {}
+.navigation-secondary-item {}
 
 .promo-list { list-style: none; }
 .promo-item { display: block; }

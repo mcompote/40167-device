@@ -10,91 +10,110 @@
 <body>
     <div class="wrapper-full-width">
         <header class="main-header">
-
-            <!-- логотип -->
-            <div class="logo-container">
-                <a href="index.html">
-                    <img class="logo-image" src="TODO:add_logo_to_project_folder.jpg" alt="логотип интернет-магазина DEVICE">
-                </a>
+    
+            <!-- класс-обертка для ширины в 1/2 от макетной, блок слева -->
+            <div class="wrapper-one-half wrapper-left">
+    
+                <!-- логотип -->
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img class="logo-image" src="TODO:add_logo_to_project_folder.jpg" alt="логотип интернет-магазина DEVICE">
+                    </a>
+                </div>
+    
+                <div class="search-container">
+                    <input type="text" name="search_keywords" id="search">
+                    <a class="button search-button" href="#">Найти</a>
+                    <!-- Согласно styleguide.psd, кнопка "НАЙТИ" появляется при наборе символов в строке поиска -->
+                </div>
+    
             </div>
-
-            <div class="search-container">
-                <input type="text" name="search_keywords" id="search">
-                <a class="button search-button" href="#">Найти</a>
-                <!-- Согласно styleguide.psd, кнопка "НАЙТИ" появляется при наборе символов в строке поиска -->
+    
+            <!-- класс-обертка для ширины в 1/2 от макетной, блок справа -->
+            <div class="wrapper-one-half wrapper-right">
+    
+                <!-- элементы "регистрация" и "логин" -->
+                <ul class="user-login">
+                    <li>
+                        <a href="#">Регистрация</a>
+                    </li>
+                    <li>
+                        <a href="#">Войти</a>
+                    </li>
+                </ul>
+    
+                <!-- элементы "сравнить" и "корзина" -->
+                <ul class="user-cart">
+                    <li class="user-cart-item">
+                        <a href="#">Корзина</a>
+                    </li>
+                    <li class="user-cart-item">
+                        <a href="#">Сравнить</a>
+                    </li>
+                </ul>
+    
             </div>
-
+    
+            <!-- TODO: review wrappers classes and <nav> structure -->
             <nav class="main-header-navigation">
-
+    
                 <ul class="navigation-list">
                     <li class="navigation-item">
                         <section class="main-header-catalogue">
-                            <a href="#">
-                                <h2>Каталог товаров</h2>
-                                <span class="catalogue-expand"></span>
-                                <!-- Декоративный плюсик справа от "Каталог товаров" -->
-                            </a>
-                            <ul class="main-header-catalogue-list">
-                                <li class="main-header-catalogue-item">
-                                    <a href="#">Виртуальная реальность</a>
-                                </li>
-                                <li class="main-header-catalogue-item">
-                                    <a href="#">Моноподы для селфи</a>
-                                </li>
-                                <li class="main-header-catalogue-item">
-                                    <a href="#">Экшн-камеры</a>
-                                </li>
-                                <li class="main-header-catalogue-item">
-                                    <a href="#">Фитнес-браслеты</a>
-                                </li>
-                                <li class="main-header-catalogue-item">
-                                    <a href="#">Умные часы</a>
-                                </li>
-                                <li class="main-header-catalogue-item">
-                                    <a href="#">Квадрокоптеры</a>
-                                </li>
-                            </ul>
+                            <div class="wrapper-one-half wrapper-left">
+                                <a href="#">
+                                    <h2>Каталог товаров</h2>
+                                    <span class="catalogue-expand"></span>
+                                    <!-- Декоративный плюсик справа от "Каталог товаров" -->
+                                </a>
+                                <ul class="main-header-catalogue-list">
+                                    <li class="main-header-catalogue-item">
+                                        <a href="#">Виртуальная реальность</a>
+                                    </li>
+                                    <li class="main-header-catalogue-item">
+                                        <a href="#">Моноподы для селфи</a>
+                                    </li>
+                                    <li class="main-header-catalogue-item">
+                                        <a href="#">Экшн-камеры</a>
+                                    </li>
+                                    <li class="main-header-catalogue-item">
+                                        <a href="#">Фитнес-браслеты</a>
+                                    </li>
+                                    <li class="main-header-catalogue-item">
+                                        <a href="#">Умные часы</a>
+                                    </li>
+                                    <li class="main-header-catalogue-item">
+                                        <a href="#">Квадрокоптеры</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </section>
                     </li>
                     <li class="navigation-item">
-                        <a href="#">
-                            <b>Доставка</b>
-                        </a>
-                    </li>
-                    <li class="navigation-item">
-                        <a href="#">
-                            <b>Гарантия</b>
-                        </a>
-                    </li>
-                    <li class="navigation-item">
-                        <a href="#">
-                            <b>Контакты</b>
-                        </a>
+                        <div class="wrapper-one-half wrapper-right">
+                            <ul class="navigation-secondary-list">
+                                <li class="navigation-secondary-item">
+                                    <a href="#">
+                                        <b>Доставка</b>
+                                    </a>
+                                </li>
+                                <li class="navigation-secondary-item">
+                                    <a href="#">
+                                        <b>Гарантия</b>
+                                    </a>
+                                </li>
+                                <li class="navigation-secondary-item">
+                                    <a href="#">
+                                        <b>Контакты</b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
-
+    
             </nav>
-
-            <!-- элементы "регистрация" и "логин" -->
-            <ul class="user-login">
-                <li>
-                    <a href="#">Регистрация</a>
-                </li>
-                <li>
-                    <a href="#">Войти</a>
-                </li>
-            </ul>
-
-            <!-- элементы "сравнить" и "корзина" -->
-            <ul class="user-cart">
-                <li class="user-cart-item">
-                    <a href="#">Корзина</a>
-                </li>
-                <li class="user-cart-item">
-                    <a href="#">Сравнить</a>
-                </li>
-            </ul>
-
+    
         </header>
     </div>
 
