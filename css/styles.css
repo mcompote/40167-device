@@ -105,6 +105,8 @@
 .button-blackened {}
 .social-button {}
 .button-back, .button-forth {}
+.button-slide-changer  {}
+
 
 
 /* sliders */
@@ -127,6 +129,8 @@
 .user-cart {}
 .user-cart-item {}
 
+.slider-navigation-list {}
+.slider-navigation-item {}
 
 .promo-list { list-style: none; }
 .promo-item { display: block; }
