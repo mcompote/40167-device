@@ -78,6 +78,7 @@
 .popular {}
 .popular-item-image-box {}
 .services {}
+.service-description-box {}
 .brands-gallery {}
 .info {}
 .contacts {}
@@ -164,6 +165,17 @@
 .log-me-in  {}
 .user-name  {}
 .search-icon {}
+
+
+
+/* for headings or something like headings in .psd layout */
+/* in .services <h3>, in services <h2> */
+.huge-heading { 
+    font-size: 47px; 
+    font-family: "Gilroy ExtraBold", "Gilroy-ExtraBold", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    line-height: 48px;
+}
 
 
 
