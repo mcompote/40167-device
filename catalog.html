@@ -130,153 +130,160 @@
     </div>
 
     <main>
-        <h1 class="hidden">Интернет-магазин модных hi-tech гаджетов и аксессуаров "Device". Каталог товаров</h1>
+        <h1 class="visually-hidden">Интернет-магазин модных hi-tech гаджетов и аксессуаров "Device". Каталог товаров</h1>
         <h2>Моноподы для селфи</h2>
 
-        <!-- breadcrumbs -->
-        <section class="breadcrumbs">
-            <ul class="breadcrumbs-list">
-                <li class="breadcrumbs-item">
-                    <a href="index.html">Главная</a>
-                </li>
-                <li class="breadcrumbs-item">
-                    <a href="catalog.html">Каталог товаров</a>
-                </li>
-                <li class="breadcrumbs-item  breadcrumbs-item-active">
-                    Моноподы для селфи
-                </li>
-            </ul>
-        </section>
-
-        <section class="filter-box">
-            <h2 class="hidden">Фильтры для отбора товаров</h2>
-            <b>Фильтр:</b>
-            <!-- TODO: здесь будет форма с чекбоксами и прочим -->
-
-            <button type="submit" onsubmit="" class="button button-animated">Показать</button>
-        </section>
-
-        <section class="sorting-box">
-            <h2 class="hidden">Критерии сортировки товаров</h2>
-            <b>Сортировка:</b>
-
-
-            <ul class="FIXME:возможно, это не списоком верстается">
-                <li>По цене</li>
-                <li>По типу</li>
-                <li>По популярности</li>
-            </ul>
-            
-            <ul class="FIXME:возможно, это не списоком верстается">
-                <li>По убыванию</li>
-                <li>По возрастанию</li>
-            </ul>
-
-            
-        </section>
-
-        <section class="items-box">
-            <h2 class="hidden">Список товаров</h2>
-            <ul class="items-list">
-                <li class="item">
-                    <p class="item-name">Любительская селфи-палка</p>
-                    <p class="item-price">500&nbsp;
-                        <span class="currency-sign"></span>
-                    </p>
-                    <img src="TODO:add_photo_to_project_folder.jpg" alt="Любительская селфи-палка">
-            
-                    <!-- новый товар -->
-                    <span class="new-item"></span>
-            
-                    <!-- При наведении показываются -->
-                    <a class="hidden" href="#">
-                        <span class="button button-animated">В корзину</span>
-                    </a>
-                    <a class="hidden" href="#">
-                        <p>Добавить к сравнению</p>
-                    </a>
-                </li>
-                <li class="item">
-                    <p class="item-name">Профессиональная селфи-палка</p>
-                    <p class="item-price">1500&nbsp;
-                        <span class="currency-sign"></span>
-                    </p>
-                    <img src="TODO:add_photo_to_project_folder.jpg" alt="Профессиональная селфи-палка">
-            
-                    <!-- новый товар -->
-                    <span class="new-item"></span>
-            
-                    <!-- При наведении показываются -->
-                    <a class="hidden" href="#">
-                        <span class="button button-animated">В корзину</span>
-                    </a>
-                    <a class="hidden" href="#">
-                        <p>Добавить к сравнению</p>
-                    </a>
-                </li>
-                <li class="item">
-                    <p class="item-name">Непотопляемая селфи-палка</p>
-                    <p class="item-price">2500&nbsp;
-                        <span class="currency-sign"></span>
-                    </p>
-                    <img src="TODO:add_photo_to_project_folder.jpg" alt="Непотопляемая селфи-палка">
-            
-                    <!-- новый товар -->
-                    <span class="new-item"></span>
-            
-                    <!-- При наведении показываются -->
-                    <a class="hidden" href="#">
-                        <span class="button button-animated">В корзину</span>
-                    </a>
-                    <a class="hidden" href="#">
-                        <p>Добавить к сравнению</p>
-                    </a>
-            
-                </li>
-                <li class="item">
-                    <p class="item-name">Селфи-палка «Следуй за мной»</p>
-                    <p class="item-price">4900&nbsp;
-                        <span class="currency-sign"></span>
-                    </p>
-                    <img src="TODO:add_photo_to_project_folder.jpg" alt="Селфи-палка «Следуй за мной»">
-            
-                    <!-- новый товар -->
-                    <span class="new-item"></span>
-            
-                    <!-- При наведении показываются -->
-                    <a class="hidden" href="#">
-                        <span class="button button-animated">В корзину</span>
-                    </a>
-                    <a class="hidden" href="#">
-                        <p>Добавить к сравнению</p>
-                    </a>
-            
-                </li>
-            </ul>
-
-
-            <!-- блок, отвечающий за "пагинацию" -->
-            <div class="pagination">
-                <ul class="pagination-list">
-                    <li class="pagination-item pagination-item-current">
-                        <a href="#">1</a>
+        <div class="wrapper-full">
+            <!-- breadcrumbs -->
+            <section class="breadcrumbs">
+                <h3 class="visually-hidden">Навигационная цепочка</h3>
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-item">
+                        <a href="index.html">Главная</a>
                     </li>
-                    <li class="pagination-item">
-                        <a href="#">2</a>
+                    <li class="breadcrumbs-item">
+                        <a href="catalog.html">Каталог товаров</a>
                     </li>
-                    <li class="pagination-item">
-                        <a href="#">3</a>
+                    <li class="breadcrumbs-item  breadcrumbs-item-active">
+                        Моноподы для селфи
                     </li>
                 </ul>
-                <button class="button button-back">Назад</button>
-                <button class="button button-forth">Вперед</button>
-            </div>
+            </section>
+        </div>
 
-        </section>
+        <div class="wrapper-filter-box">
+            <section class="filter-box">
+                <h2 class="hidden">Фильтры для отбора товаров</h2>
+                <div class="filter-box-heading-block">Фильтр:</div>
+                <!-- TODO: здесь будет форма с чекбоксами и прочим -->
+    
+                <button type="submit" onsubmit="" class="button button-animated">Показать</button>
+            </section>
+        </div>
+
+        <div class="wrapper-sorting-box-and-content">
+            <section class="sorting-box">
+                <h2 class="hidden">Критерии сортировки товаров</h2>
+                <div class="sorting-box-heading-block">Сортировка:</div>
+    
+                <ul class="FIXME:возможно, это не списоком верстается">
+                    <li>По цене</li>
+                    <li>По типу</li>
+                    <li>По популярности</li>
+                </ul>
+                
+                <ul class="FIXME:возможно, это не списоком верстается">
+                    <li>По убыванию</li>
+                    <li>По возрастанию</li>
+                </ul>
+            </section>
+            
+            <div class="wrapper-items-box">
+                <section class="items-box">
+                    <h2 class="hidden">Список товаров</h2>
+                    <ul class="items-list">
+                        <li class="item">
+                            <p class="item-name">Любительская селфи-палка</p>
+                            <p class="item-price">500&nbsp;
+                                <span class="currency-sign"></span>
+                            </p>
+                            <img src="TODO:add_photo_to_project_folder.jpg" alt="Любительская селфи-палка">
+                    
+                            <!-- новый товар -->
+                            <span class="new-item"></span>
+                    
+                            <!-- При наведении показываются -->
+                            <a class="hidden" href="#">
+                                <span class="button button-animated">В корзину</span>
+                            </a>
+                            <a class="hidden" href="#">
+                                <p>Добавить к сравнению</p>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <p class="item-name">Профессиональная селфи-палка</p>
+                            <p class="item-price">1500&nbsp;
+                                <span class="currency-sign"></span>
+                            </p>
+                            <img src="TODO:add_photo_to_project_folder.jpg" alt="Профессиональная селфи-палка">
+                    
+                            <!-- новый товар -->
+                            <span class="new-item"></span>
+                    
+                            <!-- При наведении показываются -->
+                            <a class="hidden" href="#">
+                                <span class="button button-animated">В корзину</span>
+                            </a>
+                            <a class="hidden" href="#">
+                                <p>Добавить к сравнению</p>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <p class="item-name">Непотопляемая селфи-палка</p>
+                            <p class="item-price">2500&nbsp;
+                                <span class="currency-sign"></span>
+                            </p>
+                            <img src="TODO:add_photo_to_project_folder.jpg" alt="Непотопляемая селфи-палка">
+                    
+                            <!-- новый товар -->
+                            <span class="new-item"></span>
+                    
+                            <!-- При наведении показываются -->
+                            <a class="hidden" href="#">
+                                <span class="button button-animated">В корзину</span>
+                            </a>
+                            <a class="hidden" href="#">
+                                <p>Добавить к сравнению</p>
+                            </a>
+                    
+                        </li>
+                        <li class="item">
+                            <p class="item-name">Селфи-палка «Следуй за мной»</p>
+                            <p class="item-price">4900&nbsp;
+                                <span class="currency-sign"></span>
+                            </p>
+                            <img src="TODO:add_photo_to_project_folder.jpg" alt="Селфи-палка «Следуй за мной»">
+                    
+                            <!-- новый товар -->
+                            <span class="new-item"></span>
+                    
+                            <!-- При наведении показываются -->
+                            <a class="hidden" href="#">
+                                <span class="button button-animated">В корзину</span>
+                            </a>
+                            <a class="hidden" href="#">
+                                <p>Добавить к сравнению</p>
+                            </a>
+                    
+                        </li>
+                    </ul>
+        
+        
+                    <!-- блок, отвечающий за "пагинацию" -->
+                    <div class="pagination">
+                        <ul class="pagination-list">
+                            <li class="pagination-item pagination-item-current">
+                                <a href="#">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#">3</a>
+                            </li>
+                        </ul>
+                        <button class="button button-back">Назад</button>
+                        <button class="button button-forth">Вперед</button>
+                    </div>
+        
+                </section>
+            </div>
+        </div>
+        
 
     </main>
 
-    
+
     <footer class="main-footer">
         <div class="wrapper-full-width">
 
