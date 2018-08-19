@@ -168,6 +168,7 @@
 
 
 
+
 /* for headings or something like headings in .psd layout */
 /* in .services <h3>, in services <h2> */
 .huge-heading { 
@@ -177,11 +178,18 @@
     line-height: 48px;
 }
 
+/* slogan in '.promo-slider', headings in '.info' and '.contacts' sections  */
+.huge-heading-top-line {}
+.huge-heading-bottom-line {}
 
 
 
 
-/* complementary classes (for js)  */
+
+
+
+
+/* complementary classes (for animating sliders via js)  */
 .state-logged-in    {}
 .state-logged-off   {}
 
