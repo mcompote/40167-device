@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-
+  <link rel="stylesheet" href="css/styles.css">
   <title>Интернет-магазин "Device": главная</title>
 </head>
 
@@ -24,8 +24,9 @@
             <span class="search-icon"></span>
             <input type="text" name="search_keywords" id="search">
           </label>
-          <a class="button search-button" href="#">Найти</a>
           <!-- Согласно styleguide.psd, кнопка "НАЙТИ" появляется при наборе символов в строке поиска -->
+          <!-- Кнопка при нажатии будет перебрасывать пользователя на другую страницу => тэг <a> -->
+          <a class="button search-button" href="#">Найти</a>
         </div>
   
       </div>
@@ -37,16 +38,16 @@
         <!-- элементы "регистрация" и "логин" -->
         <ul class="user-login-list state-logged-off">
           <li class="user-login-item">
-            <a href="auth/login">
-              <span class="log-me-in">Войти</span>
+            <a class="link-log-me-in" href="auth/login">
+              Войти
             </a>
-            <a href="#">
-              <span class="user-name">Валентин Петухов</span>
+            <a class="link-user-name" href="#">
+              Неопознанный Енот
             </a>
           </li>
           <li class="user-login-item">
-            <a href="auth/logout">
-              <span class="logout">Выйти</span>
+            <a class="link-logout" href="auth/logout">
+              Выйти
             </a>
           </li>
         </ul>
@@ -54,10 +55,10 @@
         <!-- элементы "сравнить" и "корзина" -->
         <ul class="user-cart">
           <li class="user-cart-item">
-            <a class="button-user-cart" href="#">Корзина</a>
+            <a class="link-user-cart" href="#">Корзина</a>
           </li>
           <li class="user-cart-item">
-            <a class="button-compare" href="#">Сравнить</a>
+            <a class="link-compare" href="#">Сравнить</a>
           </li>
         </ul>
   
@@ -70,11 +71,11 @@
           <li class="navigation-item">
             <section class="main-header-catalogue">
               <div class="wrapper-one-half wrapper-left">
-                <a href="#">
+                <a class="link-catalog" href="catalog.html">
                   <h2>Каталог товаров</h2>
-                  <span class="catalogue-expand"></span>
-                  <!-- Декоративный плюсик справа от "Каталог товаров" -->
                 </a>
+                <!-- Декоративный плюсик справа от "Каталог товаров" -->
+                  <button class="buttton-catalogue-expand">Показать разделы каталога</button>
                 <ul class="main-header-catalogue-list">
                   <li class="main-header-catalogue-item">
                     <a href="#">Виртуальная реальность</a>
@@ -106,7 +107,7 @@
                     <b>Доставка</b>
                   </a>
                 </li>
-                <li class="navigation-secondary-item">
+                <li class="navigation-secondary-item navigation-secondary-item-active">
                   <a href="#">
                     <b>Гарантия</b>
                   </a>
@@ -241,13 +242,13 @@
 
         <ul class="slider-navigation-list">
           <li class="slider-navigation-item">
-            <button class="button-slide-changer"></button>
+            <button class="button-slide-changer">Показать карточку 1 промо-товара</button>
           </li>
           <li class="slider-navigation-item">
-            <button class="button-slide-changer"></button>
+            <button class="button-slide-changer">Показать карточку 2 промо-товара</button>
           </li>
           <li class="slider-navigation-item">
-            <button class="button-slide-changer"></button>
+            <button class="button-slide-changer">Показать карточку 3 промо-товара</button>
           </li>
         </ul>
 
@@ -387,29 +388,25 @@
       <!-- Галерея логотипов брендов -->
       <section class="brands-gallery">
         <h2 class="hidden">Бренды, представленные в нашем магазине</h2>
-        <ul>
-          <li>
-            <div>
-              <img src="TODO:add_brand_dji_to_project_folder.jpg" alt="бренд dji" srcset="">
-              <figcaption class="hidden">бренд dji</figcaption>
+        <ul class="brands-gallery-list">
+          <li class="brands-gallery-item">
+            <div class="brands-gallery-item-logo-wrapper">
+              <img src="TODO:add_brand_dji_to_project_folder.jpg" alt="бренд dji">
             </div>
           </li>
-          <li>
-            <div>
-              <img src="TODO:add_brand_spGadgets_to_project_folder.jpg" alt="бренд SP Gadgets" srcset="">
-              <figcaption class="hidden">бренд SP Gadgets</figcaption>
+          <li class="brands-gallery-item">
+            <div class="brands-gallery-item-logo-wrapper">
+              <img src="TODO:add_brand_spGadgets_to_project_folder.jpg" alt="бренд SP Gadgets">
             </div>
           </li>
-          <li>
-            <div>
-              <img src="TODO:add_brand_gopro_to_project_folder.jpg" alt="бренд GoPro" srcset="">
-              <figcaption class="hidden">бренд GoPro</figcaption>
+          <li class="brands-gallery-item">
+            <div class="brands-gallery-item-logo-wrapper">
+              <img src="TODO:add_brand_gopro_to_project_folder.jpg" alt="бренд GoPro">
             </div>
           </li>
-          <li>
-            <div>
-              <img src="TODO:add_brand_vive_to_project_folder.jpg" alt="бренд Vive" srcset="">
-              <figcaption class="hidden">бренд Vive</figcaption>
+          <li class="brands-gallery-item">
+            <div class="brands-gallery-item-logo-wrapper">
+              <img src="TODO:add_brand_vive_to_project_folder.jpg" alt="бренд Vive">
             </div>
           </li>
         </ul>
@@ -423,7 +420,7 @@
           <h2 class="huge-heading huge-heading-top-line">О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
           <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-          <ul class="carrier-companies-list">
+          <ul class="carrier-list">
             <li class="carrier-item">
               <a href="#">Деловые Линии</a>
             </li>
@@ -435,9 +432,8 @@
             </li>
           </ul>
 
-
-          <a href="#">
-            <span class="button button-animated">Подробнее о нас</span>
+          <a class="button button-animated" href="#">
+            Подробнее о нас
           </a>
         </section>
       </div>
@@ -449,21 +445,20 @@
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
             бывает.
           </p>
-          <a id="popup-opener-map" href="#">
+          <a id="popup-opener-map" role="button" href="#">
             <div class="map-container">
               <!-- google/whatever maps container -->
               <noscript>
-                <img src="TODO:add_google_maps_img_to_project.jpg" alt="Карта местонахождения магазина" srcset="">
+                <img src="TODO:add_google_maps_img_to_project.jpg" alt="Карта местонахождения магазина">
               </noscript>
             </div>
           </a>
-          <a id="popup-opener-write-us" href="#">
-            <span class="button button-animated">Напишите нам</span>
+          <a class="button button-animated" id="popup-opener-write-us" href="#">
+            Напишите нам
           </a>
         </section>
       </div>
     </div>
-
 
   </main>
 
@@ -505,13 +500,13 @@
         <div class="footer-social">
           <ul>
             <li>
-              <a class="social-button" href="#">Вконтакте</a>
+              <a class="button-social button-social-vk" href="#">Вконтакте</a>
             </li>
             <li>
-              <a class="social-button" href="#">Фейсбук</a>
+              <a class="social-button button-social-fb" href="#">Фейсбук</a>
             </li>
             <li>
-              <a class="social-button" href="#">Инстаграм</a>
+              <a class="social-button button-social-insta" href="#">Инстаграм</a>
             </li>
           </ul>
         </div>
@@ -539,7 +534,7 @@
 
         <p class="footer-copyright">
           <b class="hidden">Разработчик сайта:</b>
-          <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+          <a class="button-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
         </p>
       </div>
 

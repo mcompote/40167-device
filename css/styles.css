@@ -97,18 +97,27 @@
 /* --------------------------------------------------------------- */
 
 
-/* buttons, button-like behaviour */
+/* buttons, liks */
 .button-search      {}
-.button-user-cart   {}
-.button-compare     {}
+.link-user-cart     {}
+.link-compare       {}
+.link-log-me-in     {}
+.link-user-name     {}
+.link-catalog       {}
+.buttton-catalogue-expand {}
 
-.button
-.button-animated {}
-.button-blackened {}
-.social-button {}
-.button-back, .button-forth {}
-.button-slide-changer  {}
+.button             {}
+.button-animated    {}
+.button-blackened   {}
+.button-back        {}
+.button-forth       {}
+.button-slide-changer {}
 
+.button-social      {}
+.button-social-vk   {}
+.button-social-fb   {}
+.button-social-insta {}
+.button-htmlacademy {}
 
 
 /* sliders */
@@ -125,6 +134,7 @@
 .navigation-item {}
 .navigation-secondary-list {}
 .navigation-secondary-item {}
+.navigation-secondary-item-active {}
 
 .user-login-list {}
 .user-login-item {}
@@ -137,9 +147,13 @@
 .promo-list { list-style: none; }
 .promo-item { display: block; }
 
+.brands-gallery-list {}
+.brands-gallery-item {}
+.brands-gallery-item-logo-wrapper {}
+
 .popular-list {}
 .popular-item {}
-.carrier-companies-list {}
+.carrier-list {}
 .carrier-item {}
 .breadcrumbs-list {}
 .breadcrumbs-item {}
@@ -162,8 +176,6 @@
 .close-popup {}
 .currency-sign {}
 .new-item {}
-.log-me-in  {}
-.user-name  {}
 .search-icon {}
 
 
@@ -189,16 +201,19 @@
 
 
 
+
+
 /* complementary classes (for animating sliders via js)  */
 .state-logged-in    {}
 .state-logged-off   {}
 
-.user-login-list.state-logged-off .log-me-in { display: block; }
-.user-login-list.state-logged-on  .log-me-in { display: none;  }
-.user-login-list.state-logged-off .user-name { display: none;  }
-.user-login-list.state-logged-on  .user-name { display: block; } 
-.user-login-list.state-logged-off .logout    { display: none;  }
-.user-login-list.state-logged-on  .logout    { display: block; }
+.user-login-list.state-logged-off .link-log-me-in { display: block; }
+.user-login-list.state-logged-off .link-user-name { display: none;  }
+.user-login-list.state-logged-off .link-logout    { display: none;  }
+
+.user-login-list.state-logged-on  .link-user-name { display: block; } 
+.user-login-list.state-logged-on  .link-logout    { display: block; }
+.user-login-list.state-logged-on  .link-log-me-in { display: none;  }
 
 
 
