@@ -3,77 +3,81 @@
 
 <head>
     <meta charset="utf-8">
-
+    <link rel="stylesheet" href="css/styles.css">
     <title>Интернет-магазин "Device": каталог товаров</title>
 </head>
 
 <body>
     <div class="wrapper-full-width">
         <header class="main-header">
-    
+
             <!-- класс-обертка для ширины в 1/2 от макетной, блок слева -->
             <div class="wrapper-one-half wrapper-left">
-    
+
                 <!-- логотип -->
                 <div class="logo-container">
                     <a href="index.html">
                         <img class="logo-image" src="TODO:add_logo_to_project_folder.jpg" alt="логотип интернет-магазина DEVICE">
                     </a>
                 </div>
-    
+
                 <div class="search-container">
-                    <input type="text" name="search_keywords" id="search">
-                    <a class="button search-button" href="#">Найти</a>
+                    <label>
+                        <span class="search-icon"></span>
+                        <input type="text" name="search_keywords" id="search">
+                    </label>
                     <!-- Согласно styleguide.psd, кнопка "НАЙТИ" появляется при наборе символов в строке поиска -->
+                    <!-- Кнопка при нажатии будет перебрасывать пользователя на другую страницу => тэг <a> -->
+                    <a class="button search-button" href="#">Найти</a>
                 </div>
-    
+
             </div>
-            
+
             <!-- класс-обертка для ширины в 1/2 от макетной, блок справа -->
             <!-- TODO:review user-login <ul> list -->
             <div class="wrapper-one-half wrapper-right">
-            
+
                 <!-- элементы "регистрация" и "логин" -->
                 <ul class="user-login-list state-logged-off">
                     <li class="user-login-item">
-                        <a href="auth/login">
-                            <span class="log-me-in">Войти</span>
+                        <a class="link-log-me-in" href="auth/login">
+                            Войти
                         </a>
-                        <a href="#">
-                            <span class="user-name">Валентин Петухов</span>
+                        <a class="link-user-name" href="#">
+                            Неопознанный Енот
                         </a>
                     </li>
                     <li class="user-login-item">
-                        <a href="auth/logout">
-                            <span class="logout">Выйти</span>
+                        <a class="link-logout" href="auth/logout">
+                            Выйти
                         </a>
                     </li>
                 </ul>
-            
+
                 <!-- элементы "сравнить" и "корзина" -->
                 <ul class="user-cart">
                     <li class="user-cart-item">
-                        <a href="#">Корзина</a>
+                        <a class="link-user-cart" href="#">Корзина</a>
                     </li>
                     <li class="user-cart-item">
-                        <a href="#">Сравнить</a>
+                        <a class="link-compare" href="#">Сравнить</a>
                     </li>
                 </ul>
-            
+
             </div>
-    
+
             <!-- TODO: review wrappers classes and <nav> structure -->
             <nav class="main-header-navigation">
-    
+
                 <ul class="navigation-list">
                     <li class="navigation-item">
                         <section class="main-header-catalogue">
                             <div class="wrapper-one-half wrapper-left">
-                                <a href="#">
+                                <a class="link-catalog" href="catalog.html">
                                     <h2>Каталог товаров</h2>
-                                    <span class="catalogue-expand"></span>
-                                    <!-- Декоративный плюсик справа от "Каталог товаров" -->
                                 </a>
+                                <!-- Декоративный плюсик справа от "Каталог товаров" -->
+                                <button class="buttton-catalogue-expand">Показать разделы каталога</button>
                                 <ul class="main-header-catalogue-list">
                                     <li class="main-header-catalogue-item">
                                         <a href="#">Виртуальная реальность</a>
@@ -105,7 +109,7 @@
                                         <b>Доставка</b>
                                     </a>
                                 </li>
-                                <li class="navigation-secondary-item">
+                                <li class="navigation-secondary-item navigation-secondary-item-active">
                                     <a href="#">
                                         <b>Гарантия</b>
                                     </a>
@@ -119,14 +123,13 @@
                         </div>
                     </li>
                 </ul>
-    
+
             </nav>
-    
+
         </header>
     </div>
 
     <main>
-        <!-- В макете страницы заголовка нет. Мы скроем его позже, при этом оставим видимым для поисковика и читалок. -->
         <h1 class="hidden">Интернет-магазин модных hi-tech гаджетов и аксессуаров "Device". Каталог товаров</h1>
         <h2>Моноподы для селфи</h2>
 
@@ -273,110 +276,120 @@
 
     </main>
 
+    
     <footer class="main-footer">
-            <div class="wrapper-full-width">
-        
-              <div class="wrapper-three-tenths wrapper-left">
+        <div class="wrapper-full-width">
+
+            <div class="wrapper-three-tenths wrapper-left">
                 <!-- логотип -->
                 <div class="logo-container">
-                  <a href="index.html">
-                    <img class="logo-image" src="TODO:add_logo_to_project_folder.jpg" alt="логотип интернет-магазина DEVICE">
-                  </a>
+                    <a href="index.html">
+                        <img class="logo-image" src="TODO:add_logo_to_project_folder.jpg" alt="логотип интернет-магазина DEVICE">
+                    </a>
                 </div>
-        
+
                 <p class="footer-address">г. Москва, ул. Строителей, 15</p>
                 <p class="footer-contacts">
-                  <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+                    <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
                 </p>
-        
-              </div>
-        
-              <div class="wrapper-four-tenths">
+
+            </div>
+
+            <div class="wrapper-four-tenths">
                 <nav class="main-footer-navigation">
-        
-                  <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
-                  <ul class="navigation-list">
-                    <li class="navigation-item">
-                      <a href="#">Доставка</a>
-                    </li>
-                    <li class="navigation-item">
-                      <a href="#">Гарантия</a>
-                    </li>
-                    <li class="navigation-item">
-                      <a href="#">Контакты</a>
-                    </li>
-                  </ul>
-        
+
+                    <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
+                    <ul class="navigation-list">
+                        <li class="navigation-item">
+                            <a href="#">Доставка</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="#">Гарантия</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+
                 </nav>
-        
-        
+
+
                 <div class="footer-social">
-                  <ul>
-                    <li>
-                      <a class="social-button" href="#">Вконтакте</a>
-                    </li>
-                    <li>
-                      <a class="social-button" href="#">Фейсбук</a>
-                    </li>
-                    <li>
-                      <a class="social-button" href="#">Инстаграм</a>
-                    </li>
-                  </ul>
+                    <ul>
+                        <li>
+                            <a class="button-social button-social-vk" href="#">Вконтакте</a>
+                        </li>
+                        <li>
+                            <a class="social-button button-social-fb" href="#">Фейсбук</a>
+                        </li>
+                        <li>
+                            <a class="social-button button-social-insta" href="#">Инстаграм</a>
+                        </li>
+                    </ul>
                 </div>
-        
-              </div>
-        
-              <div class="wrapper-three-tenths wrapper-right">
+
+            </div>
+
+            <div class="wrapper-three-tenths wrapper-right">
+
+
                 <!-- элементы "регистрация" и "логин" -->
-                <ul class="user-login">
-                  <li>
-                    <a href="#">Регистрация</a>
-                  </li>
-                  <li>
-                    <a href="#">Войти</a>
-                  </li>
+                <ul class="user-login-list state-logged-off">
+                    <li class="user-login-item">
+                        <a class="link-log-me-in" href="auth/login">
+                            Войти
+                        </a>
+                        <a class="link-user-name" href="#">
+                            Неопознанный Енот
+                        </a>
+                    </li>
+                    <li class="user-login-item">
+                        <a class="link-logout" href="auth/logout">
+                            Выйти
+                        </a>
+                    </li>
                 </ul>
-        
+
                 <!-- элементы "сравнить" и "корзина" -->
                 <ul class="user-cart">
-                  <li class="user-cart-item"></li>
-                  <li></li>
+                    <li class="user-cart-item">
+                        <a class="link-user-cart" href="#">Корзина</a>
+                    </li>
+                    <li class="user-cart-item">
+                        <a class="link-compare" href="#">Сравнить</a>
+                    </li>
                 </ul>
-        
-        
-        
+
                 <p class="footer-copyright">
-                  <b class="hidden">Разработчик сайта:</b>
-                  <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+                    <b class="visually-hidden">Разработчик сайта:</b>
+                    <a class="button-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
                 </p>
-              </div>
-        
             </div>
-          </footer>
-        
-        
-        
-          <section class="popup popup-map">
-            <div class="wrapper-four-fifths">
-        
-              <h2 class="hidden">Мы на карте</h2>
-              <!-- TODO: здесь будет карта -->
-              <noscript>
-                <img src="TODO:add_larger_google_maps_img_to_project.jpg" alt="фото местонахождения интернет-магазина DEVICE" srcset="">
-              </noscript>
-        
-            </div>
-          </section>
-        
-          <section class="popup popup-write-us">
-            <div class="wrapper-four-fifths">
-        
-              <h2 class="hidden">Пишите нам</h2>
-              <!-- TODO: здесь будет форма -->
-              <span class="close-popup">x</span>
-        
-            </div>
-          </section>
+
+        </div>
+    </footer>
+
+    <section class="popup popup-map">
+        <div class="wrapper-four-fifths">
+
+            <h2 class="visually-hidden">Мы на карте</h2>
+            <!-- TODO: здесь будет карта -->
+            <noscript>
+                <img src="TODO:add_larger_google_maps_img_to_project.jpg" alt="фото местонахождения интернет-магазина DEVICE">
+            </noscript>
+
+        </div>
+    </section>
+
+    <section class="popup popup-write-us">
+        <div class="wrapper-four-fifths">
+
+            <h2 class="visually-hidden">Пишите нам</h2>
+            <!-- TODO: здесь будет форма -->
+            <span class="close-popup">x</span>
+
+        </div>
+    </section>
 </body>
 
 </html>
