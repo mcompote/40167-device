@@ -66,7 +66,7 @@
 .wrapper-sorting-box-and-content { width: 972px; }
 
 /* containter for content box */
-.wrapper-items-box { width: 852px; }
+.wrapper-catalog-items-box { width: 852px; }
 
 /* something like float: right */
 .wrapper-right      { float: right; }
@@ -100,6 +100,11 @@
 .filter-box-heading-block {}
 .sorting-box {}
 .sorting-box-heading-block {}
+.catalog-items-box {}
+
+.catalog-item-onhover-block        { display: none; }
+.catalog-item-onhover-block::hover { display: block; }
+
 
 
 /* --------------------------------------------------------------- */
@@ -128,6 +133,8 @@
 .button-social-fb   {}
 .button-social-insta {}
 .button-htmlacademy {}
+
+.link-add-to-compare-list {}
 
 
 /* sliders */
@@ -174,9 +181,17 @@
 .sorting-methods-list {}
 .sorting-methods-item {}
 
+.catalog-list {}
+.catalog-items-item {}
+
+
+
+
 /*  images  */
 .promo-item-pic {}
 .logo-image {}
+
+
 
 
 /* tables and related things (th,tr,td,etc.) */
@@ -185,14 +200,17 @@
 .promo-item-characteristic-value {}
 
 
+
+
+
 /* <p>, <b>, <span> and other decorating stuff */
 .footer-address {}
 .footer-contacts {}
 .close-popup {}
-.currency-sign {}
 .new-item {}
 .search-icon {}
-
+.catalog-item-name {}
+.catalog-item-price {}
 
 
 
