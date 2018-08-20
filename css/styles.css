@@ -169,6 +169,10 @@
 .breadcrumbs-item {}
 .breadcrumbs-item-active {}
 
+.ordering-methods-list {}
+.ordering-methods-item {}
+.sorting-methods-list {}
+.sorting-methods-item {}
 
 /*  images  */
 .promo-item-pic {}
@@ -204,6 +208,12 @@
 /* slogan in '.promo-slider', headings in '.info' and '.contacts' sections  */
 .huge-heading-top-line {}
 .huge-heading-bottom-line {}
+
+/* make an element looks as triangle */
+.triangle {}
+.triangle-reversed { transform: rotate(180deg); }
+
+
 
 
 
