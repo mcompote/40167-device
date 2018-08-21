@@ -81,9 +81,9 @@
 
 
 
-.main-header {}
-.main-header-navigation {}
-.main-header-catalogue {}
+.header {}
+.header-nav {}
+.header-catalogue {}
 .logo-container {}
 .search-container {}
 
@@ -97,8 +97,9 @@
 .info {}
 .contacts {}
 .map-container {}
-.main-footer {}
-.main-footer-navigation {}
+
+.footer {}
+.footer-nav {}
 .footer-social {}
 .footer-copyright {}
 .breadcrumbs {}
@@ -153,11 +154,12 @@
 
 
 /* ul, li styles */
-.navigation-list {}
-.navigation-item {}
-.navigation-secondary-list {}
-.navigation-secondary-item {}
-.navigation-secondary-item-active {}
+.header-nav-list {}
+.header-nav-item {}
+.header-nav-item_last {}
+
+.footer-nav-list {}
+.footer-nav-item {}
 
 .user-login-list {}
 .user-login-item {}
@@ -248,7 +250,7 @@
 
 
 
-/* complementary classes (for animating sliders via js)  */
+/* complementary classes (for js)  */
 .state-logged-in    {}
 .state-logged-off   {}
 

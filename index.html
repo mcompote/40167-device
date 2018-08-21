@@ -9,7 +9,7 @@
 
 <body>
   <div class="column-full">
-    <header class="main-header">
+    <header class="header">
   
       <!-- класс-обертка для ширины в 1/2 от макетной, блок слева -->
       <div class="column-one-half column-left">
@@ -65,63 +65,58 @@
       </div>
   
       <!-- TODO: review wrappers classes and <nav> structure -->
-      <nav class="main-header-navigation">
-  
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <section class="main-header-catalogue">
-              <div class="column-one-half column-left">
-                <a class="link-catalog" href="catalog.html">
-                  <h2>Каталог товаров</h2>
-                </a>
-                <!-- Декоративный плюсик справа от "Каталог товаров" -->
-                  <button class="buttton-catalogue-expand">Показать разделы каталога</button>
-                <ul class="main-header-catalogue-list">
-                  <li class="main-header-catalogue-item">
-                    <a href="#">Виртуальная реальность</a>
-                  </li>
-                  <li class="main-header-catalogue-item">
-                    <a href="#">Моноподы для селфи</a>
-                  </li>
-                  <li class="main-header-catalogue-item">
-                    <a href="#">Экшн-камеры</a>
-                  </li>
-                  <li class="main-header-catalogue-item">
-                    <a href="#">Фитнес-браслеты</a>
-                  </li>
-                  <li class="main-header-catalogue-item">
-                    <a href="#">Умные часы</a>
-                  </li>
-                  <li class="main-header-catalogue-item">
-                    <a href="#">Квадрокоптеры</a>
-                  </li>
-                </ul>
-              </div>
-            </section>
-          </li>
-          <li class="navigation-item">
-            <div class="column-one-half column-right">
-              <ul class="navigation-secondary-list">
-                <li class="navigation-secondary-item">
-                  <a href="#">
-                    <b>Доставка</b>
-                  </a>
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <li class="header-nav-item column">
+            <section class="header-catalogue">
+              <a class="link-catalog" href="catalog.html">
+                <h2>Каталог товаров</h2>
+              </a>
+              <!-- Декоративный плюсик справа от "Каталог товаров" -->
+              <button class="buttton-catalogue-expand">Показать разделы каталога</button>
+      
+              <ul class="header-catalogue-list">
+                <li class="header-catalogue-item">
+                  <a href="#">Виртуальная реальность</a>
                 </li>
-                <li class="navigation-secondary-item navigation-secondary-item-active">
-                  <a href="#">
-                    <b>Гарантия</b>
-                  </a>
+                <li class="header-catalogue-item">
+                  <a href="#">Моноподы для селфи</a>
                 </li>
-                <li class="navigation-secondary-item">
-                  <a href="#">
-                    <b>Контакты</b>
-                  </a>
+                <li class="header-catalogue-item">
+                  <a href="#">Экшн-камеры</a>
+                </li>
+                <li class="header-catalogue-item">
+                  <a href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="header-catalogue-item">
+                  <a href="#">Умные часы</a>
+                </li>
+                <li class="header-catalogue-item">
+                  <a href="#">Квадрокоптеры</a>
                 </li>
               </ul>
-            </div>
+      
+            </section>
+          </li>
+      
+          <li class="header-nav-item">
+            <a href="#">
+              <b>Доставка</b>
+            </a>
+          </li>
+      
+          <li class="header-nav-item">
+            <a href="#">
+              <b>Гарантия</b>
+            </a>
+          </li>
+      
+          <li class="header-nav-item header-nav-item_last">
+            <a href="#">
+              <b>Контакты</b>
+            </a>
           </li>
         </ul>
-  
       </nav>
   
     </header>
@@ -462,7 +457,7 @@
 
   </main>
 
-  <footer class="main-footer">
+  <footer class="footer">
     <div class="column-full">
 
       <div class="column-three-tenths column-left">
@@ -479,17 +474,17 @@
       </div>
 
       <div class="column-four-tenths">
-        <nav class="main-footer-navigation">
+        <nav class="footer-nav">
 
           <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
-          <ul class="navigation-list">
-            <li class="navigation-item">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
               <a href="#">Доставка</a>
             </li>
-            <li class="navigation-item">
+            <li class="footer-nav-item">
               <a href="#">Гарантия</a>
             </li>
-            <li class="navigation-item">
+            <li class="footer-nav-item">
               <a href="#">Контакты</a>
             </li>
           </ul>
