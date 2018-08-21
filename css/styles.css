@@ -62,10 +62,10 @@
 .column-three-tenths  { width: 360px; }
 
 /* something like float: right */
-.column-right      { float: right; }
+.column-right      { ~float: right; }
 
 /* something like float: left */
-.column-left       { float: left; }
+.column-left       { ~float: left; }
 
 
 
