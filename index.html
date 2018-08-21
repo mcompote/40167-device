@@ -32,26 +32,15 @@
       </div>
   
       <!-- класс-обертка для ширины в 1/2 от макетной, блок справа -->
-      <!-- TODO:review user-login <ul> list -->
       <div class="column-one-half column-right">
   
-        <!-- элементы "регистрация" и "логин" -->
-        <ul class="user-login-list state-logged-off">
-          <li class="user-login-item">
-            <a class="link-log-me-in" href="auth/login">
-              Войти
-            </a>
-            <a class="link-user-name" href="#">
-              Неопознанный Енот
-            </a>
-          </li>
-          <li class="user-login-item">
-            <a class="link-logout" href="auth/logout">
-              Выйти
-            </a>
-          </li>
-        </ul>
-  
+        <!-- элемент "логин" -->
+        <div class="login-container">
+          <a class="link-log-me-in" href="auth/login">
+            Войти
+          </a>
+        </div>
+ 
         <!-- элементы "сравнить" и "корзина" -->
         <ul class="user-cart">
           <li class="user-cart-item">
@@ -64,7 +53,6 @@
   
       </div>
   
-      <!-- TODO: review wrappers classes and <nav> structure -->
       <nav class="header-nav">
         <ul class="header-nav-list">
           <li class="header-nav-item column">
@@ -511,22 +499,12 @@
       <div class="column-three-tenths column-right">
 
 
-        <!-- элементы "регистрация" и "логин" -->
-        <ul class="user-login-list state-logged-off">
-          <li class="user-login-item">
+        <!-- элемент "логин" -->
+        <div class="login-container">
             <a class="link-log-me-in" href="auth/login">
               Войти
             </a>
-            <a class="link-user-name" href="#">
-              Неопознанный Енот
-            </a>
-          </li>
-          <li class="user-login-item">
-            <a class="link-logout" href="auth/logout">
-              Выйти
-            </a>
-          </li>
-        </ul>
+        </div>
         
         <!-- элементы "сравнить" и "корзина" -->
         <ul class="user-cart">

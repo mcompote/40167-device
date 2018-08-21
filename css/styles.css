@@ -86,7 +86,7 @@
 .header-catalogue {}
 .logo-container {}
 .search-container {}
-
+.login-container {}
 .promo-article {}
 
 .popular {}
@@ -125,6 +125,7 @@
 .link-compare       {}
 .link-log-me-in     {}
 .link-user-name     {}
+.link-logout        {}
 .link-catalog       {}
 .buttton-catalogue-expand {}
 
@@ -161,8 +162,7 @@
 .footer-nav-list {}
 .footer-nav-item {}
 
-.user-login-list {}
-.user-login-item {}
+
 .user-cart {}
 .user-cart-item {}
 
@@ -240,27 +240,6 @@
 .triangle-reversed { transform: rotate(180deg); }
 
 
-
-
-
-
-
-
-
-
-
-
-/* complementary classes (for js)  */
-.state-logged-in    {}
-.state-logged-off   {}
-
-.user-login-list.state-logged-off .link-log-me-in { display: block; }
-.user-login-list.state-logged-off .link-user-name { display: none;  }
-.user-login-list.state-logged-off .link-logout    { display: none;  }
-
-.user-login-list.state-logged-on  .link-user-name { display: block; } 
-.user-login-list.state-logged-on  .link-logout    { display: block; }
-.user-login-list.state-logged-on  .link-log-me-in { display: none;  }
 
 
 
