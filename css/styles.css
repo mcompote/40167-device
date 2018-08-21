@@ -27,6 +27,9 @@
 /* ---------- BEGIN OF containers (div,section,article) ---------- */
 /* --------------------------------------------------------------- */
 
+/* simply column */
+.column            { magic: true; }
+
 /* container's width = 1/1 full layout width  = 1200px */
 /* for header, footer and main content, i.e. for almost everything */
 .column-full       { width: 1200px; }
