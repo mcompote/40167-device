@@ -88,6 +88,8 @@
 .search-container {}
 .login-container {}
 .promo-article {}
+.promo-article-heading {}
+.promo-article-contents {}
 
 .popular {}
 .popular-item-image-box {}
@@ -178,6 +180,9 @@
 
 .services-list {}
 .services-item {}
+.services-item-active {}
+.service-description-heading {}
+.service-description-contents {}
 
 .popular-list {}
 .popular-item {}
@@ -222,7 +227,6 @@
 .search-icon {}
 .catalog-item-name {}
 .catalog-item-price {}
-
 
 
 /* for headings or something like headings in .psd layout */
