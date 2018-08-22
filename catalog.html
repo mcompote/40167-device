@@ -117,13 +117,12 @@
     </div>
 
     <main>
-        <h1 class="visually-hidden">Интернет-магазин модных hi-tech гаджетов и аксессуаров "Device". Каталог товаров</h1>
-        <h2>Моноподы для селфи</h2>
+        <h1>Моноподы для селфи</h1>
 
-        <div class="wrapper-full">
+        <div class="column-full">
             <!-- breadcrumbs -->
             <section class="breadcrumbs">
-                <h3 class="visually-hidden">Навигационная цепочка</h3>
+                <h2 class="visually-hidden">Навигационная цепочка</h2>
                 <ul class="breadcrumbs-list">
                     <li class="breadcrumbs-item">
                         <a href="index.html">Главная</a>
@@ -142,130 +141,136 @@
             <section class="filter-box">
                 <h2 class="hidden">Фильтры для отбора товаров</h2>
                 <div class="filter-box-heading-block">Фильтр:</div>
+
                 <!-- TODO: здесь будет форма с чекбоксами и прочим -->
     
                 <button type="submit" onsubmit="" class="button button-animated">Показать</button>
             </section>
         </div>
 
-        <div class="wrapper-sorting-box-and-content">
-            <section class="sorting-box">
-                <h2 class="hidden">Критерии сортировки товаров</h2>
+        <section class="wrapper-sorting-box-and-content">
+            <h2 class="visually-hidden">Список товаров</h2>
+        
+            <div class="sorting-box">
+                <h3 class="hidden">Критерии сортировки товаров</h3>
                 <div class="sorting-box-heading-block">Сортировка:</div>
-    
+            
                 <ul class="sorting-methods-list">
-                    <li class="sorting-methods-item">По цене</li>
-                    <li class="sorting-methods-item">По типу</li>
-                    <li class="sorting-methods-item">По популярности</li>
+                    <li class="sorting-methods-item">
+                        <button class="link-sorting-criteria link-sorting-criteria-active js-sorting-criteria-by-price">По цене</button>
+                    </li>
+                    <li class="sorting-methods-item">
+                        <button class="link-sorting-criteria js-sorting-criteria-by-type">По типу</button>
+                    </li>
+                    <li class="sorting-methods-item">
+                        <button class="link-sorting-criteria js-sorting-criteria-by-popularity">По популярности</button>
+                    </li>
                 </ul>
-                
                 <ul class="ordering-methods-list">
                     <li class="ordering-methods-item">
-                        <button class="triangle triangle-reversed">
+                        <button class="triangle js-sorting-criteria-ascending">
                             По возрастанию
                         </button>
                     </li>
                     <li class="ordering-methods-item">
-                        <button class="triangle triangle-reversed">
+                        <button class="triangle triangle-reversed triangle-active js-sorting-criteria-descending">
                             По убыванию
                         </button>
                     </li>
                 </ul>
-            </section>
+            </div>
 
-            <div class="wrapper-catalog-items-box">
-                <section class="catalog-items-box">
-                    <h2 class="visually-hidden">Список товаров</h2>
-                    <ul class="catalog-list">
-                        <li class="catalog-item">
-                            <img src="TODO:add_photo_to_project_folder.jpg" alt="Любительская селфи-палка">
-                            <p class="catalog-item-name">Любительская селфи-палка</p>
-                            <p class="catalog-item-price">500</p>
-
-                            <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
-                            <div class="catalog-item-onhover-block">
-                                <button class="button button-animated" href="#">
-                                    В корзину
-                                </button>
-                                <button class="link-add-to-compare-list" href="#">
-                                    Добавить к сравнению
-                                </button>
-                            </div>
+            <div class="catalog-items-box">
+                <h3 class="visually-hidden">Отсортированный список товаров</h3>
+        
+                <ul class="catalog-list">
+                    <li class="catalog-item">
+                        <img src="TODO:add_photo_to_project_folder.jpg" alt="Любительская селфи-палка">
+                        <p class="catalog-item-name">Любительская селфи-палка</p>
+                        <p class="catalog-item-price">500 руб.</p>
+        
+                        <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
+                        <div class="catalog-item-onhover-block">
+                            <button class="button button-animated" href="#">
+                                В корзину
+                            </button>
+                            <button class="link-add-to-compare-list" href="#">
+                                Добавить к сравнению
+                            </button>
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <img src="TODO:add_photo_to_project_folder.jpg" alt="Профессиональная селфи-палка">
+                        <p class="catalog-item-name">Профессиональная селфи-палка</p>
+                        <p class="catalog-item-price">1500 руб.</p>
+        
+                        <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
+                        <div class="catalog-item-onhover-block">
+                            <button class="button button-animated" href="#">
+                                В корзину
+                            </button>
+                            <button class="link-add-to-compare-list" href="#">
+                                Добавить к сравнению
+                            </button>
+                        </div>
+        
+                    </li>
+                    <li class="catalog-item">
+                        <img src="TODO:add_photo_to_project_folder.jpg" alt="Непотопляемая селфи-палка">
+                        <p class="catalog-item-name">Непотопляемая селфи-палка</p>
+                        <p class="catalog-item-price">2500 руб.</p>
+        
+                        <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
+                        <div class="catalog-item-onhover-block">
+                            <button class="button button-animated" href="#">
+                                В корзину
+                            </button>
+                            <button class="link-add-to-compare-list" href="#">
+                                Добавить к сравнению
+                            </button>
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <!-- новый товар -->
+                        <span class="new-item">NEW</span>
+        
+                        <img src="TODO:add_photo_to_project_folder.jpg" alt="Селфи-палка «Следуй за мной»">
+                        <p class="catalog-item-name">Селфи-палка «Следуй за мной»</p>
+                        <p class="catalog-item-price">4900 руб.</p>
+        
+                        <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
+                        <div class="catalog-item-onhover-block">
+                            <button class="button button-animated" href="#">
+                                В корзину
+                            </button>
+                            <button class="link-add-to-compare-list" href="#">
+                                Добавить к сравнению
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+        
+                <!-- блок, отвечающий за "пагинацию" -->
+                <div class="pagination">
+                    <button class="button-back">Назад</button>
+        
+                    <ul class="pagination-list">
+                        <li class="pagination-item pagination-item-current">
+                            <a href="#">1</a>
                         </li>
-                        <li class="catalog-item">
-                            <img src="TODO:add_photo_to_project_folder.jpg" alt="Профессиональная селфи-палка">
-                            <p class="catalog-item-name">Профессиональная селфи-палка</p>
-                            <p class="catalog-item-price">1500</p>
-                            
-                            <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
-                            <div class="catalog-item-onhover-block">
-                                    <button class="button button-animated" href="#">
-                                        В корзину
-                                    </button>
-                                    <button class="link-add-to-compare-list" href="#">
-                                        Добавить к сравнению
-                                    </button>
-                            </div>
-
+                        <li class="pagination-item">
+                            <a href="#">2</a>
                         </li>
-                        <li class="catalog-item">
-                            <img src="TODO:add_photo_to_project_folder.jpg" alt="Непотопляемая селфи-палка">
-                            <p class="catalog-item-name">Непотопляемая селфи-палка</p>
-                            <p class="catalog-item-price">2500</p>
-
-                            <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
-                            <div class="catalog-item-onhover-block">
-                                <button class="button button-animated" href="#">
-                                    В корзину
-                                </button>
-                                <button class="link-add-to-compare-list" href="#">
-                                    Добавить к сравнению
-                                </button>
-                            </div>
-                        </li>
-                        <li class="catalog-item">
-                            <!-- новый товар -->
-                            <span class="new-item">NEW</span>
-
-                            <img src="TODO:add_photo_to_project_folder.jpg" alt="Селфи-палка «Следуй за мной»">
-                            <p class="catalog-item-name">Селфи-палка «Следуй за мной»</p>
-                            <p class="catalog-item-price">4900</p>
-                    
-                            <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
-                            <div class="catalog-item-onhover-block">
-                                <button class="button button-animated" href="#">
-                                    В корзину
-                                </button>
-                                <button class="link-add-to-compare-list" href="#">
-                                    Добавить к сравнению
-                                </button>
-                            </div>
+                        <li class="pagination-item">
+                            <a href="#">3</a>
                         </li>
                     </ul>
         
-        
-                    <!-- блок, отвечающий за "пагинацию" -->
-                    <div class="pagination">
-                        <button class="button-back">Назад</button>
+                    <button class="button-forth">Вперед</button>
+                </div>
 
-                        <ul class="pagination-list">
-                            <li class="pagination-item pagination-item-current">
-                                <a href="#">1</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a href="#">2</a>
-                            </li>
-                            <li class="pagination-item">
-                                <a href="#">3</a>
-                            </li>
-                        </ul>
-
-                        <button class="button-forth">Вперед</button>
-                    </div>
-        
-                </section>
             </div>
-        </div>
+        </section>
         
 
     </main>

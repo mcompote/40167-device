@@ -62,10 +62,10 @@
 .column-three-tenths  { width: 360px; }
 
 /* something like float: right */
-.column-right      { ~float: right; }
+.column-right      { magic: true; }
 
 /* something like float: left */
-.column-left       { ~float: left; }
+.column-left       { magic: true; }
 
 
 
@@ -75,9 +75,6 @@
 
 /* container for both sorting box and content box */
 .wrapper-sorting-box-and-content { width: 972px; }
-
-/* containter for content box */
-.wrapper-catalog-items-box { width: 852px; }
 
 
 
@@ -106,10 +103,10 @@
 .footer-copyright {}
 .breadcrumbs {}
 .filter-box { width: 348px; }
-.filter-box-heading-block {}
-.sorting-box {}
-.sorting-box-heading-block {}
-.catalog-items-box {}
+.filter-box-heading-block       {}
+.sorting-box                    {}
+.sorting-box-heading-block      {}
+.catalog-items-box              { width: 852px; }
 
 .catalog-item-onhover-block        { display: none; }
 .catalog-item-onhover-block::hover { display: block; }
@@ -145,6 +142,13 @@
 .button-htmlacademy {}
 
 .link-add-to-compare-list {}
+.link-sorting-criteria                {}
+
+.js-sorting-criteria-by-price         {}
+.js-sorting-criteria-by-type          {}
+.js-sorting-criteria-by-popularity    {}
+.js-sorting-criteria-ascending        {}
+.js-sorting-criteria-descending       {}
 
 
 /* sliders */
@@ -194,6 +198,7 @@
 
 .ordering-methods-list {}
 .ordering-methods-item {}
+
 .sorting-methods-list {}
 .sorting-methods-item {}
 
@@ -245,6 +250,7 @@
 /* make an element looks as triangle */
 .triangle {}
 .triangle-reversed { transform: rotate(180deg); }
+.triangle-active {}
 
 
 
