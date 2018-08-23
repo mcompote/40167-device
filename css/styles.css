@@ -120,7 +120,15 @@
 
 /* buttons, liks */
 .button-search      {}
-.link-user-cart     {}
+.link-user-cart     { magic: true; }
+.link-user-cart::before {
+    display: inline-block;
+    content: '';
+    width: 1em;
+    height: 1em;
+    background: url('../img/svg/cart.svg');
+}
+
 .link-compare       {}
 .link-log-me-in     {}
 .link-user-name     {}
@@ -229,7 +237,13 @@
 .footer-contacts {}
 .close-popup {}
 .new-item {}
-.search-icon {}
+
+.search-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url('../img/svg/search.svg');    
+}
 .catalog-item-name {}
 .catalog-item-price {}
 
