@@ -547,11 +547,36 @@
 
   <section class="popup popup-write-us">
     <div class="column-four-fifths">
-
       <h2 class="visually-hidden">Пишите нам</h2>
-      <!-- TODO: здесь будет форма -->
-      <span class="close-popup">x</span>
+      
+      <form class="form-feedback" action="/api/feedback" method="POST">
+      
+        <div class="form-feedback-component">
+          <label class="form-feedback-label">
+            Ваше имя:
+            <input class="form-feedback-input-text" type="text" name="name" placeholder="Имя Фамилия" required>
+          </label>
+      
+          <div class="form-feedback-component">
+            <label class="form-feedback-label">
+              Ваш email:
+              <input class="form-feedback-input-text" type="email" name="email" placeholder="email@example.com" required>
+            </label>
+          </div>
+      
+          <div class="form-feedback-component">
+            <label class="form-feedback-label">
+              Текст письма:
+              <textarea class="form-feedback-textarea" name="feedback" cols="30" rows="10" required>В свободной форме</textarea>
+            </label>
+          </div>
+      
+          <button type="submit" class="button button-animated">Отправить</button>
+        </div>
+      </form>
 
+      <!-- закрывающий форму крестик -->
+      <span class="close-popup">x</span>
     </div>
   </section>
 </body>

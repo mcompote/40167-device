@@ -147,11 +147,15 @@
                     <div class="form-filter-component">
                         <div class="form-filter-input-range-ugly block">
                             <noscript>
-                                <label for="form_filter_min_cost">Минимальная Стоимость</label>
-                                <input type="range" name="min_cost" id="form_filter_min_cost" value="0">
-        
-                                <label class="form-filter-label" for="form_filter_max_cost">Максимальная Стоимость</label>
-                                <input class="form-filter-input-range" type="range" name="max_cost" id="form_filter_max_cost" min="0" value="5000">
+                                <label class="form-filter-label">
+                                    Минимальная Стоимость
+                                    <input type="range" name="min_cost" value="0">
+                                </label>
+                                
+                                <label class="form-filter-label">
+                                    Максимальная Стоимость
+                                    <input class="form-filter-input-range" type="range" name="max_cost" min="0" value="5000">
+                                </label>
                             </noscript>
                         </div>
                         
@@ -167,27 +171,27 @@
                     <div class="form-filter-component">
                         <h3>Цвет</h3>
                         <label class="form-filter-label">
-                            <input class="form-filter-checkbox" type="checkbox" name="color" id="form_filter_color_1" value="Черный">
+                            <input class="form-filter-checkbox" type="checkbox" name="color" value="Черный">
                             Черный
                         </label>
                         
                         <label class="form-filter-label">
-                            <input class="form-filter-checkbox" type="checkbox" name="color" id="form_filter_color_2" value="Белый">
+                            <input class="form-filter-checkbox" type="checkbox" name="color" value="Белый">
                             Белый
                         </label>
                         
                         <label class="form-filter-label">
-                            <input class="form-filter-checkbox" type="checkbox" name="color" id="form_filter_color_3" value="Синий">
+                            <input class="form-filter-checkbox" type="checkbox" name="color" value="Синий">
                             Синий
                         </label>
 
                         <label class="form-filter-label">
-                            <input class="form-filter-checkbox" type="checkbox" name="color" id="form_filter_color_4" value="Красный">
+                            <input class="form-filter-checkbox" type="checkbox" name="color" value="Красный">
                             Красный
                         </label>
 
                         <label class="form-filter-label">
-                            <input class="form-filter-checkbox" type="checkbox" name="color" id="form_filter_color_5" value="Розовый">
+                            <input class="form-filter-checkbox" type="checkbox" name="color" value="Розовый">
                             Розовый
                         </label>
                     </div>
@@ -195,11 +199,11 @@
                     <div class="form-filter-component">
                             <h3><span class="visually-hidden">Наличие </span>Bluetooth</h3>
                             <label class="form-filter-label">
-                                <input class="form-filter-radio" type="radio" name="features_bluetooth"  value="true">
+                                <input class="form-filter-radio" type="radio" name="features_bluetooth" value="true">
                                 Есть
                             </label>
                             <label class="form-filter-label">
-                                <input class="form-filter-radio" type="radio" name="features_bluetooth"  value="false">
+                                <input class="form-filter-radio" type="radio" name="features_bluetooth" value="false">
                                 Нет
                             </label>
 
@@ -435,14 +439,39 @@
 
         </div>
     </section>
-
+    
     <section class="popup popup-write-us">
         <div class="column-four-fifths">
-
             <h2 class="visually-hidden">Пишите нам</h2>
-            <!-- TODO: здесь будет форма -->
-            <span class="close-popup">x</span>
 
+            <form class="form-feedback" action="/api/feedback" method="POST">
+
+                <div class="form-feedback-component">
+                    <label class="form-feedback-label">
+                        Ваше имя:
+                        <input class="form-feedback-input-text" type="text" name="name" placeholder="Имя Фамилия" required>
+                    </label>
+
+                    <div class="form-feedback-component">
+                        <label class="form-feedback-label">
+                            Ваш email:
+                            <input class="form-feedback-input-text" type="email" name="email" placeholder="email@example.com" required>
+                        </label>
+                    </div>
+
+                    <div class="form-feedback-component">
+                        <label class="form-feedback-label">
+                            Текст письма:
+                            <textarea class="form-feedback-textarea" name="feedback" cols="30" rows="10" required>В свободной форме</textarea>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="button button-animated">Отправить</button>
+                </div>
+            </form>
+
+            <!-- закрывающий форму крестик -->
+            <span class="close-popup">x</span>
         </div>
     </section>
 </body>
