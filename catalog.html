@@ -142,9 +142,72 @@
                 <h2 class="hidden">Фильтры для отбора товаров</h2>
                 <div class="filter-box-heading-block">Фильтр:</div>
 
-                <!-- TODO: здесь будет форма с чекбоксами и прочим -->
+                <form class="form-filter" action="/api/catalog" method="get" id="form_filter">
+
+                    <div class="form-filter-component">
+                        <div class="form-filter-input-range-ugly block">
+                            <noscript>
+                                <label for="form_filter_min_cost">Минимальная Стоимость</label>
+                                <input type="range" name="min_cost" id="form_filter_min_cost" value="0">
+        
+                                <label class="form-filter-label" for="form_filter_max_cost">Максимальная Стоимость</label>
+                                <input class="form-filter-input-range" type="range" name="max_cost" id="form_filter_max_cost" min="0" value="5000">
+                            </noscript>
+                        </div>
+                        
+                        <!-- заглушка для модного input-range, который скорее всего ч/з js работает -->
+                        <div class="form-filter-input-range-pretty none">
+                            <h3 class="form-filter-heading">Стоимость:</h3>
+                            <div class="js-input-range-element">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-filter-component">
+                        <h3>Цвет</h3>
+                        <label class="form-filter-label">
+                            <input class="form-filter-checkbox" type="checkbox" name="color" id="form_filter_color_1" value="Черный">
+                            Черный
+                        </label>
+                        
+                        <label class="form-filter-label">
+                            <input class="form-filter-checkbox" type="checkbox" name="color" id="form_filter_color_2" value="Белый">
+                            Белый
+                        </label>
+                        
+                        <label class="form-filter-label">
+                            <input class="form-filter-checkbox" type="checkbox" name="color" id="form_filter_color_3" value="Синий">
+                            Синий
+                        </label>
+
+                        <label class="form-filter-label">
+                            <input class="form-filter-checkbox" type="checkbox" name="color" id="form_filter_color_4" value="Красный">
+                            Красный
+                        </label>
+
+                        <label class="form-filter-label">
+                            <input class="form-filter-checkbox" type="checkbox" name="color" id="form_filter_color_5" value="Розовый">
+                            Розовый
+                        </label>
+                    </div>
+
+                    <div class="form-filter-component">
+                            <h3><span class="visually-hidden">Наличие </span>Bluetooth</h3>
+                            <label class="form-filter-label">
+                                <input class="form-filter-radio" type="radio" name="features_bluetooth"  value="true">
+                                Есть
+                            </label>
+                            <label class="form-filter-label">
+                                <input class="form-filter-radio" type="radio" name="features_bluetooth"  value="false">
+                                Нет
+                            </label>
+
+                    </div>
+
+                    <button type="submit" class="button button-animated">Показать</button>
+                </form>
     
-                <button type="submit" onsubmit="" class="button button-animated">Показать</button>
             </section>
         </div>
 

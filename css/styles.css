@@ -1,9 +1,6 @@
 /* list of all classes and id's in all .html files */
 
 
-/* ------ popus ------ */
-#popup-opener-map {}
-#popup-opener-write-us {}
 
 
 
@@ -12,10 +9,12 @@
 /* --------------------------------------------------------------- */
 
 /* constantly hidden on the pages, for example, <h1> for screen readers and web spiders */
-.visually-hidden    { visibility: hidden; }
+.visually-hidden    { display: block; position: absolute; visibility: hidden;  }
 
 /* for popups and other temporarily hidden objects on the page */
-.hidden             { visibility: hidden; }
+.hidden             { visibility:   hidden;  }
+.none               { display:      none;    }
+.block              { display:      block;   }
 
 /* --------------------------------------------------------------- */
 /* ----------    END   OF visibility control classes    ---------- */
@@ -113,10 +112,18 @@
 
 
 
+
+
+
 /* --------------------------------------------------------------- */
 /* ---------- END   OF containers (div,section,article) ---------- */
 /* --------------------------------------------------------------- */
 
+
+
+/* --------------------------------------------------------------- */
+/* ----------          BEGIN OF BUTTONS & LINKS         ---------- */
+/* --------------------------------------------------------------- */
 
 /* buttons, liks */
 .button-search      {}
@@ -158,15 +165,20 @@
 .js-sorting-criteria-ascending        {}
 .js-sorting-criteria-descending       {}
 
-
-/* sliders */
-.slider {}
-.promo-slider {}
-
+/* --------------------------------------------------------------- */
+/* ----------          END   OF BUTTONS & LINKS         ---------- */
+/* --------------------------------------------------------------- */
 
 
 
 
+
+
+
+
+/* --------------------------------------------------------------- */
+/* ----------      BEGIN OF LISTS (UL,LI ENLEMENTS)     ---------- */
+/* --------------------------------------------------------------- */
 
 /* ul, li styles */
 .header-nav-list {}
@@ -212,7 +224,25 @@
 
 .catalog-list {}
 .catalog-item {}
+/* --------------------------------------------------------------- */
+/* ----------      END   OF LISTS (UL,LI ENLEMENTS)     ---------- */
+/* --------------------------------------------------------------- */
 
+
+
+
+
+
+
+
+/* ------ popus ------ */
+#popup-opener-map {}
+#popup-opener-write-us {}
+
+
+/* sliders */
+.slider {}
+.promo-slider {}
 
 
 
@@ -232,7 +262,19 @@
 
 
 
-/* <p>, <b>, <span> and other decorating stuff */
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------- */
+/* ----------    BEGIN OF containers decorating stuff   ---------- */
+/* --------------------------------------------------------------- */
+
+/* <p>, <b>, <span> and other  */
 .footer-address {}
 .footer-contacts {}
 .close-popup {}
@@ -266,9 +308,21 @@
 .triangle-reversed { transform: rotate(180deg); }
 .triangle-active {}
 
+/* --------------------------------------------------------------- */
+/* ----------    END   OF containers decorating stuff   ---------- */
+/* --------------------------------------------------------------- */
 
 
 
 
 
-
+/* --- FORMS --- */
+.form-filter {}
+.form-filter-label {}
+.form-filter-input-range {}
+.form-filter-input-range-ugly {}
+.form-filter-input-range-pretty {}
+.js-input-range-element {}
+.form-filter-checkbox {}
+.form-filter-radio {}
+.form-filter-heading {}
