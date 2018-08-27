@@ -131,7 +131,9 @@ input#search:focus {
     background-image: url('../img/svg/popular-6.svg');
 }
 
-
+.services-item-active {
+    background: black;
+}
 /* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ */
 /* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ */
 
@@ -357,6 +359,11 @@ input#search:focus ~ .button-search {
 /* --------------------------------------------------------------- */
 /* ----------      BEGIN OF LISTS (UL,LI ENLEMENTS)     ---------- */
 /* --------------------------------------------------------------- */
+
+[class$='-list'] {
+    list-style: none;
+}
+
 
 /* ul, li styles */
 .header-nav-list {}
