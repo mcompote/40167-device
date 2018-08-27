@@ -15,111 +15,113 @@
 
 <body>
     <div class="column-full">
-        <header class="header">
-
-            <!-- класс-обертка для ширины в 1/2 от макетной, блок слева -->
-            <div class="column-one-half column-left">
-
-                <!-- логотип -->
-                <div class="logo-container">
-                    <a href="index.html">
-                        <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE">
-                    </a>
+            <header class="header">
+            
+                <!-- класс-обертка для ширины в 1/2 от макетной, блок слева -->
+                <div class="column-one-half column-left">
+                    
+                    <!-- логотип -->
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE">
+                        </a>
+                    </div>
+            
+                    <div class="search-container">
+                        <form class="form-search" id="form_search" action="/api/search" method="get">
+                            <label class="form-search-label">
+                                <!-- TODO: может, вместо спана через псевдоэлемент сделать? -->
+                                <span class="search-icon"></span>
+                                <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
+                            </label>
+            
+                            <button class="button button-search" type="submit">Найти</button>
+                        </form>
+                    </div>
+            
                 </div>
-
-                <div class="search-container">
-                    <label>
-                        <span class="search-icon"></span>
-                        <input type="text" name="search_keywords" id="search">
-                    </label>
-                    <!-- Согласно styleguide.psd, кнопка "НАЙТИ" появляется при наборе символов в строке поиска -->
-                    <!-- Кнопка при нажатии будет перебрасывать пользователя на другую страницу => тэг <a> -->
-                    <a class="button search-button" href="#">Найти</a>
+            
+                <!-- класс-обертка для ширины в 1/2 от макетной, блок справа -->
+                <div class="column-one-half column-right">
+            
+                    <!-- элементы "Пользователь" и "Выйти" -->
+                    <div class="login-container">
+                        <a class="link-user-name" href="#">
+                            Неопознанный Енот
+                        </a>
+                    
+                        <a class="link-logout" href="auth/logout">
+                            Выйти
+                        </a>
+                    </div>
+            
+                    <!-- элементы "сравнить" и "корзина" -->
+                    <ul class="user-cart">
+                        <li class="user-cart-item">
+                            <a class="link-user-cart" href="#">Корзина</a>
+                        </li>
+                        <li class="user-cart-item">
+                            <a class="link-compare" href="#">Сравнить</a>
+                        </li>
+                    </ul>
+            
                 </div>
-
-            </div>
-
-            <!-- класс-обертка для ширины в 1/2 от макетной, блок справа -->
-            <div class="column-one-half column-right">
-
-                <!-- элементы "Пользователь" и "Выйти" -->
-                <div class="login-container">
-                    <a class="link-user-name" href="#">
-                        Неопознанный Енот
-                    </a>
-
-                    <a class="link-logout" href="auth/logout">
-                        Выйти
-                    </a>
-                </div>
-
-                <!-- элементы "сравнить" и "корзина" -->
-                <ul class="user-cart">
-                    <li class="user-cart-item">
-                        <a class="link-user-cart" href="#">Корзина</a>
-                    </li>
-                    <li class="user-cart-item">
-                        <a class="link-compare" href="#">Сравнить</a>
-                    </li>
-                </ul>
-
-            </div>
-
-            <nav class="header-nav">
-                <ul class="header-nav-list">
-                    <li class="header-nav-item column">
-                        <section class="header-catalogue">
-                            <a class="link-catalog" href="catalog.html">
-                                <h2>Каталог товаров</h2>
+            
+                <nav class="header-nav">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item column">
+                            <section class="header-catalogue">
+                                <a class="link-catalog" href="catalog.html">
+                                    <h2>Каталог товаров</h2>
+                                </a>
+                                <!-- Декоративный плюсик справа от "Каталог товаров" -->
+                                <button class="buttton-catalogue-expand">Показать разделы каталога</button>
+            
+                                <ul class="header-catalogue-list">
+                                    <li class="header-catalogue-item">
+                                        <a class="header-catalogue-item-link" href="#">Виртуальная реальность</a>
+                                    </li>
+                                    <li class="header-catalogue-item">
+                                        <a class="header-catalogue-item-link" href="#">Моноподы для селфи</a>
+                                    </li>
+                                    <li class="header-catalogue-item">
+                                        <a class="header-catalogue-item-link" href="#">Экшн-камеры</a>
+                                    </li>
+                                    <li class="header-catalogue-item">
+                                        <a class="header-catalogue-item-link" href="#">Фитнес-браслеты</a>
+                                    </li>
+                                    <li class="header-catalogue-item">
+                                        <a class="header-catalogue-item-link" href="#">Умные часы</a>
+                                    </li>
+                                    <li class="header-catalogue-item">
+                                        <a class="header-catalogue-item-link" href="#">Квадрокоптеры</a>
+                                    </li>
+                                </ul>
+            
+                            </section>
+                        </li>
+            
+                        <li class="header-nav-item">
+                            <a href="#">
+                                <b>Доставка</b>
                             </a>
-                            <!-- Декоративный плюсик справа от "Каталог товаров" -->
-                            <button class="buttton-catalogue-expand">Показать разделы каталога</button>
+                        </li>
             
-                            <ul class="header-catalogue-list">
-                                <li class="header-catalogue-item">
-                                    <a href="#">Виртуальная реальность</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                    <a href="#">Моноподы для селфи</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                    <a href="#">Экшн-камеры</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                    <a href="#">Фитнес-браслеты</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                    <a href="#">Умные часы</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                    <a href="#">Квадрокоптеры</a>
-                                </li>
-                            </ul>
+                        <li class="header-nav-item">
+                            <a href="#">
+                                <b>Гарантия</b>
+                            </a>
+                        </li>
             
-                        </section>
-                    </li>
+                        <li class="header-nav-item header-nav-item_last">
+                            <a href="#">
+                                <b>Контакты</b>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             
-                    <li class="header-nav-item">
-                        <a href="#">
-                            <b>Доставка</b>
-                        </a>
-                    </li>
-            
-                    <li class="header-nav-item">
-                        <a href="#">
-                            <b>Гарантия</b>
-                        </a>
-                    </li>
-            
-                    <li class="header-nav-item header-nav-item_last">
-                        <a href="#">
-                            <b>Контакты</b>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-        </header>
+            </header>
     </div>
 
     <main>
@@ -353,7 +355,7 @@
 
     <footer class="footer">
         <div class="column-full">
-
+    
             <div class="column-three-tenths column-left">
                 <!-- логотип -->
                 <div class="logo-container">
@@ -361,17 +363,17 @@
                         <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE">
                     </a>
                 </div>
-
+    
                 <p class="footer-address">г. Москва, ул. Строителей, 15</p>
                 <p class="footer-contacts">
                     <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
                 </p>
-
+    
             </div>
-
+    
             <div class="column-four-tenths">
                 <nav class="footer-nav">
-            
+    
                     <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
                     <ul class="footer-nav-list">
                         <li class="footer-nav-item">
@@ -384,12 +386,12 @@
                             <a href="#">Контакты</a>
                         </li>
                     </ul>
-            
+    
                 </nav>
-            
-            
+    
+    
                 <div class="footer-social">
-                    <ul>
+                    <ul class="footer-social-list">
                         <li>
                             <a class="button-social button-social-vk" href="#">Вконтакте</a>
                         </li>
@@ -401,12 +403,12 @@
                         </li>
                     </ul>
                 </div>
-            
+    
             </div>
-
+    
+            
             <div class="column-three-tenths column-right">
-
-
+    
                 <!-- элементы "Пользователь" и "Выйти" -->
                 <div class="login-container">
                     <a class="link-user-name" href="#">
@@ -417,7 +419,7 @@
                         Выйти
                     </a>
                 </div>
-
+    
                 <!-- элементы "сравнить" и "корзина" -->
                 <ul class="user-cart">
                     <li class="user-cart-item">
@@ -427,58 +429,58 @@
                         <a class="link-compare" href="#">Сравнить</a>
                     </li>
                 </ul>
-
+    
                 <p class="footer-copyright">
                     <b class="visually-hidden">Разработчик сайта:</b>
                     <a class="button-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
                 </p>
             </div>
-
+    
         </div>
     </footer>
 
     <section class="popup popup-map">
         <div class="column-four-fifths">
-
+    
             <h2 class="visually-hidden">Мы на карте</h2>
             <!-- TODO: здесь будет карта -->
             <noscript>
                 <img src="img/content/map-contacts-full.jpg" alt="фото местонахождения интернет-магазина DEVICE">
             </noscript>
-
+    
         </div>
     </section>
-
+    
     <section class="popup popup-write-us">
         <div class="column-four-fifths">
             <h2 class="visually-hidden">Пишите нам</h2>
-
+    
             <form class="form-feedback" id="form_feedback" action="/api/feedback" method="POST">
-
+    
                 <div class="form-feedback-component">
                     <label class="form-feedback-label">
                         Ваше имя:
                         <input class="form-feedback-input-text" type="text" name="name" placeholder="Имя Фамилия" required>
                     </label>
-
+    
                     <div class="form-feedback-component">
                         <label class="form-feedback-label">
                             Ваш email:
                             <input class="form-feedback-input-text" type="email" name="email" placeholder="email@example.com" required>
                         </label>
                     </div>
-
+    
                     <div class="form-feedback-component">
                         <label class="form-feedback-label">
                             Текст письма:
                             <textarea class="form-feedback-textarea" name="feedback" cols="30" rows="10" required>В свободной форме</textarea>
                         </label>
                     </div>
-
+    
                     <button type="submit" class="button button-animated">Отправить</button>
                 </div>
             </form>
-
+    
             <!-- закрывающий форму крестик -->
             <span class="close-popup">x</span>
         </div>
