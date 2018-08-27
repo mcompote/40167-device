@@ -26,14 +26,15 @@
         </div>
   
         <div class="search-container">
-          <label>
-            <span class="search-icon"></span>
-            <input type="text" name="search_keywords" id="search" placeholder="Поиск по сайту">
-          </label>
-          <!-- Согласно styleguide.psd, кнопка "НАЙТИ" появляется при наборе символов в строке поиска -->
-          <!-- Кнопка при нажатии будет перебрасывать пользователя на другую страницу => тэг <a> -->
-          <!-- FIXME: selector #search ~ .button-search doesn't work -->
-          <a class="button button-search" href="#">Найти</a>
+          <form class="form-search" id="form_search" action="/api/search" method="get">
+            <label class="form-search-label">
+              <!-- TODO: может, вместо спана через псевдоэлемент сделать? -->
+              <span class="search-icon"></span>
+              <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
+            </label>
+          
+            <button class="button button-search" type="submit">Найти</button>
+          </form>
         </div>
   
       </div>
@@ -558,7 +559,7 @@
     <div class="column-four-fifths">
       <h2 class="visually-hidden">Пишите нам</h2>
       
-      <form class="form-feedback" action="/api/feedback" method="POST">
+      <form class="form-feedback" id="form_feedback" action="/api/feedback" method="POST">
       
         <div class="form-feedback-component">
           <label class="form-feedback-label">

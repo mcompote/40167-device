@@ -56,7 +56,7 @@ a:visited {
 /* ----------------------------------ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
 /* ----------------------------------ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
 
-input#search {
+.form-search .form-search-input {
     /* INHERITED FROM BODY
     font-size: 15px; line-height: 30px; 
     */
@@ -65,11 +65,11 @@ input#search {
     color: rgba(0, 0, 0, 0.3); 
 }
 
-input#search:hover {
+.form-search .form-search-input:hover {
     color: rgba(0, 0, 0, 0.6); 
 }
 
-input#search:focus {
+.form-search .form-search-input:focus {
     color: rgba(0, 0, 0, 1); 
 }
 
@@ -399,8 +399,8 @@ input#search:focus ~ .button-search {
     font-weight: 800;
     font-size: 18px;
     line-height: auto;
-    background: orange;
     /* FIXME: здесь должен быть "красивый" background */
+    background: orange;
     
 }
 .button-blackened   {}
@@ -599,3 +599,8 @@ input#search:focus ~ .button-search {
 
 .form-feedback-component {}
 .form-feedback-textarea {}
+
+.form-search {}
+.form-search-label {}
+.form-search-input {}
+
