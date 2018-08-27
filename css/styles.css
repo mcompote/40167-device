@@ -46,6 +46,10 @@ a:visited {
 
 
 
+
+
+
+
 /* ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
 /* ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
 
@@ -69,7 +73,7 @@ input#search:focus {
 .header [class*='button']:active,  .header [class*='link']:active { opacity: 0.3;  }
 
 .header-nav-item > a, .link-catalog {
-    font-family: 'Gillroy', sans-serif;
+    font-family: 'Gilroy', sans-serif;
     font-size: 18px;
     line-height: 24px;
 }
@@ -80,9 +84,60 @@ input#search:focus {
 }
 
 
+.promo-item-characteristic-name {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.promo-item-characteristic-value {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+
+.popular-list {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.popular-item-image-box {
+    width: 160px;
+    height: 160px;
+    background-color: #f7e296;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.popular-list .popular-item:nth-of-type(1) .popular-item-image-box {
+    background-image: url('../img/svg/popular-1.svg');
+}
+.popular-list .popular-item:nth-of-type(2) .popular-item-image-box {
+    background-image: url('../img/svg/popular-2.svg');
+}
+.popular-list .popular-item:nth-of-type(3) .popular-item-image-box {
+    background-image: url('../img/svg/popular-3.svg');
+}
+.popular-list .popular-item:nth-of-type(4) .popular-item-image-box {
+    background-image: url('../img/svg/popular-4.svg');
+}
+.popular-list .popular-item:nth-of-type(5) .popular-item-image-box {
+    background-image: url('../img/svg/popular-5.svg');
+}
+.popular-list .popular-item:nth-of-type(6) .popular-item-image-box {
+    background-image: url('../img/svg/popular-6.svg');
+}
+
 
 /* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ */
 /* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ */
+
+
+
+
 
 
 
