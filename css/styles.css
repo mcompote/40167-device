@@ -1,3 +1,5 @@
+
+
 /* Set box-sizing: border-box for entire project */
 /* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 html {
@@ -14,6 +16,10 @@ body {
     font-weight: 300;
     font-size: 15px;
     line-height: 30px;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -174,17 +180,19 @@ input#search:focus {
     color: black;
     visibility: hidden;
 }
-
 input#search:focus ~ .button-search {
     visibility: visible;
 }
-
 .button-search:hover {
-
+    color: white;
+    background: black;
 }
 .button-search:active {
-
+    color: rgba(255, 255, 255, 0.3);
+    visibility: visible;
 }
+
+
 
 .link-user-cart     { magic: true; }
 .link-user-cart::before {
