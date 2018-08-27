@@ -8,10 +8,31 @@ html {
 }
 
 
+body {
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;   /* text - Open Sans, headings - Gilroy */
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+}
 
 
 
-/* okay, let's begin */
+input#search {
+    /* INHERITED FROM BODY
+    font-size: 15px; line-height: 30px; 
+    */
+    color: rgba(0, 0, 0, 0.3); 
+}
+
+input#search:hover {
+    color: rgba(0, 0, 0, 0.6); 
+}
+
+input#search:focus {
+    color: rgba(0, 0, 0, 1); 
+}
+
 
 
 
@@ -145,8 +166,26 @@ html {
 /* ----------          BEGIN OF BUTTONS & LINKS         ---------- */
 /* --------------------------------------------------------------- */
 
-/* buttons, liks */
-.button-search      {}
+.button-search {
+    width: 85px;
+    height: 49px;
+    border: 2px solid black;
+    background: transparent;
+    color: black;
+    visibility: hidden;
+}
+
+input#search:focus ~ .button-search {
+    visibility: visible;
+}
+
+.button-search:hover {
+
+}
+.button-search:active {
+
+}
+
 .link-user-cart     { magic: true; }
 .link-user-cart::before {
     display: inline-block;

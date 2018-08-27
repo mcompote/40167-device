@@ -8,7 +8,7 @@
          url('../fonts/gilroylight.woff') format('woff');
   }
   
-  @font-face {
+@font-face {
       font-family: 'Gilroy';
       font-style: normal;
       font-weight: 300;
@@ -17,4 +17,4 @@
            local('Gilroy-Extra-Bold'), 
            url('../fonts/gilroyextrabold.woff2') format('woff2'),
            url('../fonts/gilroyextrabold.woff') format('woff');
-    }
+}
