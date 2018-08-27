@@ -406,6 +406,7 @@ input#search:focus ~ .button-search {
 .button-blackened   {}
 .button-back        {}
 .button-forth       {}
+.button-page    {}
 .button-slide-changer {}
 
 .button-social      { width: 32px; height: 32px; border-radius: 50%; }
