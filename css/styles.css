@@ -1,4 +1,6 @@
-
+/* --------------------------------------------------------------- */
+/* ----------  BEGIN OF GLOBAL styles (html, body, etc.) --------- */
+/* --------------------------------------------------------------- */
 
 /* Set box-sizing: border-box for entire project */
 /* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
@@ -12,6 +14,7 @@ html {
 
 body {
     background-color: white;
+    color: black;
     font-family: 'Open Sans', sans-serif;   /* text - Open Sans, headings - Gilroy */
     font-weight: 300;
     font-size: 15px;
@@ -22,7 +25,16 @@ a {
     text-decoration: none;
 }
 
+/* --------------------------------------------------------------- */
+/* ----------  END   OF GLOBAL styles (html, body, etc.) --------- */
+/* --------------------------------------------------------------- */
 
+
+
+
+
+/* ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ */
+/* ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ */
 
 input#search {
     /* INHERITED FROM BODY
@@ -39,8 +51,14 @@ input#search:focus {
     color: rgba(0, 0, 0, 1); 
 }
 
+/* Если у ссылок картинки грузятся через псевдо-элементы, то opacity подойдет, наверное, лучше, чем color: rgba(,,,0.3) */
+.header [class^='button']:hover,   .header [class^='link']:hover  { opacity: 0.6;  }
+.header [class^='button']:active,  .header [class^='link']:active { opacity: 0.3;  }
 
 
+
+/* ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ */
+/* ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ */
 
 
 
@@ -129,7 +147,9 @@ input#search:focus {
 .header-catalogue {}
 .logo-container {}
 .search-container {}
+
 .login-container {}
+
 .promo-article {}
 .promo-article-heading {}
 .promo-article-contents {}
@@ -203,10 +223,11 @@ input#search:focus ~ .button-search {
     background: url('../img/svg/cart.svg');
 }
 
-.link-compare       {}
-.link-log-me-in     {}
-.link-user-name     {}
-.link-logout        {}
+.link-compare           { display: block; }
+.link-log-me-in         { display: block; }
+.link-user-name         { display: block; }
+.link-logout            { display: block; }
+
 .link-catalog       {}
 .buttton-catalogue-expand {}
 
