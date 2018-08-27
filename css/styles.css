@@ -588,10 +588,16 @@ input#search:focus ~ .button-search {
 .form-filter-input-range {}
 .form-filter-input-range-ugly {}
 .form-filter-input-range-pretty {}
-.js-input-range-element {}
 .form-filter-checkbox {}
 .form-filter-radio {}
 .form-filter-heading {}
+
+.drag-slider {}
+.drag-slider-body {}
+.drag-slider-line {}
+.drag-slider-handle {}
+.drag-slider-handle-left {}
+.drag-slider-handle-right {}
 
 .form-feedback {}
 .form-feedback-label {}
