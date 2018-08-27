@@ -68,6 +68,7 @@ input#search:focus {
     color: rgba(0, 0, 0, 1); 
 }
 
+/* TODO: REVIEW */
 /* Если у ссылок картинки грузятся через псевдо-элементы, то opacity подойдет, наверное, лучше, чем color: rgba(,,,0.3) */
 .header [class*='button']:hover,   .header [class*='link']:hover  { opacity: 0.6;  }
 .header [class*='button']:active,  .header [class*='link']:active { opacity: 0.3;  }
@@ -134,6 +135,62 @@ input#search:focus {
 .services-item-active {
     background: black;
 }
+
+
+.service-description-heading {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 47px;
+    line-height: auto;    
+}
+
+/* TODO: картинки не видно, пока так оставлю */
+.services .service-description-box:nth-of-type(1) .service-image-box {
+    background-image: url('../img/svg/delivery.svg');
+}
+.services .service-description-box:nth-of-type(2) .service-image-box {
+    background-image: url('../img/svg/warranty.svg');
+}
+.services .service-description-box:nth-of-type(3) .service-image-box {
+    background-image: url('../img/svg/credit.svg');
+}
+
+/* TODO: dear IE11, hello! */
+/* обесцвечиваем изображения логотипов */
+.brands-gallery-item-logo-wrapper {
+    filter: grayscale(100%);
+}
+.brands-gallery-item-logo-wrapper:hover {
+    filter: grayscale(0%);
+}
+
+
+.carrier-item {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 40px;        
+}
+
+.footer {
+    background: #464646;
+    color: #f9f9f9;
+}
+
+/* до лучшего решения не додумался */
+.footer a {
+    color: #f9f9f9;
+}
+
+.footer-nav-list .footer-nav-item {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;   
+}
+
+
+
 /* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ */
 /* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ */
 
@@ -322,6 +379,7 @@ input#search:focus ~ .button-search {
     font-weight: 800;
     font-size: 18px;
     line-height: auto;
+    background: orange;
     /* FIXME: здесь должен быть "красивый" background */
     
 }
@@ -380,7 +438,7 @@ input#search:focus ~ .button-search {
 .slider-navigation-list {}
 .slider-navigation-item {}
 
-.promo-list { list-style: none; }
+.promo-list {  }
 .promo-item { display: block; }
 
 .brands-gallery-list {}
@@ -409,6 +467,9 @@ input#search:focus ~ .button-search {
 
 .catalog-list {}
 .catalog-item {}
+
+.footer-social-list {}
+
 /* --------------------------------------------------------------- */
 /* ----------      END   OF LISTS (UL,LI ENLEMENTS)     ---------- */
 /* --------------------------------------------------------------- */
