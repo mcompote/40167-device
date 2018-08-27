@@ -46,17 +46,22 @@ a:visited {
 
 
 
+.header {
+    background-color: #f7e296;
+}
 
 
 
 
-/* ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
-/* ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
+/* ----------------------------------ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
+/* ----------------------------------ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
 
 input#search {
     /* INHERITED FROM BODY
     font-size: 15px; line-height: 30px; 
     */
+    background: transparent;
+    border: none;
     color: rgba(0, 0, 0, 0.3); 
 }
 
@@ -190,9 +195,24 @@ input#search:focus {
 }
 
 
+.form-feedback-label {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;       
+}
 
-/* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ */
-/* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ */
+.form-feedback input, .form-feedback textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;        
+}
+
+
+
+/* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ---------------------------------- */
+/* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ---------------------------------- */
 
 
 
@@ -388,8 +408,8 @@ input#search:focus ~ .button-search {
 .button-forth       {}
 .button-slide-changer {}
 
-.button-social      {}
-.button-social-vk   {}
+.button-social      { width: 32px; height: 32px; border-radius: 50%; }
+.button-social-vk   { }
 .button-social-fb   {}
 .button-social-insta {}
 .button-htmlacademy {}
