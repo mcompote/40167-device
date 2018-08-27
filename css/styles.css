@@ -210,6 +210,14 @@ a:visited {
     line-height: 18px;        
 }
 
+/*  вторая стр. пошла */
+
+/* по аналогии с header'ом попробуем тот же трюк для breadcrumbs */
+.breadcrumbs [class*='button'],         .breadcrumbs [class*='link'],        .breadcrumbs .breadcrumbs-item-active          { opacity: 0.3; }
+.breadcrumbs [class*='button']:hover,   .breadcrumbs [class*='link']:hover , .breadcrumbs .breadcrumbs-item-activet:hover   { opacity: 0.6; }
+.breadcrumbs [class*='button']:active,  .breadcrumbs [class*='link']:active, .breadcrumbs .breadcrumbs-item-active:active   { opacity: 0.1; }
+
+
 
 /* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ---------------------------------- */
 /* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ---------------------------------- */
@@ -293,7 +301,10 @@ a:visited {
 
 /* container's width = 468px */
 /* for filter box in catalog.html */
-.wrapper-filter-box { width: 468px; }
+.wrapper-filter-box { 
+    width: 468px; 
+    background-color: #eee;
+}
 
 /* container for both sorting box and content box */
 .wrapper-sorting-box-and-content { width: 972px; }
@@ -327,7 +338,15 @@ a:visited {
 .footer-copyright {}
 .breadcrumbs {}
 .filter-box { width: 348px; }
-.filter-box-heading-block       {}
+.filter-box-heading-block       {
+    background-color: #dbdbdb;
+
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+
+}
 .sorting-box                    {}
 .sorting-box-heading-block      {}
 .catalog-items-box              { width: 852px; }
