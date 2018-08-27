@@ -80,6 +80,7 @@ input#search:focus {
 
 .header-nav-item > a, .link-catalog {
     font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
     font-size: 18px;
     line-height: 24px;
 }
@@ -208,7 +209,6 @@ input#search:focus {
     font-size: 14px;
     line-height: 18px;        
 }
-
 
 
 /* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ---------------------------------- */
