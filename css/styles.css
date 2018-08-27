@@ -311,7 +311,18 @@ input#search:focus ~ .button-search {
 .buttton-catalogue-expand {}
 
 .button             {}
-.button-animated    {}
+.button-animated    {
+    display: block;
+    width:  220px;
+    height: 40px;
+
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: auto;
+    /* FIXME: здесь должен быть "красивый" background */
+    
+}
 .button-blackened   {}
 .button-back        {}
 .button-forth       {}
