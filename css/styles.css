@@ -71,7 +71,7 @@ a:visited {
 }
 
 /* TODO: REVIEW */
-/* Если у ссылок картинки грузятся через псевдо-элементы, то opacity подойдет, наверное, лучше, чем color: rgba(,,,0.3) */
+/* Если у ссылок картинки грузятся через псевдо-элементы, то opacity подойдет, наверное, лучше, чем color: rgba(,,,0.3) ?? */
 .header [class*='button']:hover,   .header [class*='link']:hover  { opacity: 0.6;  }
 .header [class*='button']:active,  .header [class*='link']:active { opacity: 0.3;  }
 
@@ -193,6 +193,33 @@ a:visited {
 }
 
 
+/*  Доставка, гарантия, контакты в футере */
+.footer-nav-list a,        .footer-nav-list button,        .footer-nav-list [class*='button'],          .footer-nav-list [class*='link']           { color: rgba(255,255,255, 1.0); }
+.footer-nav-list a:hover,  .footer-nav-list button:hover,  .footer-nav-list [class*='button']:hover,    .footer-nav-list [class*='link']:hover     { color: rgba(255,255,255, 0.6); }  
+.footer-nav-list a:active, .footer-nav-list button:active, .footer-nav-list [class*='button']:active,   .footer-nav-list [class*='link']:active    { color: rgba(255,255,255, 0.6); }  
+
+/* Кнопки соц сетей */
+.footer-social-list a,        .footer-social-list button,        .footer-social-list [class*='button'],          .footer-social-list [class*='link']           { opacity: 0.3; }
+.footer-social-list a:hover,  .footer-social-list button:hover,  .footer-social-list [class*='button']:hover,    .footer-social-list [class*='link']:hover     { opacity: 0.6; }  
+.footer-social-list a:active, .footer-social-list button:active, .footer-social-list [class*='button']:active,   .footer-social-list [class*='link']:active    { opacity: 0.1; }  
+
+/* Cравнить, корзина */
+/* для header'а другие состояния => уточняем классом .footer */
+.footer .user-cart a,        .footer .user-cart button,        .footer .user-cart [class*='button'],          .footer .user-cart [class*='link']           { opacity: 0.7; }
+.footer .user-cart a:hover,  .footer .user-cart button:hover,  .footer .user-cart [class*='button']:hover,    .footer .user-cart [class*='link']:hover     { opacity: 1.0; }  
+.footer .user-cart a:active, .footer .user-cart button:active, .footer .user-cart [class*='button']:active,   .footer .user-cart [class*='link']:active    { opacity: 0.3; }  
+
+/* Логин */
+.footer .link-log-me-in a,        .footer .link-log-me-in button,        .footer .link-log-me-in [class*='button'],          .footer .link-log-me-in [class*='link']           { opacity: 0.7; }
+.footer .link-log-me-in a:hover,  .footer .link-log-me-in button:hover,  .footer .link-log-me-in [class*='button']:hover,    .footer .link-log-me-in [class*='link']:hover     { opacity: 1.0; }  
+.footer .link-log-me-in a:active, .footer .link-log-me-in button:active, .footer .link-log-me-in [class*='button']:active,   .footer .link-log-me-in [class*='link']:active    { opacity: 0.3; }  
+
+/* htmlacademy svg */
+.button-htmlacademy:hover  { opacity: 0.6; }
+.button-htmlacademy:active { opacity: 0.3; }
+
+
+
 .form-feedback-label {
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
@@ -208,7 +235,7 @@ a:visited {
 }
 
 
-/*  2ая стр. пошла */
+/*  ---2ая стр. пошла--- */
 
 /* по аналогии с header'ом попробуем тот же трюк для breadcrumbs */
 .breadcrumbs [class*='button'],         .breadcrumbs [class*='link'],        .breadcrumbs .breadcrumbs-item-active          { opacity: 0.3; }
@@ -377,6 +404,9 @@ a:visited {
 .header-nav {}
 .header-catalogue {}
 .logo-container {}
+.logo-container:hover  { opacity: 0.6; }
+.logo-container:active { opacity: 0.3; }
+
 .search-container {}
 
 .login-container {}
@@ -652,7 +682,7 @@ input#search:focus ~ .button-search {
 .footer-contacts {}
 .close-popup {}
 
-/* TODO: осталось спозиционировать относительно родителя, разметка будет меняться? */
+
 .new-item {
             display: inline-block;
             width: 60px;
@@ -668,7 +698,8 @@ input#search:focus ~ .button-search {
             font-weight: 800;
 
             opacity: 0.2;
-
+            
+            /* TODO: осталось спозиционировать относительно родителя, разметка будет меняться? */
             ~~position: absolute;
             top: 29px;
             right: 27px; 
