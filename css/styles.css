@@ -256,9 +256,9 @@ a:visited {
 
 
 
-.pagination .button-page           {  color: rgba(0, 0, 0, 0.3); }
-.pagination .button-page:hover     {  color: rgba(0, 0, 0, 0.6); }
-.pagination .button-page:active    {  color: rgba(0, 0, 0, 1.0); }
+.pagination .page-link           {  color: rgba(0, 0, 0, 0.3); }
+.pagination .page-link:hover     {  color: rgba(0, 0, 0, 0.6); }
+.pagination .page-link:active    {  color: rgba(0, 0, 0, 1.0); }
 
 
 /* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ---------------------------------- */
@@ -498,7 +498,7 @@ input#search:focus ~ .button-search {
 .button-forth       {}
 
 
-.button-page    {}
+.page-link    {}
 .button-slide-changer {}
 
 .button-social      { width: 32px; height: 32px; border-radius: 50%; }
