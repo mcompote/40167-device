@@ -273,6 +273,11 @@ a:visited {
 .ordering-methods-list [class*='triangle']:active                                               { opacity: 1.0; }
 
 
+
+
+.popular-item-image-box {}
+
+
 .pagination button, .pagination a, .pagination [class*="button"], .pagination [class*="-link"] {
     display: block;
     font-family: 'Gilroy', sans-serif;
