@@ -5,8 +5,6 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
-  <!-- Gilroy ExtraBold, Light -->
-  <link rel="stylesheet" href="css/gilroy-font.css">
   <!-- OpenSans Light, Regular  -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
 
@@ -31,9 +29,10 @@
               <!-- TODO: может, вместо спана через псевдоэлемент сделать? -->
               <span class="search-icon"></span>
               <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
+
+              <button class="button button-search" type="submit">Найти</button>
             </label>
           
-            <button class="button button-search" type="submit">Найти</button>
           </form>
         </div>
   
@@ -50,7 +49,7 @@
         </div>
  
         <!-- элементы "сравнить" и "корзина" -->
-        <ul class="user-cart">
+        <ul class="user-cart-list">
           <li class="user-cart-item">
             <a class="link-user-cart" href="#">Корзина</a>
           </li>
@@ -64,12 +63,12 @@
       <nav class="header-nav">
         <ul class="header-nav-list">
           <li class="header-nav-item column">
-            <section class="header-catalogue">
-              <a class="link-catalog" href="catalog.html">
-                <h2>Каталог товаров</h2>
-              </a>
-              <!-- Декоративный плюсик справа от "Каталог товаров" -->
-              <button class="buttton-catalogue-expand">Показать разделы каталога</button>
+
+              <button class="header-nav-item-link">
+                Каталог товаров
+                <!-- Декоративный плюсик справа от "Каталог товаров" -->
+                <span class="plus-sign">Показать разделы каталога</span>
+              </button>
       
               <ul class="header-catalogue-list">
                 <li class="header-catalogue-item">
@@ -91,24 +90,23 @@
                   <a class="header-catalogue-item-link" href="#">Квадрокоптеры</a>
                 </li>
               </ul>
-      
-            </section>
+
           </li>
       
           <li class="header-nav-item">
-            <a href="#">
+            <a class="header-nav-item-link" href="#">
               Доставка
             </a>
           </li>
       
           <li class="header-nav-item">
-            <a href="#">
+            <a class="header-nav-item-link" href="#">
               Гарантия
             </a>
           </li>
       
           <li class="header-nav-item header-nav-item_last">
-            <a href="#">
+            <a class="header-nav-item-link" href="#">
               Контакты
             </a>
           </li>
@@ -135,7 +133,7 @@
               </div>
         
               <div class="column-one-half column-right">
-                <div class="promo-article-heading huge-heading huge-heading-top-line">
+                <div class="huge-heading huge-heading-top-line promo-article-heading">
                   Делай сэлфи, как Бен Стиллер!
                 </div>
         
@@ -172,7 +170,7 @@
         
               <div class="column-one-half column-right">
         
-                <div class="promo-article-heading huge-heading huge-heading-top-line">
+                <div class="huge-heading huge-heading-top-line promo-article-heading">
                   Худеем правильно!
                 </div>
         
@@ -204,7 +202,7 @@
               </div>
               <div class="column-one-half column-right">
         
-                <div class="promo-article-heading huge-heading huge-heading-top-line">
+                <div class="huge-heading huge-heading-top-line promo-article-heading">
                   Порхает как бабочка, жалит как пчела!
                 </div>
         
@@ -301,7 +299,7 @@
       <div class="column-full">
         <div class="column-one-third column-left">
           <ul class="services-list">
-            <li class="services-item services-item-active">
+            <li class="services-item services-item_active ">
               <a class="button button-animated button-blackened" href="#">
                 Доставка
               </a>
@@ -322,7 +320,7 @@
         <div class="column-two-thirds column-right">
           <div class="service-description-box">
           
-            <div class="service-description-heading huge-heading">
+            <div class="huge-heading service-description-heading ">
               Доставка
             </div>
             <div class="service-description-contents">
@@ -336,7 +334,7 @@
           </div>
           <div class="service-description-box">
 
-              <div class="service-description-heading huge-heading">
+              <div class="huge-heading service-description-heading">
                 Гарантия
               </div>
               <div class="service-description-contents">
@@ -350,7 +348,7 @@
           </div>
           <div class="service-description-box">
 
-            <div class="service-description-heading huge-heading">
+            <div class="huge-heading service-description-heading">
               Кредит
             </div>
             <div class="service-description-contents">
@@ -477,13 +475,13 @@
           <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
           <ul class="footer-nav-list">
             <li class="footer-nav-item">
-              <a href="#">Доставка</a>
+              <a class="footer-nav-item-link" href="#">Доставка</a>
             </li>
             <li class="footer-nav-item">
-              <a href="#">Гарантия</a>
+              <a class="footer-nav-item-link" href="#">Гарантия</a>
             </li>
             <li class="footer-nav-item">
-              <a href="#">Контакты</a>
+              <a class="footer-nav-item-link" href="#">Контакты</a>
             </li>
           </ul>
       
@@ -517,7 +515,7 @@
         </div>
         
         <!-- элементы "сравнить" и "корзина" -->
-        <ul class="user-cart">
+        <ul class="user-cart-list">
           <li class="user-cart-item">
             <a class="link-user-cart" href="#">Корзина</a>
           </li>

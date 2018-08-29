@@ -68,7 +68,6 @@ a:active {
 a:visited {
     color: black;
 }
-
 /* --------------------------------------------------------------- */
 /* ----------  END   OF GLOBAL styles (html, body, etc.) --------- */
 /* --------------------------------------------------------------- */
@@ -84,21 +83,37 @@ a:visited {
 /* ----------------------------------ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
 /* ----------------------------------ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
 
-.form-search .form-search-input {
+.header   { 
+    margin-top: 40px;
+
+    background-color: #f7e296; 
+    letter-spacing: 0.01em;
+}
+
+
+#form_search .form-search-input {
     /* INHERITED FROM BODY
     font-size: 15px; line-height: 30px; 
     */
     background: transparent;
     border: none;
-    color: rgba(0, 0, 0, 0.3); 
+    ~color: rgba(0, 0, 0, 0.3); 
+    color: opacity: 0.3; 
 }
 
-.form-search .form-search-input:hover {
-    color: rgba(0, 0, 0, 0.6); 
+#form_search .form-search-input:hover {
+    ~color: rgba(0, 0, 0, 0.6); 
+    opacity: 0.6; 
 }
 
-.form-search .form-search-input:focus {
+#form_search .form-search-input:focus {
     color: rgba(0, 0, 0, 1); 
+    opacity: 1; 
+}
+
+#form_search .button-search {
+    /*  перебиваем правило изменения opacity для ссылок в заголовке */
+    opacity: 1;  
 }
 
 /* TODO: REVIEW */
@@ -106,29 +121,44 @@ a:visited {
 .header [class*='button']:hover,   .header [class*='link']:hover  { opacity: 0.6;  }
 .header [class*='button']:active,  .header [class*='link']:active { opacity: 0.3;  }
 
-.header-nav-item > a, .link-catalog {
+.header-nav-item-link, .footer-nav-item-link {
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 24px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
+
+.header-catalogue-item-link {
+    line-height: 36px;
+}
+
+
+/* <main пошёл> */
 
 /* два класса для большего приоритета, далее .huge-heading переопределяет line-height */
 .promo-article .promo-article-heading {
     line-height: 56px;
 }
 
-
 .promo-item-characteristic-name {
+    font-weight: 300;    /* default UA style for <TH>: font-weight = bold */
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+}
+
+.promo-item-characteristic-value {
     font-family: 'Gilroy', sans-serif;
     font-weight: 300;
     font-size: 36px;
     line-height: 48px;
+    letter-spacing: 0.01em;
 }
 
-.promo-item-characteristic-value {
-    font-size: 13px;
-    line-height: 20px;
+.promo-article-contents {
+    letter-spacing: 0.01em;
 }
 
 
@@ -137,6 +167,7 @@ a:visited {
     font-weight: 800;
     font-size: 18px;
     line-height: 24px;
+    letter-spacing: 0.01em;
 }
 
 .popular-item-image-box {
@@ -166,17 +197,15 @@ a:visited {
     background-image: url('../img/svg/popular-6.svg');
 }
 
-.services-item-active {
+.services-item_active {
     background: black;
 }
 
-
 .service-description-heading {
-    font-family: 'Gilroy', sans-serif;
-    font-weight: 800;
-    font-size: 47px;
-    line-height: auto;    
+    /* line-height: 48px;     */
 }
+
+.service-description-contents { letter-spacing: 0.01em; }
 
 /* TODO: картинки не видно, пока так оставлю */
 .services .service-description-box:nth-of-type(1) .service-image-box {
@@ -206,15 +235,19 @@ a:visited {
     line-height: 40px;        
 }
 
+
+/* задаем инверсию цветов фона и текста для футера */
 .footer {
     background: #464646;
-    color: #f9f9f9;
+    color: #fff;
 }
 
-/* до лучшего решения не додумался */
-.footer a {
-    color: #f9f9f9;
+/* переопределяем глобально заданный цвет у ссылки */
+.footer a, .footer a:hover, .footer a:active, .footer a:visited {
+    color: #fff;
 }
+
+
 
 .footer-nav-list .footer-nav-item {
     font-family: 'Gilroy', sans-serif;
@@ -236,9 +269,9 @@ a:visited {
 
 /* Cравнить, корзина */
 /* для header'а другие состояния => уточняем классом .footer */
-.footer .user-cart a,        .footer .user-cart button,        .footer .user-cart [class*='button'],          .footer .user-cart [class*='link']           { opacity: 0.7; }
-.footer .user-cart a:hover,  .footer .user-cart button:hover,  .footer .user-cart [class*='button']:hover,    .footer .user-cart [class*='link']:hover     { opacity: 1.0; }  
-.footer .user-cart a:active, .footer .user-cart button:active, .footer .user-cart [class*='button']:active,   .footer .user-cart [class*='link']:active    { opacity: 0.3; }  
+.footer .user-cart-list a,        .footer .user-cart-list button,        .footer .user-cart-list [class*='button'],          .footer .user-cart-list [class*='link']           { opacity: 0.7; }
+.footer .user-cart-list a:hover,  .footer .user-cart-list button:hover,  .footer .user-cart-list [class*='button']:hover,    .footer .user-cart-list [class*='link']:hover     { opacity: 1.0; }  
+.footer .user-cart-list a:active, .footer .user-cart-list button:active, .footer .user-cart-list [class*='button']:active,   .footer .user-cart-list [class*='link']:active    { opacity: 0.3; }  
 
 /* Логин */
 .footer .link-log-me-in a,        .footer .link-log-me-in button,        .footer .link-log-me-in [class*='button'],          .footer .link-log-me-in [class*='link']           { opacity: 0.7; }
@@ -282,7 +315,8 @@ a:visited {
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
     font-size: 18px;
-    line-height: 24px;     
+    line-height: 24px; 
+    letter-spacing: 0.01em;    
 }
 
 .form-filter-label {
@@ -290,7 +324,8 @@ a:visited {
     font-style: inherit;
     font-weight: 300;
     font-size: 14px;
-    line-height: 40px;       
+    line-height: 40px; 
+    letter-spacing: 0.01em;       
 }
 
 
@@ -306,17 +341,22 @@ a:visited {
 
 
 
-.popular-item-image-box {}
+
+.catalog-item { font-family: 'Gilroy', sans-serif; line-height: 24px; letter-spacing: 0.01em; }
+.catalog-item-name  { font-weight: 800; font-size: 18px; }
+.catalog-item-price { font-weight: 300; font-size: 16px; }
 
 
-.pagination button, .pagination a, .pagination [class*="button"], .pagination [class*="-link"] {
+
+/* .page-link, .button-forth, .button-back  */
+.pagination [class*="button"], .pagination [class*="-link"] {
     display: block;
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
     font-size: 16px;
     line-height: 24px;
+    letter-spacing: 0.2em;
 }
-
 
 
 .pagination .page-link           {  color: rgba(0, 0, 0, 0.3); }
@@ -436,20 +476,18 @@ a:visited {
 
 
 
-.header                 { background-color: #f7e296; }
 .header-nav {}
-.header-catalogue {}
+
 .logo-container {}
 .logo-container:hover  { opacity: 0.6; }
 .logo-container:active { opacity: 0.3; }
 
 .search-container {}
 
-.login-container {}
+.login-container { letter-spacing: 0.01em; }
 
 .promo-article {}
-.promo-article-heading {}
-.promo-article-contents {}
+
 
 .popular {}
 .popular-item-image-box {}
@@ -464,7 +502,7 @@ a:visited {
 .footer-nav {}
 .footer-social {}
 .footer-copyright {}
-.breadcrumbs {}
+.breadcrumbs { letter-spacing: 0.01em; }
 .filter-box                     { display: block; width: 348px; }
 .sorting-box                    { display: block; background: #ebebeb; }
 .filter-box-heading-block, .sorting-box-heading-block {      
@@ -472,6 +510,8 @@ a:visited {
     font-weight: 800;
     font-size: 16px;
     line-height: 24px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
 .filter-box-heading-block       { display: block; background-color: #dbdbdb; }
 
@@ -507,17 +547,22 @@ a:visited {
 .button-search {
     width: 85px;
     height: 49px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     border: 2px solid black;
     background: transparent;
     color: black;
     visibility: hidden;
 }
-input#search:focus ~ .button-search {
+.form-search-input:focus ~ .button-search {
     visibility: visible;
 }
+
 .button-search:hover {
     color: white;
     background: black;
+    visibility: visible;
 }
 .button-search:active {
     color: rgba(255, 255, 255, 0.3);
@@ -541,7 +586,7 @@ input#search:focus ~ .button-search {
 .link-logout            { display: block; }
 
 .link-catalog       {}
-.buttton-catalogue-expand {}
+
 
 .button             {}
 .button-animated    {
@@ -552,7 +597,9 @@ input#search:focus ~ .button-search {
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
     font-size: 18px;
-    line-height: auto;
+    line-height: 24px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     /* FIXME: здесь должен быть "красивый" background */
     background: orange;
     
@@ -625,7 +672,7 @@ input#search:focus ~ .button-search {
 .footer-nav-item {}
 
 
-.user-cart {}
+.user-cart-list { letter-spacing: 0.01em; }
 .user-cart-item {}
 
 .slider-navigation-list {}
@@ -640,9 +687,8 @@ input#search:focus ~ .button-search {
 
 .services-list {}
 .services-item {}
-.services-item-active {}
-.service-description-heading {}
-.service-description-contents {}
+.services-item_active {}
+
 
 .popular-list {}
 .popular-item {}
@@ -659,8 +705,6 @@ input#search:focus ~ .button-search {
 .sorting-methods-item {}
 
 .catalog-list {}
-.catalog-item { font-family: 'Gilroy', sans-serif; line-height: 24px; }
-
 .footer-social-list {}
 
 /* --------------------------------------------------------------- */
@@ -728,10 +772,11 @@ input#search:focus ~ .button-search {
 
             vertical-align: middle;
             text-align: center;
-            line-height: 56px;
             font-family: 'Gilroy', sans-serif;
-            font-size: 14px;
             font-weight: 800;
+            font-size: 14px;
+            line-height: 56px;
+            letter-spacing: 0.05em;
 
             opacity: 0.2;
             
@@ -741,6 +786,9 @@ input#search:focus ~ .button-search {
             right: 27px; 
 }
 
+
+.plus-sign {}
+
 /* FIXME: её лучше засунуть в псевдоэлемент */
 .search-icon {
     position: absolute;
@@ -748,17 +796,17 @@ input#search:focus ~ .button-search {
     height: 1em;
     background-image: url('../img/svg/search.svg');    
 }
-.catalog-item-name  { font-weight: 800; font-size: 18px; }
-.catalog-item-price { font-weight: 300; font-size: 16px; }
+
 
 
 /* for headings or something like headings in .psd layout */
 /* in .services <h3>, in services <h2> */
 .huge-heading { 
-    font-size: 47px; 
-    font-family: "Gilroy ExtraBold", "Gilroy-ExtraBold", Arial, Helvetica, sans-serif;
+    font-family: 'Gilroy', sans-serif;
     font-weight: 800;
+    font-size: 47px; 
     line-height: 48px;
+    letter-spacing: 0.01em;
 }
 
 /* slogan in '.promo-slider', headings in '.info' and '.contacts' sections  */
@@ -794,7 +842,7 @@ input#search:focus ~ .button-search {
 .form-filter-input-range-pretty {}
 .form-filter-checkbox {}
 .form-filter-radio {}
-.form-filter-heading {}
+.form-filter-heading { }
 
 .drag-slider {}
 .drag-slider-body {}
@@ -811,6 +859,6 @@ input#search:focus ~ .button-search {
 .form-feedback-textarea {}
 
 .form-search {}
-.form-search-label {}
+.form-search-label { position: relative; }
 .form-search-input {}
 

@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Gilroy ExtraBold, Light -->
-    <link rel="stylesheet" href="css/gilroy-font.css">
     <!-- OpenSans Light, Regular  -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
 
@@ -33,9 +31,10 @@
                                 <!-- TODO: может, вместо спана через псевдоэлемент сделать? -->
                                 <span class="search-icon"></span>
                                 <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
+                                
+                                <button class="button button-search" type="submit">Найти</button>
                             </label>
             
-                            <button class="button button-search" type="submit">Найти</button>
                         </form>
                     </div>
             
@@ -56,7 +55,7 @@
                     </div>
             
                     <!-- элементы "сравнить" и "корзина" -->
-                    <ul class="user-cart">
+                    <ul class="user-cart-list">
                         <li class="user-cart-item">
                             <a class="link-user-cart" href="#">Корзина</a>
                         </li>
@@ -66,55 +65,54 @@
                     </ul>
             
                 </div>
-            
+                
                 <nav class="header-nav">
                     <ul class="header-nav-list">
                         <li class="header-nav-item column">
-                            <section class="header-catalogue">
-                                <a class="link-catalog" href="catalog.html">
-                                    <h2>Каталог товаров</h2>
-                                </a>
+                
+                            <button class="header-nav-item-link">
+                                Каталог товаров
                                 <!-- Декоративный плюсик справа от "Каталог товаров" -->
-                                <button class="buttton-catalogue-expand">Показать разделы каталога</button>
-            
-                                <ul class="header-catalogue-list">
-                                    <li class="header-catalogue-item">
-                                        <a class="header-catalogue-item-link" href="#">Виртуальная реальность</a>
-                                    </li>
-                                    <li class="header-catalogue-item">
-                                        <a class="header-catalogue-item-link" href="#">Моноподы для селфи</a>
-                                    </li>
-                                    <li class="header-catalogue-item">
-                                        <a class="header-catalogue-item-link" href="#">Экшн-камеры</a>
-                                    </li>
-                                    <li class="header-catalogue-item">
-                                        <a class="header-catalogue-item-link" href="#">Фитнес-браслеты</a>
-                                    </li>
-                                    <li class="header-catalogue-item">
-                                        <a class="header-catalogue-item-link" href="#">Умные часы</a>
-                                    </li>
-                                    <li class="header-catalogue-item">
-                                        <a class="header-catalogue-item-link" href="#">Квадрокоптеры</a>
-                                    </li>
-                                </ul>
-            
-                            </section>
+                                <span class="plus-sign">Показать разделы каталога</span>
+                            </button>
+                
+                            <ul class="header-catalogue-list">
+                                <li class="header-catalogue-item">
+                                    <a class="header-catalogue-item-link" href="#">Виртуальная реальность</a>
+                                </li>
+                                <li class="header-catalogue-item">
+                                    <a class="header-catalogue-item-link" href="#">Моноподы для селфи</a>
+                                </li>
+                                <li class="header-catalogue-item">
+                                    <a class="header-catalogue-item-link" href="#">Экшн-камеры</a>
+                                </li>
+                                <li class="header-catalogue-item">
+                                    <a class="header-catalogue-item-link" href="#">Фитнес-браслеты</a>
+                                </li>
+                                <li class="header-catalogue-item">
+                                    <a class="header-catalogue-item-link" href="#">Умные часы</a>
+                                </li>
+                                <li class="header-catalogue-item">
+                                    <a class="header-catalogue-item-link" href="#">Квадрокоптеры</a>
+                                </li>
+                            </ul>
+                
                         </li>
-            
+                
                         <li class="header-nav-item">
-                            <a href="#">
+                            <a class="header-nav-item-link" href="#">
                                 Доставка
                             </a>
                         </li>
-            
+                
                         <li class="header-nav-item">
-                            <a href="#">
+                            <a class="header-nav-item-link" href="#">
                                 Гарантия
                             </a>
                         </li>
-            
+                
                         <li class="header-nav-item header-nav-item_last">
-                            <a href="#">
+                            <a class="header-nav-item-link" href="#">
                                 Контакты
                             </a>
                         </li>
@@ -380,13 +378,13 @@
                     <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
                     <ul class="footer-nav-list">
                         <li class="footer-nav-item">
-                            <a href="#">Доставка</a>
+                            <a class="footer-nav-item-link" href="#">Доставка</a>
                         </li>
                         <li class="footer-nav-item">
-                            <a href="#">Гарантия</a>
+                            <a class="footer-nav-item-link" href="#">Гарантия</a>
                         </li>
                         <li class="footer-nav-item">
-                            <a href="#">Контакты</a>
+                            <a class="footer-nav-item-link" href="#">Контакты</a>
                         </li>
                     </ul>
     
@@ -424,7 +422,7 @@
                 </div>
     
                 <!-- элементы "сравнить" и "корзина" -->
-                <ul class="user-cart">
+                <ul class="user-cart-list">
                     <li class="user-cart-item">
                         <a class="link-user-cart" href="#">Корзина</a>
                     </li>
