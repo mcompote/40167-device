@@ -344,7 +344,14 @@ a, a:hover, a:active, a:visited {
 
 
 
-.catalog-item { font-family: 'Gilroy', sans-serif; line-height: 24px; letter-spacing: 0.01em; }
+.catalog-item { 
+    font-family: 'Gilroy', sans-serif; 
+    line-height: 24px; 
+    letter-spacing: 0.01em; 
+    /* TODO: remove lately */
+    background: cyan;
+}
+
 .catalog-item-name  { font-weight: 800; font-size: 18px; }
 .catalog-item-price { font-weight: 300; font-size: 16px; }
 
@@ -433,8 +440,8 @@ a, a:hover, a:active, a:visited {
 }
 
 /* container's width = 1/2 of layout width    = 600px */
-.column-one-half   { width: 600px; }
 .column-one-half   { width: 50%;   }
+.column-one-half   { width: 600px; }
 
 /* container's width = 1/3 of layout width    = 400px  */
 /* for .services > left block (buttons) */
@@ -442,6 +449,7 @@ a, a:hover, a:active, a:visited {
 
 /* container's width = 2/3 of layout width    = 400px  */
 /* for .services > right block (content) */
+.column-two-thirds { width: 66.667%; } /* получается не ровно 800px */
 .column-two-thirds { width: 800px; }
 
 /* container's width = 1/6 of layout width    = 200px */
@@ -456,8 +464,8 @@ a, a:hover, a:active, a:visited {
 
 /* container's width = 4/5 of layout width    = 960px */
 /* for popup 'write-us' and 'map' containers */
-.column-four-fifths  { width: 960px; }
 .column-four-fifths  { width: 80%; }
+.column-four-fifths  { width: 960px; }
 
 /* container's width = 0.4 of layout width    = 480px */
 /* for footer's central block */
@@ -465,6 +473,7 @@ a, a:hover, a:active, a:visited {
 
 /* container's width = 0.3 of layout width    = 360px */
 /* for footer's central block */
+.column-three-tenths  { width: 30%; }
 .column-three-tenths  { width: 360px; }
 
 /* container's width = 5/12 of layout width    = 500px  */
@@ -499,17 +508,26 @@ a, a:hover, a:active, a:visited {
     width: 100vw;
 }
 
+.padding-left-80px {
+    padding-left: 80px;
+}
+
+.padding-left-52px {
+    padding-left: 52px;
+}
 
 /* container for filter box */
 .wrapper-filter-box { 
+    /* 348px - see .column-29-percent */
     width: calc( 348px + (( 100% - 1200px )/2) );
     background-color: #eee;
 }
 
-        /* container's width for sorting box and content box */
+/* container's width for sorting box and content box */
 .wrapper-sorting-box-and-content { 
+    /* 852px - see .column-71-percent */
     width: calc( 852px + (( 100% - 1200px )/2) );;
-    /* TODO: remove */
+    /* TODO: remove later*/
     background: pink;
 }
 
@@ -582,6 +600,10 @@ a, a:hover, a:active, a:visited {
     background: #ebebeb; 
 }
 
+.sorting-box div:first-child {
+    justify-content: space-around;
+}
+
 .filter-box-heading-block, .sorting-box-heading-block {      
     min-height: 4.375em;
 
@@ -594,7 +616,8 @@ a, a:hover, a:active, a:visited {
 }
 .filter-box-heading-block       { display: block; background-color: #dbdbdb; }
 
-.catalog-items-box              { width: 852px; }
+.catalog-items-box { 
+}
 
 .catalog-item-image-box {
     position: relative;
@@ -608,7 +631,13 @@ a, a:hover, a:active, a:visited {
     background: rgba( 238, 238, 238, 0.7); 
  }
 
+.pagination {
+    margin-left: 20px;
+    margin-right: 20px;
 
+    justify-content: space-between;
+    background: magenta;
+}
 
 
 
@@ -692,7 +721,10 @@ a, a:hover, a:active, a:visited {
 .button-forth       {}
 
 
-.page-link    {}
+.page-link    {
+    /* max width = 3 symbols: 1...999 "subpages" on the catalog page */
+    width: 3em;
+}
 .button-slide-changer {}
 
 .button-social      { width: 32px; height: 32px; border-radius: 50%; }
@@ -739,7 +771,7 @@ a, a:hover, a:active, a:visited {
 /* ----------      BEGIN OF LISTS (UL,LI ENLEMENTS)     ---------- */
 /* --------------------------------------------------------------- */
 
-[class$='-list'] {
+[class*='-list'] {
     list-style: none;
     margin:0;
     padding:0;
@@ -811,8 +843,24 @@ a, a:hover, a:active, a:visited {
 .sorting-methods-list {}
 .sorting-methods-item {}
 
-.catalog-list {}
+.catalog-list { 
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    /* TODO: remove lately */
+    background: greenyellow;
+}
 .footer-social-list {}
+
+
+.pagination-list {
+    justify-content: space-between;
+}
+
+.pagination-item {
+}
+
 
 /* --------------------------------------------------------------- */
 /* ----------      END   OF LISTS (UL,LI ENLEMENTS)     ---------- */
