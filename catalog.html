@@ -13,120 +13,123 @@
 
 <body>
     <div class="column-full">
-            <header class="header">
-            
-                <!-- класс-обертка для ширины в 1/2 от макетной, блок слева -->
-                <div class="column-one-half column-left">
-                    
-                    <!-- логотип -->
-                    <div class="logo-container">
-                        <a href="index.html">
-                            <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE">
-                        </a>
-                    </div>
-            
-                    <div class="search-container">
-                        <form class="form-search" id="form_search" action="/api/search" method="get">
-                            <label class="form-search-label">
-                                <!-- TODO: может, вместо спана через псевдоэлемент сделать? -->
-                                <span class="search-icon"></span>
-                                <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
-                                
-                                <button class="button button-search" type="submit">Найти</button>
-                            </label>
-            
-                        </form>
-                    </div>
-            
-                </div>
-            
-                <!-- класс-обертка для ширины в 1/2 от макетной, блок справа -->
-                <div class="column-one-half column-right">
-            
-                    <!-- элементы "Пользователь" и "Выйти" -->
-                    <div class="login-container">
-                        <a class="link-user-name" href="#">
-                            Неопознанный Енот
-                        </a>
-                    
-                        <a class="link-logout" href="auth/logout">
-                            Выйти
-                        </a>
-                    </div>
-            
-                    <!-- элементы "сравнить" и "корзина" -->
-                    <ul class="user-cart-list">
-                        <li class="user-cart-item">
-                            <a class="link-user-cart" href="#">Корзина</a>
-                        </li>
-                        <li class="user-cart-item">
-                            <a class="link-compare" href="#">Сравнить</a>
-                        </li>
-                    </ul>
-            
+        <header class="header">
+
+            <!-- FIXME: класс column-left не задействован никак -->
+            <!-- класс-обертка для ширины в 1/2 от макетной, блок слева -->
+            <div class="column-one-half column-left">
+
+                <!-- логотип -->
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE">
+                    </a>
                 </div>
 
-                <nav class="header-nav">
-                    <ul class="header-nav-list">
-                        <li class="header-nav-item">
-                
-                            <button class="header-nav-item-link">
-                                Каталог товаров
-                                <!-- Декоративный плюсик справа от "Каталог товаров" -->
-                                <span class="plus-sign">Показать разделы каталога</span>
-                            </button>
-                
-                            <ul class="header-catalogue-list">
-                                <li class="header-catalogue-item">
-                                    <a class="header-catalogue-item-link" href="#">Виртуальная реальность</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                    <a class="header-catalogue-item-link" href="#">Моноподы для селфи</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                    <a class="header-catalogue-item-link" href="#">Экшн-камеры</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                    <a class="header-catalogue-item-link" href="#">Фитнес-браслеты</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                    <a class="header-catalogue-item-link" href="#">Умные часы</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                    <a class="header-catalogue-item-link" href="#">Квадрокоптеры</a>
-                                </li>
-                            </ul>
-                
-                        </li>
-                
-                        <li class="header-nav-item">
-                            <a class="header-nav-item-link" href="#">
-                                Доставка
-                            </a>
-                        </li>
-                
-                        <li class="header-nav-item">
-                            <a class="header-nav-item-link" href="#">
-                                Гарантия
-                            </a>
-                        </li>
-                
-                        <li class="header-nav-item header-nav-item_last">
-                            <a class="header-nav-item-link" href="#">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            
-            </header>
+                <div class="search-container">
+                    <form class="form-search" id="form_search" action="/api/search" method="get">
+                        <label class="form-search-label">
+                            <!-- TODO: может, вместо спана через псевдоэлемент сделать? -->
+                            <span class="search-icon"></span>
+                            <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
+
+                            <button class="button button-search" type="submit">Найти</button>
+                        </label>
+
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- FIXME: класс column-right не задействован никак -->
+            <!-- класс-обертка для ширины в 1/2 от макетной, блок справа -->
+            <div class="column-one-half column-right">
+
+                <!-- элементы "Пользователь" и "Выйти" -->
+                <div class="login-container">
+                    <a class="link-user-name" href="#">
+                        Неопознанный Енот
+                    </a>
+
+                    <a class="link-logout" href="auth/logout">
+                        Выйти
+                    </a>
+                </div>
+
+                <!-- элементы "сравнить" и "корзина" -->
+                <ul class="user-cart-list">
+                    <li class="user-cart-item">
+                        <a class="link-user-cart" href="#">Корзина</a>
+                    </li>
+                    <li class="user-cart-item">
+                        <a class="link-compare" href="#">Сравнить</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item column-one-half">
+
+                        <button class="header-nav-item-link">
+                            Каталог товаров
+                            <!-- FIXME: Плюсик засунуть в псевдоэлемент -->
+                            <!-- Декоративный плюсик справа от "Каталог товаров" -->
+                            <span class="plus-sign">Показать разделы каталога</span>
+                        </button>
+
+                        <ul class="header-catalogue-list">
+                            <li class="header-catalogue-item">
+                                <a class="header-catalogue-item-link" href="#">Виртуальная реальность</a>
+                            </li>
+                            <li class="header-catalogue-item">
+                                <a class="header-catalogue-item-link" href="#">Моноподы для селфи</a>
+                            </li>
+                            <li class="header-catalogue-item">
+                                <a class="header-catalogue-item-link" href="#">Экшн-камеры</a>
+                            </li>
+                            <li class="header-catalogue-item">
+                                <a class="header-catalogue-item-link" href="#">Фитнес-браслеты</a>
+                            </li>
+                            <li class="header-catalogue-item">
+                                <a class="header-catalogue-item-link" href="#">Умные часы</a>
+                            </li>
+                            <li class="header-catalogue-item">
+                                <a class="header-catalogue-item-link" href="#">Квадрокоптеры</a>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                    <li class="header-nav-item">
+                        <a class="header-nav-item-link" href="#">
+                            Доставка
+                        </a>
+                    </li>
+
+                    <li class="header-nav-item">
+                        <a class="header-nav-item-link" href="#">
+                            Гарантия
+                        </a>
+                    </li>
+
+                    <li class="header-nav-item header-nav-item_last">
+                        <a class="header-nav-item-link" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
     </div>
 
     <main>
         <div class="column-full">
             <!-- main heading -->
             <h1 class="huge-heading padding-left-80px">Моноподы для селфи</h1>
-            
+
             <!-- breadcrumbs -->
             <section class="breadcrumbs padding-left-80px">
                 <h2 class="visually-hidden">Навигационная цепочка</h2>
@@ -153,7 +156,7 @@
                             Фильтр:
                         </div>
                     </div>
-    
+
                     <form class="form-filter column-29-percent column-right padding-left-80px" id="form_filter" action="/api/catalog" method="get">
                         <div class="form-filter-component">
                             <div class="form-filter-input-range-ugly block">
@@ -162,14 +165,14 @@
                                         Минимальная Стоимость
                                         <input type="range" name="min_cost" value="0">
                                     </label>
-                    
+
                                     <label class="form-filter-label">
                                         Максимальная Стоимость
                                         <input class="form-filter-input-range" type="range" name="max_cost" min="0" value="5000">
                                     </label>
                                 </noscript>
                             </div>
-                    
+
                             <!-- заглушка для модного input-range, который скорее всего ч/з js работает -->
                             <div class="form-filter-input-range-pretty none">
                                 <h3 class="form-filter-heading">Стоимость</h3>
@@ -182,31 +185,31 @@
                                 </div>
                             </div>
                         </div>
-                    
-                    
+
+
                         <div class="form-filter-component">
                             <h3 class="form-filter-heading">Цвет</h3>
                             <label class="form-filter-label">
                                 <input class="form-filter-checkbox" type="checkbox" name="color" value="Черный"> Черный
                             </label>
-                    
+
                             <label class="form-filter-label">
                                 <input class="form-filter-checkbox" type="checkbox" name="color" value="Белый"> Белый
                             </label>
-                    
+
                             <label class="form-filter-label">
                                 <input class="form-filter-checkbox" type="checkbox" name="color" value="Синий"> Синий
                             </label>
-                    
+
                             <label class="form-filter-label">
                                 <input class="form-filter-checkbox" type="checkbox" name="color" value="Красный"> Красный
                             </label>
-                    
+
                             <label class="form-filter-label">
                                 <input class="form-filter-checkbox" type="checkbox" name="color" value="Розовый"> Розовый
                             </label>
                         </div>
-                    
+
                         <div class="form-filter-component">
                             <h3 class="form-filter-heading">
                                 <span class="visually-hidden">Наличие</span>Bluetooth</h3>
@@ -216,23 +219,23 @@
                             <label class="form-filter-label">
                                 <input class="form-filter-radio" type="radio" name="features_bluetooth" value="false"> Нет
                             </label>
-                    
+
                         </div>
-                    
+
                         <button type="submit" class="button button-animated">Показать</button>
                     </form>
-        
+
                 </section>
             </div>
-    
+
             <section class="wrapper-sorting-box-and-content column-left">
                 <h2 class="visually-hidden">Список товаров и критерии их сортировки</h2>
-            
+
                 <div class="sorting-box">
-                    <div class="column-71-percent column-left column-flexbox padding-left-52px">                        
+                    <div class="column-71-percent column-left column-flexbox padding-left-52px">
                         <h3 class="visually-hidden">Критерии сортировки товаров</h3>
                         <div class="sorting-box-heading-block">Сортировка:</div>
-                    
+
                         <ul class="sorting-methods-list column-flexbox">
                             <li class="sorting-methods-item">
                                 <button class="link-sorting-criteria link-sorting-criteria-active js-sorting-criteria-by-price">По цене</button>
@@ -258,10 +261,10 @@
                         </ul>
                     </div>
                 </div>
-    
+
                 <div class="catalog-items-box column-71-percent padding-left-52px">
                     <h3 class="visually-hidden">Отсортированный список товаров</h3>
-            
+
                     <ul class="catalog-list column-flexbox">
                         <li class="catalog-item column-three-tenths">
                             <div class="catalog-item-image-box">
@@ -327,10 +330,10 @@
                                 </div>
                             </div>
                             <p class="catalog-item-name">Селфи-палка «Следуй за мной»</p>
-                            <p class="catalog-item-price">4900 руб.</p>        
+                            <p class="catalog-item-price">4900 руб.</p>
                         </li>
                     </ul>
-            
+
                     <!-- блок, отвечающий за "пагинацию" -->
                     <div class="pagination column-flexbox">
                         <button class="button-back">Назад</button>
@@ -351,148 +354,146 @@
                                 </button>
                             </li>
                         </ul>
-                    
+
                         <button class="button-forth">Вперед</button>
                     </div>
-    
+
                 </div>
             </section>
         </div>
-        
+
 
     </main>
 
-
     <footer class="footer">
-        <div class="column-full">
-    
-            <div class="column-three-tenths">
-                <!-- логотип -->
-                <div class="logo-container">
-                    <a href="index.html">
-                        <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE">
-                    </a>
-                </div>
-    
-                <p class="footer-address">г. Москва, ул. Строителей, 15</p>
-                <p class="footer-contacts">
-                    <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
-                </p>
-    
+        <div class="column-full column-flexbox">
+
+            <!-- логотип -->
+            <div class="logo-container">
+                <a href="index.html">
+                    <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE">
+                </a>
             </div>
-    
-            <div class="column-four-tenths">
-                <nav class="footer-nav">
-    
-                    <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
-                    <ul class="footer-nav-list">
-                        <li class="footer-nav-item">
-                            <a class="footer-nav-item-link" href="#">Доставка</a>
-                        </li>
-                        <li class="footer-nav-item">
-                            <a class="footer-nav-item-link" href="#">Гарантия</a>
-                        </li>
-                        <li class="footer-nav-item">
-                            <a class="footer-nav-item-link" href="#">Контакты</a>
-                        </li>
-                    </ul>
-    
-                </nav>
-    
-    
-                <div class="footer-social">
-                    <ul class="footer-social-list">
-                        <li>
-                            <a class="button-social button-social-vk" href="#">Вконтакте</a>
-                        </li>
-                        <li>
-                            <a class="button-social button-social-fb" href="#">Фейсбук</a>
-                        </li>
-                        <li>
-                            <a class="button-social button-social-insta" href="#">Инстаграм</a>
-                        </li>
-                    </ul>
-                </div>
-    
-            </div>
-    
-            
-            <div class="column-three-tenths">
-    
-                <!-- элементы "Пользователь" и "Выйти" -->
-                <div class="login-container">
-                    <a class="link-user-name" href="#">
-                        Неопознанный Енот
-                    </a>
-                
-                    <a class="link-logout" href="auth/logout">
-                        Выйти
-                    </a>
-                </div>
-    
-                <!-- элементы "сравнить" и "корзина" -->
-                <ul class="user-cart-list">
-                    <li class="user-cart-item">
-                        <a class="link-user-cart" href="#">Корзина</a>
+
+            <p class="footer-address">г. Москва, ул. Строителей, 15</p>
+            <p class="footer-contacts">
+                <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+            </p>
+
+        </div>
+
+        <div class="column-four-tenths">
+            <nav class="footer-nav">
+
+                <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item">
+                        <a class="footer-nav-item-link" href="#">Доставка</a>
                     </li>
-                    <li class="user-cart-item">
-                        <a class="link-compare" href="#">Сравнить</a>
+                    <li class="footer-nav-item">
+                        <a class="footer-nav-item-link" href="#">Гарантия</a>
+                    </li>
+                    <li class="footer-nav-item">
+                        <a class="footer-nav-item-link" href="#">Контакты</a>
                     </li>
                 </ul>
-    
-                <p class="footer-copyright">
-                    <b class="visually-hidden">Разработчик сайта:</b>
-                    <a class="button-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-                </p>
+
+            </nav>
+
+
+            <div class="footer-social">
+                <ul class="footer-social-list">
+                    <li>
+                        <a class="button-social button-social-vk" href="#">Вконтакте</a>
+                    </li>
+                    <li>
+                        <a class="button-social button-social-fb" href="#">Фейсбук</a>
+                    </li>
+                    <li>
+                        <a class="button-social button-social-insta" href="#">Инстаграм</a>
+                    </li>
+                </ul>
             </div>
-    
+
+        </div>
+
+
+        <div class="column-three-tenths">
+
+            <!-- элементы "Пользователь" и "Выйти" -->
+            <div class="login-container">
+                <a class="link-user-name" href="#">
+                    Неопознанный Енот
+                </a>
+
+                <a class="link-logout" href="auth/logout">
+                    Выйти
+                </a>
+            </div>
+
+            <!-- элементы "сравнить" и "корзина" -->
+            <ul class="user-cart-list">
+                <li class="user-cart-item">
+                    <a class="link-user-cart" href="#">Корзина</a>
+                </li>
+                <li class="user-cart-item">
+                    <a class="link-compare" href="#">Сравнить</a>
+                </li>
+            </ul>
+
+            <p class="footer-copyright">
+                <b class="visually-hidden">Разработчик сайта:</b>
+                <a class="button-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+            </p>
+        </div>
+
         </div>
     </footer>
 
     <section class="popup popup-map">
         <div class="column-four-fifths">
-    
+
             <h2 class="visually-hidden">Мы на карте</h2>
             <!-- TODO: здесь будет карта -->
             <noscript>
                 <img src="img/content/map-contacts-full.jpg" alt="фото местонахождения интернет-магазина DEVICE">
             </noscript>
-    
+
         </div>
     </section>
-    
+
     <section class="popup popup-write-us">
         <div class="column-four-fifths">
             <h2 class="visually-hidden">Пишите нам</h2>
-    
+
             <form class="form-feedback" id="form_feedback" action="/api/feedback" method="POST">
-    
+
                 <div class="form-feedback-component">
                     <label class="form-feedback-label">
                         Ваше имя:
                         <input class="form-feedback-input-text" type="text" name="name" placeholder="Имя Фамилия" required>
                     </label>
-    
+
                     <div class="form-feedback-component">
                         <label class="form-feedback-label">
                             Ваш email:
                             <input class="form-feedback-input-text" type="email" name="email" placeholder="email@example.com" required>
                         </label>
                     </div>
-    
+
                     <div class="form-feedback-component">
                         <label class="form-feedback-label">
                             Текст письма:
                             <textarea class="form-feedback-textarea" name="feedback" cols="30" rows="10" required>В свободной форме</textarea>
                         </label>
                     </div>
-    
+
                     <button type="submit" class="button button-animated">Отправить</button>
                 </div>
             </form>
-    
+
             <!-- закрывающий форму крестик -->
-            <span class="close-popup">x</span>
+            <button class="close-popup">Закрыть всплывающую форму</button>
         </div>
     </section>
 </body>
