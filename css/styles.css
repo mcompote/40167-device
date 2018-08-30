@@ -477,6 +477,10 @@ a, a:hover, a:active, a:visited {
 /* something like float: left */
 .column-left       { magic: true; }
 
+.column-flex { 
+    display: flex; 
+}
+
 .column-no-shrink {
     flex-shrink: 0;
 }
@@ -505,12 +509,12 @@ a, a:hover, a:active, a:visited {
 
 .login-container { letter-spacing: 0.01em; }
 
-.promo-article {}
+.promo-article { display: flex; }
 
 
 .popular {}
 .popular-item-image-box {}
-.services {}
+.services { background: #e5e5e5; }
 .service-description-box {}
 .brands-gallery { 
 }
@@ -715,6 +719,8 @@ a, a:hover, a:active, a:visited {
 .promo-item { display: block; }
 
 .brands-gallery-list {
+    display: flex;
+    justify-content: space-around;
 }
 .brands-gallery-item {}
 .brands-gallery-item-logo-wrapper {}
@@ -725,7 +731,6 @@ a, a:hover, a:active, a:visited {
 
 
 .popular-list {
-    background: #ccc;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
