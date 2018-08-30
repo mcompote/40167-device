@@ -455,8 +455,9 @@ a, a:hover, a:active, a:visited {
 .column-two-fifteenth  { width: 160px; }
 
 /* container's width = 4/5 of layout width    = 960px */
-/* for popup 'write-us' and 'map' container */
+/* for popup 'write-us' and 'map' containers */
 .column-four-fifths  { width: 960px; }
+.column-four-fifths  { width: 80%; }
 
 /* container's width = 0.4 of layout width    = 480px */
 /* for footer's central block */
@@ -471,9 +472,17 @@ a, a:hover, a:active, a:visited {
 .column-five-twenteeth { width : 41.6667%; }
 .column-five-twenteeth { width : 500px; }    /* чтобы было ровно */
 
+.column-29-percent {
+    /* 29 процентов от "базовой" ширины в 1200px */
+    width: 348px;
+}
+.column-71-percent {
+    /* 71 процент от "базовой" ширины в 1200px */
+    width: 852px;
+}
 
 /* something like float: right */
-.column-right      {margin-left: auto; }
+.column-right      { margin-left: auto; }
 
 /* something like float: left */
 .column-left       { margin-right: auto; }
@@ -486,15 +495,34 @@ a, a:hover, a:active, a:visited {
     flex-shrink: 0;
 }
 
-/* container's width = 468px */
-/* for filter box in catalog.html */
+.column-vw100 {
+    width: 100vw;
+}
+
+
+/* container for filter box */
 .wrapper-filter-box { 
-    width: 468px; 
+    width: calc( 348px + (( 100% - 1200px )/2) );
     background-color: #eee;
 }
 
-/* container for both sorting box and content box */
-.wrapper-sorting-box-and-content { width: 972px; }
+        /* container's width for sorting box and content box */
+.wrapper-sorting-box-and-content { 
+    width: calc( 852px + (( 100% - 1200px )/2) );;
+    /* TODO: remove */
+    background: pink;
+}
+
+@media only screen and (max-width : 1200px) {
+    .wrapper-filter-box { 
+        width: 32.5%;
+    }   
+   
+    .wrapper-sorting-box-and-content {
+        width: 67.5%;
+    }
+}
+/* ------------------------------------ */
 
 
 
@@ -546,9 +574,17 @@ a, a:hover, a:active, a:visited {
 .footer-social {}
 .footer-copyright {}
 .breadcrumbs { letter-spacing: 0.01em; }
-.filter-box                     { display: block; width: 348px; }
-.sorting-box                    { display: block; background: #ebebeb; }
+.filter-box  { 
+    display: block;  
+}
+.sorting-box  { 
+    display: block; 
+    background: #ebebeb; 
+}
+
 .filter-box-heading-block, .sorting-box-heading-block {      
+    min-height: 4.375em;
+
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
     font-size: 16px;
@@ -872,6 +908,9 @@ a, a:hover, a:active, a:visited {
 }
 
 
+.main-catalogue-heading {
+    padding-left: 80px;
+}
 
 /* for headings or something like headings in .psd layout */
 /* in .services <h3>, in services <h2> */
@@ -925,7 +964,9 @@ a, a:hover, a:active, a:visited {
 .drag-slider-handle-left {}
 .drag-slider-handle-right {}
 
-.form-feedback {}
+.form-feedback {
+    mar
+}
 .form-feedback-label {}
 .form-feedback-input-text {}
 
