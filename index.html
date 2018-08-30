@@ -15,14 +15,15 @@
   <div class="column-full">
     <header class="header">
   
+      <!-- FIXME: класс column-left не задействован никак -->
       <!-- класс-обертка для ширины в 1/2 от макетной, блок слева -->
       <div class="column-one-half column-left">
-  
+        
         <!-- логотип -->
         <div class="logo-container">
           <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE">
         </div>
-  
+        
         <div class="search-container">
           <form class="form-search" id="form_search" action="/api/search" method="get">
             <label class="form-search-label">
@@ -35,9 +36,10 @@
           
           </form>
         </div>
-  
+        
       </div>
-  
+      
+      <!-- FIXME: класс column-right не задействован никак -->
       <!-- класс-обертка для ширины в 1/2 от макетной, блок справа -->
       <div class="column-one-half column-right">
   
@@ -62,10 +64,11 @@
   
       <nav class="header-nav">
         <ul class="header-nav-list">
-          <li class="header-nav-item column">
+          <li class="header-nav-item column-one-half">
 
               <button class="header-nav-item-link">
                 Каталог товаров
+                <!-- FIXME: Плюсик засунуть в псевдоэлемент -->
                 <!-- Декоративный плюсик справа от "Каталог товаров" -->
                 <span class="plus-sign">Показать разделы каталога</span>
               </button>
@@ -252,37 +255,37 @@
         <h2 class="visually-hidden">Самые интересные категории товаров</h2>
     
         <ul class="popular-list">
-          <li class="popular-item column-one-sixth">
+          <li class="popular-item column-two-fifteenth">
             <a href="catalog?category=vr">
                 <div class="popular-item-image-box"></div>
                 Виртуальная реальность
             </a>
           </li>
-          <li class="popular-item column-one-sixth">
+          <li class="popular-item column-two-fifteenth">
             <a href="catalog?category=selfie-stick">
                 <div class="popular-item-image-box"></div>
                 Моноподы для сэлфи
             </a>
           </li>
-          <li class="popular-item column-one-sixth">
+          <li class="popular-item column-two-fifteenth">
             <a href="catalog?category=action-cams">
                 <div class="popular-item-image-box"></div>
                 Экшн-камеры
             </a>
           </li>
-          <li class="popular-item column-one-sixth">
+          <li class="popular-item column-two-fifteenth">
             <a href="catalog?category=fitness-trackers">
                 <div class="popular-item-image-box"></div>
                 Фитнес-браслеты
             </a>
           </li>
-          <li class="popular-item column-one-sixth">
+          <li class="popular-item column-two-fifteenth">
             <a href="catalog?category=smart-watches">
                 <div class="popular-item-image-box"></div>
                 Умные часы
             </a>
           </li>
-          <li class="popular-item column-one-sixth">
+          <li class="popular-item column-two-fifteenth">
             <a href="catalog?category=quadcopters">
                 <div class="popular-item-image-box"></div>
                 Квадрокоптеры
