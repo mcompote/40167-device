@@ -176,22 +176,22 @@ a, a:hover, a:active, a:visited {
     background-size: 100% 100%;
 }
 
-.popular-list .popular-item:nth-of-type(1) .popular-item-image-box {
+.popular-item:nth-of-type(1) .popular-item-image-box {
     background-image: url('../img/svg/popular-1.svg');
 }
-.popular-list .popular-item:nth-of-type(2) .popular-item-image-box {
+.popular-item:nth-of-type(2) .popular-item-image-box {
     background-image: url('../img/svg/popular-2.svg');
 }
-.popular-list .popular-item:nth-of-type(3) .popular-item-image-box {
+.popular-item:nth-of-type(3) .popular-item-image-box {
     background-image: url('../img/svg/popular-3.svg');
 }
-.popular-list .popular-item:nth-of-type(4) .popular-item-image-box {
+.popular-item:nth-of-type(4) .popular-item-image-box {
     background-image: url('../img/svg/popular-4.svg');
 }
-.popular-list .popular-item:nth-of-type(5) .popular-item-image-box {
+.popular-item:nth-of-type(5) .popular-item-image-box {
     background-image: url('../img/svg/popular-5.svg');
 }
-.popular-list .popular-item:nth-of-type(6) .popular-item-image-box {
+.popular-item:nth-of-type(6) .popular-item-image-box {
     background-image: url('../img/svg/popular-6.svg');
 }
 
@@ -424,11 +424,6 @@ a, a:hover, a:active, a:visited {
 /* ---------- BEGIN OF containers (div,section,article) ---------- */
 /* --------------------------------------------------------------- */
 
-/* simply column */
-.column            { 
-    width
-}
-
 /* container's width = 1/1 full layout width  = 1200px */
 /* for header, footer and main content, i.e. for almost everything */
 .column-full       { 
@@ -471,13 +466,19 @@ a, a:hover, a:active, a:visited {
 /* for footer's central block */
 .column-three-tenths  { width: 360px; }
 
+/* container's width = 5/12 of layout width    = 500px  */
+/* for .info block */
+.column-five-twenteeth { width : 41.6667%; }
+.column-five-twenteeth { width : 500px; }    /* чтобы было ровно */
+
+
 /* something like float: right */
-.column-right      { magic: true; }
+.column-right      {margin-left: auto; }
 
 /* something like float: left */
-.column-left       { magic: true; }
+.column-left       { margin-right: auto; }
 
-.column-flex { 
+.column-flexbox { 
     display: flex; 
 }
 
@@ -512,17 +513,35 @@ a, a:hover, a:active, a:visited {
 .promo-article { display: flex; }
 
 
-.popular {}
+.popular {
+    /* TODO: потом убрать */
+    background: crimson;
+}
 .popular-item-image-box {}
 .services { background: #e5e5e5; }
 .service-description-box {}
+
 .brands-gallery { 
+    margin-top: 106px;
+        /* TODO: поменять потом */
+        background: burlywood;
 }
-.info {}
-.contacts {}
+.info {
+    margin-left: 20px;
+    margin-right: 20px;
+    
+    /* TODO: поменять потом */
+    background: palevioletred;
+}
+.contacts {
+        /* TODO: поменять потом */
+        background: palevioletred;
+}
 .map-container {}
 
-.footer {}
+.footer { 
+    margin-top: 90px;    /* FIXME: на глаз мерил примерно */
+}
 .footer-nav {}
 .footer-social {}
 .footer-copyright {}
@@ -715,12 +734,20 @@ a, a:hover, a:active, a:visited {
 .slider-navigation-list {}
 .slider-navigation-item {}
 
-.promo-list {  }
-.promo-item { display: block; }
+.promo-list { position: relative;  }
+.promo-item {
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    opacity: 0.1; 
+    z-index: -9999; 
+}
+.promo-item_active { position: static; opacity: 1; }
 
 .brands-gallery-list {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 .brands-gallery-item {}
 .brands-gallery-item-logo-wrapper {}
@@ -769,7 +796,10 @@ a, a:hover, a:active, a:visited {
 
 /* sliders */
 .slider {}
-.promo-slider {}
+.promo-slider {
+    /* TODO: потом убрать */
+    background: cornflowerblue;
+}
 
 
 
