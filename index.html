@@ -15,9 +15,7 @@
   <div class="column-full">
     <header class="header">
   
-      <!-- FIXME: класс column-left не задействован никак -->
-      <!-- класс-обертка для ширины в 1/2 от макетной, блок слева -->
-      <div class="column-one-half column-left">
+      <div class="column-one-half">
         
         <!-- логотип -->
         <div class="logo-container">
@@ -27,8 +25,6 @@
         <div class="search-container">
           <form class="form-search" id="form_search" action="/api/search" method="get">
             <label class="form-search-label">
-              <!-- TODO: может, вместо спана через псевдоэлемент сделать? -->
-              <span class="search-icon"></span>
               <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
 
               <button class="button button-search" type="submit">Найти</button>
@@ -38,10 +34,8 @@
         </div>
         
       </div>
-      
-      <!-- FIXME: класс column-right не задействован никак -->
-      <!-- класс-обертка для ширины в 1/2 от макетной, блок справа -->
-      <div class="column-one-half column-right">
+
+      <div class="column-one-half">
   
         <!-- элемент "логин" -->
         <div class="login-container">
