@@ -54,6 +54,11 @@ a, a:hover, a:active, a:visited {
     color: black;
     text-decoration: none;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 /* --------------------------------------------------------------- */
 /* ----------  END   OF GLOBAL styles (html, body, etc.) --------- */
 /* --------------------------------------------------------------- */
