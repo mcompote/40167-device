@@ -27,8 +27,6 @@
 
 
 
-
-
 /* --------------------------------------------------------------- */
 /* ----------  BEGIN OF GLOBAL styles (html, body, etc.) --------- */
 /* --------------------------------------------------------------- */
@@ -73,7 +71,7 @@ a, a:hover, a:active, a:visited {
 
 .header   { 
     min-height: 299px;
-
+    
     margin-top: 40px;
     margin-left: 20px;
     margin-right: 20px;
@@ -88,36 +86,11 @@ a, a:hover, a:active, a:visited {
     letter-spacing: 0.01em;
 }
 
-
-#form_search .form-search-input {
-    /* INHERITED FROM BODY
-    font-size: 15px; line-height: 30px; 
-    */
-    background: transparent;
-    border: none;
-    ~color: rgba(0, 0, 0, 0.3); 
-    color: opacity: 0.3; 
-}
-
-#form_search .form-search-input:hover {
-    ~color: rgba(0, 0, 0, 0.6); 
-    opacity: 0.6; 
-}
-
-#form_search .form-search-input:focus {
-    color: rgba(0, 0, 0, 1); 
-    opacity: 1; 
-}
-
-#form_search .button-search {
-    /*  перебиваем правило изменения opacity для ссылок в заголовке */
-    opacity: 1;  
-}
-
 /* TODO: REVIEW */
 /* Если у ссылок картинки грузятся через псевдо-элементы, то opacity подойдет, наверное, лучше, чем color: rgba(,,,0.3) ?? */
 .header [class*='button']:hover,   .header [class*='link']:hover  { opacity: 0.6;  }
 .header [class*='button']:active,  .header [class*='link']:active { opacity: 0.3;  }
+
 
 .header-nav-item-link, .footer-nav-item-link {
     font-family: 'Gilroy', sans-serif;
@@ -531,7 +504,7 @@ a, a:hover, a:active, a:visited {
     background: pink;
 }
 
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 1199px) {
     .wrapper-filter-box { 
         width: 32.5%;
     }   
@@ -660,32 +633,6 @@ a, a:hover, a:active, a:visited {
 /* ----------          BEGIN OF BUTTONS & LINKS         ---------- */
 /* --------------------------------------------------------------- */
 
-.button-search {
-    width: 85px;
-    height: 49px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border: 2px solid black;
-    background: transparent;
-    color: black;
-    visibility: hidden;
-}
-.form-search-input:focus ~ .button-search {
-    visibility: visible;
-}
-
-.button-search:hover {
-    color: white;
-    background: black;
-    visibility: visible;
-}
-.button-search:active {
-    color: rgba(255, 255, 255, 0.3);
-    visibility: visible;
-}
-
-
 .link-user-cart {
     display: block;
     padding-left: 24px; /* padding = 2 * width(left_svg_icon) */
@@ -739,6 +686,20 @@ a, a:hover, a:active, a:visited {
 .link-logout            { display: block; }
 
 .link-catalog       {}
+
+
+/* svg-icon goes after text "сравнить" */
+.header-nav-item-link {}
+
+.header-nav-item-link::before, .header-nav-item-link::after {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 14px;
+    width: 13px;
+    height: 12px;
+    content: '';
+    background: url('../img/svg/user.svg') center center no-repeat;
+}
 
 
 .button             {}
@@ -994,9 +955,6 @@ a, a:hover, a:active, a:visited {
 }
 
 
-.plus-sign {}
-
-
 
 .main-catalogue-heading {
     padding-left: 80px;
@@ -1036,8 +994,90 @@ a, a:hover, a:active, a:visited {
 
 
 
+/* --------------------------------------------------------------- */
+/* ----------               BEGIN OF FORMS              ---------- */
+/* --------------------------------------------------------------- */
 
-/* --- FORMS --- */
+
+/* -----------      форма поиска в шапке      ----------- */
+.form-search {
+    padding-right: 100px;
+}
+
+.form-search-label { 
+    display: block;
+    position: relative; 
+}
+
+.form-search-input {
+    display: block;
+    width: 100%;
+    padding-left: 36px;
+    border: none;
+    
+    background-color: transparent;
+    background: url('../img/svg/search.svg') left center no-repeat;
+    background-size: 16px 16px;
+
+    color: rgba(0, 0, 0, 0.3); 
+}
+
+.form-search-input, .button-search {
+    /* rewrite normalize.css styles for inputs */
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+}
+
+.form-search-input:hover {
+    color: rgba(0, 0, 0, 0.6); 
+}
+
+.form-search-input:focus {
+    color: rgba(0, 0, 0, 1.0);
+    border-bottom: 2px solid black; 
+}
+
+.button-search {
+    display: none;
+    width: 85px;
+    height: 49px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 2px solid black;
+    background: transparent;
+    color: black;
+}
+
+.form-search-input:focus ~ .button-search, .button-search:hover, .button-search:active {
+    display: block;
+}
+
+.button-search:hover {
+    background: black;
+    color: white;
+}
+
+.button-search:active {
+    background: black;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/*  TODO: review  */
+/* правило изменения opacity для ссылок в .header'e оказалось более специфичным => 
+   уточняем классом формы */
+#form_search .button-search:hover, #form_search .button-search:active {
+    opacity: 1;  
+}
+
+
+
+
+
+/* --- остальные формы --- */
 .form-filter {}
 .form-filter-label {}
 .form-filter-input-range {}
@@ -1061,24 +1101,6 @@ a, a:hover, a:active, a:visited {
 .form-feedback-component {}
 .form-feedback-textarea {}
 
-.form-search {
-    padding-right: 100px;
-}
-.form-search-label { 
-    display: block;
-    position: relative; 
-}
-
-.form-search-input { 
-}
-
-.form-search-label::before {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 20px;
-    width: 16px;
-    height: 16px;
-    content: '';
-    background: url('../img/svg/search.svg') center center no-repeat;
-}
-
+/* --------------------------------------------------------------- */
+/* ----------               END   OF FORMS              ---------- */
+/* --------------------------------------------------------------- */
