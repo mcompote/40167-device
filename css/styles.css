@@ -546,6 +546,7 @@ img {
 }
 
 .header-nav { 
+    margin-top: 43px; /* FIXME: На глаз */
     width: 100%; 
 }
 
