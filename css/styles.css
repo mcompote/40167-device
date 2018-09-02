@@ -721,8 +721,9 @@ img {
 
 .plus-sign::before, .plus-sign::after {
     position: absolute;
-    top: 50%;
-    right: -20px;
+    display: block;
+    top: 11px;
+    right: -32px;
     content: '';
     width: 16px;
     height: 2px;
