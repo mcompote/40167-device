@@ -848,6 +848,12 @@ img {
     margin-right: 2.2em;
 }
 
+.header-catalogue-list {
+    /* TODO: пока что скроем */
+    display: none;
+}
+
+
 .header-nav-item_last {
     margin-left: auto;
 }
