@@ -535,6 +535,14 @@ img {
 /* ------------------------------------ */
 
 
+.header-user-nav {
+    align-items: flex-end;
+    /* TODO: не работает почему-то */
+    ~margin-top: -4px;; /* подгоняем под одну линию с полем поиска слева */
+
+    position: relative;
+    top: -4px;
+}
 
 .header-nav { 
     width: 100%; 
@@ -654,7 +662,7 @@ img {
 
 .link-user-cart {
     display: block;
-    padding-left: 24px; /* padding = 2 * width(left_svg_icon) */
+    text-align: right;
 }
 
 /* svg-icon goes before text "Корзина" */
@@ -671,7 +679,8 @@ img {
 
 .link-compare { 
     display: block; 
-    padding-left: 20px; /* padding = 2 * width(left_svg_icon) */
+    text-align: center;
+    margin-right: 20px;
 }
 
 /* svg-icon goes before text "сравнить" */
@@ -687,7 +696,6 @@ img {
 
 .link-log-me-in, .link-user-name { 
     display: block; 
-    padding-left: 27px; /* padding = 14px + width(left_svg_icon) */
 }
 
 /* svg-icon goes before text "сравнить" */
@@ -701,8 +709,14 @@ img {
     background: url('../img/svg/user.svg') center center no-repeat;
 }
 
+.link-user-name {
 
-.link-logout            { display: block; }
+}
+
+.link-logout { 
+    display: block; 
+    margin-left: 20px;
+}
 
 .link-catalog       {}
 
@@ -833,8 +847,11 @@ img {
 .footer-nav-item {}
 
 
-.user-cart-list { letter-spacing: 0.01em; }
-.user-cart-item { min-width: 100px;}
+.user-cart-list { 
+    justify-content: flex-end;
+    letter-spacing: 0.01em; 
+}
+.user-cart-item { min-width: 100px; }
 
 .slider-navigation-list {}
 .slider-navigation-item {}
@@ -1047,7 +1064,8 @@ img {
     width: 100%;
     padding-left: 36px;
     border: none;
-    
+    border-bottom: 2px solid transparent; 
+
     background-color: transparent;
     background: url('../img/svg/search.svg') left center no-repeat;
     background-size: 16px 16px;
