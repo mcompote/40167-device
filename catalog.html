@@ -14,71 +14,62 @@
 <body>
     <div class="column-full">
         <header class="header">
-
-            <!-- FIXME: класс column-left не задействован никак -->
-            <!-- класс-обертка для ширины в 1/2 от макетной, блок слева -->
-            <div class="column-one-half column-left">
-
+    
+            <div class="column-one-half">
+    
                 <!-- логотип -->
                 <div class="logo-container">
                     <a href="index.html">
-                        <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE">
+                        <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE" width="163" height="35">
                     </a>
                 </div>
-
+    
                 <div class="search-container">
                     <form class="form-search" id="form_search" action="/api/search" method="get">
                         <label class="form-search-label">
-                            <!-- TODO: может, вместо спана через псевдоэлемент сделать? -->
-                            <span class="search-icon"></span>
                             <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
-
+    
                             <button class="button button-search" type="submit">Найти</button>
                         </label>
-
+    
                     </form>
                 </div>
-
+    
             </div>
-
-            <!-- FIXME: класс column-right не задействован никак -->
-            <!-- класс-обертка для ширины в 1/2 от макетной, блок справа -->
-            <div class="column-one-half column-right">
-
-                <!-- элементы "Пользователь" и "Выйти" -->
-                <div class="login-container">
-                    <a class="link-user-name" href="#">
-                        Неопознанный Енот
-                    </a>
-
-                    <a class="link-logout" href="auth/logout">
-                        Выйти
-                    </a>
+    
+            <div class="header-user-nav column-one-half column-flexbox">
+    
+                    <!-- элементы "Пользователь" и "Выйти" -->
+                <div class="login-container column-flexbox column-left">
+                        <a class="link-user-name" href="#">
+                                Неопознанный Енот
+                            </a>
+        
+                            <a class="link-logout" href="auth/logout">
+                                Выйти
+                            </a>
                 </div>
-
+    
                 <!-- элементы "сравнить" и "корзина" -->
-                <ul class="user-cart-list">
-                    <li class="user-cart-item">
-                        <a class="link-user-cart" href="#">Корзина</a>
-                    </li>
+                <ul class="user-cart-list column-flexbox">
                     <li class="user-cart-item">
                         <a class="link-compare" href="#">Сравнить</a>
                     </li>
+                    <li class="user-cart-item">
+                        <a class="link-user-cart" href="#">Корзина</a>
+                    </li>
                 </ul>
-
+    
             </div>
-
+    
             <nav class="header-nav">
                 <ul class="header-nav-list">
                     <li class="header-nav-item column-one-half">
-
-                        <button class="header-nav-item-link">
+    
+                        <button class="header-nav-item-link plus-sign">
                             Каталог товаров
-                            <!-- FIXME: Плюсик засунуть в псевдоэлемент -->
-                            <!-- Декоративный плюсик справа от "Каталог товаров" -->
-                            <span class="plus-sign">Показать разделы каталога</span>
                         </button>
-
+    
                         <ul class="header-catalogue-list">
                             <li class="header-catalogue-item">
                                 <a class="header-catalogue-item-link" href="#">Виртуальная реальность</a>
@@ -99,21 +90,21 @@
                                 <a class="header-catalogue-item-link" href="#">Квадрокоптеры</a>
                             </li>
                         </ul>
-
+    
                     </li>
-
+    
                     <li class="header-nav-item">
                         <a class="header-nav-item-link" href="#">
                             Доставка
                         </a>
                     </li>
-
+    
                     <li class="header-nav-item">
                         <a class="header-nav-item-link" href="#">
                             Гарантия
                         </a>
                     </li>
-
+    
                     <li class="header-nav-item header-nav-item_last">
                         <a class="header-nav-item-link" href="#">
                             Контакты
@@ -121,7 +112,7 @@
                     </li>
                 </ul>
             </nav>
-
+    
         </header>
     </div>
 

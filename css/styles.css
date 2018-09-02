@@ -536,6 +536,7 @@ img {
 
 
 .header-user-nav {
+    justify-content: flex-end;
     align-items: flex-end;
     /* TODO: не работает почему-то */
     ~margin-top: -4px;; /* подгоняем под одну линию с полем поиска слева */
@@ -662,7 +663,9 @@ img {
 
 .link-user-cart {
     display: block;
+
     text-align: right;
+    white-space: nowrap;
 }
 
 /* svg-icon goes before text "Корзина" */
@@ -681,6 +684,8 @@ img {
     display: block; 
     text-align: center;
     margin-right: 20px;
+
+    white-space: nowrap;
 }
 
 /* svg-icon goes before text "сравнить" */
@@ -696,10 +701,11 @@ img {
 
 .link-log-me-in, .link-user-name { 
     display: block; 
+    white-space: nowrap;
 }
 
 /* svg-icon goes before text "сравнить" */
-.link-log-me-in::before {
+.link-log-me-in::before, .link-user-name::before {
     display: inline-block;
     vertical-align: baseline;
     margin-right: 14px;
@@ -710,7 +716,10 @@ img {
 }
 
 .link-user-name {
-
+    max-width: 210px;
+    white-space: nowrap;     /* Отменяем перенос текста */
+    overflow: hidden;        /* Обрезаем содержимое */
+    text-overflow: ellipsis; /* Многоточие */
 }
 
 .link-logout { 
@@ -848,8 +857,9 @@ img {
 
 
 .user-cart-list { 
+    margin-left: 20px;
     justify-content: flex-end;
-    letter-spacing: 0.01em; 
+    /* letter-spacing: 0.01em;  */
 }
 .user-cart-item { min-width: 100px; }
 
