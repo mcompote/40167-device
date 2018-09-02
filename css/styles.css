@@ -91,10 +91,16 @@ img {
     letter-spacing: 0.01em;
 }
 
-/* TODO: REVIEW */
-/* Если у ссылок картинки грузятся через псевдо-элементы, то opacity подойдет, наверное, лучше, чем color: rgba(,,,0.3) ?? */
-.header [class*='button']:hover,   .header [class*='link']:hover  { opacity: 0.6;  }
-.header [class*='button']:active,  .header [class*='link']:active { opacity: 0.3;  }
+
+/* У ссылок в шапке декоративные картинки добавлены через псевдо-элементы */
+.header [class*='button']:hover,   .header [class*='link']:hover   { opacity: 0.6;  } 
+.header [class*='button']:active,  .header [class*='link']:active  { opacity: 0.3;  } 
+/* переопределяем поведение для кнопки поиска и для ссылки на каталог товаров */
+.header [class*='link'][class~='plus-sign']:hover        { opacity: 1; color: rgba(0,0,0,0.6);  } 
+.header [class*='link'][class~='plus-sign']:active       { opacity: 1; color: rgba(0,0,0,0.3);  } 
+.header [class*='button'][class~='button-search']:hover  { opacity: 1; }
+.header [class*='button'][class~='button-search']:active { opacity: 1; }
+
 
 
 .header-nav-item-link, .footer-nav-item-link {
@@ -482,7 +488,12 @@ img {
     flex-shrink: 0;
 }
 
+/* Убрать вьюпорт, этот вьюпорт считается вместе с боковым скроллом (или наоборот), короче, ломает верстку */
 .column-vw100 {
+    width: 100vw;
+}
+
+.column-100percentages {
     width: 100vw;
 }
 
@@ -497,6 +508,7 @@ img {
 /* container for filter box */
 .wrapper-filter-box { 
     /* 348px - see .column-29-percent */
+    min-width: 348px;
     width: calc( 348px + (( 100% - 1200px )/2) );
     background-color: #eee;
 }
@@ -504,18 +516,20 @@ img {
 /* container's width for sorting box and content box */
 .wrapper-sorting-box-and-content { 
     /* 852px - see .column-71-percent */
+    min-width: 852px;
     width: calc( 852px + (( 100% - 1200px )/2) );
     /* TODO: remove later*/
     background: pink;
 }
 
+/* TODO: убрать медиа-запрос, он здесь не нужен */
 @media only screen and (max-width : 1199px) {
     .wrapper-filter-box { 
-        width: 32.5%;
+        ~~width: 32.5%;
     }   
    
     .wrapper-sorting-box-and-content {
-        width: 67.5%;
+        ~~width: 67.5%;
     }
 }
 /* ------------------------------------ */
@@ -526,7 +540,7 @@ img {
     width: 100%; 
 }
 
-.logo-container {}
+.logo-container {   margin-top: -17px; }
 .logo-container:hover  { opacity: 0.6; }
 .logo-container:active { opacity: 0.3; }
 
@@ -694,16 +708,29 @@ img {
 
 
 /* svg-icon goes after text "сравнить" */
-.header-nav-item-link {}
+.header-nav-item-link {
+    /* FF adds paddings 8px from left and right sides */
+    padding: 0;
+}
 
-.header-nav-item-link::before, .header-nav-item-link::after {
-    display: inline-block;
-    vertical-align: baseline;
-    margin-right: 14px;
-    width: 13px;
-    height: 12px;
+.header-nav-item:first-of-type .header-nav-item-link {
+    position: relative;
+    background: transparent;
+    border: none;
+}
+
+.plus-sign::before, .plus-sign::after {
+    position: absolute;
+    top: 50%;
+    right: -20px;
     content: '';
-    background: url('../img/svg/user.svg') center center no-repeat;
+    width: 16px;
+    height: 2px;
+    background: #b8a974;
+}
+
+.plus-sign::after {
+    transform: rotate(90deg);
 }
 
 
@@ -1069,13 +1096,6 @@ img {
 .button-search:active {
     background: black;
     color: rgba(255, 255, 255, 0.3);
-}
-
-/*  TODO: review  */
-/* правило изменения opacity для ссылок в .header'e оказалось более специфичным => 
-   уточняем классом формы */
-#form_search .button-search:hover, #form_search .button-search:active {
-    opacity: 1;  
 }
 
 
