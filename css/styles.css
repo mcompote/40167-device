@@ -1267,7 +1267,16 @@ img {
 
 /* slogan in '.promo-slider', headings in '.info' and '.contacts' sections  */
 .huge-heading-top-line {}
-.huge-heading-bottom-line {}
+
+.bottom-line::after {
+    position: absolute;
+    top: 179px;
+    display: block;
+    content: '';
+    width: 80px;
+    height: 7px;
+    background: #ffc600;
+}
 
 /* make an element looks as triangle */
 .triangle { display: block;
