@@ -645,8 +645,8 @@ img {
 .header .logo-container { margin-top: -17px; }
 .footer .logo-container { position: relative; top: 18px;}
 
-.logo-container:hover  { opacity: 0.6; }
-.logo-container:active { opacity: 0.3; }
+.logo-container:hover  .logo-image  { opacity: 0.6; }
+.logo-container:active .logo-image  { opacity: 0.3; }
 
 .search-container {}
 
