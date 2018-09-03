@@ -193,10 +193,13 @@ img {
 }
 
 .service-description-heading {
-    /* line-height: 48px;     */
+    margin-bottom: 35px;
 }
 
-.service-description-contents { letter-spacing: 0.01em; }
+.service-description-contents { 
+    padding-right: 242px;
+    letter-spacing: 0.01em; 
+}
 
 /* TODO: картинки не видно, пока так оставлю */
 .services .service-description-box:nth-of-type(1) .service-image-box {
@@ -511,6 +514,10 @@ img {
     padding-left: 80px;
 }
 
+.padding-r-100px {
+    padding-right: 100px;
+}
+
 .padding-left-52px {
     padding-left: 52px;
 }
@@ -520,6 +527,10 @@ img {
 */
 .padding-lr-20px {
     padding: 0 20px;
+}
+
+.padding-l-20px {
+    padding-left: 20px;
 }
 
 
@@ -582,12 +593,12 @@ img {
 .popular {
     /* TODO: потом убрать */
     background: crimson;
-    margin-bottom: 180px;     /* FIXME: примерно, потом точнее  */
+    margin-bottom: 82px;     
 }
 .popular-item-image-box {}
 
 .services { 
-    margin-top: 100px;
+    margin-top: 182px;  
     padding-bottom: 69px;
     background: #e5e5e5; 
 
@@ -595,6 +606,7 @@ img {
 
 .service-description-box {
     display: none;
+    margin-top: -30px;
 }
 
 .service-description-box.service-description-box_active {
@@ -923,11 +935,14 @@ img {
 
 
 .services-list {
-    margin-top: -50px;
+    margin-top: -100px;
+    padding-top: 80px;
+    margin-bottom: 70px;    
     border-right-width: 6px;
     border-right-color: black;
     border-right-style: solid;
 }
+
 .services-item {
     align-items: center;
     min-height: 40px;
