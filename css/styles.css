@@ -257,6 +257,11 @@ img {
     color: #fff;
 }
 
+.footer .logo-container, .footer .user-nav {
+    margin-top: 62px;
+}
+
+
 
 
 .footer-nav-list .footer-nav-item {
@@ -277,6 +282,8 @@ img {
 .footer-social-list [class*='button']:hover,    .footer-social-list [class*='link']:hover     { opacity: 0.6; }  
 .footer-social-list [class*='button']:active,   .footer-social-list [class*='link']:active    { opacity: 0.1; }  
 
+
+
 /* Cравнить, корзина */
 /* для header'а другие состояния => уточняем классом .footer */
 /* FIXME: вложенность получилась 3 уровня */
@@ -288,13 +295,26 @@ img {
 .footer .link-user-cart:active, .footer .link-compare:active    { opacity: 0.3; }
 
 /* Логин */
-.footer .link-log-me-in [class*='button'],          .footer .link-log-me-in [class*='link']           { opacity: 0.7; }
-.footer .link-log-me-in [class*='button']:hover,    .footer .link-log-me-in [class*='link']:hover     { opacity: 1.0; }  
-.footer .link-log-me-in [class*='button']:active,   .footer .link-log-me-in [class*='link']:active    { opacity: 0.3; }  
+.footer .link-log-me-in,          .footer .link-log-me-in           { opacity: 0.7; }
+.footer .link-log-me-in:hover,    .footer .link-log-me-in:hover     { opacity: 1.0; }  
+.footer .link-log-me-in:active,   .footer .link-log-me-in:active    { opacity: 0.3; }  
+
+
+.footer-contacts-and-copyright {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding-bottom: 66px;
+}
+
+
+
 
 /* htmlacademy svg */
 .button-htmlacademy:hover  { opacity: 0.6; }
 .button-htmlacademy:active { opacity: 0.3; }
+
 
 
 
@@ -495,8 +515,8 @@ img {
 
 /* container's width = 5/12 of layout width    = 500px  */
 /* for .info block */
-.column-five-twenteeth { width : 41.6667%; }
 .column-five-twenteeth { width : 500px; }    /* чтобы было ровно */
+.column-five-twenteeth { width : 41.6667%; }
 
 .column-29-percent {
     /* 29 процентов от "базовой" ширины в 1200px */
@@ -507,11 +527,14 @@ img {
     width: 852px;
 }
 
-/* something like float: right */
+/* stick element to the right corner of container */
 .column-right      { margin-left: auto; }
 
-/* something like float: left */
+/* stick element to the left corner of container */
 .column-left       { margin-right: auto; }
+
+/* align element in the center of container */
+.column-center     { margin-right: auto; margin-left: auto; }
 
 .column-flexbox { 
     display: flex; 
@@ -519,6 +542,10 @@ img {
 
 .column-no-shrink {
     flex-shrink: 0;
+}
+
+.column-grow-1 {
+    flex-grow: 1;
 }
 
 /* TODO: Убрать вьюпорт, этот вьюпорт считается вместе с боковым скроллом (или наоборот), короче, ломает верстку */
@@ -546,11 +573,16 @@ img {
     например, в .column-full?
 */
 .padding-lr-20px {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .padding-l-20px {
     padding-left: 20px;
+}
+
+.padding-r-20px {
+    padding-right: 20px;
 }
 
 
@@ -583,10 +615,21 @@ img {
 }
 /* ------------------------------------ */
 
+.user-nav {
+    justify-content: flex-end;
+    align-items: flex-end;    
+}
+
+.header-user-nav [class*="link"]:not([class="link-user-cart"]) {
+    margin-right: 20px;
+}
+
+.footer-user-nav [class*="link"]:not([class="link-user-cart"]) {
+    margin-right: 35px;
+}
+
 
 .header-user-nav {
-    justify-content: flex-end;
-    align-items: flex-end;
     /* TODO: не работает почему-то */
     ~margin-top: -4px;; /* подгоняем под одну линию с полем поиска слева */
 
@@ -599,7 +642,9 @@ img {
     width: 100%; 
 }
 
-.logo-container {   margin-top: -17px; }
+.header .logo-container { margin-top: -17px; }
+.footer .logo-container { position: relative; top: 18px;}
+
 .logo-container:hover  { opacity: 0.6; }
 .logo-container:active { opacity: 0.3; }
 
@@ -661,8 +706,17 @@ img {
 .footer { 
     margin-top: 90px;    /* FIXME: на глаз мерил примерно */
 }
-.footer-nav {}
+
+.footer-row-top {
+    margin-bottom: 49px;
+}
+
+.footer-nav {
+    margin-bottom: 64px;
+}
+
 .footer-social {}
+
 .footer-copyright {}
 .breadcrumbs { letter-spacing: 0.01em; }
 .filter-box  { 
@@ -855,11 +909,38 @@ img {
 }
 .button-slide-changer {}
 
-.button-social      { width: 32px; height: 32px; border-radius: 50%; }
-.button-social-vk   { }
-.button-social-fb   {}
-.button-social-insta {}
-.button-htmlacademy {}
+.button-social { 
+    display: block;
+    width: 32px; 
+    height: 32px; 
+    border-radius: 50%; 
+    font-size: 0;
+}
+
+.button-social-fb   {
+    background-image: url('../img/svg/fb.svg');
+    background-repeat: no-repeat;
+}
+
+.button-social-insta {
+    background-image: url('../img/svg/instagram.svg');
+    background-repeat: no-repeat;
+}
+
+.button-social-twitter   { 
+    background-image: url('../img/svg/twitter.svg');
+    background-repeat: no-repeat;
+}
+
+.button-htmlacademy {
+    display: block;
+    width: 27px;
+    height: 34px;
+    background-image: url('../img/svg/logo-html.svg');
+    background-repeat: no-repeat;
+    
+    font-size: 0px;
+}
 
 .link-add-to-compare-list {
     font-family: 'Open Sans', sans-serif;
@@ -925,16 +1006,24 @@ img {
     margin-left: auto;
 }
 
-.footer-nav-list {}
+.footer-nav-list {
+    justify-content: space-around;
+}
+
+/* перекрываем правило, обнуляющее margin у всех элементов с классом list */
+.footer-nav .footer-nav-list {
+    margin-top: 3px;
+}
+
 .footer-nav-item {}
 
 
 .user-cart-list { 
-    margin-left: 20px;
     justify-content: flex-end;
     /* letter-spacing: 0.01em;  */
 }
-.user-cart-item { min-width: 100px; }
+
+.header-user-nav .user-cart-item { min-width: 100px; }
 
 .slider-navigation-list {}
 .slider-navigation-item {}
@@ -1032,7 +1121,16 @@ img {
     /* TODO: remove lately */
     background: greenyellow;
 }
-.footer-social-list {}
+
+.footer-social-list {
+    justify-content: space-around;
+}
+/* правило, обнуляющее margin'ы для всех эл-тов с классом list сильнее, 
+   уточняем родительским классом 
+*/
+.footer-social .footer-social-list {
+    margin: 0 auto;
+}
 
 
 .pagination-list {
@@ -1118,8 +1216,13 @@ img {
 
 
 /* <p>, <b>, <span> and other  */
-.footer-address {}
-.footer-contacts {}
+.footer-address, .footer-contacts {
+    /* сбрасываем стили браузера */
+    margin: 0;
+    /* отступ снизу от следующего элемента */
+    margin-bottom: 47px;
+
+}
 .close-popup {}
 
 
