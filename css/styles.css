@@ -197,18 +197,33 @@ img {
 }
 
 .service-description-contents { 
+    position: relative;
     padding-right: 242px;
     letter-spacing: 0.01em; 
 }
 
-/* TODO: картинки не видно, пока так оставлю */
-.services .service-description-box:nth-of-type(1) .service-image-box {
+/* FIXME: пока так оставлю */
+.service-description-contents::after {
+    position: absolute;
+    display: block;
+    height: 260px;
+    width: 260px;
+    bottom: 0px;
+    right: 0px;
+    content: '';
+    border: 2px dashed blueviolet;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.service-description-box:nth-of-type(1) .service-description-contents::after {
     background-image: url('../img/svg/delivery.svg');
 }
-.services .service-description-box:nth-of-type(2) .service-image-box {
+
+.service-description-box:nth-of-type(2) .service-description-contents::after {
     background-image: url('../img/svg/warranty.svg');
 }
-.services .service-description-box:nth-of-type(3) .service-image-box {
+.service-description-box:nth-of-type(3) .service-description-contents::after {
     background-image: url('../img/svg/credit.svg');
 }
 
