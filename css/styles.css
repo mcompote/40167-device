@@ -232,9 +232,16 @@ img {
 .brands-gallery-item-logo-wrapper {
     filter: grayscale(100%);
 }
+
 .brands-gallery-item-logo-wrapper:hover {
     filter: grayscale(0%);
 }
+
+.brands-gallery-item-logo-wrapper img {
+    display: block;
+    margin: 0 auto;
+}
+
 
 
 .carrier-item {
@@ -459,6 +466,10 @@ img {
 .column-one-third  { width: 400px; } 
 .column-one-third  { width: 33.3334%; } 
 
+/* container's width = 1/4 of parent block */
+/* for brand image contaners */
+.column-one-fourth  { width: 25%; } 
+
 /* container's width = 2/3 of layout width    = 400px  */
 /* for .services > right block (content) */
 .column-two-thirds { width: 800px; }
@@ -635,7 +646,9 @@ img {
         /* TODO: поменять потом */
         background: burlywood;
 }
+
 .info {
+    margin-top: 160px;
     margin-left: 20px;
     margin-right: 20px;
     
@@ -643,6 +656,8 @@ img {
     background: palevioletred;
 }
 .contacts {
+    margin-top: 160px;
+
         /* TODO: поменять потом */
         background: palevioletred;
 }
@@ -941,12 +956,12 @@ img {
 .promo-item_active { position: static; opacity: 1; }
 
 .brands-gallery-list {
-    display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .brands-gallery-item {}
-.brands-gallery-item-logo-wrapper {}
+
 
 
 .services-list {
