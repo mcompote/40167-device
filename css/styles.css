@@ -162,9 +162,11 @@ img {
 .popular-item-image-box {
     width: 160px;
     height: 160px;
+    margin-bottom: 32px;     /* FIXME: примерно */
     background-color: #f7e296;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
 }
 
 .popular-item:nth-of-type(1) .popular-item-image-box {
@@ -579,6 +581,7 @@ img {
 .popular {
     /* TODO: потом убрать */
     background: crimson;
+    margin-bottom: 180px;     /* FIXME: примерно, потом точнее  */
 }
 .popular-item-image-box {}
 
@@ -972,6 +975,7 @@ img {
     /* TODO: потом убрать */
     background: rgba(100, 149, 237, 0.4);
     margin-top: -32px;
+    margin-bottom: 112px;
 }
 
 
