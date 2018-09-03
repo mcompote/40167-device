@@ -119,10 +119,12 @@ img {
 
 /* <main пошёл> */
 
-/* два класса для большего приоритета, далее .huge-heading переопределяет line-height */
+/* два класса для большего приоритета, т.к. далее .huge-heading переопределяет line-height */
 .promo-article .promo-article-heading {
     line-height: 56px;
+    margin-bottom: 28px;
 }
+
 
 .promo-item-characteristic-name {
     font-weight: 300;    /* default UA style for <TH>: font-weight = bold */
@@ -141,6 +143,11 @@ img {
 
 .promo-article-contents {
     letter-spacing: 0.01em;
+    margin-bottom: 56px;  /* FIXME: примерно померил */
+}
+
+.promo-article .button-animated {
+    margin-bottom: 64px;
 }
 
 
