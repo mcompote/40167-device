@@ -961,7 +961,11 @@ img {
 
 
 /*  images  */
-.promo-item-pic {}
+.promo-item-pic {
+    display: block;
+    margin: 0 auto;
+}
+
 .logo-image {}
 
 
