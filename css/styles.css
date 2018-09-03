@@ -439,11 +439,12 @@ img {
 /* container's width = 1/3 of layout width    = 400px  */
 /* for .services > left block (buttons) */
 .column-one-third  { width: 400px; } 
+.column-one-third  { width: 33.3334%; } 
 
 /* container's width = 2/3 of layout width    = 400px  */
 /* for .services > right block (content) */
-.column-two-thirds { width: 66.667%; } /* получается не ровно 800px */
 .column-two-thirds { width: 800px; }
+.column-two-thirds { width: 66.6667%; } 
 
 /* container's width = 1/6 of layout width    = 200px */
 /* for items in .popular container */
@@ -591,7 +592,16 @@ img {
     background: #e5e5e5; 
 
 }
-.service-description-box {}
+
+.service-description-box {
+    display: none;
+}
+
+.service-description-box.service-description-box_active {
+    display: block;
+}
+
+
 
 .brands-gallery { 
     margin-top: 106px;
@@ -777,11 +787,13 @@ img {
 }
 
 
-.button             {}
+.button             { magic: false; }
+
 .button-animated    {
-    display: block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width:  220px;
-    height: 40px;
 
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
@@ -909,11 +921,34 @@ img {
 .brands-gallery-item {}
 .brands-gallery-item-logo-wrapper {}
 
+
 .services-list {
-    margin-top: -100px;
+    margin-top: -50px;
+    border-right-width: 6px;
+    border-right-color: black;
+    border-right-style: solid;
 }
-.services-item {}
-.services-item_active {}
+.services-item {
+    align-items: center;
+    min-height: 40px;
+    margin-bottom: 25px;
+}
+
+.services-item .button-animated {
+    width: 160px;
+}
+
+.services-item_active {
+    background: #000000;
+}
+
+.services-item_active .button-blackened,
+.services-item_active .button-blackened:hover,
+.services-item_active .button-blackened:active
+ {
+    color: #f7e184;
+    background: inherit;
+}
 
 
 .popular-list {
