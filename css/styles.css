@@ -244,12 +244,6 @@ img {
 
 
 
-.carrier-item {
-    font-family: 'Gilroy', sans-serif;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 40px;        
-}
 
 
 /* задаем инверсию цветов фона и текста для футера */
@@ -649,18 +643,19 @@ img {
 
 .info {
     margin-top: 160px;
-    margin-left: 20px;
-    margin-right: 20px;
     
     /* TODO: поменять потом */
     background: palevioletred;
 }
+
+
 .contacts {
     margin-top: 160px;
 
         /* TODO: поменять потом */
         background: palevioletred;
 }
+
 .map-container {}
 
 .footer { 
@@ -904,12 +899,11 @@ img {
 /* ----------      BEGIN OF LISTS (UL,LI ENLEMENTS)     ---------- */
 /* --------------------------------------------------------------- */
 
-[class*='-list'] {
+[class*='-list']:not([class*='marked-']) {
     list-style: none;
     margin:0;
     padding:0;
 }
-
 
 /* ul, li styles */
 .header-nav-list {
@@ -1002,8 +996,24 @@ img {
     justify-content: space-around;
 }
 .popular-item {}
-.carrier-list {}
-.carrier-item {}
+
+.carrier-marked-list {
+    list-style: circle;
+    /* TODO: либо убрать marked-list ---> list и сделать на псевдоэлементах, 
+             либо в list-style-image таки надо будет что-то указать
+     */
+    /* list-style-image: url(''); */
+    padding: 0;
+    margin-top: 70px;
+}
+
+.carrier-item { 
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 40px;        
+}
+
 .breadcrumbs-list {}
 .breadcrumbs-item {}
 .breadcrumbs-item-active {}
@@ -1092,7 +1102,18 @@ img {
 /* ----------    BEGIN OF containers decorating stuff   ---------- */
 /* --------------------------------------------------------------- */
 
+.info h2, .contacts h2 {
+    margin-bottom: 47px;
+}
 
+.info p, .contacts p  {
+    margin-top: 37px;
+    margin-bottom: 37px;
+}
+
+.info .button-animated, .contacts .button-animated {
+    margin-top: 78px;
+}
 
 
 
