@@ -150,24 +150,23 @@
                     </div>
 
                     <form class="form-filter column-29-percent column-right padding-left-80px" id="form_filter" action="/api/catalog" method="get">
-                        <div class="form-filter-component">
+                       
+                        <fieldset class="form-filter-component">
+                                <legend class="form-filter-heading">Стоимость</legend>
                             <div class="form-filter-input-range-ugly block">
-                                <noscript>
-                                    <label class="form-filter-label">
-                                        Минимальная Стоимость
-                                        <input type="range" name="min_cost" value="0">
-                                    </label>
-
-                                    <label class="form-filter-label">
-                                        Максимальная Стоимость
-                                        <input class="form-filter-input-range" type="range" name="max_cost" min="0" value="5000">
-                                    </label>
-                                </noscript>
+                                <label class="form-filter-label">
+                                    Минимальная Стоимость
+                                    <input type="range" name="min_cost" value="0">
+                                </label>
+                        
+                                <label class="form-filter-label">
+                                    Максимальная Стоимость
+                                    <input class="form-filter-input-range" type="range" name="max_cost" min="0" value="5000">
+                                </label>
                             </div>
 
                             <!-- заглушка для модного input-range, который скорее всего ч/з js работает -->
                             <div class="form-filter-input-range-pretty none">
-                                <h3 class="form-filter-heading">Стоимость</h3>
                                 <div class="drag-slider">
                                     <div class="drag-slider-body">
                                         <div class="drag-slider-line"></div>
@@ -176,11 +175,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </fieldset>
 
-
-                        <div class="form-filter-component">
-                            <h3 class="form-filter-heading">Цвет</h3>
+                        <fieldset class="form-filter-component">
+                            <legend class="form-filter-heading">Цвет</legend>
                             <label class="form-filter-label">
                                 <input class="form-filter-checkbox" type="checkbox" name="color" value="Черный"> Черный
                             </label>
@@ -200,19 +198,19 @@
                             <label class="form-filter-label">
                                 <input class="form-filter-checkbox" type="checkbox" name="color" value="Розовый"> Розовый
                             </label>
-                        </div>
+                        </fieldset>
 
-                        <div class="form-filter-component">
-                            <h3 class="form-filter-heading">
-                                <span class="visually-hidden">Наличие</span>Bluetooth</h3>
+                        <fieldset class="form-filter-component">
+                            <legend class="form-filter-heading">
+                                <span class="visually-hidden">Наличие</span>Bluetooth
+                            </legend>
                             <label class="form-filter-label">
                                 <input class="form-filter-radio" type="radio" name="features_bluetooth" value="true"> Есть
                             </label>
                             <label class="form-filter-label">
                                 <input class="form-filter-radio" type="radio" name="features_bluetooth" value="false"> Нет
                             </label>
-
-                        </div>
+                        </fieldset>
 
                         <button type="submit" class="button button-animated">Показать</button>
                     </form>
