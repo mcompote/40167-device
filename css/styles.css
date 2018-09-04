@@ -272,32 +272,28 @@ img {
 }
 
 
-/*  Доставка, гарантия, контакты в футере */
-.footer-nav-list [class*='button'],        .footer-nav-list [class*='link']        { color: rgba(255,255,255, 1.0); }
-.footer-nav-list [class*='button']:hover,  .footer-nav-list [class*='link']:hover  { color: rgba(255,255,255, 0.6); }  
-.footer-nav-list [class*='button']:active, .footer-nav-list [class*='link']:active { color: rgba(255,255,255, 0.6); }  
+/*  Доставка, гарантия, контакты, логотип htmlacademy в футере имеют одинаковые состояния прозрачности
+    при наведении и клике
+*/
+.footer-nav              [class*='button']:hover,  .footer-nav        [class*='link']:hover,
+.logo-container:hover    [class*='button']:hover,  .logo-container    [class*='link']:hover,
+.footer-copyright:hover  [class*='button']:hover,  .footer-copyright  [class*='link']:hover { opacity: 0.6; }
+
+.footer-nav              [class*='button']:active, .footer-nav       [class*='link']:active,
+.logo-container:active   [class*='button']:active, .logo-container   [class*='link']:active,
+.footer-copyright:active [class*='button']:active, .footer-copyright [class*='link']:active { opacity: 0.3; }
+
 
 /* Кнопки соц сетей */
-.footer-social-list [class*='button'],          .footer-social-list [class*='link']           { opacity: 0.3; }
-.footer-social-list [class*='button']:hover,    .footer-social-list [class*='link']:hover     { opacity: 0.6; }  
-.footer-social-list [class*='button']:active,   .footer-social-list [class*='link']:active    { opacity: 0.1; }  
+.footer-social-list [class*='button'],          .footer-social-list [class*='link']         { opacity: 0.3; }
+.footer-social-list [class*='button']:hover,    .footer-social-list [class*='link']:hover   { opacity: 0.6; }  
+.footer-social-list [class*='button']:active,   .footer-social-list [class*='link']:active  { opacity: 0.1; }  
 
+/* Логин, Пользователь, Выйти, Cравнить, Корзина */
+.footer-user-nav  [class*='button'],         .footer-user-nav  [class*='link']              { opacity: 0.7; }
+.footer-user-nav  [class*='button']:hover,   .footer-user-nav  [class*='link']:hover        { opacity: 1.0; }
+.footer-user-nav  [class*='button']:active,  .footer-user-nav  [class*='link']:active       { opacity: 0.3; }
 
-
-/* Cравнить, корзина */
-/* для header'а другие состояния => уточняем классом .footer */
-/* FIXME: вложенность получилась 3 уровня */
-/* .footer .user-cart-list [class*='button'],          .footer .user-cart-list [class*='link']           { opacity: 0.7; }
-.footer .user-cart-list [class*='button']:hover,    .footer .user-cart-list [class*='link']:hover     { opacity: 1.0; }  
-.footer .user-cart-list [class*='button']:active,   .footer .user-cart-list [class*='link']:active    { opacity: 0.3; } */
-.footer .link-user-cart,        .footer .link-compare           { opacity: 0.7; }
-.footer .link-user-cart:hover,  .footer .link-compare:hover     { opacity: 1.0; }
-.footer .link-user-cart:active, .footer .link-compare:active    { opacity: 0.3; }
-
-/* Логин */
-.footer .link-log-me-in,          .footer .link-log-me-in           { opacity: 0.7; }
-.footer .link-log-me-in:hover,    .footer .link-log-me-in:hover     { opacity: 1.0; }  
-.footer .link-log-me-in:active,   .footer .link-log-me-in:active    { opacity: 0.3; }  
 
 
 .footer-contacts-and-copyright {
@@ -307,8 +303,6 @@ img {
 
     padding-bottom: 66px;
 }
-
-
 
 
 /* htmlacademy svg */
@@ -615,6 +609,10 @@ img {
 }
 /* ------------------------------------ */
 
+
+
+
+
 .user-nav {
     justify-content: flex-end;
     align-items: flex-end;    
@@ -628,7 +626,9 @@ img {
     margin-right: 40px;
 }
 
-/* FIXME: пришлось воспользоваться 3 уровнями чтобы "перебить" вышестоящее правило */
+/* FIXME: пришлось воспользоваться 3 уровнями чтобы "перебить" вышестоящее правило,
+          иначе .link-user-name вылезет из контейнера
+*/
 .footer-row-top .footer-user-nav .link-user-name {
     margin-right: auto;
 }
