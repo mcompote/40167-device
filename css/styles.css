@@ -60,12 +60,14 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+button {
+    /* по умолчанию в Chrome для <button> используется background-color: buttonface; */
+    background: transparent;
+}
 /* --------------------------------------------------------------- */
 /* ----------  END   OF GLOBAL styles (html, body, etc.) --------- */
 /* --------------------------------------------------------------- */
-
-
-
 
 
 
@@ -533,7 +535,9 @@ img {
 
 .column-flexbox { 
     display: flex; 
-}
+}    
+
+
 
 .column-no-shrink {
     flex-shrink: 0;
@@ -541,6 +545,10 @@ img {
 
 .column-grow-1 {
     flex-grow: 1;
+}
+
+.flex-h-middle { 
+    align-items: center;
 }
 
 /* TODO: Убрать вьюпорт, этот вьюпорт считается вместе с боковым скроллом (или наоборот), короче, ломает верстку */
@@ -738,9 +746,12 @@ img {
     background: #ebebeb; 
 }
 
-.sorting-box div:first-child {
-    justify-content: space-around;
+.sorting-box-top-row {
+    padding-left: 72px;
+    padding-right: 20px;
+    justify-content: space-between;
 }
+
 
 .filter-box-heading-block, .sorting-box-heading-block {      
     min-height: 4.375em;
@@ -752,7 +763,22 @@ img {
     letter-spacing: 0.2em;
     text-transform: uppercase;
 }
-.filter-box-heading-block       { display: block; background-color: #dbdbdb; }
+
+.sorting-box-heading-block { 
+    min-width: 160px; 
+    margin-right: 20px; 
+}
+.filter-box-heading-block  { 
+    display: block; 
+    background-color: #dbdbdb; 
+}
+
+
+.filter-box-heading-block-content {
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+}
 
 .catalog-items-box { 
 }
@@ -964,7 +990,9 @@ img {
 }
 
 
-.link-sorting-criteria                {}
+.link-sorting-criteria {
+    border: none;
+}
 
 .js-sorting-criteria-by-price         {}
 .js-sorting-criteria-by-type          {}
@@ -988,10 +1016,16 @@ img {
 /* ----------      BEGIN OF LISTS (UL,LI ENLEMENTS)     ---------- */
 /* --------------------------------------------------------------- */
 
-[class*='-list']:not([class*='marked-']) {
+[class*='-list'] {
     list-style: none;
     margin:0;
     padding:0;
+}
+
+[class*='marked-list'] {
+    list-style: disc;
+    margin:0;
+    padding: 20px;
 }
 
 /* ul, li styles */
@@ -1133,8 +1167,16 @@ img {
 
 .breadcrumbs-item-active {}
 
-.ordering-methods-list {}
-.ordering-methods-item {}
+.ordering-methods-list {
+    min-width: 60px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.ordering-methods-item:first-child {
+    margin-right: 19px;
+}
 
 .sorting-methods-list {}
 .sorting-methods-item {}
