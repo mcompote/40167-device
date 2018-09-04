@@ -13,107 +13,108 @@
 
 <body>
     <div class="column-full">
-        <header class="header">
-    
-            <div class="column-one-half">
-    
-                <!-- логотип -->
-                <div class="logo-container">
-                    <a href="index.html">
-                        <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE" width="163" height="35">
-                    </a>
-                </div>
-    
-                <div class="search-container">
-                    <form class="form-search" id="form_search" action="/api/search" method="get">
-                        <label class="form-search-label">
-                            <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
-    
-                            <button class="button button-search" type="submit">Найти</button>
-                        </label>
-    
-                    </form>
-                </div>
-    
-            </div>
-    
-            <div class="header-user-nav column-one-half column-flexbox">
-    
-                    <!-- элементы "Пользователь" и "Выйти" -->
-                <div class="login-container column-flexbox column-left">
-                        <a class="link-user-name" href="#">
-                                Неопознанный Енот
-                            </a>
-        
-                            <a class="link-logout" href="auth/logout">
-                                Выйти
-                            </a>
-                </div>
-    
-                <!-- элементы "сравнить" и "корзина" -->
-                <ul class="user-cart-list column-flexbox">
-                    <li class="user-cart-item">
-                        <a class="link-compare" href="#">Сравнить</a>
-                    </li>
-                    <li class="user-cart-item">
-                        <a class="link-user-cart" href="#">Корзина</a>
-                    </li>
-                </ul>
-    
-            </div>
-    
-            <nav class="header-nav">
-                <ul class="header-nav-list">
-                    <li class="header-nav-item column-one-half">
-    
-                        <button class="header-nav-item-link plus-sign">
-                            Каталог товаров
-                        </button>
-    
-                        <ul class="header-catalogue-list">
-                            <li class="header-catalogue-item">
-                                <a class="header-catalogue-item-link" href="#">Виртуальная реальность</a>
-                            </li>
-                            <li class="header-catalogue-item">
-                                <a class="header-catalogue-item-link" href="#">Моноподы для селфи</a>
-                            </li>
-                            <li class="header-catalogue-item">
-                                <a class="header-catalogue-item-link" href="#">Экшн-камеры</a>
-                            </li>
-                            <li class="header-catalogue-item">
-                                <a class="header-catalogue-item-link" href="#">Фитнес-браслеты</a>
-                            </li>
-                            <li class="header-catalogue-item">
-                                <a class="header-catalogue-item-link" href="#">Умные часы</a>
-                            </li>
-                            <li class="header-catalogue-item">
-                                <a class="header-catalogue-item-link" href="#">Квадрокоптеры</a>
-                            </li>
+            <div class="column-full">
+                    <header class="header">
+                  
+                      <div class="column-one-half">
+                        
+                        <!-- логотип -->
+                        <div class="logo-container">
+                                <a href="index.html">
+                          <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE" width="163" height="35">
+                        </a>
+                        </div>
+                        
+                        <div class="search-container">
+                          <form class="form-search" id="form_search" action="/api/search" method="get">
+                            <label class="form-search-label">
+                              <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
+                
+                              <button class="button button-search" type="submit">Найти</button>
+                            </label>
+                          
+                          </form>
+                        </div>
+                        
+                      </div>
+                
+                      <div class="user-nav header-user-nav column-one-half column-flexbox">
+                  
+                        <!-- элементы "Пользователь" и "Выйти" -->
+                        <div class="login-container column-flexbox column-grow-1">
+                                <a class="link-user-name" href="#">
+                                        Неопознанный Енот
+                                    </a>
+                
+                                    <a class="link-logout" href="auth/logout">
+                                        Выйти
+                                    </a>
+                        </div>
+                 
+                        <!-- элементы "сравнить" и "корзина" -->
+                        <ul class="user-cart-list column-flexbox">
+                          <li class="user-cart-item">
+                            <a class="link-compare" href="#">Сравнить</a>
+                          </li>
+                          <li class="user-cart-item">
+                            <a class="link-user-cart" href="#">Корзина</a>
+                          </li>
                         </ul>
-    
-                    </li>
-    
-                    <li class="header-nav-item">
-                        <a class="header-nav-item-link" href="#">
-                            Доставка
-                        </a>
-                    </li>
-    
-                    <li class="header-nav-item">
-                        <a class="header-nav-item-link" href="#">
-                            Гарантия
-                        </a>
-                    </li>
-    
-                    <li class="header-nav-item header-nav-item_last">
-                        <a class="header-nav-item-link" href="#">
-                            Контакты
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-    
-        </header>
+                  
+                      </div>
+                  
+                      <nav class="header-nav">
+                        <ul class="header-nav-list">
+                          <li class="header-nav-item column-one-half">
+                
+                              <button class="header-nav-item-link plus-sign">
+                                Каталог товаров
+                              </button>
+                      
+                              <ul class="header-catalogue-list">
+                                <li class="header-catalogue-item">
+                                  <a class="header-catalogue-item-link" href="#">Виртуальная реальность</a>
+                                </li>
+                                <li class="header-catalogue-item">
+                                  <a class="header-catalogue-item-link" href="#">Моноподы для селфи</a>
+                                </li>
+                                <li class="header-catalogue-item">
+                                  <a class="header-catalogue-item-link" href="#">Экшн-камеры</a>
+                                </li>
+                                <li class="header-catalogue-item">
+                                  <a class="header-catalogue-item-link" href="#">Фитнес-браслеты</a>
+                                </li>
+                                <li class="header-catalogue-item">
+                                  <a class="header-catalogue-item-link" href="#">Умные часы</a>
+                                </li>
+                                <li class="header-catalogue-item">
+                                  <a class="header-catalogue-item-link" href="#">Квадрокоптеры</a>
+                                </li>
+                              </ul>
+                
+                          </li>
+                      
+                          <li class="header-nav-item">
+                            <a class="header-nav-item-link" href="#">
+                              Доставка
+                            </a>
+                          </li>
+                      
+                          <li class="header-nav-item">
+                            <a class="header-nav-item-link" href="#">
+                              Гарантия
+                            </a>
+                          </li>
+                      
+                          <li class="header-nav-item header-nav-item_last">
+                            <a class="header-nav-item-link" href="#">
+                              Контакты
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                  
+                    </header>
     </div>
 
     <main>
