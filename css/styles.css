@@ -1453,7 +1453,10 @@ button {
 
 
 /* --- остальные формы --- */
-.form-filter {}
+.form-filter {
+    padding-right: 68px;
+}
+
 .form-filter-label {}
 .form-filter-input-range {}
 .form-filter-input-range-ugly {}
