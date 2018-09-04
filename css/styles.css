@@ -339,10 +339,19 @@ button {
 
 
 .form-filter-component {
+    position: relative;
+    border: none;
     border-top: 2px solid black;
+    padding-top: 60px;
+    margin-bottom: 40px;
 }
 
 .form-filter-heading {
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 0px;
+
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -918,7 +927,7 @@ button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width:  220px;
+    ~~~width:  220px;
 
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
@@ -1454,6 +1463,7 @@ button {
 
 /* --- остальные формы --- */
 .form-filter {
+    padding-top: 69px;
     padding-right: 68px;
 }
 
