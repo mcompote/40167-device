@@ -356,91 +356,99 @@
     </main>
 
     <footer class="footer">
-        <div class="column-full column-flexbox">
 
-            <div class="column-three-tenths">
-            
-                <!-- логотип -->
-                <div class="logo-container">
-                    <a href="index.html">
-                        <img class="logo-image" src="img/content/logo-device.svg" alt="логотип интернет-магазина DEVICE">
-                    </a>
-                </div>
-            
-                <p class="footer-address">г. Москва, ул. Строителей, 15</p>
-                <p class="footer-contacts">
-                    <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
-                </p>
-            
-            </div>
+        <div class="footer-row-top column-full column-flexbox padding-lr-20px">
+              <!-- логотип -->
+              <div class="logo-container bottom-line column-left">
+                  <a href="index.html">
+                      <img class="logo-image" src="img/content/logo-device-footer.svg" alt="логотип интернет-магазина DEVICE" width="163" height="35">
+                  </a>
+              </div>
+        
+              <div class="user-nav footer-user-nav column-five-twenteeth column-flexbox">
+          
+                <!-- элемент "логин" -->
+                <div class="login-container column-flexbox column-grow-1">
 
-            <div class="column-four-tenths">
-                <nav class="footer-nav">
-    
-                    <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
-                    <ul class="footer-nav-list">
-                        <li class="footer-nav-item">
-                            <a class="footer-nav-item-link" href="#">Доставка</a>
-                        </li>
-                        <li class="footer-nav-item">
-                            <a class="footer-nav-item-link" href="#">Гарантия</a>
-                        </li>
-                        <li class="footer-nav-item">
-                            <a class="footer-nav-item-link" href="#">Контакты</a>
-                        </li>
-                    </ul>
-    
-                </nav>
-    
-    
-                <div class="footer-social">
-                    <ul class="footer-social-list">
-                        <li>
-                            <a class="button-social button-social-vk" href="#">Вконтакте</a>
-                        </li>
-                        <li>
-                            <a class="button-social button-social-fb" href="#">Фейсбук</a>
-                        </li>
-                        <li>
-                            <a class="button-social button-social-insta" href="#">Инстаграм</a>
-                        </li>
-                    </ul>
-                </div>
-    
-            </div>
-    
-    
-            <div class="column-three-tenths">
-    
-                <!-- элементы "Пользователь" и "Выйти" -->
-                <div class="login-container">
-                    <a class="link-user-name" href="#">
+                  <a class="link-user-name" href="#">
                         Неопознанный Енот
                     </a>
     
-                    <a class="link-logout" href="auth/logout">
+                    <a class="link-logout column-right" href="auth/logout">
                         Выйти
                     </a>
                 </div>
-    
+         
                 <!-- элементы "сравнить" и "корзина" -->
-                <ul class="user-cart-list">
-                    <li class="user-cart-item">
-                        <a class="link-user-cart" href="#">Корзина</a>
-                    </li>
-                    <li class="user-cart-item">
-                        <a class="link-compare" href="#">Сравнить</a>
-                    </li>
+                <ul class="user-cart-list column-flexbox">
+                  <li class="user-cart-item">
+                    <a class="link-compare" href="#">Сравнить</a>
+                  </li>
+                  <li class="user-cart-item">
+                    <a class="link-user-cart" href="#">Корзина</a>
+                  </li>
                 </ul>
-    
-                <p class="footer-copyright">
-                    <b class="visually-hidden">Разработчик сайта:</b>
-                    <a class="button-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-                </p>
-            </div>
-
+          
+              </div>
         </div>
-    </footer>
+    
+    
+        <div class="footer-row-bottom column-full column-flexbox">
+    
+          <div class="column-three-tenths">
+            <p class="footer-address">г. Москва, ул. Строителей, 15</p>
+          </div>
+    
+          <div class="column-four-tenths">
+            <nav class="footer-nav">
+          
+              <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
+              <ul class="footer-nav-list column-flexbox">
+                <li class="footer-nav-item">
+                  <a class="footer-nav-item-link" href="#">Доставка</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="footer-nav-item-link" href="#">Гарантия</a>
+                </li>
+                <li class="footer-nav-item">
+                  <a class="footer-nav-item-link" href="#">Контакты</a>
+                </li>
+              </ul>
+          
+            </nav>
+    
+    
+            <div class="footer-social">
+              <ul class="footer-social-list column-flexbox column-one-third">
+                <li>
+                  <a class="button-social button-social-fb" href="#">Вконтакте</a>
+                </li>
+                <li>
+                  <a class="button-social button-social-insta" href="#">Фейсбук</a>
+                </li>
+                <li>
+                  <a class="button-social button-social-twitter" href="#">Инстаграм</a>
+                </li>
+              </ul>
+            </div>
+    
+          </div>
+    
+          <div class="footer-contacts-and-copyright column-three-tenths column-flexbox padding-lr-20px">
+              <p class="footer-contacts">
+                  <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+              </p>
+            <p class="footer-copyright">
+              <b class="visually-hidden">Разработчик сайта:</b>
+              <a class="button-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+            </p>
+    
+          </div>
+    
+        </div>
+      </footer>
+
+
 
     <section class="popup popup-map">
         <div class="column-four-fifths">

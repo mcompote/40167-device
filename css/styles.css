@@ -625,7 +625,12 @@ img {
 }
 
 .footer-user-nav [class*="link"]:not([class="link-user-cart"]) {
-    margin-right: 35px;
+    margin-right: 40px;
+}
+
+/* FIXME: пришлось воспользоваться 3 уровнями чтобы "перебить" вышестоящее правило */
+.footer-row-top .footer-user-nav .link-user-name {
+    margin-right: auto;
 }
 
 
@@ -803,8 +808,6 @@ img {
 .link-compare { 
     display: block; 
     text-align: center;
-    margin-right: 20px;
-
     white-space: nowrap;
 }
 
@@ -828,7 +831,7 @@ img {
 .link-log-me-in::before, .link-user-name::before {
     display: inline-block;
     vertical-align: baseline;
-    margin-right: 14px;
+    margin-right: 8px;
     width: 13px;
     height: 12px;
     content: '';
@@ -844,7 +847,6 @@ img {
 
 .link-logout { 
     display: block; 
-    margin-left: 20px;
 }
 
 .link-catalog       {}
@@ -1197,7 +1199,7 @@ img {
 
 
 /* --------------------------------------------------------------- */
-/* ----------    BEGIN OF containers decorating stuff   ---------- */
+/* ----------      BEGIN OF        decorating stuff     ---------- */
 /* --------------------------------------------------------------- */
 
 .info h2, .contacts h2 {
@@ -1292,8 +1294,10 @@ img {
 .triangle-active    { opacity: 1 !important;     }
 
 /* --------------------------------------------------------------- */
-/* ----------    END   OF containers decorating stuff   ---------- */
+/* ----------      END OF          decorating stuff     ---------- */
 /* --------------------------------------------------------------- */
+
+
 
 
 
