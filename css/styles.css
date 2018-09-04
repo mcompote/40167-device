@@ -329,10 +329,10 @@ img {
 
 /*  ---2ая стр. пошла--- */
 
-/* по аналогии с header'ом попробуем тот же трюк для breadcrumbs */
-.breadcrumbs [class*='button'],         .breadcrumbs [class*='link'],        .breadcrumbs .breadcrumbs-item-active          { opacity: 0.3; }
-.breadcrumbs [class*='button']:hover,   .breadcrumbs [class*='link']:hover , .breadcrumbs .breadcrumbs-item-active:hover    { opacity: 0.6; }
-.breadcrumbs [class*='button']:active,  .breadcrumbs [class*='link']:active, .breadcrumbs .breadcrumbs-item-active:active   { opacity: 0.1; }
+/* breadcrumbs: меняем цвет текста в состояниях :hover, :active */
+.breadcrumbs [class*='button'],        .breadcrumbs [class*='link'],        .breadcrumbs .breadcrumbs-item-active        { color: rgba(0, 0, 0, 0.3); }
+.breadcrumbs [class*='button']:hover,  .breadcrumbs [class*='link']:hover , .breadcrumbs .breadcrumbs-item-active:hover  { color: rgba(0, 0, 0, 0.6); }
+.breadcrumbs [class*='button']:active, .breadcrumbs [class*='link']:active, .breadcrumbs .breadcrumbs-item-active:active { color: rgba(0, 0, 0, 0.1); }
 
 
 .form-filter-component {
@@ -723,7 +723,12 @@ img {
 .footer-social {}
 
 .footer-copyright {}
-.breadcrumbs { letter-spacing: 0.01em; }
+
+.breadcrumbs { 
+    letter-spacing: 0.01em;
+    margin-bottom: 49px; 
+}
+
 .filter-box  { 
     display: block;  
 }
@@ -1106,7 +1111,25 @@ img {
 }
 
 .breadcrumbs-list {}
-.breadcrumbs-item {}
+
+.breadcrumbs-item-link {
+    position: relative;
+    padding-right: 34px;
+}
+
+.breadcrumbs-item-link::after {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right:0;
+    background-image: url('../img/svg/nav-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
 .breadcrumbs-item-active {}
 
 .ordering-methods-list {}
@@ -1292,6 +1315,13 @@ img {
     }
 .triangle-reversed  { transform: rotate(180deg); }
 .triangle-active    { opacity: 1 !important;     }
+
+
+/* отсутпы сверху и снизу у главного заголовка в каталоге товаров */
+.heading-current-section {
+    margin-top: 36px;
+    margin-bottom: 24px;
+}
 
 /* --------------------------------------------------------------- */
 /* ----------      END OF          decorating stuff     ---------- */
