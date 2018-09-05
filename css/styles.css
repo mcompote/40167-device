@@ -563,6 +563,10 @@ button {
 .pad-r-100px {
     padding-right: 100px;
 }
+/* for .service-description-heading, .service-description-contents */
+.pad-r-242px {
+    padding-right: 242px;
+}
 
 .pad-lr-20px {
     padding-left: 20px;
