@@ -1082,8 +1082,8 @@ button {
 .services-list {
     margin-top: -100px;
     padding-top: 80px;
-    margin-bottom: 70px;    
-    border-right-width: 6px;
+    padding-bottom: 70px;    
+    border-right-width: 7px;
     border-right-color: black;
     border-right-style: solid;
 }
@@ -1091,7 +1091,11 @@ button {
 .services-item {
     align-items: center;
     min-height: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
+}
+
+.services-item:last-child {
+    margin-bottom: 0;
 }
 
 .services-item .button-animated {
