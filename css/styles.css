@@ -555,8 +555,32 @@ button {
 }
 
 
+
+.pad-l-20px {
+    padding-left: 20px;
+}
+
+.pad-r-20px {
+    padding-right: 20px;
+}
+
+.pad-lr-20px {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* for .promo-article-heading */
+.pad-r-60px {
+    padding-right: 60px;
+}
+
 .pad-l-80px {
     padding-left: 80px;
+}
+
+/* for .promo-article-contents */
+.pad-r-80px {
+    padding-right: 80px;
 }
 
 .pad-r-100px {
@@ -567,18 +591,6 @@ button {
     padding-right: 242px;
 }
 
-.pad-lr-20px {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.pad-l-20px {
-    padding-left: 20px;
-}
-
-.pad-r-20px {
-    padding-right: 20px;
-}
 
 
 /* container for filter box */
@@ -1243,9 +1255,32 @@ button {
 
 
 /* tables and related things (th,tr,td,etc.) */
-.promo-item-characteristics {}
-.romo-item-characteristic-name {}
-.promo-item-characteristic-value {}
+.promo-item-characteristics-table {
+    flex-direction: column-reverse;
+}
+
+.promo-item-characteristics-table tr {
+    display: flex;
+}
+
+.promo-item-characteristics-table th,
+.promo-item-characteristics-table td {
+    display: block;
+    /* TODO: пока что так, но это криво смотрится на  */
+    width: 140px;
+    margin: 0;
+    padding: 0;
+}
+
+.promo-item-characteristics-table .promo-item-characteristic-name {
+    margin-bottom: 25px;
+}
+
+.promo-item-characteristic-name:not(:last-of-type),
+.promo-item-characteristic-value:not(:last-of-type) {
+    margin-right: 20px;
+}
+
 
 
 
