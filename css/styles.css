@@ -263,7 +263,7 @@ button {
 }
 
 .footer .logo-container, .footer .user-nav {
-    margin-top: 62px;
+    margin-top: 49px;
 }
 
 
@@ -649,7 +649,7 @@ button {
 }
 
 .header .logo-container { margin-top: -17px; }
-.footer .logo-container { position: relative; top: 18px;}
+.footer .logo-container { position: relative; top: 16px;}
 
 .logo-container:hover  .logo-image  { opacity: 0.6; }
 .logo-container:active .logo-image  { opacity: 0.3; }
@@ -1276,16 +1276,17 @@ button {
     margin-top: 78px;
 }
 
-
-
-/* <p>, <b>, <span> and other  */
-.footer-address, .footer-contacts {
+.footer p {
     /* сбрасываем стили браузера */
     margin: 0;
+}
+
+.footer .footer-address, .footer .footer-contacts {
     /* отступ снизу от следующего элемента */
     margin-bottom: 47px;
-
 }
+
+
 .close-popup {}
 
 
