@@ -40,7 +40,7 @@
                       <div class="user-nav header-user-nav column-one-half column-flexbox">
                   
                         <!-- элементы "Пользователь" и "Выйти" -->
-                        <div class="login-container column-flexbox column-grow-1">
+                        <div class="login-container column-flexbox flex-grow-1">
                                 <a class="link-user-name" href="#">
                                         Неопознанный Енот
                                     </a>
@@ -119,10 +119,10 @@
     <main>
         <div class="column-full">
             <!-- main heading -->
-            <h1 class="heading-current-section huge-heading padding-left-80px">Моноподы для селфи</h1>
+            <h1 class="heading-current-section huge-heading pad-l-80px">Моноподы для селфи</h1>
 
             <!-- breadcrumbs -->
-            <section class="breadcrumbs padding-left-80px">
+            <section class="breadcrumbs pad-l-80px">
                 <h2 class="visually-hidden">Навигационная цепочка</h2>
                 <ul class="breadcrumbs-list column-flexbox">
                     <li class="breadcrumbs-item">
@@ -144,12 +144,12 @@
                 <div class="filter-box">
                     <h3 class="visually-hidden">Фильтры для отбора товаров</h2>
                     <div class="filter-box-heading-block">
-                        <div class="filter-box-heading-block-content column-29-percent column-right padding-left-80px">
+                        <div class="filter-box-heading-block-content column-29-percent column-right pad-l-80px">
                             Фильтр:
                         </div>
                     </div>
 
-                    <form class="form-filter column-29-percent column-right padding-left-80px" id="form_filter" action="/api/catalog" method="get">
+                    <form class="form-filter column-29-percent column-right pad-l-80px" id="form_filter" action="/api/catalog" method="get">
                        
                         <fieldset class="form-filter-component">
                                 <legend class="form-filter-heading">Стоимость</legend>
@@ -228,7 +228,7 @@
                         <div class="sorting-box-heading-block column-flexbox flex-h-middle">
                             Сортировка:
                         </div>
-                        <ul class="sorting-methods-list column-flexbox column-grow-1">
+                        <ul class="sorting-methods-list column-flexbox flex-grow-1">
                             <li class="sorting-methods-item">
                                 <button class="link-sorting-criteria link-sorting-criteria-active js-sorting-criteria-by-price">По цене</button>
                             </li>
@@ -359,7 +359,7 @@
 
     <footer class="footer">
 
-        <div class="footer-row-top column-full column-flexbox padding-lr-20px">
+        <div class="footer-row-top column-full column-flexbox pad-lr-20px">
               <!-- логотип -->
               <div class="logo-container bottom-line column-left">
                   <a href="index.html">
@@ -370,7 +370,7 @@
               <div class="user-nav footer-user-nav column-five-twenteeth column-flexbox">
           
                 <!-- элемент "логин" -->
-                <div class="login-container column-flexbox column-grow-1">
+                <div class="login-container column-flexbox flex-grow-1">
 
                   <a class="link-user-name" href="#">
                         Неопознанный Енот
@@ -436,7 +436,7 @@
     
           </div>
     
-          <div class="footer-contacts-and-copyright column-three-tenths column-flexbox padding-lr-20px">
+          <div class="footer-contacts-and-copyright column-three-tenths column-flexbox pad-lr-20px">
               <p class="footer-contacts">
                   <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
               </p>
@@ -452,14 +452,19 @@
 
 
 
-    <section class="popup popup-map">
-        <div class="column-four-fifths">
+    <section class="popup popup-map column-full">
+        <div class="column-four-fifths column-center">
 
             <h2 class="visually-hidden">Мы на карте</h2>
             <!-- TODO: здесь будет карта -->
-            <noscript>
+
+            <!-- FIXME: убрать <noscript>, без JS попап просто не покажется -->
+            <!-- <noscript>
                 <img src="img/content/map-contacts-full.jpg" alt="фото местонахождения интернет-магазина DEVICE">
-            </noscript>
+            </noscript> -->
+            <div>
+                <img src="img/content/map-contacts-full.jpg" alt="фото местонахождения интернет-магазина DEVICE">
+            </div>
 
         </div>
     </section>

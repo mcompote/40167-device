@@ -234,10 +234,12 @@ button {
 /* обесцвечиваем изображения логотипов */
 .brands-gallery-item-logo-wrapper {
     filter: grayscale(100%);
+    opacity: 0.2;
 }
 
 .brands-gallery-item-logo-wrapper:hover {
     filter: grayscale(0%);
+    opacity: 1;
 }
 
 .brands-gallery-item-logo-wrapper img {
@@ -477,52 +479,45 @@ button {
     margin-right: auto;
 }
 
-/* container's width = 1/2 of layout width    = 600px */
-.column-one-half   { width: 600px; }
-.column-one-half   { width: 50%;   }
+/* container's width = 1/2 of parent's width,  1/2 of layout  = 600px */
+.column-one-half   { width: 50%; }
 
-/* container's width = 1/3 of layout width    = 400px  */
+/* container's width = 1/3 of parent's width,  1/3 of layout  = 400px  */
 /* for .services > left block (buttons) */
-.column-one-third  { width: 400px; } 
 .column-one-third  { width: 33.3334%; } 
 
-/* container's width = 1/4 of parent block */
+/* container's width = 1/4 of parent's width,  1/4 of layout = 300px */
 /* for brand image contaners */
 .column-one-fourth  { width: 25%; } 
 
-/* container's width = 2/3 of layout width    = 400px  */
+/* container's width = 2/3 of parent's width,  2/3 of layout  = 800px  */
 /* for .services > right block (content) */
-.column-two-thirds { width: 800px; }
 .column-two-thirds { width: 66.6667%; } 
 
-/* container's width = 1/6 of layout width    = 200px */
+/* container's width = 1/6 of parent's width,  1/6 oflayout   = 200px */
 /* for items in .popular container */
-.column-one-sixth  { width: 16.667%; } /* получается не ровно 200px */
-.column-one-sixth  { width: 200px; }
+.column-one-sixth  { width: 16.6667%; } 
 
-/* container's width = 2/15 of layout width    = 160px */
-/* for items in .popular container WITHOUT margins and paddings */
-.column-two-fifteenth  { width: 13.333%; } /* получается не ровно 160px */
-.column-two-fifteenth  { width: 160px; }
+/* container's width = 2/15 of parent's width, 2/15 of layout  = 160px */
+/* for items inside .popular container WITHOUT margins and paddings */
+.column-two-fifteenth  { width: 13.3334%; } 
 
-/* container's width = 4/5 of layout width    = 960px */
-/* for popup 'write-us' and 'map' containers */
+/* container's width = 4/5 of parent's width,  4/5 of layout   = 960px */
+/* for popups 'write-us' and 'map' containers */
 .column-four-fifths  { width: 80%; }
-.column-four-fifths  { width: 960px; }
 
-/* container's width = 0.4 of layout width    = 480px */
-/* for footer's central block */
-.column-four-tenths  { width: 480px; }
+/* container's width = 0.4 of parent's width, 4/10 of layout   = 480px */
+/* for footer's central block  */
+.column-four-tenths  { width: 40%; }
 
-/* container's width = 0.3 of layout width    = 360px */
+/* container's width = 0.3 of parent's width, 3/10 of layout   = 360px */
 /* for footer's central block */
 .column-three-tenths  { width: 30%; }
-.column-three-tenths  { width: 360px; }
 
-/* container's width = 5/12 of layout width    = 500px  */
+/* container's width = 5/12 of parent's width, 5/12 of layout  = 500px  */
 /* for .info block */
-.column-five-twenteeth { width : 500px; }    /* чтобы было ровно */
 .column-five-twenteeth { width : 41.6667%; }
+
 
 .column-29-percent {
     /* 29 процентов от "базовой" ширины в 1200px */
@@ -542,17 +537,16 @@ button {
 /* align element in the center of container */
 .column-center     { margin-right: auto; margin-left: auto; }
 
+
 .column-flexbox { 
     display: flex; 
 }    
 
-
-
-.column-no-shrink {
+.flex-no-shrink {
     flex-shrink: 0;
 }
 
-.column-grow-1 {
+.flex-grow-1 {
     flex-grow: 1;
 }
 
@@ -560,40 +554,25 @@ button {
     align-items: center;
 }
 
-/* TODO: Убрать вьюпорт, этот вьюпорт считается вместе с боковым скроллом (или наоборот), короче, ломает верстку */
-.column-vw100 {
-    width: 100vw;
-}
 
-.column-100percentages {
-    width: 100vw;
-}
-
-.padding-left-80px {
+.pad-l-80px {
     padding-left: 80px;
 }
 
-.padding-r-100px {
+.pad-r-100px {
     padding-right: 100px;
 }
 
-.padding-left-52px {
-    padding-left: 52px;
-}
-
-/* TODO: может, можно этот паддинг включить в одну из оберток
-    например, в .column-full?
-*/
-.padding-lr-20px {
+.pad-lr-20px {
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.padding-l-20px {
+.pad-l-20px {
     padding-left: 20px;
 }
 
-.padding-r-20px {
+.pad-r-20px {
     padding-right: 20px;
 }
 
@@ -790,6 +769,7 @@ button {
 }
 
 .catalog-items-box { 
+    padding-left: 52px;
 }
 
 .catalog-item-image-box {
