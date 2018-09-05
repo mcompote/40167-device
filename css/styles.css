@@ -917,13 +917,17 @@ button {
 }
 
 
+
+
 .button             { magic: false; }
 
 .button-animated    {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    ~~~width:  220px;
+    min-height: 40px;    /* see styleguide.psd */
+    padding: 0 1.25em 0;
+
 
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
@@ -931,10 +935,32 @@ button {
     line-height: 24px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    /* FIXME: здесь должен быть "красивый" background */
-    background: orange;
-    
+
+    border: none;
+    background: transparent;  
+    background-image: 
+        linear-gradient(to top, #f0c52e 0px, #f0c52e 3px, #edcd5a 3px, #edcd5a 4px, transparent 4px),
+        linear-gradient(to bottom, #f0c52e 0px, #f0c52e 3px, #edcd5a 3px, #edcd5a 4px, transparent 4px);
+    background-size: 5px 5px;
+    background-position: 
+        0px 15px, 
+        0px 20px;
+    background-repeat: repeat-x;
+
+    transition: background-color 0.4s ease-out, background-image 0.2s ease-out;
 }
+
+.button-animated:hover {
+    background-color: #f0c52e;
+    background-image: none;
+}
+
+.button-animated:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+
+
 .button-blackened   {}
 
 .button-back        {}
