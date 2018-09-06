@@ -95,6 +95,9 @@ button {
     letter-spacing: 0.01em;
 }
 
+/* меняем прозрачность логотипа (значения в header'е и footer'е одинаковые) */
+.logo-container:hover  { opacity: 0.6; }
+.logo-container:active { opacity: 0.3; }
 
 /* У ссылок в шапке декоративные картинки добавлены через псевдо-элементы */
 .header [class*='button']:hover,   .header [class*='link']:hover   { opacity: 0.6;  } 
@@ -277,16 +280,14 @@ button {
 }
 
 
+
 /*  Доставка, гарантия, контакты, логотип htmlacademy в футере имеют одинаковые состояния прозрачности
     при наведении и клике
 */
 .footer-nav              [class*='button']:hover,  .footer-nav        [class*='link']:hover,
-.logo-container:hover    [class*='button']:hover,  .logo-container    [class*='link']:hover,
-.footer-copyright:hover  [class*='button']:hover,  .footer-copyright  [class*='link']:hover { opacity: 0.6; }
-
+.footer-copyright        [class*='button']:hover,  .footer-copyright  [class*='link']:hover { opacity: 0.6; }
 .footer-nav              [class*='button']:active, .footer-nav       [class*='link']:active,
-.logo-container:active   [class*='button']:active, .logo-container   [class*='link']:active,
-.footer-copyright:active [class*='button']:active, .footer-copyright [class*='link']:active { opacity: 0.3; }
+.footer-copyright        [class*='button']:active, .footer-copyright [class*='link']:active { opacity: 0.3; }
 
 
 /* Кнопки соц сетей */
@@ -663,8 +664,6 @@ button {
 .header .logo-container { margin-top: -17px; }
 .footer .logo-container { position: relative; top: 16px;}
 
-.logo-container:hover  .logo-image  { opacity: 0.6; }
-.logo-container:active .logo-image  { opacity: 0.3; }
 
 .search-container {}
 
