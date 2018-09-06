@@ -31,7 +31,7 @@
                             <label class="form-search-label">
                               <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
                 
-                              <button class="button button-search" type="submit">Найти</button>
+                              <button class="btn btn-search" type="submit">Найти</button>
                             </label>
                           
                           </form>
@@ -156,14 +156,18 @@
                         <fieldset class="form-filter-component">
                                 <legend class="form-filter-heading">Стоимость</legend>
                             <div class="form-filter-input-range-ugly block">
-                                <label class="form-filter-label">
+                                <label class="form-filter-label flex-dir-col">
                                     Минимальная Стоимость
-                                    <input type="range" name="min_cost" value="0">
+                                    <input class="form-filter-input-range" type="range" id="form_filter__min_cost_input" name="min_cost" min="0" value="0">
+                                    <span><output                                       id="form_filter__min_cost_output">0</output> руб.
+                                    </span>
                                 </label>
-                        
-                                <label class="form-filter-label">
+                                
+                                <label class="form-filter-label flex-dir-col">
                                     Максимальная Стоимость
-                                    <input class="form-filter-input-range" type="range" name="max_cost" min="0" value="5000">
+                                    <input class="form-filter-input-range" type="range" id="form_filter__max_cost_input" name="max_cost" min="0" max="1000000" value="500000">
+                                    <span><output                                       id="form_filter__max_cost_output">9999999999</output> руб.
+                                    </span>
                                 </label>
                             </div>
 
@@ -182,23 +186,33 @@
                         <fieldset class="form-filter-component">
                             <legend class="form-filter-heading">Цвет</legend>
                             <label class="form-filter-label">
-                                <input class="form-filter-checkbox" type="checkbox" name="color" value="Черный"> Черный
+                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="black">
+                                <span class="checkbox-indicator"></span>
+                                Черный
                             </label>
-
+                            
                             <label class="form-filter-label">
-                                <input class="form-filter-checkbox" type="checkbox" name="color" value="Белый"> Белый
+                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="white">
+                                <span class="checkbox-indicator"></span>
+                                Белый
                             </label>
-
+                            
                             <label class="form-filter-label">
-                                <input class="form-filter-checkbox" type="checkbox" name="color" value="Синий"> Синий
+                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="blue">
+                                <span class="checkbox-indicator"></span>
+                                Синий
                             </label>
-
+                            
                             <label class="form-filter-label">
-                                <input class="form-filter-checkbox" type="checkbox" name="color" value="Красный"> Красный
+                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="red">
+                                <span class="checkbox-indicator"></span>
+                                Красный
                             </label>
-
+                            
                             <label class="form-filter-label">
-                                <input class="form-filter-checkbox" type="checkbox" name="color" value="Розовый"> Розовый
+                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="pink">
+                                <span class="checkbox-indicator"></span>
+                                Розовый
                             </label>
                         </fieldset>
 
@@ -207,14 +221,18 @@
                                 <span class="visually-hidden">Наличие</span>Bluetooth
                             </legend>
                             <label class="form-filter-label">
-                                <input class="form-filter-radio" type="radio" name="features_bluetooth" value="true"> Есть
+                                <input class="form-filter-radio none" type="radio" name="features_bluetooth" value="true">
+                                <span class="radio-indicator"></span>
+                                Есть
                             </label>
                             <label class="form-filter-label">
-                                <input class="form-filter-radio" type="radio" name="features_bluetooth" value="false"> Нет
+                                <input class="form-filter-radio none" type="radio" name="features_bluetooth" value="false">
+                                <span class="radio-indicator"></span>
+                                Нет
                             </label>
                         </fieldset>
 
-                        <button type="submit" class="button button-animated">Показать</button>
+                        <button type="submit" class="btn btn-animated btn-200px">Показать</button>
                     </form>
 
                 </div>
@@ -266,7 +284,7 @@
                                 <img src="img/content/catalog-items/catalog-item-amateur-selfie-stick.jpg" alt="Любительская селфи-палка">
                                 <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
                                 <div class="catalog-item-onhover-block">
-                                    <button class="button button-animated" href="#">
+                                    <button class="btn btn-animated" href="#">
                                         В корзину
                                     </button>
                                     <button class="link-add-to-compare-list" href="#">
@@ -282,7 +300,7 @@
                                 <img src="img/content/catalog-items/catalog-item-professional-selfie-stick.jpg" alt="Профессиональная селфи-палка">
                                 <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
                                 <div class="catalog-item-onhover-block">
-                                    <button class="button button-animated" href="#">
+                                    <button class="btn btn-animated" href="#">
                                         В корзину
                                     </button>
                                     <button class="link-add-to-compare-list" href="#">
@@ -298,7 +316,7 @@
                                 <img src="img/content/catalog-items/catalog-item-waterproof-selfie-stick.jpg" alt="Непотопляемая селфи-палка">
                                 <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
                                 <div class="catalog-item-onhover-block">
-                                    <button class="button button-animated" href="#">
+                                    <button class="btn btn-animated" href="#">
                                         В корзину
                                     </button>
                                     <button class="link-add-to-compare-list" href="#">
@@ -316,7 +334,7 @@
                                 <img src="img/content/catalog-items/catalog-item-followme-selfie-stick.jpg" alt="Селфи-палка «Следуй за мной»">
                                 <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
                                 <div class="catalog-item-onhover-block">
-                                    <button class="button button-animated" href="#">
+                                    <button class="btn btn-animated" href="#">
                                         В корзину
                                     </button>
                                     <button class="link-add-to-compare-list" href="#">
@@ -331,7 +349,7 @@
 
                     <!-- блок, отвечающий за "пагинацию" -->
                     <div class="pagination column-flexbox">
-                        <button class="button-back">Назад</button>
+                        <button class="btn-back">Назад</button>
                         <ul class="pagination-list column-center column-flexbox">
                             <li class="pagination-item pagination-item-current">
                                 <button class="page-link">
@@ -350,7 +368,7 @@
                             </li>
                         </ul>
 
-                        <button class="button-forth">Вперед</button>
+                        <button class="btn-forth">Вперед</button>
                     </div>
 
                 </div>
@@ -427,13 +445,13 @@
             <div class="footer-social">
               <ul class="footer-social-list column-flexbox column-one-third">
                 <li>
-                  <a class="button-social button-social-fb" href="#">Вконтакте</a>
+                  <a class="btn-social btn-social-fb" href="#">Вконтакте</a>
                 </li>
                 <li>
-                  <a class="button-social button-social-insta" href="#">Фейсбук</a>
+                  <a class="btn-social btn-social-insta" href="#">Фейсбук</a>
                 </li>
                 <li>
-                  <a class="button-social button-social-twitter" href="#">Инстаграм</a>
+                  <a class="btn-social btn-social-twitter" href="#">Инстаграм</a>
                 </li>
               </ul>
             </div>
@@ -446,7 +464,7 @@
               </p>
             <p class="footer-copyright">
               <b class="visually-hidden">Разработчик сайта:</b>
-              <a class="button-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+              <a class="btn-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
             </p>
     
           </div>
@@ -499,7 +517,7 @@
                         </label>
                     </div>
 
-                    <button type="submit" class="button button-animated">Отправить</button>
+                    <button type="submit" class="btn btn-animated">Отправить</button>
                 </div>
             </form>
 
@@ -507,6 +525,9 @@
             <button class="close-popup">Закрыть всплывающую форму</button>
         </div>
     </section>
+
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

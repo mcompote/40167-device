@@ -66,6 +66,11 @@ button {
     /* по умолчанию в Chrome для <button> используется background-color: buttonface; */
     background: transparent;
 }
+
+.btn-200px {
+    min-width: 200px;
+}
+
 /* --------------------------------------------------------------- */
 /* ----------  END   OF GLOBAL styles (html, body, etc.) --------- */
 /* --------------------------------------------------------------- */
@@ -100,13 +105,13 @@ button {
 .logo-container:active { opacity: 0.3; }
 
 /* У ссылок в шапке декоративные картинки добавлены через псевдо-элементы */
-.header [class*='button']:hover,   .header [class*='link']:hover   { opacity: 0.6;  } 
-.header [class*='button']:active,  .header [class*='link']:active  { opacity: 0.3;  } 
+.header [class*='btn']:hover,   .header [class*='link']:hover   { opacity: 0.6;  } 
+.header [class*='btn']:active,  .header [class*='link']:active  { opacity: 0.3;  } 
 /* переопределяем поведение для кнопки поиска и для ссылки на каталог товаров */
 .header [class*='link'][class~='plus-sign']:hover        { opacity: 1; color: rgba(0,0,0,0.6);  } 
 .header [class*='link'][class~='plus-sign']:active       { opacity: 1; color: rgba(0,0,0,0.3);  } 
-.header [class*='button'][class~='button-search']:hover  { opacity: 1; }
-.header [class*='button'][class~='button-search']:active { opacity: 1; }
+.header [class*='btn'][class~='btn-search']:hover  { opacity: 1; }
+.header [class*='btn'][class~='btn-search']:active { opacity: 1; }
 
 
 
@@ -153,7 +158,7 @@ button {
     margin-bottom: 56px;  /* FIXME: примерно померил */
 }
 
-.promo-article .button-animated {
+.promo-article .btn-animated {
     margin-bottom: 64px;
 }
 
@@ -284,21 +289,21 @@ button {
 /*  Доставка, гарантия, контакты, логотип htmlacademy в футере имеют одинаковые состояния прозрачности
     при наведении и клике
 */
-.footer-nav              [class*='button']:hover,  .footer-nav        [class*='link']:hover,
-.footer-copyright        [class*='button']:hover,  .footer-copyright  [class*='link']:hover { opacity: 0.6; }
-.footer-nav              [class*='button']:active, .footer-nav       [class*='link']:active,
-.footer-copyright        [class*='button']:active, .footer-copyright [class*='link']:active { opacity: 0.3; }
+.footer-nav              [class*='btn']:hover,  .footer-nav        [class*='link']:hover,
+.footer-copyright        [class*='btn']:hover,  .footer-copyright  [class*='link']:hover { opacity: 0.6; }
+.footer-nav              [class*='btn']:active, .footer-nav       [class*='link']:active,
+.footer-copyright        [class*='btn']:active, .footer-copyright [class*='link']:active { opacity: 0.3; }
 
 
 /* Кнопки соц сетей */
-.footer-social-list [class*='button'],          .footer-social-list [class*='link']         { opacity: 0.3; }
-.footer-social-list [class*='button']:hover,    .footer-social-list [class*='link']:hover   { opacity: 0.6; }  
-.footer-social-list [class*='button']:active,   .footer-social-list [class*='link']:active  { opacity: 0.1; }  
+.footer-social-list [class*='btn'],          .footer-social-list [class*='link']         { opacity: 0.3; }
+.footer-social-list [class*='btn']:hover,    .footer-social-list [class*='link']:hover   { opacity: 0.6; }  
+.footer-social-list [class*='btn']:active,   .footer-social-list [class*='link']:active  { opacity: 0.1; }  
 
 /* Логин, Пользователь, Выйти, Cравнить, Корзина */
-.footer-user-nav  [class*='button'],         .footer-user-nav  [class*='link']              { opacity: 0.7; }
-.footer-user-nav  [class*='button']:hover,   .footer-user-nav  [class*='link']:hover        { opacity: 1.0; }
-.footer-user-nav  [class*='button']:active,  .footer-user-nav  [class*='link']:active       { opacity: 0.3; }
+.footer-user-nav  [class*='btn'],         .footer-user-nav  [class*='link']              { opacity: 0.7; }
+.footer-user-nav  [class*='btn']:hover,   .footer-user-nav  [class*='link']:hover        { opacity: 1.0; }
+.footer-user-nav  [class*='btn']:active,  .footer-user-nav  [class*='link']:active       { opacity: 0.3; }
 
 
 
@@ -312,8 +317,8 @@ button {
 
 
 /* htmlacademy svg */
-.button-htmlacademy:hover  { opacity: 0.6; }
-.button-htmlacademy:active { opacity: 0.3; }
+.btn-htmlacademy:hover  { opacity: 0.6; }
+.btn-htmlacademy:active { opacity: 0.3; }
 
 
 
@@ -336,46 +341,15 @@ button {
 /*  ---2ая стр. пошла--- */
 
 /* breadcrumbs: меняем цвет текста в состояниях :hover, :active */
-.breadcrumbs [class*='button'],        .breadcrumbs [class*='link'],        .breadcrumbs .breadcrumbs-item-active        { color: rgba(0, 0, 0, 0.3); }
-.breadcrumbs [class*='button']:hover,  .breadcrumbs [class*='link']:hover , .breadcrumbs .breadcrumbs-item-active:hover  { color: rgba(0, 0, 0, 0.6); }
-.breadcrumbs [class*='button']:active, .breadcrumbs [class*='link']:active, .breadcrumbs .breadcrumbs-item-active:active { color: rgba(0, 0, 0, 0.1); }
-
-
-.form-filter-component {
-    position: relative;
-    border: none;
-    border-top: 2px solid black;
-    padding-top: 60px;
-    margin-bottom: 40px;
-}
-
-.form-filter-heading {
-    display: block;
-    position: absolute;
-    top: 12px;
-    left: 0px;
-
-    font-family: 'Gilroy', sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 24px; 
-    letter-spacing: 0.01em;    
-}
-
-.form-filter-label {
-    display: block;
-    font-style: inherit;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 40px; 
-    letter-spacing: 0.01em;       
-}
+.breadcrumbs [class*='btn'],        .breadcrumbs [class*='link'],        .breadcrumbs .breadcrumbs-item-active        { color: rgba(0, 0, 0, 0.3); }
+.breadcrumbs [class*='btn']:hover,  .breadcrumbs [class*='link']:hover , .breadcrumbs .breadcrumbs-item-active:hover  { color: rgba(0, 0, 0, 0.6); }
+.breadcrumbs [class*='btn']:active, .breadcrumbs [class*='link']:active, .breadcrumbs .breadcrumbs-item-active:active { color: rgba(0, 0, 0, 0.1); }
 
 
 /* при наведении на кнопки упорядочивания и сортировки - изменяется прозрачность элементов  */
-.sorting-methods-list [class*='button'],         .sorting-methods-list [class*='link']          { opacity: 0.3; }
-.sorting-methods-list [class*='button']:hover,   .sorting-methods-list [class*='link']:hover    { opacity: 0.6; }
-.sorting-methods-list [class*='button']:active,  .sorting-methods-list [class*='link']:active   { opacity: 1.0; }
+.sorting-methods-list [class*='btn'],         .sorting-methods-list [class*='link']          { opacity: 0.3; }
+.sorting-methods-list [class*='btn']:hover,   .sorting-methods-list [class*='link']:hover    { opacity: 0.6; }
+.sorting-methods-list [class*='btn']:active,  .sorting-methods-list [class*='link']:active   { opacity: 1.0; }
 
 .ordering-methods-list [class*='triangle']                                                      { opacity: 0.2; }
 .ordering-methods-list [class*='triangle']:hover                                                { opacity: 0.4; }
@@ -398,8 +372,8 @@ button {
 
 
 
-/* .page-link, .button-forth, .button-back  */
-.pagination [class*="button"], .pagination [class*="-link"] {
+/* .page-link, .btn-forth, .btn-back  */
+.pagination [class*="btn"], .pagination [class*="-link"] {
     display: block;
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
@@ -554,6 +528,11 @@ button {
 .flex-h-middle { 
     align-items: center;
 }
+
+.flex-dir-col { 
+    flex-direction: column;
+}
+
 
 
 
@@ -918,9 +897,9 @@ button {
 
 
 
-.button             { magic: false; }
+.btn             { magic: false; }
 
-.button-animated    {
+.btn-animated    {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -949,31 +928,31 @@ button {
     transition: background-color 0.4s ease-out, background-image 0.2s ease-out;
 }
 
-.button-animated:hover {
+.btn-animated:hover {
     background-color: #f0c52e;
     background-image: none;
 }
 
-.button-animated:active {
+.btn-animated:active {
     color: rgba(0, 0, 0, 0.3);
 }
 
 
 
-.button-blackened   {}
+.btn-blackened   {}
 
-.button-back        {}
+.btn-back        {}
 
-.button-forth       {}
+.btn-forth       {}
 
 
 .page-link    {
     /* max width = 3 symbols: 1...999 "subpages" on the catalog page */
     width: 3em;
 }
-.button-slide-changer {}
+.btn-slide-changer {}
 
-.button-social { 
+.btn-social { 
     display: block;
     width: 32px; 
     height: 32px; 
@@ -981,22 +960,22 @@ button {
     font-size: 0;
 }
 
-.button-social-fb   {
+.btn-social-fb   {
     background-image: url('../img/svg/fb.svg');
     background-repeat: no-repeat;
 }
 
-.button-social-insta {
+.btn-social-insta {
     background-image: url('../img/svg/instagram.svg');
     background-repeat: no-repeat;
 }
 
-.button-social-twitter   { 
+.btn-social-twitter   { 
     background-image: url('../img/svg/twitter.svg');
     background-repeat: no-repeat;
 }
 
-.button-htmlacademy {
+.btn-htmlacademy {
     display: block;
     width: 27px;
     height: 34px;
@@ -1138,7 +1117,7 @@ button {
     margin-bottom: 0;
 }
 
-.services-item .button-animated {
+.services-item .btn-animated {
     width: 160px;
 }
 
@@ -1146,9 +1125,9 @@ button {
     background: #000000;
 }
 
-.services-item_active .button-blackened,
-.services-item_active .button-blackened:hover,
-.services-item_active .button-blackened:active
+.services-item_active .btn-blackened,
+.services-item_active .btn-blackened:hover,
+.services-item_active .btn-blackened:active
  {
     color: #f7e184;
     background: inherit;
@@ -1332,7 +1311,7 @@ button {
     margin-bottom: 37px;
 }
 
-.info .button-animated, .contacts .button-animated {
+.info .btn-animated, .contacts .btn-animated {
     margin-top: 78px;
 }
 
@@ -1460,7 +1439,7 @@ button {
     color: rgba(0, 0, 0, 0.3); 
 }
 
-.form-search-input, .button-search {
+.form-search-input, .btn-search {
     /* rewrite normalize.css styles for inputs */
     font-family: 'Open Sans';
     font-weight: 300;
@@ -1478,7 +1457,7 @@ button {
     border-bottom: 2px solid black; 
 }
 
-.button-search {
+.btn-search {
     display: none;
     width: 85px;
     height: 49px;
@@ -1490,16 +1469,16 @@ button {
     color: black;
 }
 
-.form-search-input:focus ~ .button-search, .button-search:hover, .button-search:active {
+.form-search-input:focus ~ .btn-search, .btn-search:hover, .btn-search:active {
     display: block;
 }
 
-.button-search:hover {
+.btn-search:hover {
     background: black;
     color: white;
 }
 
-.button-search:active {
+.btn-search:active {
     background: black;
     color: rgba(255, 255, 255, 0.3);
 }
@@ -1514,13 +1493,87 @@ button {
     padding-right: 68px;
 }
 
-.form-filter-label {}
+.form-filter legend, fieldset {
+    margin: 0px;
+    padding: 0px;
+}
+
+.form-filter-component {
+    position: relative;
+    border: none;
+    border-top: 2px solid black;
+    padding-top: 51px;
+    padding-bottom: 32px;
+}
+
+.form-filter-heading {
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 0px;
+
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px; 
+    letter-spacing: 0.01em;    
+}
+
+.form-filter-label {
+    display: flex;
+    align-items: center;
+    font-style: inherit;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 40px; 
+    letter-spacing: 0.01em;    
+    text-transform: capitalize;   
+}
+
+.checkbox-indicator {
+    display: inline-block;
+    width: 27px;
+    height: 23px;
+    margin-right: 14px;
+    background-image: none;
+    background-repeat: no-repeat;
+}
+
+.form-filter-checkbox:not(:checked) + .checkbox-indicator {
+    background-image: url('../img/svg/checkbox-off.svg');
+}
+
+.form-filter-checkbox:checked + .checkbox-indicator {
+    background-image: url('../img/svg/checkbox-on.svg');
+}
+
+.radio-indicator {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    background-image: none;
+    background-repeat: no-repeat;
+}
+
+.form-filter-radio:not(:checked) + .radio-indicator {
+    background-image: url('../img/svg/radio-off.svg');
+}
+
+.form-filter-radio:checked + .radio-indicator {
+    background-image: url('../img/svg/radio-on.svg');
+}
+
+
 .form-filter-input-range {}
 .form-filter-input-range-ugly {}
+.form-filter-input-range-ugly .form-filter-label {
+    flex-direction: column;
+    align-items: flex-start;
+}
 .form-filter-input-range-pretty {}
-.form-filter-checkbox {}
 .form-filter-radio {}
-.form-filter-heading { }
+
 
 .drag-slider {}
 .drag-slider-body {}
