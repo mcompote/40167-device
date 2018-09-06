@@ -367,8 +367,18 @@ button {
     background: cyan;
 }
 
-.catalog-item-name-link  { font-weight: 800; font-size: 18px; }
-.catalog-item-price      { font-weight: 300; font-size: 16px; }
+.catalog-item-name-link  { 
+    max-width: 72%;              
+    font-weight: 800; 
+    font-size: 18px; 
+}
+.catalog-item-price      { 
+    max-width: 28%; 
+    margin: 0; 
+    font-weight: 300; 
+    font-size: 16px; 
+    color: #464646;
+}
 
 
 
@@ -496,7 +506,7 @@ button {
 
 /* container's width = 0.45=9.20 of parent's width  */
 /* for .catalog-item in catalog.html */
-.column-nine twenties  { width: 45.000%; }
+.column-nine-twenties  { width: 45.000%; }
 
 
 .column-29-percent {
@@ -803,7 +813,11 @@ button {
     display: flex;
  }
 
- 
+ .catalog-item-description-box {
+    justify-content: space-between;
+ }
+
+
 
 .pagination {
     margin-left: 20px;
@@ -1224,9 +1238,12 @@ button {
 
 .catalog-list { 
     width: 100%;
+    padding-top: 69px;
+    padding-bottom: 35px;    /* FIXME: мерил на глаз */
+
     flex-wrap: wrap;
     justify-content: space-around;
-    align-content: space-around;
+    align-content: flex-start;
     /* TODO: remove lately */
     background: greenyellow;
 }
