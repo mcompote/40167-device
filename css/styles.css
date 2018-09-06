@@ -361,12 +361,14 @@ button {
 
 .catalog-item { 
     position: relative;
+    margin-bottom: 47px;
 
+    /* TODO: remove lately */
+    background: cyan;
+    
     font-family: 'Gilroy', sans-serif; 
     line-height: 24px; 
     letter-spacing: 0.01em; 
-    /* TODO: remove lately */
-    background: cyan;
 }
 
 .catalog-item-name-link  { 
@@ -818,15 +820,16 @@ button {
  }
 
  .catalog-item-description-box {
+    margin-top: 31px;
     justify-content: space-between;
  }
 
 
 
 .pagination {
+    margin-top: -12px; /* компенсация margin'ов у последних блоков .catalog-item */
     margin-left: 20px;
     margin-right: 20px;
-
     justify-content: space-between;
     background: magenta;
 }
@@ -1243,10 +1246,10 @@ button {
 .catalog-list { 
     width: 100%;
     padding-top: 69px;
-    padding-bottom: 35px;    /* FIXME: мерил на глаз */
 
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: flex-start;
     align-content: flex-start;
     /* TODO: remove lately */
     background: greenyellow;
