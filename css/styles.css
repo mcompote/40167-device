@@ -494,6 +494,11 @@ button {
 .column-five-twenteeth { width : 41.6667%; }
 
 
+/* container's width = 0.45=9.20 of parent's width  */
+/* for .catalog-item in catalog.html */
+.column-nine twenties  { width: 45.000%; }
+
+
 .column-29-percent {
     /* 29 процентов от "базовой" ширины в 1200px */
     width: 348px;
@@ -767,6 +772,9 @@ button {
 }
 
 .catalog-item-image-box {
+    background-color: #eee;
+    /* TODO: remove lately */
+    background-color: #fbc;
     position: relative;
 }
 
