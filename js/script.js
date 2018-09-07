@@ -4,7 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', function(evt) {
     
-    // спагетти
+    // спагетти-код
 
 
 
@@ -29,13 +29,28 @@ document.addEventListener('DOMContentLoaded', function(evt) {
     // для .services переключалка слайдера
     let sliderServices = document.querySelector('.services');
 
-    Array.from( document.querySelectorAll('.services .btn-animated') )
+    Array.from( sliderServices.querySelectorAll('.btn-animated') )
          .forEach( button => 
                    button.addEventListener('click', 
                                            evt => { superListener(evt) } 
                                           ) 
-                );        
+                );  
+                
+
+    //для .promo-slider переключалка слайдов
+    let sliderPromo = document.querySelector('.promo-slider');
+
+    Array.from(sliderPromo.querySelectorAll('.btn-slide-changer'))
+        .forEach(button =>
+            button.addEventListener('click',
+                evt => { superListener2(evt) }
+            )
+        );  
+    
 });
+
+
+
 
 
 function superListener(evt) {
@@ -72,4 +87,40 @@ function superListener(evt) {
     servicesBlock.querySelector(`${dot}service-description-box:nth-of-type(${nth})`)
                  .classList
                  .toggle('service-description-box_active');
+}
+
+function superListener2(evt) {
+    evt.preventDefault();
+    let element = evt.target;
+    let dot = '.';
+
+    if( element.parentNode.className.includes('active') )
+        return;
+
+    //  find <section class="promo-slider">
+    let promoBlock = element;
+    while ( promoBlock.className !== 'promo-slider' && promoBlock.nodeName.toLowerCase() !== 'body' )
+        promoBlock = promoBlock.parentNode;
+    
+    Array.from( promoBlock.querySelectorAll(dot + 'promo-item_active') ).forEach( child => {
+            console.log( child );
+            child.classList.toggle('promo-item_active');
+    });
+    Array.from( promoBlock.querySelectorAll( dot + 'slider-navigation-item_active') ).forEach( child => {
+            child.classList.toggle('slider-navigation-item_active');
+    });
+
+
+    element.parentNode.classList.toggle('slider-navigation-item_active');
+    
+    let nth = 1;
+    let lSibling = element.parentNode.previousElementSibling;
+    while( lSibling !== null ) {
+        nth++;
+        lSibling = lSibling.previousElementSibling;
+    }
+
+    promoBlock.querySelector(`${dot}promo-item:nth-of-type(${nth})`)
+                 .classList
+                 .toggle('promo-item_active');
 }
