@@ -181,8 +181,8 @@ button {
     margin-bottom: 32px;     /* FIXME: примерно */
     background-color: #f7e296;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-
+    background-size: auto;
+    background-position: center;
 }
 
 .popular-item:nth-of-type(1) .popular-item-image-box {
