@@ -67,6 +67,10 @@ button {
     background: transparent;
 }
 
+.btn-100px {
+    min-width: 100px;
+}
+
 .btn-200px {
     min-width: 200px;
 }
@@ -389,6 +393,14 @@ button {
 /* .page-link, .btn-forth, .btn-back  */
 .pagination [class*="btn"], .pagination [class*="-link"] {
     display: block;
+
+    /* переопределяем UA-styles */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    border: none;
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
     font-size: 16px;
@@ -834,6 +846,8 @@ button {
     margin-top: -12px; /* компенсация margin'ов у последних блоков .catalog-item */
     margin-left: 20px;
     margin-right: 20px;
+    padding-top: 23px;
+    padding-bottom: 23px;
     justify-content: space-between;
     background: magenta;
 }
@@ -990,12 +1004,14 @@ button {
 }
 
 
-
 .btn-blackened   {}
 
-.btn-back        {}
+.btn-back, .btn-forth {
+    text-transform: uppercase;
+}
 
-.btn-forth       {}
+.btn-back  { text-align: right; }
+.btn-forth { text-align: left;  }
 
 
 .page-link    {
@@ -1271,6 +1287,8 @@ button {
 
 
 .pagination-list {
+    max-width: 68%;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
