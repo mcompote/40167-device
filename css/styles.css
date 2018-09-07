@@ -815,6 +815,10 @@ button {
     display: none;
  }
 
+ .catalog-item:hover {
+     cursor: pointer;
+ }
+
  .catalog-item:hover .catalog-item-onhover-block {
     display: flex;
  }
