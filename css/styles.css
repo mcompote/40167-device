@@ -1018,7 +1018,26 @@ button {
     /* max width = 3 symbols: 1...999 "subpages" on the catalog page */
     width: 3em;
 }
-.btn-slide-changer {}
+
+
+.btn-slide-changer {
+    display: block;
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    width: 12px;
+    height: 12px;
+
+    background-image: radial-gradient(circle at center, transparent, transparent 5px, black 5px, black 6px, transparent 6px);
+    background-repeat: no-repeat;
+    font-size: 0px;
+}
+
+.slider-navigation-item_active .btn-slide-changer {
+    /* FIXME: в Хроме по-уродски выглядит, в лисе - огонь */
+    background-image: radial-gradient(circle at center, transparent 0px, transparent 1px, black 1px, black 2px, transparent 2px, transparent 5px, black 5px, black 6px, transparent 6px);
+}
 
 .btn-social { 
     display: block;
@@ -1145,18 +1164,50 @@ button {
 
 .header-user-nav .user-cart-item { min-width: 100px; }
 
-.slider-navigation-list {}
+.slider-navigation-list {
+    width: 78px;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: 100px;
+
+    /* TODO: remove lately */
+    background-color: greenyellow;
+}
 .slider-navigation-item {}
 
-.promo-list { position: relative;  }
+.promo-list { 
+    counter-reset: position_counter; 
+    position: relative;  
+}
+
 .promo-item {
+    counter-increment: position_counter;
+    
     position: absolute; 
     left: 0; 
     top: 0; 
-    opacity: 0.1; 
+
+    opacity: 0; 
     z-index: -9999; 
 }
+
 .promo-item_active { position: static; opacity: 1; }
+
+.promo-item::before {
+    display: block;
+    content: '0' counter(position_counter);
+    position: absolute;
+    top: -93px;
+    right: 80px;
+    font-size: 179.2px;
+    line-height: 179.2px;
+    font-weight: 900;
+    font-family: 'Gilroy', sans-serif;
+    color: white; 
+}
+
 
 .brands-gallery-list {
     justify-content: space-around;
@@ -1315,6 +1366,7 @@ button {
 /* sliders */
 
 .promo-slider {
+    position: relative;
     /* TODO: потом убрать */
     background: rgba(100, 149, 237, 0.4);
     margin-top: -32px;
@@ -1436,6 +1488,7 @@ button {
 /* for headings or something like headings in .psd layout */
 /* in .services <h3>, in services <h2> */
 .huge-heading { 
+    position: relative;
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
     font-size: 47px; 
@@ -1443,17 +1496,28 @@ button {
     letter-spacing: 0.01em;
 }
 
-/* slogan in '.promo-slider', headings in '.info' and '.contacts' sections  */
-.huge-heading-top-line {}
-
-.bottom-line::after {
-    position: absolute;
-    top: 179px;
-    display: block;
-    content: '';
+.line-bottom::after, .line-top::after {
     width: 80px;
     height: 7px;
+    display: block;
+    content: '';
+    position: absolute;
+
+}
+
+.line-bottom::after {
+    top: 179px;
     background: #ffc600;
+}
+
+.line-top::after {
+    top: -68px;
+    background: black;
+}
+
+.promo-slider .line-top::after {
+    top: -56px;
+    background: white;
 }
 
 /* make an element looks as triangle */
