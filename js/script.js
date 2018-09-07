@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', function(evt) {
 
     Array.from(sliderPromo.querySelectorAll('.btn-slide-changer'))
         .forEach(button =>
-            button.addEventListener('click',
-                evt => { superListener2(evt) }
-            )
+                 button.addEventListener('click',
+                                          evt => { superListener2(evt) }
+                                        )
         );  
     
 });
