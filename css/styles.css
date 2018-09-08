@@ -97,9 +97,9 @@ button {
     letter-spacing: 0.01em;
 }
 
-/* меняем прозрачность логотипа (значения в header'е и footer'е одинаковые) */
-.logo-container:hover  { opacity: 0.6; }
-.logo-container:active { opacity: 0.3; }
+/* меняем прозрачность логотипа, обернутого в ссылку (значения в header'е и footer'е одинаковые) */
+.logo-container:hover  a { opacity: 0.6; }
+.logo-container:active a { opacity: 0.3; }
 
 /* У ссылок в шапке декоративные картинки добавлены через псевдо-элементы */
 .header [class*='btn']:hover,   .header [class*='link']:hover   { opacity: 0.6;  } 
