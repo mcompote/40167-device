@@ -131,7 +131,7 @@ button {
 /* два класса для большего приоритета, т.к. далее .huge-heading переопределяет line-height */
 .promo-article .promo-article-heading {
     line-height: 56px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 }
 
 
@@ -152,11 +152,11 @@ button {
 
 .promo-article-contents {
     letter-spacing: 0.01em;
-    margin-bottom: 56px;  /* FIXME: примерно померил */
+    margin-bottom: 44px;  
 }
 
 .promo-article .btn-animated {
-    margin-bottom: 64px;
+    margin-bottom: 50px;
 }
 
 
@@ -613,6 +613,11 @@ button {
 }
 
 /* for .promo-article-heading */
+.pad-r-40px {
+    padding-right: 40px;
+}
+
+/* for .promo-article-contents */
 .pad-r-60px {
     padding-right: 60px;
 }
@@ -621,7 +626,7 @@ button {
     padding-left: 80px;
 }
 
-/* for .promo-article-contents */
+/* TODO: НЕ ИСПОЛЬЗУЕТСЯ */
 .pad-r-80px {
     padding-right: 80px;
 }
@@ -632,6 +637,10 @@ button {
 /* for .service-description-heading, .service-description-contents */
 .pad-r-242px {
     padding-right: 242px;
+}
+
+.mar-t-79px-neg {
+    margin-top: -79px;
 }
 
 
@@ -1003,6 +1012,10 @@ button {
     min-width: 200px;
 }
 
+.btn-220px {
+    min-width: 220px;
+}
+
 .btn-animated    {
     display: inline-flex;
     justify-content: center;
@@ -1205,10 +1218,10 @@ button {
 .slider-navigation-list {
     width: 78px;
     justify-content: space-between;
+    
     position: absolute;
     z-index: 2;
-    /* FIXME: высота НЕ в процентах, потому что высота род.блока меняется */
-    top: 300px;
+    top: 250px;
     right: 100px;
 
     /* TODO: remove lately */
@@ -1435,8 +1448,8 @@ button {
 .promo-item-characteristics-table th,
 .promo-item-characteristics-table td {
     display: block;
-    /* TODO: пока что так, но это криво смотрится на  */
-    width: 140px;
+
+    width: 160px;
     margin: 0;
     padding: 0;
 }
@@ -1445,10 +1458,14 @@ button {
     margin-bottom: 25px;
 }
 
-.promo-item-characteristic-name:not(:last-of-type),
+
+/* FIXME: подчистить */
+/* Вместо 140px блок + 20px маргин будет просто 160px блок */
+
+/* .promo-item-characteristic-name:not(:last-of-type),
 .promo-item-characteristic-value:not(:last-of-type) {
     margin-right: 20px;
-}
+} */
 
 
 
