@@ -67,13 +67,6 @@ button {
     background: transparent;
 }
 
-.btn-100px {
-    min-width: 100px;
-}
-
-.btn-200px {
-    min-width: 200px;
-}
 
 /* --------------------------------------------------------------- */
 /* ----------  END   OF GLOBAL styles (html, body, etc.) --------- */
@@ -1002,6 +995,14 @@ button {
 
 
 .btn             { magic: false; }
+
+.btn-100px {
+    min-width: 100px;
+}
+
+.btn-200px {
+    min-width: 200px;
+}
 
 .btn-animated    {
     display: inline-flex;
