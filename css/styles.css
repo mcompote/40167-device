@@ -178,8 +178,16 @@ button {
     background-position: center;
 }
 
-.popular-item-image-box:hover {
+.popular-item-link {
+    display: block;
+}
+
+.popular-item-link:hover .popular-item-image-box {
     background-color: #f0c52e;
+}
+
+.popular-item-link:active {
+    color: rgba(0, 0, 0, 0.3); 
 }
 
 /* поднимаем специфичность, дописывая active 2 раза 
@@ -190,11 +198,13 @@ button {
     }
 
 */
-.popular-item .popular-item-image-box:active:active {
+.popular-item-link:active:active .popular-item-image-box {
     background-image: none;
 }
 
-.popular-item-image-box:active::before {
+
+
+.popular-item-image-box::before {
     content: '';
     display: block;
     background-image: none;
@@ -206,32 +216,32 @@ button {
     opacity: 0.3;
 }  
 
-.popular-item:nth-of-type(1) .popular-item-image-box,
-.popular-item:nth-of-type(1) .popular-item-image-box:active::before {
+.popular-item:nth-of-type(1)        .popular-item-image-box,
+.popular-item:nth-of-type(1):active .popular-item-image-box::before {
     background-image: url('../img/svg/popular-1.svg');
 }
 
-.popular-item:nth-of-type(2) .popular-item-image-box,
-.popular-item:nth-of-type(2) .popular-item-image-box:active:before {
+.popular-item:nth-of-type(2)        .popular-item-image-box,
+.popular-item:nth-of-type(2):active .popular-item-image-box::before {
     background-image: url('../img/svg/popular-2.svg');
 }
 
-.popular-item:nth-of-type(3) .popular-item-image-box,
-.popular-item:nth-of-type(3) .popular-item-image-box:active:before {
+.popular-item:nth-of-type(3)        .popular-item-image-box,
+.popular-item:nth-of-type(3):active .popular-item-image-box::before {
     background-image: url('../img/svg/popular-3.svg');
 }
 
-.popular-item:nth-of-type(4) .popular-item-image-box,
-.popular-item:nth-of-type(4) .popular-item-image-box:active:before {
+.popular-item:nth-of-type(4)        .popular-item-image-box,
+.popular-item:nth-of-type(4):active .popular-item-image-box::before {
     background-image: url('../img/svg/popular-4.svg');
 }
 
-.popular-item:nth-of-type(5) .popular-item-image-box,
-.popular-item:nth-of-type(5) .popular-item-image-box:active:before {
+.popular-item:nth-of-type(5)        .popular-item-image-box,
+.popular-item:nth-of-type(5):active .popular-item-image-box::before {
     background-image: url('../img/svg/popular-5.svg');
 }
-.popular-item:nth-of-type(6) .popular-item-image-box,
-.popular-item:nth-of-type(6) .popular-item-image-box:active:before {
+.popular-item:nth-of-type(6)        .popular-item-image-box,
+.popular-item:nth-of-type(6):active .popular-item-image-box::before {
     background-image: url('../img/svg/popular-6.svg');
 }
 
@@ -1311,6 +1321,7 @@ button {
     flex-direction: row;
     justify-content: space-around;
 }
+
 .popular-item {}
 
 .carrier-marked-list {
