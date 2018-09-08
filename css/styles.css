@@ -1065,7 +1065,19 @@ button {
 }
 
 
-.btn-blackened   {}
+.btn-blackened:active:active  {
+    color: #f7e184;
+    background: black;
+}
+
+.services-item_active .btn-blackened,
+.services-item_active .btn-blackened:hover,
+.services-item_active .btn-blackened:active
+ {
+    color: #f7e184;
+    background: inherit;
+}
+
 
 .btn-back, .btn-forth {
     text-transform: uppercase;
@@ -1306,15 +1318,6 @@ button {
 .services-item_active {
     background: #000000;
 }
-
-.services-item_active .btn-blackened,
-.services-item_active .btn-blackened:hover,
-.services-item_active .btn-blackened:active
- {
-    color: #f7e184;
-    background: inherit;
-}
-
 
 .popular-list {
     display: flex;
