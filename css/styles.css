@@ -691,11 +691,7 @@ button {
 
 
 .header-user-nav {
-    /* TODO: не работает почему-то */
-    ~margin-top: -4px;; /* подгоняем под одну линию с полем поиска слева */
-
-    position: relative;
-    top: -4px;
+    margin-top: 43px;
 }
 
 .header-nav { 
@@ -707,7 +703,10 @@ button {
 .footer .logo-container { position: relative; top: 16px;}
 
 
-.search-container {}
+.search-container {
+    position: relative;
+    top: 16px;
+}
 
 .login-container { letter-spacing: 0.01em; }
 
@@ -1607,7 +1606,11 @@ button {
 .form-search-input {
     display: block;
     width: 100%;
+    padding: 0;
     padding-left: 36px;
+    padding-bottom: 8px;
+    
+    outline: none;
     border: none;
     border-bottom: 2px solid transparent; 
 
@@ -1640,10 +1643,13 @@ button {
     display: none;
     width: 85px;
     height: 49px;
+    padding: 0;
+    border: 2px solid black;
+    
     position: absolute;
     bottom: 0;
     right: 0;
-    border: 2px solid black;
+    
     background: transparent;
     color: black;
 }
