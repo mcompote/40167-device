@@ -1910,12 +1910,57 @@ button {
 .form-filter-radio {}
 
 
-.drag-slider {}
-.drag-slider-body {}
-.drag-slider-line {}
-.drag-slider-handle {}
-.drag-slider-handle-left {}
-.drag-slider-handle-right {}
+.drag-slider {
+    padding-top: 18px; 
+    padding-bottom: 3px;
+    flex-wrap: wrap;
+}
+
+.drag-slider-body {
+    position: relative;
+    margin-bottom: 13px;
+}
+.drag-slider-line {
+    display: block;
+    width: 200px;
+    height: 2px;
+    background-image: linear-gradient(to right, #91c92f 117px, #dbdbdb 117px);
+}
+
+.drag-slider-handle {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #ababab;
+    border: 8px solid white;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -10px;
+    /* TODO: еще box-shadow есть */
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
+}
+.drag-slider-handle-left {
+
+}
+.drag-slider-handle-right {
+    left: 107px;
+}
+
+.drag-slider-label {
+    width: 100px;
+       
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.drag-slider-label-max {
+    position: relative;
+    right: 11px; 
+}
 
 .form-feedback {}
 .form-feedback-label {}

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(evt) {
     let inputMaxCost  = document.querySelector('#form_filter__max_cost_input'  );
     let outputMaxCost = document.querySelector('#form_filter__max_cost_output' );
 
-    if( inputMinCost && inputMaxCost ) {
+    if( inputMinCost && inputMaxCost && outputMinCost && outputMaxCost ) {
         inputMinCost.addEventListener('change', function(evt) {
             outputMinCost.innerHTML = evt.target.value;
         });
@@ -48,10 +48,20 @@ document.addEventListener('DOMContentLoaded', function(evt) {
             );  
     
 
-
+    // показать каталог товаров в header'е
     let goodsCatalogueBtn = document.querySelector('.header-nav-item-link.plus-sign');
     if ( goodsCatalogueBtn )
         goodsCatalogueBtn.addEventListener( 'click', superListener3 );
+
+
+    //убрать ugly-block, показать pretty-block в фильтре товаров на catalog.html
+    let uglyRangeBlock   = document.querySelector('.form-filter-input-range-pretty');
+    let prettyRangeBlock = document.querySelector('.form-filter-input-range-ugly');
+    if( uglyRangeBlock && prettyRangeBlock ) {
+        uglyRangeBlock.classList.toggle('none');
+        prettyRangeBlock.classList.toggle('none');
+    }
+        
     
 });
 

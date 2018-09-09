@@ -176,7 +176,7 @@
                        
                         <fieldset class="form-filter-component">
                                 <legend class="form-filter-heading">Стоимость</legend>
-                            <div class="form-filter-input-range-ugly block">
+                            <div class="form-filter-input-range-ugly">
                                 <label class="form-filter-label flex-dir-col">
                                     Минимальная Стоимость
                                     <input class="form-filter-input-range" type="range" id="form_filter__min_cost_input" name="min_cost" min="0" value="0">
@@ -194,11 +194,19 @@
 
                             <!-- заглушка для модного input-range, который скорее всего ч/з js работает -->
                             <div class="form-filter-input-range-pretty none">
-                                <div class="drag-slider">
+                                <div class="drag-slider column-flexbox">
                                     <div class="drag-slider-body">
                                         <div class="drag-slider-line"></div>
-                                        <div class="drag-slider-handle drag-slider-handle-left"></div>
-                                        <div class="drag-slider-handle drag-slider-handle-right"></div>
+                                        <div class="drag-slider-handle drag-slider-handle-left" draggable="true"></div>
+                                        <div class="drag-slider-handle drag-slider-handle-right" draggable="true"></div>
+                                    </div>
+                                    <div class="drag-slider-label drag-slider-label-min">
+                                        От 
+                                        <span class="drag-slider-min-value">0</span>
+                                    </div>
+                                    <div class="drag-slider-label drag-slider-label-max">
+                                        До 
+                                        <span class="drag-slider-max-value">5000</span>
                                     </div>
                                 </div>
                             </div>
