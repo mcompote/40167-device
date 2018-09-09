@@ -777,7 +777,10 @@ button {
         background: palevioletred;
 }
 
-.map-container {}
+.map-container { 
+    margin-top: 40px;    /* на 10px больше, чем у вышестоящего <p> */
+    margin-bottom: 34px; 
+}
 
 .footer { 
     margin-top: 90px;    /* FIXME: на глаз мерил примерно */
@@ -1026,6 +1029,11 @@ button {
     min-width: 220px;
 }
 
+/* buttons in sections 'info' & 'contacts' */
+.btn-260px {
+    min-width: 260px;
+}
+
 .btn-animated    {
     display: inline-flex;
     justify-content: center;
@@ -1192,12 +1200,6 @@ button {
     padding:0;
 }
 
-[class*='marked-list'] {
-    list-style: disc;
-    margin:0;
-    padding: 20px;
-}
-
 /* ul, li styles */
 .header-nav-list {
     display: flex;
@@ -1327,21 +1329,32 @@ button {
 
 .popular-item {}
 
-.carrier-marked-list {
-    list-style: circle;
-    /* TODO: либо убрать marked-list ---> list и сделать на псевдоэлементах, 
-             либо в list-style-image таки надо будет что-то указать
-     */
-    /* list-style-image: url(''); */
-    padding: 0;
-    margin-top: 70px;
+.carrier-list {
+    margin-top: 65px;
 }
 
 .carrier-item { 
+    position: relative;
+    padding-left: 34px;
+
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
     font-size: 16px;
     line-height: 40px;        
+}
+
+.carrier-item::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    margin-top: -4px;
 }
 
 .breadcrumbs-list {}
@@ -1488,21 +1501,6 @@ button {
 }
 
 
-/* FIXME: подчистить */
-/* Вместо 140px блок + 20px маргин будет просто 160px блок */
-
-/* .promo-item-characteristic-name:not(:last-of-type),
-.promo-item-characteristic-value:not(:last-of-type) {
-    margin-right: 20px;
-} */
-
-
-
-
-
-
-
-
 
 
 
@@ -1513,17 +1511,17 @@ button {
 /* ----------      BEGIN OF        decorating stuff     ---------- */
 /* --------------------------------------------------------------- */
 
-.info h2, .contacts h2 {
-    margin-bottom: 47px;
+.info .huge-heading, .contacts .huge-heading {
+    margin-bottom: 43px;
+    color: #464646;
 }
 
 .info p, .contacts p  {
-    margin-top: 37px;
-    margin-bottom: 37px;
+    margin-bottom: 30px;
 }
 
 .info .btn-animated, .contacts .btn-animated {
-    margin-top: 78px;
+    margin-top: 53px;
 }
 
 .footer p {
