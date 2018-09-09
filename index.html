@@ -469,7 +469,7 @@
               <!-- </noscript> -->
             </div>
           </a>
-          <a class="btn btn-animated btn-260px" id="popup-opener-write-us" href="#">
+          <a class="btn btn-animated btn-260px" id="js-popup-opener-feedback" href="#">
             Напишите нам
           </a>
         </section>
@@ -582,7 +582,7 @@
 
 
 
-  <section class="popup popup-map column-full">
+  <section class="popup popup-map column-full none">
       <div class="column-four-fifths column-center">
 
           <h2 class="visually-hidden">Мы на карте</h2>
@@ -598,44 +598,44 @@
 
       </div>
   </section>
-
-<div class="column-full">
-  <section class="popup popup-feedback column-four-fifths column-center">
+  
+  <div class="column-full popup none">
+    <section class="popup-feedback column-four-fifths column-center">
       <h2 class="visually-hidden">Пишите нам</h2>
-      
+
       <form class="form-feedback column-flexbox" id="form_feedback" action="/api/feedback" method="POST">
-      
+
         <div class="form-feedback-component">
           <label class="form-feedback-label">
             Ваше имя:
             <input class="form-feedback-input-text" type="text" name="name" placeholder="Имя Фамилия" required>
           </label>
         </div>
-      
-          <div class="form-feedback-component">
-            <label class="form-feedback-label">
-              Ваш email:
-              <input class="form-feedback-input-text" type="email" name="email" placeholder="email@example.com" required>
-            </label>
-          </div>
-      
-          <div class="form-feedback-component">
-            <label class="form-feedback-label">
-              Текст письма:
-              <textarea class="form-feedback-textarea" name="feedback" cols="30" rows="10" required>В свободной форме</textarea>
-            </label>
-          </div>
-      
-          <button type="submit" class="btn btn-animated btn-200px">Отправить</button>
+
+        <div class="form-feedback-component">
+          <label class="form-feedback-label">
+            Ваш email:
+            <input class="form-feedback-input-text" type="email" name="email" placeholder="email@example.com" required>
+          </label>
+        </div>
+
+        <div class="form-feedback-component">
+          <label class="form-feedback-label">
+            Текст письма:
+            <textarea class="form-feedback-textarea" name="feedback" cols="30" rows="10" required>В свободной форме</textarea>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-animated btn-200px">Отправить</button>
       </form>
 
       <!-- закрывающий форму крестик -->
       <button class="btn-close-popup">Закрыть всплывающую форму</button>
-  </section>
-</div>
+    </section>
+  </div>
 
 
-  <div class="overlay"></div>
+  <div id="overlay" class="overlay none"></div>
 
 
   <script src="js/script.js"></script>

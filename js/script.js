@@ -61,8 +61,24 @@ document.addEventListener('DOMContentLoaded', function(evt) {
         uglyRangeBlock.classList.toggle('none');
         prettyRangeBlock.classList.toggle('none');
     }
-        
     
+    //кнопка "Напишите Нам"
+    let feedbackPopupLink = document.getElementById('js-popup-opener-feedback');
+    if( feedbackPopupLink )
+        feedbackPopupLink.addEventListener('click', superPopupOpener );
+
+
+    //закрывашки popup'ов
+    let popupCloseBtns = document.querySelectorAll('.btn-close-popup');
+    if( popupCloseBtns )
+        Array.from( popupCloseBtns )
+             .forEach(btn =>
+                      btn.addEventListener('click',
+                                            evt => { superPopupCloser(evt) }
+                                          ) 
+        ); 
+        
+        
 });
 
 
@@ -152,5 +168,50 @@ function superListener3(evt) {
         cataloguePopupBlock.style.display = ( cataloguePopupBlock.style.display === "none" ) ? 
                                             "flex" :
                                             "none";
+
+}
+
+
+function superPopupOpener(evt) {
+    evt.preventDefault();
+    let element = evt.target;
+
+    let feedbackPopupBlock  = document.querySelector('.popup-feedback');
+    // find nearest 'popup' container (EXACTLY 'POPUP', not 'POPUP-bla-bla-bla' classes)
+    let parent = feedbackPopupBlock;
+    while ( !parent.classList.contains('popup') && parent.nodeName.toLowerCase() !== 'body' )
+        parent = parent.parentNode;
+
+    let overlayBlock        = document.getElementById('overlay');
+    if (parent && overlayBlock) {
+        if (parent.classList.contains("none") && parent.classList.contains("none") ) {
+            parent.classList.remove("none");
+            overlayBlock.classList.remove("none");
+        }
+    }
+
+}
+
+function superPopupCloser(evt) {
+    evt.preventDefault();
+    let element = evt.target;
+
+    // find nearest 'popup' container (EXACTLY 'POPUP', not 'POPUP-bla-bla-bla' classes)
+    let parent = element;
+    while ( !parent.classList.contains('popup') && parent.nodeName.toLowerCase() !== 'body' )
+        parent = parent.parentNode;
+
+    // close popup
+    if (parent) {
+        if ( !parent.classList.contains('none') ) {
+            parent.classList.add('none');
+        }
+    }
+
+    // close overlay
+    let overlayBlock = document.getElementById('overlay');
+    if( overlayBlock && !overlayBlock.classList.contains('none') )
+        overlayBlock.classList.add('none');
+
 
 }
