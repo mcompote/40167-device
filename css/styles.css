@@ -927,6 +927,15 @@ button {
 }
 
 /* svg-icon goes before text "Корзина" */
+.link-user-cart svg {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 6px;
+    width: 12px;
+    height: 12px;
+}
+
+
 .link-user-cart::before {
     display: inline-block;
     vertical-align: baseline;
@@ -935,6 +944,9 @@ button {
     height: 12px;
     content: '';
     background: url('../img/svg/cart.svg') center center no-repeat;
+
+    /* FIXME: потом удалить полностью */
+    display: none;
 }
 
 
@@ -945,6 +957,15 @@ button {
 }
 
 /* svg-icon goes before text "сравнить" */
+.link-compare svg {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+
 .link-compare::before {
     display: inline-block;
     vertical-align: baseline;
@@ -953,12 +974,24 @@ button {
     height: 10px;
     content: '';
     background: url('../img/svg/compare.svg') center center no-repeat;
+
+    /* FIXME: потом удалить полностью */
+    display: none;
 }
 
 .link-log-me-in, .link-user-name { 
     display: block; 
     white-space: nowrap;
 }
+
+.link-log-me-in svg, .link-user-name svg {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 8px;
+    width: 13px;
+    height: 12px;    
+}
+
 
 /* svg-icon goes before text "сравнить" */
 .link-log-me-in::before, .link-user-name::before {
@@ -969,6 +1002,9 @@ button {
     height: 12px;
     content: '';
     background: url('../img/svg/user.svg') center center no-repeat;
+
+    /* FIXME: потом удалить полностью */
+    display: none;
 }
 
 .link-user-name {
@@ -981,8 +1017,6 @@ button {
 .link-logout { 
     display: block; 
 }
-
-.link-catalog       {}
 
 
 /* svg-icon goes after text "сравнить" */

@@ -13,109 +13,130 @@
 
 <body>
     <div class="column-full">
-                    <header class="header">
-                  
-                      <div class="column-one-half">
-                        
-                        <!-- логотип -->
-                        <div class="logo-container">
-                            <a href="index.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="163.281" height="34.938" aria-label="логотип интернет-магазина DEVICE">
-                                    <path id="logo" d="M-.014.661v33.6h13.532a15.723 15.723 0 0 0 11.72-4.824 16.464 16.464 0 0 0 4.712-11.976 16.465 16.465 0 0 0-4.712-11.976A15.723 15.723 0 0 0 13.518.661H-.014zm7.733 26.208V8.05h5.8a8.648 8.648 0 0 1 6.5 2.568 9.412 9.412 0 0 1 2.489 6.84 9.41 9.41 0 0 1-2.489 6.84 8.646 8.646 0 0 1-6.5 2.568h-5.8zm34.8-5.952h12.082v-7.3H42.515V8.05h13.291V.661H34.782v33.6h21.265v-7.392H42.515v-5.952zm36.343 13.344L89.881.661h-8.458l-7.491 24.72L66.441.661h-8.457l11.019 33.6h9.859zm14.4 0h7.733V.661h-7.733v33.6zm38.615-1.416a15.514 15.514 0 0 0 6.041-5.688l-6.67-3.84a7.488 7.488 0 0 1-3.165 3.024 9.874 9.874 0 0 1-4.664 1.1 9.594 9.594 0 0 1-7.177-2.736 9.907 9.907 0 0 1-2.682-7.248 9.908 9.908 0 0 1 2.682-7.248 9.594 9.594 0 0 1 7.177-2.736 9.914 9.914 0 0 1 4.64 1.08 7.6 7.6 0 0 1 3.189 3.048l6.67-3.84a15.881 15.881 0 0 0-6.09-5.688 17.419 17.419 0 0 0-8.409-2.088 17.12 17.12 0 0 0-17.592 17.472 17.12 17.12 0 0 0 17.589 17.476 17.519 17.519 0 0 0 8.458-2.088zm17.881-11.928h12.082v-7.3h-12.085V8.05h13.29V.661h-21.022v33.6h21.264v-7.392h-13.532v-5.952z" fill-rule="evenodd"/>
-                                </svg>
-                            </a>
-                        </div>
-                        
-                        <div class="search-container">
-                          <form class="form-search" id="form_search" action="/api/search" method="get">
-                            <label class="form-search-label">
-                              <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
-                
-                              <button class="btn btn-search" type="submit">Найти</button>
-                            </label>
-                          
-                          </form>
-                        </div>
-                        
-                      </div>
-                
-                      <div class="user-nav header-user-nav column-one-half column-flexbox">
-                  
-                        <!-- элементы "Пользователь" и "Выйти" -->
-                        <div class="login-container column-flexbox flex-grow-1">
-                                <a class="link-user-name" href="#">
-                                        Неопознанный Енот
-                                    </a>
-                
-                                    <a class="link-logout" href="auth/logout">
-                                        Выйти
-                                    </a>
-                        </div>
-                 
-                        <!-- элементы "сравнить" и "корзина" -->
-                        <ul class="user-cart-list column-flexbox">
-                          <li class="user-cart-item">
-                            <a class="link-compare" href="#">Сравнить</a>
-                          </li>
-                          <li class="user-cart-item">
-                            <a class="link-user-cart" href="#">Корзина</a>
-                          </li>
+        <header class="header">
+    
+            <div class="column-one-half">
+    
+                <!-- логотип -->
+                <div class="logo-container">
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="163.281" height="34.938" aria-label="логотип интернет-магазина DEVICE">
+                            <path id="svg_logo" d="M-.014.661v33.6h13.532a15.723 15.723 0 0 0 11.72-4.824 16.464 16.464 0 0 0 4.712-11.976 16.465 16.465 0 0 0-4.712-11.976A15.723 15.723 0 0 0 13.518.661H-.014zm7.733 26.208V8.05h5.8a8.648 8.648 0 0 1 6.5 2.568 9.412 9.412 0 0 1 2.489 6.84 9.41 9.41 0 0 1-2.489 6.84 8.646 8.646 0 0 1-6.5 2.568h-5.8zm34.8-5.952h12.082v-7.3H42.515V8.05h13.291V.661H34.782v33.6h21.265v-7.392H42.515v-5.952zm36.343 13.344L89.881.661h-8.458l-7.491 24.72L66.441.661h-8.457l11.019 33.6h9.859zm14.4 0h7.733V.661h-7.733v33.6zm38.615-1.416a15.514 15.514 0 0 0 6.041-5.688l-6.67-3.84a7.488 7.488 0 0 1-3.165 3.024 9.874 9.874 0 0 1-4.664 1.1 9.594 9.594 0 0 1-7.177-2.736 9.907 9.907 0 0 1-2.682-7.248 9.908 9.908 0 0 1 2.682-7.248 9.594 9.594 0 0 1 7.177-2.736 9.914 9.914 0 0 1 4.64 1.08 7.6 7.6 0 0 1 3.189 3.048l6.67-3.84a15.881 15.881 0 0 0-6.09-5.688 17.419 17.419 0 0 0-8.409-2.088 17.12 17.12 0 0 0-17.592 17.472 17.12 17.12 0 0 0 17.589 17.476 17.519 17.519 0 0 0 8.458-2.088zm17.881-11.928h12.082v-7.3h-12.085V8.05h13.29V.661h-21.022v33.6h21.264v-7.392h-13.532v-5.952z"
+                                fill-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+    
+                <div class="search-container">
+                    <form class="form-search" id="form_search" action="/api/search" method="get">
+                        <label class="form-search-label">
+                            <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
+    
+                            <button class="btn btn-search" type="submit">Найти</button>
+                        </label>
+    
+                    </form>
+                </div>
+    
+            </div>
+    
+            <div class="user-nav header-user-nav column-one-half column-flexbox">
+    
+                <!-- элементы "Пользователь" и "Выйти" -->
+                <div class="login-container column-flexbox flex-grow-1">
+                    <a class="link-user-name" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+                            <defs>
+                                <path id="svg_login" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"
+                                />
+                            </defs>
+                            <use xlink:href="#svg_login" fill="#272525"></use>
+                        </svg>
+                        Неопознанный Енот
+                    </a>
+
+                    <a class="link-logout" href="auth/logout">
+                        Выйти
+                    </a>
+                </div>
+    
+                <!-- элементы "сравнить" и "корзина" -->
+                <ul class="user-cart-list column-flexbox">
+                    <li class="user-cart-item">
+                        <a class="link-compare" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                                <path id="svg_compare" d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z" />
+                            </svg>
+                            Сравнить
+                        </a>
+                    </li>
+                    <li class="user-cart-item">
+                        <a class="link-user-cart" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                                <path id="svg_cart1" d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"
+                                />
+                                <path id="svg_cart2" d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"
+                                />
+                            </svg>
+                            Корзина
+                        </a>
+                    </li>
+                </ul>
+    
+            </div>
+    
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item column-one-half">
+    
+                        <button class="header-nav-item-link plus-sign">
+                            Каталог товаров
+                        </button>
+    
+                        <ul class="header-catalogue-list">
+                            <li class="header-catalogue-item">
+                                <a class="header-catalogue-item-link" href="#">Виртуальная реальность</a>
+                            </li>
+                            <li class="header-catalogue-item">
+                                <a class="header-catalogue-item-link" href="#">Моноподы для селфи</a>
+                            </li>
+                            <li class="header-catalogue-item">
+                                <a class="header-catalogue-item-link" href="#">Экшн-камеры</a>
+                            </li>
+                            <li class="header-catalogue-item">
+                                <a class="header-catalogue-item-link" href="#">Фитнес-браслеты</a>
+                            </li>
+                            <li class="header-catalogue-item">
+                                <a class="header-catalogue-item-link" href="#">Умные часы</a>
+                            </li>
+                            <li class="header-catalogue-item">
+                                <a class="header-catalogue-item-link" href="#">Квадрокоптеры</a>
+                            </li>
                         </ul>
-                  
-                      </div>
-                  
-                      <nav class="header-nav">
-                        <ul class="header-nav-list">
-                          <li class="header-nav-item column-one-half">
-                
-                              <button class="header-nav-item-link plus-sign">
-                                Каталог товаров
-                              </button>
-                      
-                              <ul class="header-catalogue-list">
-                                <li class="header-catalogue-item">
-                                  <a class="header-catalogue-item-link" href="#">Виртуальная реальность</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                  <a class="header-catalogue-item-link" href="#">Моноподы для селфи</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                  <a class="header-catalogue-item-link" href="#">Экшн-камеры</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                  <a class="header-catalogue-item-link" href="#">Фитнес-браслеты</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                  <a class="header-catalogue-item-link" href="#">Умные часы</a>
-                                </li>
-                                <li class="header-catalogue-item">
-                                  <a class="header-catalogue-item-link" href="#">Квадрокоптеры</a>
-                                </li>
-                              </ul>
-                
-                          </li>
-                      
-                          <li class="header-nav-item">
-                            <a class="header-nav-item-link" href="#">
-                              Доставка
-                            </a>
-                          </li>
-                      
-                          <li class="header-nav-item">
-                            <a class="header-nav-item-link" href="#">
-                              Гарантия
-                            </a>
-                          </li>
-                      
-                          <li class="header-nav-item header-nav-item_last">
-                            <a class="header-nav-item-link" href="#">
-                              Контакты
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-                  
-                    </header>
+    
+                    </li>
+    
+                    <li class="header-nav-item">
+                        <a class="header-nav-item-link" href="#">
+                            Доставка
+                        </a>
+                    </li>
+    
+                    <li class="header-nav-item">
+                        <a class="header-nav-item-link" href="#">
+                            Гарантия
+                        </a>
+                    </li>
+    
+                    <li class="header-nav-item header-nav-item_last">
+                        <a class="header-nav-item-link" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    
+        </header>
     </div>
 
     <main>
@@ -384,99 +405,113 @@
     </main>
 
     <footer class="footer">
-
+    
         <div class="footer-row-top column-full column-flexbox pad-lr-20px">
-              <!-- логотип -->
-              <div class="logo-container line-bottom column-left">
-                  <a href="index.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="163.281" height="34.938" aria-label="логотип интернет-магазина DEVICE">
-                            <use xlink:href="#logo" fill="#ffc600"></use>
-                        </svg>
-                  </a>
-              </div>
-        
-              <div class="user-nav footer-user-nav column-five-twenteeth column-flexbox">
-          
+            <!-- логотип -->
+            <div class="logo-container line-bottom column-left">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="163.281" height="34.938" aria-label="логотип интернет-магазина DEVICE">
+                        <use xlink:href="#svg_logo" fill="#ffc600"></use>
+                    </svg>
+                </a>
+            </div>
+    
+            <div class="user-nav footer-user-nav column-five-twenteeth column-flexbox">
+    
                 <!-- элемент "логин" -->
                 <div class="login-container column-flexbox flex-grow-1">
 
-                  <a class="link-user-name" href="#">
+                    <a class="link-user-name" href="#">
+                        <svg>
+                            <use xlink:href="#svg_login" fill="#ffc600"></use>
+                        </svg>
                         Неопознанный Енот
                     </a>
-    
+
                     <a class="link-logout column-right" href="auth/logout">
                         Выйти
                     </a>
                 </div>
-         
+    
                 <!-- элементы "сравнить" и "корзина" -->
                 <ul class="user-cart-list column-flexbox">
-                  <li class="user-cart-item">
-                    <a class="link-compare" href="#">Сравнить</a>
-                  </li>
-                  <li class="user-cart-item">
-                    <a class="link-user-cart" href="#">Корзина</a>
-                  </li>
+                    <li class="user-cart-item">
+                        <a class="link-compare" href="#">
+                            <svg>
+                                <use xlink:href="#svg_compare" fill="#ffc600"></use>
+                            </svg>
+                            Сравнить
+                        </a>
+                    </li>
+                    <li class="user-cart-item">
+                        <a class="link-user-cart" href="#">
+                            <svg>
+                                <use xlink:href="#svg_cart1" fill="#ffc600"></use>
+                                <use xlink:href="#svg_cart2" fill="#ffc600"></use>
+                            </svg>
+                            Корзина
+                        </a>
+                    </li>
                 </ul>
-          
-              </div>
+    
+            </div>
         </div>
     
     
         <div class="footer-row-bottom column-full column-flexbox pad-lr-20px">
     
-          <div class="column-three-tenths">
-            <p class="footer-address">г. Москва, ул. Строителей, 15</p>
-          </div>
-    
-          <div class="column-four-tenths">
-            <nav class="footer-nav">
-          
-              <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
-              <ul class="footer-nav-list column-flexbox">
-                <li class="footer-nav-item">
-                  <a class="footer-nav-item-link" href="#">Доставка</a>
-                </li>
-                <li class="footer-nav-item">
-                  <a class="footer-nav-item-link" href="#">Гарантия</a>
-                </li>
-                <li class="footer-nav-item">
-                  <a class="footer-nav-item-link" href="#">Контакты</a>
-                </li>
-              </ul>
-          
-            </nav>
-    
-    
-            <div class="footer-social">
-              <ul class="footer-social-list column-flexbox column-one-third">
-                <li>
-                  <a class="btn-social btn-social-fb" href="#">Вконтакте</a>
-                </li>
-                <li>
-                  <a class="btn-social btn-social-insta" href="#">Фейсбук</a>
-                </li>
-                <li>
-                  <a class="btn-social btn-social-twitter" href="#">Инстаграм</a>
-                </li>
-              </ul>
+            <div class="column-three-tenths">
+                <p class="footer-address">г. Москва, ул. Строителей, 15</p>
             </div>
     
-          </div>
+            <div class="column-four-tenths">
+                <nav class="footer-nav">
     
-          <div class="footer-contacts-and-copyright column-three-tenths column-flexbox">
-              <p class="footer-contacts">
-                  <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
-              </p>
-            <p class="footer-copyright">
-              <b class="visually-hidden">Разработчик сайта:</b>
-              <a class="btn-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-            </p>
+                    <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
+                    <ul class="footer-nav-list column-flexbox">
+                        <li class="footer-nav-item">
+                            <a class="footer-nav-item-link" href="#">Доставка</a>
+                        </li>
+                        <li class="footer-nav-item">
+                            <a class="footer-nav-item-link" href="#">Гарантия</a>
+                        </li>
+                        <li class="footer-nav-item">
+                            <a class="footer-nav-item-link" href="#">Контакты</a>
+                        </li>
+                    </ul>
     
-          </div>
+                </nav>
+    
+    
+                <div class="footer-social">
+                    <ul class="footer-social-list column-flexbox column-one-third">
+                        <li>
+                            <a class="btn-social btn-social-fb" href="#">Вконтакте</a>
+                        </li>
+                        <li>
+                            <a class="btn-social btn-social-insta" href="#">Фейсбук</a>
+                        </li>
+                        <li>
+                            <a class="btn-social btn-social-twitter" href="#">Инстаграм</a>
+                        </li>
+                    </ul>
+                </div>
+    
+            </div>
+    
+            <div class="footer-contacts-and-copyright column-three-tenths column-flexbox">
+                <p class="footer-contacts">
+                    <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+                </p>
+                <p class="footer-copyright">
+                    <b class="visually-hidden">Разработчик сайта:</b>
+                    <a class="btn-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+                </p>
+    
+            </div>
     
         </div>
-      </footer>
+    </footer>
 
 
 
