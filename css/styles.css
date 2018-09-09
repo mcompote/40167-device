@@ -391,9 +391,9 @@ button {
 /*  ---2ая стр. пошла--- */
 
 /* breadcrumbs: меняем цвет текста в состояниях :hover, :active */
-.breadcrumbs [class*='btn'],        .breadcrumbs [class*='link'],        .breadcrumbs .breadcrumbs-item-active        { color: rgba(0, 0, 0, 0.3); }
-.breadcrumbs [class*='btn']:hover,  .breadcrumbs [class*='link']:hover , .breadcrumbs .breadcrumbs-item-active:hover  { color: rgba(0, 0, 0, 0.6); }
-.breadcrumbs [class*='btn']:active, .breadcrumbs [class*='link']:active, .breadcrumbs .breadcrumbs-item-active:active { color: rgba(0, 0, 0, 0.1); }
+.breadcrumbs [class*='btn'],        .breadcrumbs [class*='link'], .breadcrumbs .breadcrumbs-item_active { color: rgba(0, 0, 0, 0.3); }
+.breadcrumbs [class*='btn']:hover,  .breadcrumbs [class*='link']:hover                                  { color: rgba(0, 0, 0, 0.6); }
+.breadcrumbs [class*='btn']:active, .breadcrumbs [class*='link']:active                                 { color: rgba(0, 0, 0, 0.1); }
 
 
 /* при наведении на кнопки упорядочивания и сортировки - изменяется прозрачность элементов  */
@@ -401,9 +401,9 @@ button {
 .sorting-methods-list [class*='btn']:hover,   .sorting-methods-list [class*='link']:hover    { opacity: 0.6; }
 .sorting-methods-list [class*='btn']:active,  .sorting-methods-list [class*='link']:active   { opacity: 1.0; }
 
-.ordering-methods-list [class*='triangle']                                                      { opacity: 0.2; }
-.ordering-methods-list [class*='triangle']:hover                                                { opacity: 0.4; }
-.ordering-methods-list [class*='triangle']:active                                               { opacity: 1.0; }
+.ordering-methods-list [class*='triangle']                                                   { opacity: 0.2; }
+.ordering-methods-list [class*='triangle']:hover                                             { opacity: 0.4; }
+.ordering-methods-list [class*='triangle']:active                                            { opacity: 1.0; }
 
 
 
@@ -1415,7 +1415,7 @@ button {
     background-position: 50% 50%;
 }
 
-.breadcrumbs-item-active {}
+.breadcrumbs-item_active {}
 
 .ordering-methods-list {
     min-width: 60px;
