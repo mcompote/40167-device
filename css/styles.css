@@ -397,13 +397,23 @@ button {
 
 
 /* при наведении на кнопки упорядочивания и сортировки - изменяется прозрачность элементов  */
-.sorting-methods-list [class*='btn'],         .sorting-methods-list [class*='link']          { opacity: 0.3; }
-.sorting-methods-list [class*='btn']:hover,   .sorting-methods-list [class*='link']:hover    { opacity: 0.6; }
-.sorting-methods-list [class*='btn']:active,  .sorting-methods-list [class*='link']:active   { opacity: 1.0; }
+.sorting-methods-item.sorting-methods-item_active [class*='btn'],        .sorting-methods-item.sorting-methods-item_active [class*='link'],                           
+.sorting-methods-item.sorting-methods-item_active [class*='btn']:hover,  .sorting-methods-item.sorting-methods-item_active [class*='link']:hover,                           
+.sorting-methods-item.sorting-methods-item_active [class*='btn']:active, .sorting-methods-item.sorting-methods-item_active [class*='link']:active                          
+                                                                                             { opacity: 1.0; }
+.sorting-methods-item [class*='btn'],         .sorting-methods-item [class*='link']          { opacity: 0.3; }
+.sorting-methods-item [class*='btn']:hover,   .sorting-methods-item [class*='link']:hover    { opacity: 0.6; }
+.sorting-methods-item [class*='btn']:active,  .sorting-methods-item [class*='link']:active   { opacity: 1.0; }
 
-.ordering-methods-list [class*='triangle']                                                   { opacity: 0.2; }
-.ordering-methods-list [class*='triangle']:hover                                             { opacity: 0.4; }
-.ordering-methods-list [class*='triangle']:active                                            { opacity: 1.0; }
+
+.ordering-methods-item.ordering-methods-item_active [class*='triangle'],
+.ordering-methods-item.ordering-methods-item_active [class*='triangle']:hover,
+.ordering-methods-item.ordering-methods-item_active [class*='triangle']:active               { opacity: 1.0; }
+.ordering-methods-item [class*='triangle']                                                   { opacity: 0.2; }
+.ordering-methods-item [class*='triangle']:hover                                             { opacity: 0.4; }
+.ordering-methods-item [class*='triangle']:active                                            { opacity: 1.0; }
+
+
 
 
 
@@ -1112,6 +1122,7 @@ button {
 .page-link    {
     /* max width = 3 symbols: 1...999 "subpages" on the catalog page */
     width: 3em;
+    cursor: pointer;
 }
 
 /* .page-link, .btn-forth, .btn-back  */
@@ -1215,6 +1226,7 @@ button {
 
 .link-sorting-criteria {
     border: none;
+    cursor: pointer;
 }
 
 .js-sorting-criteria-by-price         {}
@@ -1653,17 +1665,19 @@ button {
 }
 
 /* make an element looks as triangle */
-.triangle { display: block;
-            font-size: 0;
-            padding: 0;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 0 5.5px 10px 5.5px;
-            border-color: transparent transparent #000000 transparent;
-    }
+.triangle { 
+    display: block;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border-width: 0 5.5px 10px 5.5px;
+    border-style: solid;
+    border-color: transparent transparent #000000 transparent;
+    font-size: 0;
+}
+
 .triangle-reversed  { transform: rotate(180deg); }
-.triangle-active    { opacity: 1 !important;     }
 
 
 /* отсутпы сверху и снизу у главного заголовка в каталоге товаров */
