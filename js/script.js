@@ -28,24 +28,30 @@ document.addEventListener('DOMContentLoaded', function(evt) {
 
     // для .services переключалка слайдера
     let sliderServices = document.querySelector('.services');
-
-    Array.from( sliderServices.querySelectorAll('.btn-animated') )
-         .forEach( button => 
-                   button.addEventListener('click', 
-                                           evt => { superListener(evt) } 
-                                          ) 
-                );  
+    if( sliderServices )
+        Array.from( sliderServices.querySelectorAll('.btn-animated') )
+            .forEach( button => 
+                    button.addEventListener('click', 
+                                            evt => { superListener(evt) } 
+                                            ) 
+                    );  
                 
 
     //для .promo-slider переключалка слайдов
     let sliderPromo = document.querySelector('.promo-slider');
+    if( sliderPromo )
+        Array.from(sliderPromo.querySelectorAll('.btn-slide-changer'))
+            .forEach(button =>
+                    button.addEventListener('click',
+                                            evt => { superListener2(evt) }
+                                            )
+            );  
+    
 
-    Array.from(sliderPromo.querySelectorAll('.btn-slide-changer'))
-        .forEach(button =>
-                 button.addEventListener('click',
-                                          evt => { superListener2(evt) }
-                                        )
-        );  
+
+    let goodsCatalogueBtn = document.querySelector('.header-nav-item-link.plus-sign');
+    if ( goodsCatalogueBtn )
+        goodsCatalogueBtn.addEventListener( 'click', superListener3 );
     
 });
 
@@ -123,4 +129,18 @@ function superListener2(evt) {
     promoBlock.querySelector(`${dot}promo-item:nth-of-type(${nth})`)
                  .classList
                  .toggle('promo-item_active');
+}
+
+function superListener3(evt) {
+    evt.preventDefault();
+    let element = evt.target;
+    let dot = '.';
+
+
+    let cataloguePopupBlock = document.querySelector('.header-catalogue-list');
+    if (cataloguePopupBlock ) 
+        cataloguePopupBlock.style.display = ( cataloguePopupBlock.style.display === "none" ) ? 
+                                            "flex" :
+                                            "none";
+
 }

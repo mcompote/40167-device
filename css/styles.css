@@ -81,6 +81,7 @@ button {
 /* ----------------------------------ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
 
 .header   { 
+    position: relative;
     min-height: 186px;
     
     margin-top: 40px;
@@ -124,6 +125,16 @@ button {
     letter-spacing: 0.2em;
     text-transform: uppercase;
 }
+
+.header-nav-item-link.plus-sign {
+    position: relative;
+}
+
+/* .header-nav-item.column-one-half .header-nav-item-link::before {
+    content: 'Каталог товаров';
+    width: 100%;
+    position: absolute;
+} */
 
 .header-catalogue-item-link {
     line-height: 36px;
@@ -1012,7 +1023,6 @@ button {
 }
 
 .header-nav-item:first-of-type .header-nav-item-link {
-    position: relative;
     background: transparent;
     border: none;
 }
@@ -1021,7 +1031,7 @@ button {
     position: absolute;
     display: block;
     top: 11px;
-    right: -32px;
+    right: -28px;
     content: '';
     width: 16px;
     height: 2px;
@@ -1267,9 +1277,42 @@ button {
     margin-right: 2.2em;
 }
 
+/* ближайший родитель с position:relative - это <header> */
 .header-catalogue-list {
-    /* TODO: пока что скроем */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 113px;
+    width: 100%;
+    padding-left:  60px;
+    padding-right: 50%; 
+    
+    position: absolute;
+    z-index: 20;
+    top: 186px;
+    left: 0px;
+
+    background: inherit;
+    /* TODO: remove lately */
+    background: indianred;
+
+
+    /* TODO: пока что через js переключаю состояния */
     display: none;
+}
+
+.header-catalogue-item {
+    position: relative;
+    top: -29px;
+    width: 200px;
+}
+
+.header-catalogue-item:nth-child(n+4){
+    padding-left: 40px;
+}
+
+.header-catalogue-item_decorative {
+    visibility: hidden;
 }
 
 
