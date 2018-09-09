@@ -81,7 +81,7 @@ button {
 /* ----------------------------------ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
 
 .header   { 
-    min-height: 299px;
+    min-height: 186px;
     
     margin-top: 40px;
     margin-left: 20px;
@@ -95,6 +95,10 @@ button {
     
     background-color: #f7e296; 
     letter-spacing: 0.01em;
+}
+
+.main-page .header {
+    min-height: 299px;
 }
 
 /* меняем прозрачность логотипа, обернутого в ссылку (значения в header'е и footer'е одинаковые) */
