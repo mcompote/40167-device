@@ -714,7 +714,7 @@ button {
 }
 
 .header-nav { 
-    margin-top: 43px; /* FIXME: На глаз */
+    margin-top: 36px;
     width: 100%; 
 }
 
@@ -1436,7 +1436,7 @@ button {
     /* TODO: потом убрать */
     background: rgba(100, 149, 237, 0.4);
     margin-top: -32px;
-    margin-bottom: 112px;
+    margin-bottom: 89px;
 }
 
 
@@ -1445,6 +1445,21 @@ button {
 .promo-item-pic {
     display: block;
     margin: 0 auto;
+}
+
+.promo-item .promo-item-pic[src$="quadcopter.png"] {
+    position: relative;
+    top:  65px;
+    left: 14px;
+}
+.promo-item .promo-item-pic[src$="fitness-tracker.png"] {
+    position: relative;
+    top:  13px;
+    left: 8px;
+}
+.promo-item .promo-item-pic[src$="selfie-stick.png"] {
+    position: relative;
+    left: 2px;
 }
 
 
