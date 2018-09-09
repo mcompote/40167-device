@@ -434,32 +434,6 @@ button {
     color: #464646;
 }
 
-
-
-/* .page-link, .btn-forth, .btn-back  */
-.pagination [class*="btn"], .pagination [class*="-link"] {
-    display: block;
-
-    /* переопределяем UA-styles */
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-
-    border: none;
-    font-family: 'Gilroy', sans-serif;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.2em;
-}
-
-
-.pagination .page-link           {  color: rgba(0, 0, 0, 0.3); }
-.pagination .page-link:hover     {  color: rgba(0, 0, 0, 0.6); }
-.pagination .page-link:active    {  color: rgba(0, 0, 0, 1.0); }
-
-
 /* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ---------------------------------- */
 /* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ---------------------------------- */
 
@@ -902,10 +876,8 @@ button {
     margin-top: -12px; /* компенсация margin'ов у последних блоков .catalog-item */
     margin-left: 20px;
     margin-right: 20px;
-    padding-top: 23px;
-    padding-bottom: 23px;
     justify-content: space-between;
-    background: magenta;
+    background: rgba(0, 0, 0, 0.08);
 }
 
 
@@ -1055,6 +1027,7 @@ button {
 
 .btn             { magic: false; }
 
+/* TODO: remove lately, НЕ ИСПОЛЬЗУЕТСЯ, кнопки пагинации не 100пх */
 .btn-100px {
     min-width: 100px;
 }
@@ -1125,18 +1098,52 @@ button {
 }
 
 
+
+
 .btn-back, .btn-forth {
+    width: 126px;
+    min-height: 70px;
+    background: transparent;
+    
+    text-align: center;
     text-transform: uppercase;
 }
-
-.btn-back  { text-align: right; }
-.btn-forth { text-align: left;  }
-
 
 .page-link    {
     /* max width = 3 symbols: 1...999 "subpages" on the catalog page */
     width: 3em;
 }
+
+/* .page-link, .btn-forth, .btn-back  */
+.pagination [class*="btn"], .pagination [class*="-link"] {
+    display: block;
+
+    /* переопределяем UA-styles */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    border: none;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2em;
+}
+
+.pagination .btn-forth:hover,  .pagination .btn-back:hover  { background: #d9d9d9; }
+.pagination .btn-forth:active, .pagination .btn-back:active { background: #d9d9d9; color: #acacac; }
+
+.pagination-item.pagination-item_active .page-link,        
+.pagination-item.pagination-item_active .page-link:hover,  
+.pagination-item.pagination-item_active .page-link:active { color: rgba(0, 0, 0, 1.0); }
+.pagination-item .page-link                               { color: rgba(0, 0, 0, 0.3); }
+.pagination-item .page-link:hover                         { color: rgba(0, 0, 0, 0.6); }
+.pagination-item .page-link:active                        { color: rgba(0, 0, 0, 1.0); }
+
+
+
 
 
 .btn-slide-changer {
@@ -1461,6 +1468,10 @@ button {
 }
 
 .pagination-item {
+    height: 70px;
+    height: 70px;
+    padding-top: 23px;
+    padding-bottom: 23px;
 }
 
 
