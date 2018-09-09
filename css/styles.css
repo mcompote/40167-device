@@ -902,7 +902,10 @@ button {
 }
 
 
-
+.popup-feedback {
+    position: relative;
+    z-index: 200;
+}
 /* --------------------------------------------------------------- */
 /* ---------- END   OF containers (div,section,article) ---------- */
 /* --------------------------------------------------------------- */
@@ -1238,6 +1241,30 @@ button {
     border: none;
     cursor: pointer;
 }
+
+
+.btn-close-popup {
+    width: 55px;
+    height: 55px;
+    border: none;
+    font-size: 0;
+    background: url('../img/svg/modal-close.svg');
+    opacity: 0.5;
+}
+
+.btn-close-popup:hover  { opacity: 1.0; }
+.btn-close-popup:active { opacity: 0.3; }
+
+
+.popup-feedback.column-four-fifths .btn-close-popup {
+    position: absolute;
+    top:   22px;
+    right: 22px;
+
+}
+
+
+
 
 .js-sorting-criteria-by-price         {}
 .js-sorting-criteria-by-type          {}
@@ -1617,11 +1644,11 @@ button {
 
 .info .huge-heading, .contacts .huge-heading {
     margin-bottom: 43px;
-    color: #464646;
 }
 
 .info p, .contacts p  {
     margin-bottom: 30px;
+    color: #464646;
 }
 
 .info .btn-animated, .contacts .btn-animated {
@@ -1637,9 +1664,6 @@ button {
     /* отступ снизу от следующего элемента */
     margin-bottom: 47px;
 }
-
-
-.close-popup {}
 
 
 .catalog-item_new::before {
@@ -1962,12 +1986,81 @@ button {
     right: 11px; 
 }
 
-.form-feedback {}
-.form-feedback-label {}
-.form-feedback-input-text {}
 
-.form-feedback-component {}
-.form-feedback-textarea {}
+
+
+.form-feedback {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 88px;
+    padding-bottom: 78px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    background: white;
+
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
+}
+
+.form-feedback-component:nth-of-type(3) { 
+    width: 100%; 
+    margin-bottom: 36px;
+}
+
+.form-feedback-component {
+     width: 360px; 
+     margin-bottom: 34px;
+}
+
+.form-feedback-label {
+    width: inherit;
+
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.form-feedback-input-text::placeholder {
+    color:  #464646;
+}
+
+.form-feedback-textarea {
+    resize: none;
+
+}
+
+.form-feedback-input-text, .form-feedback-textarea {
+    width: inherit;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 3px solid transparent;
+    outline: none;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #464646;
+    
+    background: #f2f2f2;
+}
+
+.form-feedback-input-text:hover, .form-feedback-textarea:hover {
+    background: #eaeaea;
+}
+
+.form-feedback-input-text:focus, .form-feedback-textarea:focus {
+    background: transparent;
+    border-color: #f7e296;
+}
+.form-feedback-input-text:invalid, .form-feedback-textarea:invalid {
+    background: rgba(237, 181, 181, 0.5);
+    border-color: transparent;
+}
+
 
 /* --------------------------------------------------------------- */
 /* ----------               END   OF FORMS              ---------- */
