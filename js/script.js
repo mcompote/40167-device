@@ -62,10 +62,18 @@ document.addEventListener('DOMContentLoaded', function(evt) {
         prettyRangeBlock.classList.toggle('none');
     }
     
+
+
+
     //кнопка "Напишите Нам"
     let feedbackPopupLink = document.querySelector('.js-open-popup_feedback');
     if( feedbackPopupLink )
         feedbackPopupLink.addEventListener('click', superPopupOpener );
+    
+    //мини-карта обернута в ссылку
+    let mapPopupLink = document.querySelector('.js-open-popup_map');
+    if( mapPopupLink )
+        mapPopupLink.addEventListener('click', superPopupOpener2 );
 
 
     //закрывашки popup'ов
@@ -191,6 +199,7 @@ function superPopupOpener(evt) {
     }
 
 }
+
 function superPopupOpener2(evt) {
     evt.preventDefault();
     let element = evt.target;
