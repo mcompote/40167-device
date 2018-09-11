@@ -191,6 +191,19 @@ button {
     background-position: center;
 }
 
+.popular-item-image-box::before {
+    content: '';
+    display: block;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}  
+
+
+
 .popular-item-link {
     display: block;
 }
@@ -203,58 +216,31 @@ button {
     color: rgba(0, 0, 0, 0.3); 
 }
 
-/* поднимаем специфичность, дописывая active 2 раза 
-   т.к. далее это правило будет переопределяться записями вида:
-
-   .popular-item:nth-of-type(1) .popular-item-image-box {
-    background-image: url('../img/svg/popular-1.svg');
-    }
-
-*/
-.popular-item-link:active:active .popular-item-image-box {
-    background-image: none;
+.popular-item-link:active .popular-item-image-box::before {
+   opacity: 0.3;
 }
 
-
-
-.popular-item-image-box::before {
-    content: '';
-    display: block;
-    background-image: none;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-}  
-
-.popular-item:nth-of-type(1)        .popular-item-image-box,
-.popular-item:nth-of-type(1):active .popular-item-image-box::before {
+.popular-item:nth-of-type(1) .popular-item-image-box::before {
     background-image: url('../img/svg/popular-1.svg');
 }
 
-.popular-item:nth-of-type(2)        .popular-item-image-box,
-.popular-item:nth-of-type(2):active .popular-item-image-box::before {
+.popular-item:nth-of-type(2) .popular-item-image-box::before {
     background-image: url('../img/svg/popular-2.svg');
 }
 
-.popular-item:nth-of-type(3)        .popular-item-image-box,
-.popular-item:nth-of-type(3):active .popular-item-image-box::before {
+.popular-item:nth-of-type(3) .popular-item-image-box::before {
     background-image: url('../img/svg/popular-3.svg');
 }
 
-.popular-item:nth-of-type(4)        .popular-item-image-box,
-.popular-item:nth-of-type(4):active .popular-item-image-box::before {
+.popular-item:nth-of-type(4) .popular-item-image-box::before {
     background-image: url('../img/svg/popular-4.svg');
 }
 
-.popular-item:nth-of-type(5)        .popular-item-image-box,
-.popular-item:nth-of-type(5):active .popular-item-image-box::before {
+.popular-item:nth-of-type(5) .popular-item-image-box::before {
     background-image: url('../img/svg/popular-5.svg');
 }
-.popular-item:nth-of-type(6)        .popular-item-image-box,
-.popular-item:nth-of-type(6):active .popular-item-image-box::before {
+
+.popular-item:nth-of-type(6) .popular-item-image-box::before {
     background-image: url('../img/svg/popular-6.svg');
 }
 
@@ -669,16 +655,6 @@ button {
     background: pink;
 }
 
-/* TODO: убрать медиа-запрос, он здесь не нужен */
-@media only screen and (max-width : 1199px) {
-    .wrapper-filter-box { 
-        ~~width: 32.5%;
-    }   
-   
-    .wrapper-sorting-box-and-content {
-        ~~width: 67.5%;
-    }
-}
 /* ------------------------------------ */
 
 
@@ -900,8 +876,9 @@ button {
 }
 
 
-.popup-feedback {
+.popup-feedback, .popup-map {
     position: relative;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
 }
 /* --------------------------------------------------------------- */
 /* ---------- END   OF containers (div,section,article) ---------- */
@@ -1087,7 +1064,6 @@ button {
         0px 20px;
     background-repeat: repeat-x;
 
-    transition: background-color 0.4s ease-out, background-image 0.2s ease-out;
 }
 
 .btn-animated:hover {
@@ -1253,11 +1229,11 @@ button {
 .btn-close-popup:active { opacity: 0.3; }
 
 
-.popup-feedback.column-four-fifths .btn-close-popup {
+.popup-feedback .btn-close-popup,
+.popup-map      .btn-close-popup {
     position: absolute;
     top:   22px;
     right: 22px;
-
 }
 
 
@@ -1591,8 +1567,9 @@ button {
     z-index: 100;
 }
 
-#js-popup-opener-feedback {}
-#popup-opener-map {}
+.js-open-popup_feedback {}
+.js-open-popup_map {}
+.js-close-popup {}
 
 
 
@@ -2041,8 +2018,6 @@ button {
     justify-content: space-between;
 
     background: white;
-
-    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
 }
 
 .form-feedback-component:nth-of-type(3) { 

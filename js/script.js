@@ -63,13 +63,13 @@ document.addEventListener('DOMContentLoaded', function(evt) {
     }
     
     //кнопка "Напишите Нам"
-    let feedbackPopupLink = document.getElementById('js-popup-opener-feedback');
+    let feedbackPopupLink = document.querySelector('.js-open-popup_feedback');
     if( feedbackPopupLink )
         feedbackPopupLink.addEventListener('click', superPopupOpener );
 
 
     //закрывашки popup'ов
-    let popupCloseBtns = document.querySelectorAll('.btn-close-popup');
+    let popupCloseBtns = document.querySelectorAll('.js-close-popup');
     if( popupCloseBtns )
         Array.from( popupCloseBtns )
              .forEach(btn =>
@@ -179,6 +179,25 @@ function superPopupOpener(evt) {
     let feedbackPopupBlock  = document.querySelector('.popup-feedback');
     // find nearest 'popup' container (EXACTLY 'POPUP', not 'POPUP-bla-bla-bla' classes)
     let parent = feedbackPopupBlock;
+    while ( !parent.classList.contains('popup') && parent.nodeName.toLowerCase() !== 'body' )
+        parent = parent.parentNode;
+
+    let overlayBlock        = document.getElementById('overlay');
+    if (parent && overlayBlock) {
+        if (parent.classList.contains("none") && parent.classList.contains("none") ) {
+            parent.classList.remove("none");
+            overlayBlock.classList.remove("none");
+        }
+    }
+
+}
+function superPopupOpener2(evt) {
+    evt.preventDefault();
+    let element = evt.target;
+
+    let mapPopupBlock  = document.querySelector('.popup-map');
+    // find nearest 'popup' container (EXACTLY 'POPUP', not 'POPUP-bla-bla-bla' classes)
+    let parent = mapPopupBlock;
     while ( !parent.classList.contains('popup') && parent.nodeName.toLowerCase() !== 'body' )
         parent = parent.parentNode;
 
