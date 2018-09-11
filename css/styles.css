@@ -1300,6 +1300,7 @@ button {
 .header-nav-item {}
 
 .header-nav-item.column-one-half + .header-nav-item {
+    margin-left: 20px;
     margin-right: 2.2em;
 }
 
