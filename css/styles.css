@@ -1112,6 +1112,8 @@ button {
 
 
 .btn-blackened:active:active  {
+    width: 100%;
+    justify-content: flex-start;
     color: #f7e184;
     background: black;
 }
@@ -1119,9 +1121,9 @@ button {
 .services-item_active .btn-blackened,
 .services-item_active .btn-blackened:hover,
 .services-item_active .btn-blackened:active
- {
-    color: #f7e184;
+ {  
     background: inherit;
+    color: #f7e184;
 }
 
 
