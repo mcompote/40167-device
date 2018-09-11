@@ -48,10 +48,10 @@ document.addEventListener('DOMContentLoaded', function(evt) {
             );  
     
 
-    // показать каталог товаров в header'е
-    let goodsCatalogueBtn = document.querySelector('.header-nav-item-link.plus-sign');
-    if ( goodsCatalogueBtn )
-        goodsCatalogueBtn.addEventListener( 'click', superListener3 );
+    // // показать каталог товаров в header'е
+    // let goodsCatalogueBtn = document.querySelector('.header-nav-item-link.plus-sign');
+    // if ( goodsCatalogueBtn )
+    //     goodsCatalogueBtn.addEventListener( 'click', superListener3 );
 
 
     //убрать ugly-block, показать pretty-block в фильтре товаров на catalog.html

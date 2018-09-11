@@ -126,9 +126,7 @@ button {
     text-transform: uppercase;
 }
 
-.header-nav-item-link.plus-sign {
-    position: relative;
-}
+
 
 /* .header-nav-item.column-one-half .header-nav-item-link::before {
     content: 'Каталог товаров';
@@ -1023,41 +1021,32 @@ button {
 }
 
 
-/* svg-icon goes after text "сравнить" */
+
 .header-nav-item-link {
     /* FF adds paddings 8px from left and right sides */
     padding: 0;
-}
-
-.header-nav-item:first-of-type .header-nav-item-link {
     background: transparent;
     border: none;
 }
 
-.plus-sign::before, .plus-sign::after {
-    position: absolute;
-    display: block;
+.header-nav-item-link.plus-sign {
+    padding-right: 30px;
+    position: relative;
+}
+
+.header-nav-item-link.plus-sign::before,
+.header-nav-item-link.plus-sign::after {
     top: 11px;
-    right: -28px;
-    content: '';
-    width: 16px;
-    height: 2px;
-    background: #b8a974;
+    right: 3px;
 }
 
-.plus-sign::after {
-    transform: rotate(90deg);
+.header-nav-item-link.plus-sign:hover + .header-catalogue-list,
+.header-catalogue-list:hover {
+    display: flex;
 }
 
 
 
-
-.btn             { magic: false; }
-
-/* TODO: remove lately, НЕ ИСПОЛЬЗУЕТСЯ, кнопки пагинации не 100пх */
-.btn-100px {
-    min-width: 100px;
-}
 
 .btn-200px {
     min-width: 200px;
@@ -1319,13 +1308,17 @@ button {
     flex-wrap: wrap;
     flex-direction: column;
     height: 113px;
+    height: 163px;
     width: 100%;
+    padding-top: 21px;
     padding-left:  60px;
     padding-right: 50%; 
+    padding-bottom: 21px; 
     
     position: absolute;
     z-index: 20;
     top: 186px;
+    top: 136px;
     left: 0px;
 
     background: inherit;
@@ -1333,13 +1326,10 @@ button {
     background: indianred;
 
 
-    /* TODO: пока что через js переключаю состояния */
     display: none;
 }
 
 .header-catalogue-item {
-    position: relative;
-    top: -29px;
     width: 200px;
 }
 
@@ -1347,8 +1337,12 @@ button {
     padding-left: 40px;
 }
 
-.header-catalogue-item_decorative {
+.header-catalogue-item_empty {
     visibility: hidden;
+}
+
+.header-catalogue-item_empty::before {
+    content: '\00a0';   /* non-breaking space */
 }
 
 
@@ -1672,6 +1666,24 @@ button {
 /* --------------------------------------------------------------- */
 /* ----------      BEGIN OF        decorating stuff     ---------- */
 /* --------------------------------------------------------------- */
+
+.plus-sign::before, .plus-sign::after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 2px;
+    
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    
+    background: #b8a974;
+}
+
+.plus-sign::after {
+    transform: rotate(90deg);
+}
+
 
 .info .huge-heading, .contacts .huge-heading {
     margin-bottom: 43px;
