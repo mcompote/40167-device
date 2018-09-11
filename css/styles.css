@@ -717,7 +717,7 @@ button {
     width: 100%; 
 }
 
-.header .logo-container { margin-top: -17px; }
+.header .logo-container { margin-top: -18px; }
 .footer .logo-container { position: relative; top: 16px;}
 
 
@@ -976,6 +976,11 @@ button {
 
     /* FIXME: потом удалить полностью */
     display: none;
+}
+
+.header-user-nav .link-compare {
+	position: relative;
+	right: 4px;
 }
 
 .link-log-me-in, .link-user-name { 
@@ -1345,6 +1350,8 @@ button {
 
 .header-nav-item_last {
     margin-left: auto;
+    position: relative;
+    left: 4px;
 }
 
 .footer-nav-list {
