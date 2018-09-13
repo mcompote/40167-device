@@ -104,8 +104,9 @@ button {
 }
 
 /* меняем прозрачность логотипа, обернутого в ссылку (значения в header'е и footer'е одинаковые) */
-.logo-container:hover  a { opacity: 0.6; }
-.logo-container:active a { opacity: 0.3; }
+.logo-container svg        { opacity: 1.0; }
+.logo-container svg:hover  { opacity: 0.6; }
+.logo-container svg:active { opacity: 0.3; }
 
 /* У ссылок в шапке декоративные картинки добавлены через псевдо-элементы */
 .header [class*='btn']:hover,   .header [class*='link']:hover   { opacity: 0.6;  } 
@@ -332,24 +333,29 @@ button {
 
 
 
-/*  Доставка, гарантия, контакты, логотип htmlacademy в футере имеют одинаковые состояния прозрачности
-    при наведении и клике
+/*  Доставка, гарантия, контакты, логотип device, логотип htmlacademy, иконки в user-navigation 
+    в футере они имеют одинаковые состояния прозрачности при наведении и клике
 */
-.footer-nav              [class*='btn']:hover,  .footer-nav        [class*='link']:hover,
-.footer-copyright        [class*='btn']:hover,  .footer-copyright  [class*='link']:hover { opacity: 0.6; }
-.footer-nav              [class*='btn']:active, .footer-nav       [class*='link']:active,
-.footer-copyright        [class*='btn']:active, .footer-copyright [class*='link']:active { opacity: 0.3; }
+.footer-nav            [class*='btn']:hover,  .footer-nav       [class*='link']:hover,
+.footer-copyright      [class*='btn']:hover,  .footer-copyright [class*='link']:hover     { opacity: 0.6; }
+.footer-nav            [class*='btn']:active, .footer-nav       [class*='link']:active,
+.footer-copyright      [class*='btn']:active, .footer-copyright [class*='link']:active    { opacity: 0.3; }
 
 
 /* Кнопки соц сетей */
-.footer-social-list [class*='btn'],          .footer-social-list [class*='link']         { opacity: 0.3; }
-.footer-social-list [class*='btn']:hover,    .footer-social-list [class*='link']:hover   { opacity: 0.6; }  
-.footer-social-list [class*='btn']:active,   .footer-social-list [class*='link']:active  { opacity: 0.1; }  
+.footer-social-list [class*='btn'],        .footer-social-list [class*='link']            { opacity: 0.3; }
+.footer-social-list [class*='btn']:hover,  .footer-social-list [class*='link']:hover      { opacity: 0.6; }  
+.footer-social-list [class*='btn']:active, .footer-social-list [class*='link']:active     { opacity: 0.1; }  
 
 /* Логин, Пользователь, Выйти, Cравнить, Корзина */
-.footer-user-nav  [class*='btn'],         .footer-user-nav  [class*='link']              { opacity: 0.7; }
-.footer-user-nav  [class*='btn']:hover,   .footer-user-nav  [class*='link']:hover        { opacity: 1.0; }
-.footer-user-nav  [class*='btn']:active,  .footer-user-nav  [class*='link']:active       { opacity: 0.3; }
+.user-nav.footer-user-nav  [class*='btn'],        .user-nav.footer-user-nav  [class*='link']        { color:rgba(255, 255, 255, 0.7) }
+.user-nav.footer-user-nav  [class*='btn']:hover,  .user-nav.footer-user-nav  [class*='link']:hover  { color:rgba(255, 255, 255, 1.0) }
+.user-nav.footer-user-nav  [class*='btn']:active, .user-nav.footer-user-nav  [class*='link']:active { color:rgba(255, 255, 255, 0.3) }
+/* у SVG-иконок внутри ссылок "логин", "пользователь", "выйти", "сравнить", "корзина" 
+   другие состояния прозрачности, отличные от текста ссылок */
+.footer-user-nav  [class*='btn']        svg, .footer-user-nav  [class*='link']        svg  { opacity: 1.0; }
+.footer-user-nav  [class*='btn']:hover  svg, .footer-user-nav  [class*='link']:hover  svg  { opacity: 0.6; }
+.footer-user-nav  [class*='btn']:active svg, .footer-user-nav  [class*='link']:active svg  { opacity: 0.3; }
 
 
 
