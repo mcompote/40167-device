@@ -170,9 +170,7 @@ button {
     margin-bottom: 44px;  
 }
 
-.promo-article .btn-animated {
-    margin-bottom: 50px;
-}
+
 
 
 .popular-list {
@@ -286,7 +284,6 @@ button {
     background-image: url('../img/svg/credit.svg');
 }
 
-/* TODO: dear IE11, hello! */
 /* обесцвечиваем изображения логотипов */
 .brands-gallery-item-logo-wrapper {
     filter: grayscale(100%);
@@ -1026,6 +1023,10 @@ button {
     background: black;
 }
 
+.promo-article .btn-animated {
+    margin-bottom: 50px;
+}
+
 .services-item_active .btn-blackened,
 .services-item_active .btn-blackened:hover,
 .services-item_active .btn-blackened:active
@@ -1033,6 +1034,13 @@ button {
     background: inherit;
     color: #f7e184;
 }
+
+.form-feedback .btn-animated {
+    /* костыли, потому что хром - кривое говно */
+    background-position: 0px 15px, 0px 19px; 
+}
+
+
 
 
 
@@ -1163,9 +1171,11 @@ button {
     width: 55px;
     height: 55px;
     border: none;
+    outline: none;
     font-size: 0;
     background: url('../img/svg/modal-close.svg');
     opacity: 0.5;
+    cursor: pointer;
 }
 
 .btn-close-popup:hover  { opacity: 1.0; }
@@ -1293,9 +1303,6 @@ button {
     z-index: 2;
     top: 250px;
     right: 100px;
-
-    /* TODO: remove lately */
-    background-color: greenyellow;
 }
 .slider-navigation-item {}
 
@@ -1916,7 +1923,7 @@ button {
 
     position: absolute;
     top: -10px;
-    /* TODO: еще box-shadow есть */
+
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
 }
 .drag-slider-handle-left {
@@ -1947,7 +1954,7 @@ button {
 .form-feedback {
     padding-left: 100px;
     padding-right: 100px;
-    padding-top: 88px;
+    padding-top: 92px;
     padding-bottom: 78px;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1979,6 +1986,8 @@ button {
 }
 
 .form-feedback-textarea {
+    max-height: 155px;
+    margin-bottom: -5px;
     resize: none;
 
 }
