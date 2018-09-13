@@ -1085,7 +1085,8 @@ button {
 
 .btn-blackened:active:active  {
     width: 100%;
-    justify-content: flex-start;
+    padding-right: 142.5px;
+
     color: #f7e184;
     background: black;
 }
@@ -1413,9 +1414,9 @@ button {
     margin-top: -100px;
     padding-top: 80px;
     padding-bottom: 70px;    
-    border-right-width: 7px;
-    border-right-color: black;
-    border-right-style: solid;
+
+    box-shadow:        4px 0px 0px 0px rgba(0,0,0,1), 
+                inset -3px 0px 0px 0px rgba(0,0,0,1);
 }
 
 .services-item {
