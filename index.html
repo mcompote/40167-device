@@ -25,14 +25,11 @@
         </div>
         
         <div class="search-container">
-          <form class="form-search" id="form_search" action="/api/search" method="get">
-            <label class="form-search-label">
-              <input class="form-search-input" type="text" name="search_keywords" placeholder="Поиск по сайту">
-
-              <button class="btn btn-search" type="submit">Найти</button>
-            </label>
-          
-          </form>
+            <form class="form-search" id="form_search" action="/api/search" method="get">
+                <label class="form-search-label" for="form_search__keywords_input"></label>
+                <input class="form-search-input" id="form_search__keywords_input" type="text" name="search_keywords" placeholder="Поиск по сайту">
+                <button class="btn btn-search" type="submit">Найти</button>
+            </form>
         </div>
         
       </div>

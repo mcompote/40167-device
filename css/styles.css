@@ -993,15 +993,19 @@ button {
     text-transform: uppercase;
 
     border: none;
+    outline: none;
     background: transparent;  
-    background-image: 
-        linear-gradient(to top, #f0c52e 0px, #f0c52e 3px, #edcd5a 3px, #edcd5a 4px, transparent 4px),
-        linear-gradient(to bottom, #f0c52e 0px, #f0c52e 3px, #edcd5a 3px, #edcd5a 4px, transparent 4px);
+
+    /* background-image: 
+        linear-gradient(to top, #f0c52e, #f0c52e 3px, #edcd5a 3px, #edcd5a 4px, transparent 4px, transparent),
+        linear-gradient(to bottom, #f0c52e, #f0c52e 3px, #edcd5a 3px, #edcd5a 4px, transparent 4px, transparent);
     background-size: 5px 5px;
     background-position: 
         0px 15px, 
         0px 20px;
-    background-repeat: repeat-x;
+    background-repeat: repeat-x; */
+
+    background-image: linear-gradient(180deg, transparent 0%,transparent 40%,#edcd5a 40%, #edcd5a 42.5%, #f0c52e 42.5%, #f0c52e 57.5%, #edcd5a 57.5%, #edcd5a 60%, transparent 60%,transparent 100%);
 
 }
 
@@ -1736,7 +1740,6 @@ button {
 
 .form-search-label { 
     display: block;
-    position: relative; 
 }
 
 .form-search-input {
@@ -1784,13 +1787,13 @@ button {
     
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 100px;
     
     background: transparent;
     color: black;
 }
 
-.form-search-input:focus ~ .btn-search, .btn-search:hover, .btn-search:active {
+.form-search-input:focus + .btn-search, .btn-search:hover, .btn-search:active {
     display: block;
 }
 
