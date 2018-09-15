@@ -315,7 +315,7 @@
                     <ul class="catalog-list column-flexbox">
                         <li class="catalog-item column-nine-twenties">
                             <div class="catalog-item-image-box">
-                                <img src="img/content/catalog-items/catalog-item-amateur-selfie-stick.jpg" alt="Любительская селфи-палка">
+                                <img src="img/content/catalog-items/catalog-item-amateur-selfie-stick.jpg" alt="Любительская селфи-палка" width="250" height="325">
                                 <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
                                 <div class="catalog-item-onhover-block">
                                     <button class="btn btn-animated btn-200px">
@@ -333,7 +333,7 @@
                         </li>
                         <li class="catalog-item column-nine-twenties">
                             <div class="catalog-item-image-box">
-                                <img src="img/content/catalog-items/catalog-item-professional-selfie-stick.jpg" alt="Профессиональная селфи-палка">
+                                <img src="img/content/catalog-items/catalog-item-professional-selfie-stick.jpg" alt="Профессиональная селфи-палка" width="250" height="325">
                                 <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
                                 <div class="catalog-item-onhover-block">
                                     <button class="btn btn-animated btn-200px">
@@ -351,7 +351,7 @@
                         </li>
                         <li class="catalog-item column-nine-twenties">
                             <div class="catalog-item-image-box">
-                                <img src="img/content/catalog-items/catalog-item-waterproof-selfie-stick.jpg" alt="Непотопляемая селфи-палка">
+                                <img src="img/content/catalog-items/catalog-item-waterproof-selfie-stick.jpg" alt="Непотопляемая селфи-палка" width="250" height="325">
                                 <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
                                 <div class="catalog-item-onhover-block">
                                     <button class="btn btn-animated  btn-200px">
@@ -369,7 +369,7 @@
                         </li>
                         <li class="catalog-item catalog-item_new column-nine-twenties">
                             <div class="catalog-item-image-box">
-                                <img src="img/content/catalog-items/catalog-item-followme-selfie-stick.jpg" alt="Селфи-палка «Следуй за мной»">
+                                <img src="img/content/catalog-items/catalog-item-followme-selfie-stick.jpg" alt="Селфи-палка «Следуй за мной»" width="250" height="325">
                                 <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
                                 <div class="catalog-item-onhover-block">
                                     <button class="btn btn-animated  btn-200px">
@@ -527,59 +527,57 @@
     </footer>
 
 
-    <section class="popup popup-map column-full none">
-        <div class="column-four-fifths column-center">
+    <div class="column-full popup none">
+        <section class="popup-map column-four-fifths column-center">
+      
+          <h2 class="visually-hidden">Мы на карте</h2>
+          <!-- TODO: здесь будет карта когда-нибудь завтра или послезавтра, ну, выпоняли -->
+      
+          <div>
+            <img src="img/content/map-contacts-full.jpg" alt="фото местонахождения интернет-магазина DEVICE">
+          </div>
+      
+          <!-- закрывающий форму крестик -->
+          <button class="btn-close-popup js-close-popup">Закрыть всплывающую форму</button>
+        </section>
+      </div>
     
-            <h2 class="visually-hidden">Мы на карте</h2>
-            <!-- TODO: здесь будет карта -->
+      <div class="column-full popup none">
+        <section class="popup-feedback column-four-fifths column-center">
+          <h2 class="visually-hidden">Пишите нам</h2>
     
-            <!-- FIXME: убрать <noscript>, без JS попап просто не покажется -->
-            <!-- <noscript>
-                        <img src="img/content/map-contacts-full.jpg" alt="фото местонахождения интернет-магазина DEVICE">
-                    </noscript> -->
-            <div>
-                <img src="img/content/map-contacts-full.jpg" alt="фото местонахождения интернет-магазина DEVICE">
+          <form class="form-feedback column-flexbox" id="form_feedback" action="/api/feedback" method="POST">
+    
+            <div class="form-feedback-component">
+              <label class="form-feedback-label">
+                Ваше имя:
+                <input class="form-feedback-input-text" type="text" name="name" placeholder="Имя Фамилия" required>
+              </label>
             </div>
     
-        </div>
-    </section>
+            <div class="form-feedback-component">
+              <label class="form-feedback-label">
+                Ваш email:
+                <input class="form-feedback-input-text" type="email" name="email" placeholder="email@example.com" required>
+              </label>
+            </div>
     
-    <div class="column-full popup none">
-        <section class="popup-feedback column-four-fifths column-center">
-            <h2 class="visually-hidden">Пишите нам</h2>
+            <div class="form-feedback-component">
+              <label class="form-feedback-label">
+                Текст письма:
+                <textarea class="form-feedback-textarea" name="feedback" cols="30" rows="10" placeholder="В свободной форме" required></textarea>
+              </label>
+            </div>
     
-            <form class="form-feedback column-flexbox" id="form_feedback" action="/api/feedback" method="POST">
+            <button type="submit" class="btn btn-animated btn-200px">Отправить</button>
+          </form>
     
-                <div class="form-feedback-component">
-                    <label class="form-feedback-label">
-                        Ваше имя:
-                        <input class="form-feedback-input-text" type="text" name="name" placeholder="Имя Фамилия" required>
-                    </label>
-                </div>
-    
-                <div class="form-feedback-component">
-                    <label class="form-feedback-label">
-                        Ваш email:
-                        <input class="form-feedback-input-text" type="email" name="email" placeholder="email@example.com" required>
-                    </label>
-                </div>
-    
-                <div class="form-feedback-component">
-                    <label class="form-feedback-label">
-                        Текст письма:
-                        <textarea class="form-feedback-textarea" name="feedback" cols="30" rows="10" placeholder="В свободной форме" required></textarea>
-                    </label>
-                </div>
-    
-                <button type="submit" class="btn btn-animated btn-200px">Отправить</button>
-            </form>
-    
-            <!-- закрывающий форму крестик -->
-            <button class="btn-close-popup">Закрыть всплывающую форму</button>
+          <!-- закрывающий форму крестик -->
+          <button class="btn-close-popup js-close-popup">Закрыть всплывающую форму</button>
         </section>
-    </div>
+      </div>
     
-    <div id="overlay" class="overlay none"></div>
+      <div id="overlay" class="overlay none"></div>
 
 
     <script src="js/script.js"></script>

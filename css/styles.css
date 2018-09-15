@@ -258,30 +258,36 @@ button {
     letter-spacing: 0.01em; 
 }
 
-/* FIXME: пока так оставлю */
+
 .service-description-contents::after {
-    position: absolute;
-    display: block;
-    height: 260px;
-    width: 260px;
-    bottom: 0px;
-    right: 0px;
     content: '';
-    /* TODO: пересчитать позже */
-    /* ~border: 2px dashed blueviolet; */
+    display: block;
+    width: 260px;
+    height: 260px;
+    
     background-image: none;
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: right bottom;
+    
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 .service-description-box:nth-of-type(1) .service-description-contents::after {
     background-image: url('../img/svg/delivery.svg');
+    right: -9px;
+    bottom: -6px;
 }
 
 .service-description-box:nth-of-type(2) .service-description-contents::after {
     background-image: url('../img/svg/warranty.svg');
+    right: -30px;
+    bottom: -13px;
 }
 .service-description-box:nth-of-type(3) .service-description-contents::after {
     background-image: url('../img/svg/credit.svg');
+    right: -7px;
+    bottom: -6px;
 }
 
 /* обесцвечиваем изображения логотипов */
@@ -362,7 +368,7 @@ button {
     justify-content: space-between;
     align-items: flex-end;
 
-    padding-bottom: 66px;
+    padding-bottom: 68px;
 }
 
 
@@ -744,7 +750,7 @@ button {
 }
 
 .footer-row-top {
-    margin-bottom: 49px;
+    margin-bottom: 39px;
 }
 
 .footer-nav {
@@ -756,8 +762,10 @@ button {
 .footer-copyright {}
 
 .breadcrumbs { 
+    font-size: 14px;
+    line-height: 24px;
     letter-spacing: 0.01em;
-    margin-bottom: 49px; 
+    margin-bottom: 46px; 
 }
 
 .filter-box  { 
@@ -957,6 +965,7 @@ button {
 }
 
 .header-nav-item-link.plus-sign:hover + .header-catalogue-list,
+.header-nav-item-link.plus-sign:focus + .header-catalogue-list,
 .header-catalogue-list:hover {
     display: flex;
 }
@@ -994,22 +1003,13 @@ button {
 
     border: none;
     outline: none;
+
     background: transparent;  
-
-    /* background-image: 
-        linear-gradient(to top, #f0c52e, #f0c52e 3px, #edcd5a 3px, #edcd5a 4px, transparent 4px, transparent),
-        linear-gradient(to bottom, #f0c52e, #f0c52e 3px, #edcd5a 3px, #edcd5a 4px, transparent 4px, transparent);
-    background-size: 5px 5px;
-    background-position: 
-        0px 15px, 
-        0px 20px;
-    background-repeat: repeat-x; */
-
     background-image: linear-gradient(180deg, transparent 0%,transparent 40%,#edcd5a 40%, #edcd5a 42.5%, #f0c52e 42.5%, #f0c52e 57.5%, #edcd5a 57.5%, #edcd5a 60%, transparent 60%,transparent 100%);
-
 }
 
-.btn-animated:hover {
+.btn-animated:hover,
+.btn-animated:focus {
     background-color: #f0c52e;
     background-image: none;
 }
@@ -1418,16 +1418,16 @@ button {
 
 .breadcrumbs-item-link {
     position: relative;
-    padding-right: 34px;
+    padding-right: 37px;
 }
 
 .breadcrumbs-item-link::after {
     content: '';
     display: block;
-    width: 34px;
+    width: 37px;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: 1px;
     right:0;
     background-image: url('../img/svg/nav-arrow.svg');
     background-repeat: no-repeat;
@@ -1627,8 +1627,7 @@ button {
 }
 
 .footer .footer-address, .footer .footer-contacts {
-    /* отступ снизу от следующего элемента */
-    margin-bottom: 47px;
+    margin-bottom: 59px;
 }
 
 
@@ -1674,16 +1673,16 @@ button {
 }
 
 .line-bottom::after, .line-top::after {
+    content: '';
+    display: block;
     width: 80px;
     height: 7px;
-    display: block;
-    content: '';
+    
     position: absolute;
-
 }
 
 .line-bottom::after {
-    top: 179px;
+    top: 171px;
     background: #ffc600;
 }
 
