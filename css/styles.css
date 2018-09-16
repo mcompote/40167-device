@@ -143,21 +143,6 @@ button {
 }
 
 
-.promo-item-characteristic-name {
-    font-weight: 300;    /* default UA style for <TH>: font-weight = bold */
-    font-size: 13px;
-    line-height: 20px;
-    letter-spacing: 0.01em;
-}
-
-.promo-item-characteristic-value {
-    font-family: 'Gilroy', 'Arial', sans-serif;
-    font-weight: 300;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: 0.01em;
-}
-
 .promo-article-contents {
     letter-spacing: 0.01em;
     margin-bottom: 44px;  
@@ -1545,9 +1530,11 @@ button {
 }
 
 
+/* --------------------------------------------------------------- */
+/* -----  BEGIN OF tables and related things (th,tr,td,etc.)  ---- */
+/* --------------------------------------------------------------- */
 
-
-/* tables and related things (th,tr,td,etc.) */
+/*  */
 .promo-item-characteristics-table {
     flex-direction: column-reverse;
 }
@@ -1569,6 +1556,24 @@ button {
     margin-bottom: 25px;
 }
 
+
+.promo-item-characteristic-name {
+    font-weight: 300;    /* default UA style for <TH>: font-weight = bold */
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+}
+
+.promo-item-characteristic-value {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+}
+/* --------------------------------------------------------------- */
+/* -----  END   OF tables and related things (th,tr,td,etc.)  ---- */
+/* --------------------------------------------------------------- */
 
 
 
