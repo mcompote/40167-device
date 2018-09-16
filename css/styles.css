@@ -129,13 +129,6 @@ button {
 }
 
 
-
-/* .header-nav-item.column-one-half .header-nav-item-link::before {
-    content: 'Каталог товаров';
-    width: 100%;
-    position: absolute;
-} */
-
 .header-catalogue-item-link {
     line-height: 36px;
 }
@@ -1981,7 +1974,8 @@ button {
     line-height: 24px;
 }
 
-.form-feedback-input-text::placeholder {
+.form-feedback-input-text::placeholder,
+.form-feedback-textarea::placeholder {
     color:  #464646;
 }
 
