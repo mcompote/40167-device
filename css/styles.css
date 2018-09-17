@@ -1534,7 +1534,6 @@ button {
 /* -----  BEGIN OF tables and related things (th,tr,td,etc.)  ---- */
 /* --------------------------------------------------------------- */
 
-/*  */
 .promo-item-characteristics-table {
     flex-direction: column-reverse;
 }
@@ -1757,7 +1756,7 @@ button {
 
 .form-search-input, .btn-search {
     /* rewrite normalize.css styles for inputs */
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', 'Arial', sans-serif;;
     font-weight: 300;
     font-size: 15px;
     line-height: 30px;
