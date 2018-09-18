@@ -59,10 +59,12 @@
 /* Set box-sizing: border-box for entire project */
 /* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 html {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 *, *:before, *:after {
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
 }
 
 
@@ -116,9 +118,15 @@ button {
     padding-left: 60px;
     padding-right: 60px;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
     
     background-color: #f7e296; 
     letter-spacing: 0.01em;
@@ -295,12 +303,14 @@ button {
 
 /* обесцвечиваем изображения логотипов */
 .brands-gallery-item-logo-wrapper {
-    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
     opacity: 0.2;
 }
 
 .brands-gallery-item-logo-wrapper:hover {
-    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
     opacity: 1;
 }
 
@@ -367,9 +377,16 @@ button {
 
 
 .footer-contacts-and-copyright {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 
     padding-bottom: 68px;
 }
@@ -486,7 +503,8 @@ button {
     overflow: hidden;
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(1px);
+    -webkit-clip-path: inset(1px);
+            clip-path: inset(1px);
     white-space: nowrap;
     position: absolute;
  }
@@ -581,23 +599,33 @@ button {
 
 
 .column-flexbox { 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex; 
 }    
 
 .flex-no-shrink {
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
 }
 
 .flex-grow-1 {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 
 .flex-h-middle { 
-    align-items: center;
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center;
 }
 
 .flex-dir-col { 
-    flex-direction: column;
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column;
 }
 
 
@@ -661,8 +689,12 @@ button {
 
 
 .user-nav {
-    justify-content: flex-end;
-    align-items: flex-end;    
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;    
 }
 
 .header-user-nav [class*="link"]:not([class="link-user-cart"]) {
@@ -694,7 +726,7 @@ button {
 
 .login-container { letter-spacing: 0.01em; }
 
-.promo-article { display: flex; }
+.promo-article { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 
 .popular {
@@ -776,7 +808,9 @@ button {
 .sorting-box-top-row {
     padding-left: 72px;
     padding-right: 20px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 
@@ -803,8 +837,12 @@ button {
 
 .filter-box-heading-block-content {
     min-height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .catalog-items-box { 
@@ -823,10 +861,19 @@ button {
 }
 
 .catalog-item-onhover-block { 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height: 100%;
     
@@ -845,12 +892,16 @@ button {
  }
 
  .catalog-item:hover .catalog-item-onhover-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
  }
 
  .catalog-item-description-box {
     margin-top: 31px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
  }
 
 
@@ -860,14 +911,17 @@ button {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 77px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background: rgba(0, 0, 0, 0.08);
 }
 
 
 .popup-feedback, .popup-map {
     position: relative;
-    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
 }
 /* --------------------------------------------------------------- */
 /* ---------- END   OF containers (div,section,article) ---------- */
@@ -974,6 +1028,8 @@ button {
 .header-nav-item-link.plus-sign:hover + .header-catalogue-list,
 .header-nav-item-link.plus-sign:focus + .header-catalogue-list,
 .header-catalogue-list:hover {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -994,9 +1050,15 @@ button {
 }
 
 .btn-animated    {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     min-height: 40px;    /* see styleguide.psd */
     padding: 0 1.25em 0;
 
@@ -1012,6 +1074,7 @@ button {
     outline: none;
 
     background: transparent;  
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent),color-stop(40%, transparent),color-stop(40%, #edcd5a), color-stop(42.5%, #edcd5a), color-stop(42.5%, #f0c52e), color-stop(57.5%, #f0c52e), color-stop(57.5%, #edcd5a), color-stop(60%, #edcd5a), color-stop(60%, transparent),to(transparent));  
     background-image: linear-gradient(180deg, transparent 0%,transparent 40%,#edcd5a 40%, #edcd5a 42.5%, #f0c52e 42.5%, #f0c52e 57.5%, #edcd5a 57.5%, #edcd5a 60%, transparent 60%,transparent 100%);
 }
 
@@ -1130,7 +1193,8 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .btn-social { 
@@ -1242,6 +1306,8 @@ button {
 
 /* ul, li styles */
 .header-nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .header-nav-item {}
@@ -1253,9 +1319,15 @@ button {
 
 /* ближайший родитель с position:relative - это <header> */
 .header-catalogue-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 163px;
     width: 100%;
     padding-top: 21px;
@@ -1297,7 +1369,8 @@ button {
 }
 
 .footer-nav-list {
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 /* перекрываем правило, обнуляющее margin у всех элементов с классом list */
@@ -1309,7 +1382,9 @@ button {
 
 
 .user-cart-list { 
-    justify-content: flex-end;
+    -webkit-box-pack: end; 
+        -ms-flex-pack: end; 
+            justify-content: flex-end;
     /* letter-spacing: 0.01em;  */
 }
 
@@ -1317,7 +1392,9 @@ button {
 
 .slider-navigation-list {
     width: 78px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     
     position: absolute;
     z-index: 2;
@@ -1359,8 +1436,11 @@ button {
 
 
 .brands-gallery-list {
-    justify-content: space-around;
-    align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .brands-gallery-item {}
@@ -1372,12 +1452,17 @@ button {
     padding-top: 80px;
     padding-bottom: 70px;    
 
-    box-shadow:        4px 0px 0px 0px rgba(0,0,0,1), 
+    -webkit-box-shadow:        4px 0px 0px 0px rgba(0,0,0,1), 
+                inset -3px 0px 0px 0px rgba(0,0,0,1);    
+
+            box-shadow:        4px 0px 0px 0px rgba(0,0,0,1), 
                 inset -3px 0px 0px 0px rgba(0,0,0,1);
 }
 
 .services-item {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     min-height: 40px;
     margin-bottom: 24px;
 }
@@ -1395,9 +1480,15 @@ button {
 }
 
 .popular-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 .popular-item {}
@@ -1455,9 +1546,16 @@ button {
 .ordering-methods-list {
     min-width: 60px;
     margin-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 .ordering-methods-item:first-child {
     margin-right: 19px;
@@ -1470,14 +1568,22 @@ button {
     width: 100%;
     padding-top: 69px;
 
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    align-content: flex-start;
+    -ms-flex-wrap: wrap;
+
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
 }
 
 .footer-social-list {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .footer-social-item:not(:last-of-type) {
@@ -1494,8 +1600,11 @@ button {
 
 .pagination-list {
     max-width: 68%;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .pagination-item {
@@ -1522,7 +1631,8 @@ button {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     z-index: 200;
 }
 
@@ -1581,20 +1691,26 @@ button {
 /* --------------------------------------------------------------- */
 
 .promo-item-characteristics-table {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
 }
 
 .promo-item-characteristics-table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .promo-item-characteristics-table th,
 .promo-item-characteristics-table td {
     display: block;
-
     width: 160px;
     margin: 0;
     padding: 0;
+
+    text-align: left;
 }
 
 .promo-item-characteristics-table .promo-item-characteristic-name {
@@ -1651,7 +1767,8 @@ button {
 }
 
 .plus-sign::after {
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 
 
@@ -1680,9 +1797,15 @@ button {
 
 .catalog-item_new::before {
             content: 'NEW';
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
 
             width: 60px;
             height: 60px;
@@ -1758,7 +1881,7 @@ button {
     font-size: 0;
 }
 
-.triangle-reversed  { transform: rotate(180deg); }
+.triangle-reversed  { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 
 
 /* отсутпы сверху и снизу у главного заголовка в каталоге товаров */
@@ -1892,8 +2015,12 @@ button {
 }
 
 .form-filter-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-style: inherit;
     font-weight: 300;
     font-size: 14px;
@@ -1940,8 +2067,13 @@ button {
 .form-filter-input-range {}
 .form-filter-input-range-ugly {}
 .form-filter-input-range-ugly .form-filter-label {
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 }
 .form-filter-input-range-pretty {}
 .form-filter-radio {}
@@ -1950,7 +2082,8 @@ button {
 .drag-slider {
     padding-top: 18px; 
     padding-bottom: 3px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .drag-slider-body {
@@ -1975,7 +2108,9 @@ button {
     position: absolute;
     top: -10px;
 
-    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
+
+            box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
 }
 .drag-slider-handle-left {
 
@@ -2007,8 +2142,11 @@ button {
     padding-right: 100px;
     padding-top: 92px;
     padding-bottom: 78px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     background: white;
 }
@@ -2030,6 +2168,16 @@ button {
     font-weight: 800;
     font-size: 18px;
     line-height: 24px;
+}
+
+.form-feedback-input-text::-webkit-input-placeholder,
+.form-feedback-textarea::-webkit-input-placeholder {
+    color:  #464646;
+}
+
+.form-feedback-input-text:-ms-input-placeholder,
+.form-feedback-textarea:-ms-input-placeholder {
+    color:  #464646;
 }
 
 .form-feedback-input-text::placeholder,
