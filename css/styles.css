@@ -300,7 +300,7 @@ button {
 }
 
 .footer .logo-container, .footer .user-nav {
-    margin-top: 49px;
+    margin-top: 48px;
 }
 
 
@@ -649,11 +649,6 @@ button {
 }
 
 
-.user-nav.footer-user-nav .link-user-name {
-    margin-right: auto;
-}
-
-
 .header-user-nav {
     margin-top: 43px;
 }
@@ -664,7 +659,7 @@ button {
 }
 
 .header .logo-container { margin-top: -18px; }
-.footer .logo-container { position: relative; top: 16px;}
+.footer .logo-container { position: relative; top: 18px; }
 
 
 .search-container {
@@ -683,7 +678,7 @@ button {
 
 .services { 
     margin-top: 182px;  
-    padding-bottom: 69px;
+    padding-bottom: 70px;
     background: #e5e5e5; 
 
 }
@@ -700,7 +695,7 @@ button {
 
 
 .brands-gallery { 
-    margin-top: 106px;
+    margin-top: 105px;
 }
 
 .info {
@@ -723,7 +718,7 @@ button {
 }
 
 .footer-row-top {
-    margin-bottom: 39px;
+    margin-bottom: 37px;
 }
 
 .footer-nav {
@@ -879,6 +874,7 @@ button {
     white-space: nowrap;
 }
 
+
 /* svg-icon goes before text "сравнить" */
 .link-compare svg {
     display: inline-block;
@@ -904,6 +900,14 @@ button {
     margin-right: 8px;
     width: 13px;
     height: 12px;    
+}
+
+.user-nav.footer-user-nav .link-user-name {
+    margin-right: auto;
+}
+
+.user-nav.footer-user-nav .link-log-me-in {
+    margin-right: 44px; 
 }
 
 .link-user-name {
@@ -1256,7 +1260,7 @@ button {
 
 /* перекрываем правило, обнуляющее margin у всех элементов с классом list */
 .footer-nav .footer-nav-list {
-    margin-top: 3px;
+    margin-top: 6px;
 }
 
 .footer-nav-item {}
@@ -1431,8 +1435,13 @@ button {
 }
 
 .footer-social-list {
-    justify-content: space-around;
+    justify-content: center;
 }
+
+.footer-social-item:not(:last-of-type) {
+    margin-right: 23px;
+}
+
 /* правило, обнуляющее margin'ы для всех эл-тов с классом list сильнее, 
    уточняем родительским классом 
 */
@@ -1567,6 +1576,11 @@ button {
     line-height: 48px;
     letter-spacing: 0.01em;
 }
+
+.promo-item:first-of-type .promo-item-characteristic-name:nth-child(3), 
+.promo-item:first-of-type .promo-item-characteristic-value:nth-child(3) {
+    margin-left: -20px;
+}
 /* --------------------------------------------------------------- */
 /* -----  END   OF tables and related things (th,tr,td,etc.)  ---- */
 /* --------------------------------------------------------------- */
@@ -1609,7 +1623,7 @@ button {
 }
 
 .info .btn-animated, .contacts .btn-animated {
-    margin-top: 53px;
+    margin-top: 55px;
 }
 
 .footer p {
@@ -1617,8 +1631,8 @@ button {
     margin: 0;
 }
 
-.footer .footer-address, .footer .footer-contacts {
-    margin-bottom: 59px;
+.footer .footer-contacts {
+    margin-bottom: 62px;
 }
 
 
@@ -1677,8 +1691,9 @@ button {
     background: #ffc600;
 }
 
-.line-top::after {
-    top: -50px;
+.info     .line-top::after,
+.contacts .line-top::after {
+    top: -51px;
     background: black;
 }
 
