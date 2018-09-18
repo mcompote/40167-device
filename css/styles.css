@@ -144,8 +144,10 @@ button {
 
 
 .promo-article-contents {
+    padding-right: 79px;
+    margin-bottom: 44px; 
+
     letter-spacing: 0.01em;
-    margin-bottom: 44px;  
 }
 
 
@@ -164,9 +166,6 @@ button {
     height: 160px;
     margin-bottom: 32px;     /* FIXME: примерно */
     background-color: #f7e296;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
 }
 
 .popular-item-image-box::before {
@@ -203,6 +202,7 @@ button {
 }
 
 .popular-item:nth-of-type(2) .popular-item-image-box::before {
+    background-position: bottom center;
     background-image: url('../img/svg/popular-2.svg');
 }
 
@@ -594,11 +594,6 @@ button {
 /* for .promo-article-heading */
 .pad-r-40px {
     padding-right: 40px;
-}
-
-/* for .promo-article-contents */
-.pad-r-60px {
-    padding-right: 60px;
 }
 
 .pad-l-80px {
@@ -1554,7 +1549,9 @@ button {
 .promo-item-characteristics-table .promo-item-characteristic-name {
     margin-bottom: 25px;
 }
-
+.promo-item-characteristics-table .promo-item-characteristic-value {
+    margin-bottom: 5px;
+}
 
 .promo-item-characteristic-name {
     font-weight: 300;    /* default UA style for <TH>: font-weight = bold */
