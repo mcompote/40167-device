@@ -22,6 +22,31 @@
            url('../fonts/gilroyextrabold.woff') format('woff');
 }
 
+/* Open Sans Regular (400) */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('opensans'),
+         local('Open Sans'), 
+         local('Open-Sans'),
+         url('../fonts/opensans.woff2'),
+         url('../fonts/opensans.woff');  
+}
+
+/* Open Sans Light (300) */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local
+        local('opensanslight'), 
+         local('OpenSans Light'), 
+         local('OpenSans-Light'), 
+         url('../fonts/opensanslight.woff2'),
+         url('../fonts/opensanslight.woff'); 
+}
+
 
 
 
@@ -717,6 +742,10 @@ button {
     margin-top: 82px; 
 }
 
+.catalog-page .footer {
+    margin-top: 0;
+}
+
 .footer-row-top {
     margin-bottom: 37px;
 }
@@ -830,6 +859,7 @@ button {
     margin-top: -12px; /* компенсация margin'ов у последних блоков .catalog-item */
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 77px;
     justify-content: space-between;
     background: rgba(0, 0, 0, 0.08);
 }
@@ -1071,24 +1101,36 @@ button {
 
 
 
-
+/* FIXME: радиальный градиент убрал, теперь приколы при масштабировании со внутренним кружком */
 .btn-slide-changer {
+    position: relative;
     display: block;
-    border: 0;
     padding: 0;
     margin: 0;
+    border: 1px solid black;
+    border-radius: 50%;
 
     width: 12px;
     height: 12px;
 
-    background-image: radial-gradient(circle at center, transparent, transparent 5px, black 5px, black 6px, transparent 6px);
-    background-repeat: no-repeat;
+    /* background-image: radial-gradient(circle at center, transparent, transparent 5px, black 5px, black 6px, transparent 6px);
+    background-repeat: no-repeat; */
     font-size: 0px;
 }
 
-.slider-navigation-item_active .btn-slide-changer {
-    /* FIXME: в Хроме по-уродски выглядит, в лисе - огонь */
-    background-image: radial-gradient(circle at center, transparent 0px, transparent 1px, black 1px, black 2px, transparent 2px, transparent 5px, black 5px, black 6px, transparent 6px);
+.slider-navigation-item_active .btn-slide-changer::before {
+    /* background-image: radial-gradient(circle at center, transparent 0px, transparent 1px, black 1px, black 2px, transparent 2px, transparent 5px, black 5px, black 6px, transparent 6px); */
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border: 1px solid black;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .btn-social { 

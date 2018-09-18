@@ -5,13 +5,11 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- OpenSans Light, Regular  -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
 
     <title>Интернет-магазин "Device": каталог товаров</title>
 </head>
 
-<body>
+<body class="catalog-page">
     <div class="column-full">
         <header class="header">
     
@@ -49,7 +47,7 @@
                             </defs>
                             <use xlink:href="#svg_login" fill="#272525"></use>
                         </svg>
-                        Неопознанный Енот
+                        Валентин Петухов
                     </a>
 
                     <a class="link-logout" href="auth/logout">
@@ -220,7 +218,7 @@
                         <fieldset class="form-filter-component">
                             <legend class="form-filter-heading">Цвет</legend>
                             <label class="form-filter-label">
-                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="black">
+                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="black" checked>
                                 <span class="checkbox-indicator"></span>
                                 Черный
                             </label>
@@ -232,13 +230,13 @@
                             </label>
                             
                             <label class="form-filter-label">
-                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="blue">
+                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="blue" checked>
                                 <span class="checkbox-indicator"></span>
                                 Синий
                             </label>
                             
                             <label class="form-filter-label">
-                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="red">
+                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="red" checked>
                                 <span class="checkbox-indicator"></span>
                                 Красный
                             </label>
@@ -255,7 +253,7 @@
                                 <span class="visually-hidden">Наличие</span>Bluetooth
                             </legend>
                             <label class="form-filter-label">
-                                <input class="form-filter-radio none" type="radio" name="features_bluetooth" value="true">
+                                <input class="form-filter-radio none" type="radio" name="features_bluetooth" value="true" checked>
                                 <span class="radio-indicator"></span>
                                 Есть
                             </label>
@@ -438,7 +436,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
                             <use xlink:href="#svg_login" fill="#ffc600"></use>
                         </svg>
-                        Неопознанный Енот
+                        Валентин Петухов
                     </a>
     
                     <a class="link-logout column-right" href="auth/logout">
