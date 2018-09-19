@@ -1272,16 +1272,6 @@ button {
     top:   22px;
     right: 22px;
 }
-
-
-
-
-.js-sorting-criteria-by-price         {}
-.js-sorting-criteria-by-type          {}
-.js-sorting-criteria-by-popularity    {}
-.js-sorting-criteria-ascending        {}
-.js-sorting-criteria-descending       {}
-
 /* --------------------------------------------------------------- */
 /* ----------          END   OF BUTTONS & LINKS         ---------- */
 /* --------------------------------------------------------------- */
@@ -1644,12 +1634,6 @@ button {
     left:0;
     z-index: 100;
 }
-
-.js-open-popup_feedback {}
-.js-open-popup_map {}
-.js-close-popup {}
-
-
 
 
 
@@ -2222,12 +2206,23 @@ button {
     background: rgba(237, 181, 181, 0.5);
     border-color: transparent;
 }
-
-
-
+/* --------------------------------------------------------------- */
+/* ----------               END   OF FORMS              ---------- */
+/* --------------------------------------------------------------- */
 
 
 
 /* --------------------------------------------------------------- */
-/* ----------               END   OF FORMS              ---------- */
+/* ----------      BEGIN   OF JAVASCRIPT-CLASSES        ---------- */
+/* --------------------------------------------------------------- */
+.js-sorting-criteria-by-price         {}
+.js-sorting-criteria-by-type          {}
+.js-sorting-criteria-by-popularity    {}
+.js-sorting-criteria-ascending        {}
+.js-sorting-criteria-descending       {}
+.js-open-popup_feedback               {}
+.js-open-popup_map                    {}
+.js-close-popup                       {}
+/* --------------------------------------------------------------- */
+/* ----------      END     OF JAVASCRIPT-CLASSES        ---------- */
 /* --------------------------------------------------------------- */
