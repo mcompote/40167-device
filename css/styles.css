@@ -284,18 +284,18 @@ button {
     bottom: 0px;
     right: 0px;
 }
-.service-description-box:nth-of-type(1) .service-description-contents::after {
+.services-description-box:nth-of-type(1) .service-description-contents::after {
     background-image: url('../img/svg/delivery.svg');
     right: -9px;
     bottom: -6px;
 }
 
-.service-description-box:nth-of-type(2) .service-description-contents::after {
+.services-description-box:nth-of-type(2) .service-description-contents::after {
     background-image: url('../img/svg/warranty.svg');
     right: -30px;
     bottom: -13px;
 }
-.service-description-box:nth-of-type(3) .service-description-contents::after {
+.services-description-box:nth-of-type(3) .service-description-contents::after {
     background-image: url('../img/svg/credit.svg');
     right: -7px;
     bottom: -6px;
@@ -740,12 +740,12 @@ button {
 
 }
 
-.service-description-box {
+.services-description-box {
     display: none;
     margin-top: -30px;
 }
 
-.service-description-box.service-description-box_active {
+.services-description-box.services-description-box_active {
     display: block;
 }
 
@@ -1181,7 +1181,7 @@ button {
     font-size: 0px;
 }
 
-.slider-navigation-item_active .btn-slide-changer::before {
+.promo-nav-item_active .btn-slide-changer::before {
     /* background-image: radial-gradient(circle at center, transparent 0px, transparent 1px, black 1px, black 2px, transparent 2px, transparent 5px, black 5px, black 6px, transparent 6px); */
     content: '';
     display: block;
@@ -1380,7 +1380,7 @@ button {
 
 .header-user-nav .user-cart-item { min-width: 100px; }
 
-.slider-navigation-list {
+.promo-nav-list {
     width: 78px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1391,7 +1391,6 @@ button {
     top: 250px;
     right: 100px;
 }
-.slider-navigation-item {}
 
 .promo-list { 
     counter-reset: position_counter; 
@@ -1639,7 +1638,7 @@ button {
 
 /* sliders */
 
-.promo-slider {
+.promo {
     position: relative;
 
     margin-top: -32px;
@@ -1846,7 +1845,7 @@ button {
     background: black;
 }
 
-.promo-slider .line-top::after {
+.promo .line-top::after {
     top: -41px;
     width: 100px;
     background: white;

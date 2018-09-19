@@ -4,10 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', function(evt) {
     
-    // спагетти-код
-
-
-
     // для form-filter в catalog.html оживлялка output'ов
     let inputMinCost  = document.querySelector('#form_filter__min_cost_input'  );
     let outputMinCost = document.querySelector('#form_filter__min_cost_output' );
@@ -25,34 +21,9 @@ document.addEventListener('DOMContentLoaded', function(evt) {
     }
 
 
-
-    // для .services переключалка слайдера
-    let sliderServices = document.querySelector('.services');
-    if( sliderServices )
-        Array.from( sliderServices.querySelectorAll('.btn-animated') )
-            .forEach( button => 
-                    button.addEventListener('click', 
-                                            evt => { superListener(evt) } 
-                                            ) 
-                    );  
+    sliderify( document.querySelector('.services') );
+    sliderify( document.querySelector('.promo') );
                 
-
-    //для .promo-slider переключалка слайдов
-    let sliderPromo = document.querySelector('.promo-slider');
-    if( sliderPromo )
-        Array.from(sliderPromo.querySelectorAll('.btn-slide-changer'))
-            .forEach(button =>
-                    button.addEventListener('click',
-                                            evt => { superListener2(evt) }
-                                            )
-            );  
-    
-
-    // // показать каталог товаров в header'е
-    // let goodsCatalogueBtn = document.querySelector('.header-nav-item-link.plus-sign');
-    // if ( goodsCatalogueBtn )
-    //     goodsCatalogueBtn.addEventListener( 'click', superListener3 );
-
 
     //убрать ugly-block, показать pretty-block в фильтре товаров на catalog.html
     let uglyRangeBlock   = document.querySelector('.form-filter-input-range-pretty');
@@ -62,8 +33,6 @@ document.addEventListener('DOMContentLoaded', function(evt) {
         prettyRangeBlock.classList.toggle('none');
     }
     
-
-
 
     //кнопка "Напишите Нам"
     let feedbackPopupLink = document.querySelector('.js-open-popup_feedback');
@@ -84,100 +53,15 @@ document.addEventListener('DOMContentLoaded', function(evt) {
                       btn.addEventListener('click',
                                             evt => { superPopupCloser(evt) }
                                           ) 
-        ); 
-        
-        
+        );    
 });
 
 
 
 
 
-function superListener(evt) {
-    evt.preventDefault();
-    let element = evt.target;
-    let dot = '.';
-
-    if( element.parentNode.className.includes('active') )
-        return;
-
-    //  find <div.services>
-    let servicesBlock = element;
-    while ( servicesBlock.className !== 'services' && servicesBlock.nodeName.toLowerCase() !== 'body' )
-        servicesBlock = servicesBlock.parentNode;
-    
-    Array.from( servicesBlock.querySelectorAll(dot + 'services-item_active') ).forEach( child => {
-            console.log( child );
-            child.classList.toggle('services-item_active');
-    });
-    Array.from( servicesBlock.querySelectorAll( dot + 'service-description-box_active') ).forEach( child => {
-            child.classList.toggle('service-description-box_active');
-    });
 
 
-    element.parentNode.classList.toggle('services-item_active');
-    
-    let nth = 1;
-    let lSibling = element.parentNode.previousElementSibling;
-    while( lSibling !== null ) {
-        nth++;
-        lSibling = lSibling.previousElementSibling;
-    }
-
-    servicesBlock.querySelector(`${dot}service-description-box:nth-of-type(${nth})`)
-                 .classList
-                 .toggle('service-description-box_active');
-}
-
-function superListener2(evt) {
-    evt.preventDefault();
-    let element = evt.target;
-    let dot = '.';
-
-    if( element.parentNode.className.includes('active') )
-        return;
-
-    //  find <section class="promo-slider">
-    let promoBlock = element;
-    while ( promoBlock.className !== 'promo-slider' && promoBlock.nodeName.toLowerCase() !== 'body' )
-        promoBlock = promoBlock.parentNode;
-    
-    Array.from( promoBlock.querySelectorAll(dot + 'promo-item_active') ).forEach( child => {
-            console.log( child );
-            child.classList.toggle('promo-item_active');
-    });
-    Array.from( promoBlock.querySelectorAll( dot + 'slider-navigation-item_active') ).forEach( child => {
-            child.classList.toggle('slider-navigation-item_active');
-    });
-
-
-    element.parentNode.classList.toggle('slider-navigation-item_active');
-    
-    let nth = 1;
-    let lSibling = element.parentNode.previousElementSibling;
-    while( lSibling !== null ) {
-        nth++;
-        lSibling = lSibling.previousElementSibling;
-    }
-
-    promoBlock.querySelector(`${dot}promo-item:nth-of-type(${nth})`)
-                 .classList
-                 .toggle('promo-item_active');
-}
-
-function superListener3(evt) {
-    evt.preventDefault();
-    let element = evt.target;
-    let dot = '.';
-
-
-    let cataloguePopupBlock = document.querySelector('.header-catalogue-list');
-    if (cataloguePopupBlock ) 
-        cataloguePopupBlock.style.display = ( cataloguePopupBlock.style.display === "none" ) ? 
-                                            "flex" :
-                                            "none";
-
-}
 
 
 function superPopupOpener(evt) {
@@ -243,3 +127,158 @@ function superPopupCloser(evt) {
 
 
 }
+
+
+
+
+
+
+/**
+ * @param {HTMLElement} sliderContainer 
+ */
+function sliderify( sliderContainer ) { 
+    const SLIDER_CONTAINER_CLS_NAME = 'js-sliderify-slider';
+    const SLIDER_CONTROL_CLS_NAME   = 'js-sliderify-control';
+    const SLIDER_SLIDE_CLS_NAME     = 'js-sliderify-slide';
+    const DOT                       = '.';
+    const ACTIVE_STATE              = '_active';
+
+    // slider - div element (or section or whatever html5 div-like) 
+    // with class .js-slider
+    if(    !(sliderContainer                         &&
+             sliderContainer instanceof(HTMLElement) && 
+             sliderContainer.classList.contains(SLIDER_CONTAINER_CLS_NAME) 
+    ))  
+        return;
+    
+    // slider has controls, when you click on them - slider changes active slide   
+    const CONTROLS = sliderContainer.querySelectorAll(DOT + SLIDER_CONTROL_CLS_NAME);
+    if( !CONTROLS.length ) 
+        return;
+
+    // slider should definitely have slides, otherwise nothing to show
+    const SLIDES = sliderContainer.querySelectorAll(DOT + SLIDER_SLIDE_CLS_NAME);
+    if( !SLIDES.length )
+        return;
+
+    // here goes all "magic"
+    registerControlsHandlers( CONTROLS );
+
+
+
+    /**
+     * @param {NodeList} controls
+     * @param {string}   evtName 
+     */
+    function registerControlsHandlers(controls, evtName='click') {
+        Array.from( controls ).forEach( control => {
+            registerControlHandler( control, evtName ); 
+        });
+    }
+
+    /**
+     * 
+     * @param {HTMLElement} control 
+     * @param {string}      evtName
+     */
+    function registerControlHandler( control, evtName ) {
+
+        control.addEventListener(evtName, (evt) => {
+            evt.preventDefault();
+
+            let result = findRootClassPrefixForElement( control, sliderContainer );
+            if( !result ) 
+                return; //didn't find prefixed classes like slider-item or greetings-item or whatever-whatever
+
+            let activeItem = result.element;
+            if( activeItem.classList.contains(result.prefixedClass + ACTIVE_STATE) )
+                return;
+
+            let controlContainersAndSlides = Array.from( sliderContainer.querySelectorAll(DOT + result.prefixedClass) )
+                                                  .concat( ...Array.from( SLIDES) ); 
+            removeActiveState( controlContainersAndSlides );
+
+            activeItem.classList.add( result.prefixedClass + ACTIVE_STATE );
+
+            let activeItemPosition = findElementSequenceNumber(activeItem, result.prefixedClass);
+            let activeSlide = SLIDES.item(activeItemPosition);
+            activeSlideClass = findRootClassPrefixForElement(activeSlide, sliderContainer).prefixedClass;
+            activeSlide.classList.add( activeSlideClass  + ACTIVE_STATE );
+        });
+
+    }
+
+    /**
+     * @param {HTMLElement} element 
+     * @param {string} inactiveClassName 
+     */
+    function findElementSequenceNumber(element, inactiveClassName) {
+         
+        let array = Array.from( element.parentElement.querySelectorAll(DOT + inactiveClassName) );
+        for (let index = 0; index < array.length; index++) {
+            if (element == array[index] )
+                return index;
+        }
+        
+        return;
+    }
+ 
+    /**
+    * @typedef  {Object} ObjectAndPrefix
+    * @property {HTMLElement} element html element
+    * @property {string} prefixedClass prefixed class found in one of element's classList values
+    */
+    /** 
+     * 
+     * 
+     * @param {HTMLElement} element 
+     * @param {HTMLElement} root 
+     * @param {string}      delimiter 
+     * @returns {ObjectAndPrefix} result
+     */
+    function findRootClassPrefixForElement(element, root, delimiter='-') {
+        let possiblePrefixes =  Array.from(root.classList).filter( element => element != SLIDER_CONTAINER_CLS_NAME );
+        let current = element;
+        // usually goes first in classes list, i.e. use possiblePrefixes[0]
+        do {
+            let clsList = filterClassListByRegex(element.classList, possiblePrefixes[0] + delimiter) 
+
+            if( clsList.length ) {
+                return { element: element, prefixedClass: clsList[0] };            
+            }
+            element = element.parentNode;
+        }
+        while (element != root);
+        
+        return null;
+    }
+
+
+    function removeActiveState(elements) {
+        for (const element of elements) {
+            let activeClasses = filterClassListByRegex(element.classList, ACTIVE_STATE);
+            if( activeClasses.length ) {
+                for (const activeClass of activeClasses) {
+                    element.classList.remove(activeClass);    
+                }
+            }
+        }
+    }
+    
+    /**
+     * 
+     * @param {DOMTokenList} clsList 
+     * @param {string} regexString 
+     * @returns {Array<string>} filtered classList
+     */
+    function filterClassListByRegex(clsList, regexString) {
+        let regex = new RegExp(regexString);
+        return Array.from(clsList).filter( cls => regex.test( cls ) );
+    }
+    
+}
+
+
+
+
+
