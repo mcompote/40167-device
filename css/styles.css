@@ -177,7 +177,6 @@ button {
 
 
 .promo-article-contents {
-    padding-right: 79px;
     margin-bottom: 44px; 
 
     letter-spacing: 0.01em;
@@ -649,10 +648,16 @@ button {
     padding-right: 40px;
 }
 
+/* for .promo-article-contents, .info */
+.pad-r-60px {
+    padding-right: 60px;
+}
+
 .pad-l-80px {
     padding-left: 80px;
 }
 
+/* for  .services descendants*/
 .pad-r-100px {
     padding-right: 100px;
 }
@@ -785,8 +790,6 @@ button {
 .footer-nav {
     margin-bottom: 64px;
 }
-
-.footer-social {}
 
 .footer-copyright {}
 
@@ -1483,7 +1486,7 @@ button {
 .popular-item {}
 
 .carrier-list {
-    margin-top: 65px;
+    margin-top: 66px;
 }
 
 .carrier-item { 
