@@ -741,7 +741,7 @@ button {
 }
 
 .services { 
-    margin-top: 182px;  
+    margin-top: 142px;  
     padding-bottom: 70px;
     background: #e5e5e5; 
 
@@ -1031,8 +1031,8 @@ button {
 
 .header-nav-item-link.plus-sign::before,
 .header-nav-item-link.plus-sign::after {
-    top: 11px;
-    right: 3px;
+    top: 10px;
+    right: 11px;
 }
 
 .header-nav-item-link.plus-sign:hover + .header-catalogue-list,
