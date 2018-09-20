@@ -46,10 +46,6 @@ document.addEventListener('DOMContentLoaded', function(evt) {
 
 
 
-
-
-
-
 /**
  * @param {HTMLElement} rootElement
  */
@@ -178,8 +174,6 @@ function popuppify(rootElement = document.body, options = {}) {
         //TODO: generate overlay HTML markup + css, add to <body>, return link to element
     }
 }
-
-
 
 /**
  * @param {HTMLElement} sliderContainer 
@@ -324,6 +318,32 @@ function sliderify( sliderContainer ) {
         return Array.from(clsList).filter( cls => regex.test( cls ) );
     }
     
+}
+
+function gMapsInitialize( selector='.popup-map-container' ) {
+    
+    findMapContainers( selector ).forEach( mapContainer => {
+
+        // mapContainer.style.height = mapContainer.getBoundingClientRect().height;
+        // findAndHideImages( mapContainer );
+        let mskPosition = {lat: 55.687126, lng: 37.529640};
+        let gMap = new google.maps.Map( mapContainer, {
+                                        center: mskPosition,
+                                        zoom: 17,
+                                        zoomControl: false
+                                    });
+        let marker = new google.maps.Marker({position: mskPosition, map: gMap});
+    });
+    
+
+    function findMapContainers(selector) {
+        return Array.from( document.querySelectorAll( selector ) );
+    }
+
+    function findAndHideImages( root ) {
+        let gmapsFallbackImages = root.querySelectorAll('img');
+        Array.from(gmapsFallbackImages).forEach( img => img.style.display = 'none');
+    }
 }
 
 

@@ -179,20 +179,14 @@
                                 <legend class="form-filter-heading">Стоимость</legend>
                             <div class="form-filter-input-range-ugly">
                                 <label class="form-filter-label flex-dir-col">
-                                    Минимальная Стоимость
+                                    Минимальная Стоимость (от 0 руб.)
                                     <input class="form-filter-input-range" type="range" id="form_filter__min_cost_input" name="min_cost" min="0" max="1000000" value="0">
                                 </label>
-                                <span>
-                                    <output id="form_filter__min_cost_output">0</output> руб.
-                                </span>
                                 
                                 <label class="form-filter-label flex-dir-col">
-                                    Максимальная Стоимость
+                                    Максимальная Стоимость (до 1000000 руб.)
                                     <input class="form-filter-input-range" type="range" id="form_filter__max_cost_input" name="max_cost" min="0" max="1000000" value="500000">
                                 </label>
-                                    <span>
-                                        <output id="form_filter__max_cost_output">1000000</output> руб.
-                                    </span>
                             </div>
 
                             <!-- заглушка для модного input-range, который скорее всего ч/з js работает -->
@@ -576,6 +570,8 @@
 
 
     <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFNqCeOLrvZmDYyJxyCc5sLVoWNyWJin8&callback=gMapsInitialize"></script>
+
 </body>
 
 </html>

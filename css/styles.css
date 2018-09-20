@@ -770,7 +770,7 @@ button {
     margin-top: 160px;
 }
 
-.map-container { 
+.contacts-map { 
     margin-top: 40px;    /* на 10px больше, чем у вышестоящего <p> */
     margin-bottom: 13px; 
 }
@@ -925,6 +925,11 @@ button {
     position: relative;
     -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
             box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
+}
+
+.popup-map-container {
+    min-height: 559px;
+    width: 100%;
 }
 /* --------------------------------------------------------------- */
 /* ---------- END   OF containers (div,section,article) ---------- */
@@ -2022,6 +2027,7 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2068,7 +2074,9 @@ button {
 }
 
 
-.form-filter-input-range {}
+.form-filter-input-range {
+    max-width: 100%;
+}
 .form-filter-input-range-ugly {}
 .form-filter-input-range-ugly .form-filter-label {
     -webkit-box-orient: vertical;

@@ -443,10 +443,7 @@
             бывает.
           </p>
           <a class="js-popuppify-open" data-js-popuppify-name="map" href="#">
-            <div class="map-container">
-
-                <img src="img/content/map-contacts.jpg" alt="Карта местонахождения магазина"  width="560" height="222">
-            </div>
+            <img class="contacts-map" src="img/content/map-contacts.jpg" alt="Карта местонахождения магазина"  width="560" height="222">
           </a>
           <a class="btn btn-animated btn-260px js-popuppify-open" data-js-popuppify-name="feedback" href="#">
             Напишите нам
@@ -562,10 +559,8 @@
   <div class="column-full popup none js-popuppify-popup" data-js-popuppify-name="map">
     <section class="popup-map column-four-fifths column-center">
   
-      <h2 class="visually-hidden">Мы на карте</h2>
-      <!-- TODO: здесь будет карта когда-нибудь завтра или послезавтра, ну, выпоняли -->
-  
-      <div>
+      <h2 class="visually-hidden">Мы на карте</h2>  
+      <div class="popup-map-container">
         <img src="img/content/map-contacts-full.jpg" alt="фото местонахождения интернет-магазина DEVICE" width="960" height="559">
       </div>
   
@@ -613,6 +608,8 @@
 
 
   <script src="js/script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFNqCeOLrvZmDYyJxyCc5sLVoWNyWJin8&callback=gMapsInitialize"
+  async defer></script>
 </body>
 
 </html>
