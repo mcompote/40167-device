@@ -1637,6 +1637,24 @@ button {
     z-index: 100;
 }
 
+.animation-fade-in {
+    animation: fadeIn 0.1s ease-in;
+}
+
+.animation-fade-out {
+    animation: fadeOut 0.1s ease-in;
+}
+
+@keyframes fadeIn {
+    0%   {  transform: translate(-50%, -50%) scale(0.0);  }
+    50%  {  transform: translate(-50%, -50%) scale(0.5);  }
+    100% {  transform: translate(-50%, -50%) scale(1.0);  }
+}
+@keyframes fadeOut {
+    0%   {  transform: translate(-50%, -50%) scale(1.0);  }
+    50%  {  transform: translate(-50%, -50%) scale(0.5);  }
+    100% {  transform: translate(-50%, -50%) scale(0.0);  }
+}
 
 
 /* sliders */

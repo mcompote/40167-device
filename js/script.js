@@ -22,8 +22,17 @@ document.addEventListener('DOMContentLoaded', function(evt) {
 
 
     sliderify( document.querySelector ('.services') );
-    sliderify( document.querySelector ('.promo')    );
-    popuppify( document.body );            
+    sliderify( document.querySelector ('.promo'   ) );
+    popuppify(  document.body, 
+                { animation: {
+                    fadeInClasses: ['animation-fade-in'],
+                    fadeOutClasses: ['animation-fade-out'],
+                    animationDuration: 0.1      
+                  } 
+                } 
+    );            
+
+
 
     //убрать ugly-block, показать pretty-block в фильтре товаров на catalog.html
     let uglyRangeBlock   = document.querySelector('.form-filter-input-range-pretty');
@@ -32,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function(evt) {
         uglyRangeBlock.classList.toggle('none');
         prettyRangeBlock.classList.toggle('none');
     }
+
 });
 
 
@@ -40,76 +50,10 @@ document.addEventListener('DOMContentLoaded', function(evt) {
 
 
 
-
-
-function superPopupOpener(evt) {
-    evt.preventDefault();
-    let element = evt.target;
-
-    let feedbackPopupBlock  = document.querySelector('.popup-feedback');
-    // find nearest 'popup' container (EXACTLY 'POPUP', not 'POPUP-bla-bla-bla' classes)
-    let parent = feedbackPopupBlock;
-    while ( !parent.classList.contains('popup') && parent.nodeName.toLowerCase() !== 'body' )
-        parent = parent.parentNode;
-
-    let overlayBlock        = document.getElementById('overlay');
-    if (parent && overlayBlock) {
-        if (parent.classList.contains("none") && parent.classList.contains("none") ) {
-            parent.classList.remove("none");
-            overlayBlock.classList.remove("none");
-        }
-    }
-
-}
-
-function superPopupOpener2(evt) {
-    evt.preventDefault();
-    let element = evt.target;
-
-    let mapPopupBlock  = document.querySelector('.popup-map');
-    // find nearest 'popup' container (EXACTLY 'POPUP', not 'POPUP-bla-bla-bla' classes)
-    let parent = mapPopupBlock;
-    while ( !parent.classList.contains('popup') && parent.nodeName.toLowerCase() !== 'body' )
-        parent = parent.parentNode;
-
-    let overlayBlock        = document.getElementById('overlay');
-    if (parent && overlayBlock) {
-        if (parent.classList.contains("none") && parent.classList.contains("none") ) {
-            parent.classList.remove("none");
-            overlayBlock.classList.remove("none");
-        }
-    }
-
-}
-
-function superPopupCloser(evt) {
-    evt.preventDefault();
-    let element = evt.target;
-
-    // find nearest 'popup' container (EXACTLY 'POPUP', not 'POPUP-bla-bla-bla' classes)
-    let parent = element;
-    while ( !parent.classList.contains('popup') && parent.nodeName.toLowerCase() !== 'body' )
-        parent = parent.parentNode;
-
-    // close popup
-    if (parent) {
-        if ( !parent.classList.contains('none') ) {
-            parent.classList.add('none');
-        }
-    }
-
-    // close overlay
-    let overlayBlock = document.getElementById('overlay');
-    if( overlayBlock && !overlayBlock.classList.contains('none') )
-        overlayBlock.classList.add('none');
-
-
-}
-
 /**
  * @param {HTMLElement} rootElement
  */
-function popuppify(rootElement = document.body) {
+function popuppify(rootElement = document.body, options = {}) {
     const POPUP_ROOT_CLS    = 'js-popuppify-popup';
     const POPUP_OPEN_CLS    = 'js-popuppify-open';
     const POPUP_CLOSE_CLS   = 'js-popuppify-close';
@@ -117,15 +61,17 @@ function popuppify(rootElement = document.body) {
     const DOT               = '.';
 
     if( !rootElement )
-        return;
+    return;
     
     //find overlay
     const POPUP_OVERLAY = document.querySelector(DOT + POPUP_OVERLAY_CLS) || generateOverlay();
-
+    //copy options to constant
+    const POPUP_OPTIONS = options;
 
     //find all .popup containers inside root container
     let popups = rootElement.querySelectorAll(DOT + POPUP_ROOT_CLS);
     Array.from( popups ).forEach( popup => registerPopupHandlers(popup) );
+
 
 
     /**
@@ -171,15 +117,26 @@ function popuppify(rootElement = document.body) {
     }
 
     function closePopupAndOverlay( popupRoot, overlay ) {
-        if( popupRoot )
-            popupRoot.classList.add('none');
+        if( popupRoot ) {
+            if( options && options.animation && options.animation.fadeOutClasses )
+            options.animation.fadeOutClasses.forEach( cls => popupRoot.classList.add(cls) );
+
+            let animationDuration = POPUP_OPTIONS.animation.animationDuration*1000 || 1000;
+            setTimeout( () => { popupRoot.classList.add('none') } , animationDuration);
+        }
         
-        if( overlay )
+        if( overlay ) {
             overlay.classList.add('none');
+        }
     }
 
     function openPopupAndOverlay( popupRoot, overlay ) {
         if( popupRoot )
+            if( options && options.animation && options.animation.fadeOutClasses )
+                options.animation.fadeOutClasses.forEach( cls => popupRoot.classList.remove(cls) );
+            if( options && options.animation && options.animation.fadeInClasses )
+                options.animation.fadeInClasses.forEach( cls => popupRoot.classList.add(cls) );
+
             popupRoot.classList.remove('none');
         
         if( overlay )
