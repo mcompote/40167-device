@@ -211,51 +211,68 @@
 
                         <fieldset class="form-filter-component">
                             <legend class="form-filter-heading">Цвет</legend>
-                            <label class="form-filter-label">
-                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="black" checked>
-                                <span class="checkbox-indicator"></span>
-                                Черный
-                            </label>
                             
-                            <label class="form-filter-label">
-                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="white">
-                                <span class="checkbox-indicator"></span>
-                                Белый
-                            </label>
+                            <div class="form-filter-group">
+                                <input class="form-filter-checkbox none" id="form_filter__checkbox_color__black" type="checkbox" name="color" value="black" checked>
+                                <label class="form-filter-label" for="form_filter__checkbox_color__black">
+                                    <span class="checkbox-indicator"></span>
+                                    Черный
+                                </label>
+                            </div>
                             
-                            <label class="form-filter-label">
-                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="blue" checked>
-                                <span class="checkbox-indicator"></span>
-                                Синий
-                            </label>
+                            <div class="form-filter-group">
+                                <input class="form-filter-checkbox none" id="form_filter__checkbox_color__white" type="checkbox" name="color" value="white">
+                                <label class="form-filter-label" for="form_filter__checkbox_color__white">
+                                    <span class="checkbox-indicator"></span>
+                                    Белый
+                                </label>
+                            </div>
                             
-                            <label class="form-filter-label">
-                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="red" checked>
-                                <span class="checkbox-indicator"></span>
-                                Красный
-                            </label>
+                            <div class="form-filter-group">
+                                <input class="form-filter-checkbox none" id="form_filter__checkbox_color__blue" type="checkbox" name="color" value="blue" checked>
+                                <label class="form-filter-label" for="form_filter__checkbox_color__blue">
+                                    <span class="checkbox-indicator"></span>
+                                    Синий
+                                </label>
+                            </div>
                             
-                            <label class="form-filter-label">
-                                <input class="form-filter-checkbox none" type="checkbox" name="color" value="pink">
-                                <span class="checkbox-indicator"></span>
-                                Розовый
-                            </label>
+                            <div class="form-filter-group">
+                                <input class="form-filter-checkbox none" id="form_filter__checkbox_color__red" type="checkbox" name="color" value="red" checked>
+                                <label class="form-filter-label" for="form_filter__checkbox_color__red">
+                                    <span class="checkbox-indicator"></span>
+                                    Красный
+                                </label>
+                            </div>
+                            
+                            <div class="form-filter-group">
+                                <input class="form-filter-checkbox none" id="form_filter__checkbox_color__pink" type="checkbox" name="color" value="pink">
+                                <label class="form-filter-label" for="form_filter__checkbox_color__pink">
+                                    <span class="checkbox-indicator"></span>
+                                    Розовый
+                                </label>
+                            </div>
                         </fieldset>
 
                         <fieldset class="form-filter-component">
                             <legend class="form-filter-heading">
                                 <span class="visually-hidden">Наличие</span>Bluetooth
                             </legend>
-                            <label class="form-filter-label">
-                                <input class="form-filter-radio none" type="radio" name="features_bluetooth" value="true" checked>
-                                <span class="radio-indicator"></span>
-                                Есть
-                            </label>
-                            <label class="form-filter-label">
-                                <input class="form-filter-radio none" type="radio" name="features_bluetooth" value="false">
-                                <span class="radio-indicator"></span>
-                                Нет
-                            </label>
+                        
+                            <div class="form-filter-group">
+                                <input class="form-filter-radio none" id="form_filter__radio_features_bluetooth__true" type="radio" name="features_bluetooth" value="true" checked>
+                                <label class="form-filter-label" for="form_filter__radio_features_bluetooth__true">
+                                    <span class="radio-indicator"></span>
+                                    Есть
+                                </label>
+                            </div>
+                        
+                            <div class="form-filter-group">
+                                <input class="form-filter-radio none" id="form_filter__radio_features_bluetooth__false" type="radio" name="features_bluetooth" value="false">
+                                <label class="form-filter-label" for="form_filter__radio_features_bluetooth__false">
+                                    <span class="radio-indicator"></span>
+                                    Нет
+                                </label>
+                            </div>
                         </fieldset>
 
                         <button type="submit" class="btn btn-animated btn-200px">Показать</button>
@@ -337,7 +354,7 @@
                                 </div>
                             </div>
                             <div class="catalog-item-description-box column-flexbox">
-                                <a class="catalog-item-name-link" href="/catalog?q=professional-selfie-stick">Профессиональная селфи-палка</a>
+                                <a class="catalog-item-name-link" href="/catalog?q=professional-selfie-stick">Профессиональная <span class="nowrap">селфи-палка</span></a>
                                 <p class="catalog-item-price">1500 руб.</p>
                             </div>
                         </li>

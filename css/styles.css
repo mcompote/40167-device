@@ -901,7 +901,7 @@ button {
  }
 
  .catalog-item-description-box {
-    margin-top: 31px;
+    margin-top: 33px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1667,6 +1667,8 @@ button {
 }
 
 
+
+
 /* sliders */
 
 .promo {
@@ -1675,6 +1677,8 @@ button {
     margin-top: -32px;
     margin-bottom: 89px;
 }
+
+
 
 
 
@@ -1766,6 +1770,10 @@ button {
 /* --------------------------------------------------------------- */
 /* ----------      BEGIN OF        decorating stuff     ---------- */
 /* --------------------------------------------------------------- */
+
+.nowrap {
+    white-space: nowrap;
+}
 
 .plus-sign::before, .plus-sign::after {
     content: '';
@@ -1998,7 +2006,7 @@ button {
 
 /* -----------      форма фильтрации в catalog.html      ----------- */
 .form-filter {
-    padding-top: 69px;
+    padding-top: 70px;
     padding-right: 68px;
 }
 
@@ -2011,24 +2019,11 @@ button {
     position: relative;
     border: none;
     border-top: 2px solid black;
-    padding-top: 51px;
-    padding-bottom: 32px;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
-.form-filter-heading {
-    display: block;
-    position: absolute;
-    top: 9px;
-    left: 0px;
-
-    font-family: 'Gilroy', 'Arial', sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 24px; 
-    letter-spacing: 0.01em;    
-}
-
-.form-filter-label {
+.form-filter-group  {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2044,52 +2039,103 @@ button {
     text-transform: capitalize;   
 }
 
-.checkbox-indicator {
+.form-filter-group:last-of-type {
+    margin-bottom: -5px;
+}
+
+.form-filter-group:first-of-type {
+    margin-top: 8px;
+}
+
+.form-filter-heading {
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 0px;
+
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px; 
+    letter-spacing: 0.01em;    
+}
+
+
+.checkbox-indicator, .radio-indicator {
     display: inline-block;
+    position: relative;
+    top: 6px;
     vertical-align: baseline;
-    width: 27px;
-    height: 23px;
-    margin-right: 14px;
+
     background-image: none;
     background-repeat: no-repeat;
 }
 
-.form-filter-checkbox:not(:checked) + .checkbox-indicator {
-    background-image: url('../img/svg/checkbox-off.svg');
-}
-
-.form-filter-checkbox:checked + .checkbox-indicator {
-    background-image: url('../img/svg/checkbox-on.svg');
-}
-
-.form-filter-checkbox:disabled + .checkbox-indicator {
-    background-image: url('../img/svg/checkbox-on.svg');
+.checkbox-indicator {
+    width: 27px;
+    height: 23px;
+    margin-right: 7px;
 }
 
 .radio-indicator {
-    display: inline-block;
-    vertical-align: baseline;
     width: 25px;
     height: 25px;
-    margin-right: 15px;
-    background-image: none;
-    background-repeat: no-repeat;
+    margin-right: 10px;
 }
 
-.form-filter-radio:not(:checked) + .radio-indicator {
+.form-filter-checkbox:not(:checked)                 + .form-filter-label        .checkbox-indicator,
+.form-filter-checkbox:not(:disabled):checked        + .form-filter-label:active .checkbox-indicator {
+    background-image: url('../img/svg/checkbox-off.svg');
+}
+
+.form-filter-checkbox:checked                       + .form-filter-label        .checkbox-indicator,
+.form-filter-checkbox:not(:disabled):not(:checked)  + .form-filter-label:active .checkbox-indicator {
+    background-image: url('../img/svg/checkbox-on.svg');
+}
+
+.form-filter-radio:not(:checked)                    + .form-filter-label        .radio-indicator,
+.form-filter-radio:not(:disabled):checked           + .form-filter-label:active .radio-indicator {
     background-image: url('../img/svg/radio-off.svg');
 }
 
-.form-filter-radio:checked + .radio-indicator {
+.form-filter-radio:checked                          + .form-filter-label         .radio-indicator,
+.form-filter-radio:not(:disabled):not(:checked)     + .form-filter-label:active  .radio-indicator {
     background-image: url('../img/svg/radio-on.svg');
 }
 
-
-.form-filter-input-range {
-    max-width: 100%;
+.form-filter-checkbox:not(:disabled) + .form-filter-label:hover .checkbox-indicator,
+.form-filter-radio:not(:disabled)    + .form-filter-label:hover .radio-indicator {
+    opacity: 0.6;
 }
-.form-filter-input-range-ugly {}
+
+.form-filter-checkbox:not(:disabled) + .form-filter-label:active .checkbox-indicator,
+.form-filter-radio:not(:disabled)    + .form-filter-label:active .radio-indicator {
+    opacity: 1;
+}
+
+
+.form-filter-label {
+    position: relative;
+    top: -6px;
+    font-style: inherit;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 40px; 
+    letter-spacing: 0.01em;    
+    text-transform: capitalize;   
+}
+
+input.form-filter-checkbox:disabled  + .form-filter-label,  
+input.form-filter-radio:disabled     + .form-filter-label  {
+    opacity: 0.25;
+}
+
 .form-filter-input-range-ugly .form-filter-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2098,13 +2144,24 @@ button {
         -ms-flex-align: start;
             align-items: flex-start;
 }
+
+
+
+.form-filter-input-range {
+    max-width: 100%;
+}
+
+
+.form-filter-input-range-ugly {}
 .form-filter-input-range-pretty {}
 .form-filter-radio {}
 
 
+
+
 .drag-slider {
     padding-top: 18px; 
-    padding-bottom: 3px;
+    padding-bottom: 1px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
