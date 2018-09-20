@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function(evt) {
     }
 
 
-    sliderify( document.querySelector('.services') );
-    sliderify( document.querySelector('.promo') );
-                
+    sliderify( document.querySelector ('.services') );
+    sliderify( document.querySelector ('.promo')    );
+    popuppify( document.body );            
 
     //убрать ugly-block, показать pretty-block в фильтре товаров на catalog.html
     let uglyRangeBlock   = document.querySelector('.form-filter-input-range-pretty');
@@ -32,28 +32,6 @@ document.addEventListener('DOMContentLoaded', function(evt) {
         uglyRangeBlock.classList.toggle('none');
         prettyRangeBlock.classList.toggle('none');
     }
-    
-
-    //кнопка "Напишите Нам"
-    let feedbackPopupLink = document.querySelector('.js-open-popup_feedback');
-    if( feedbackPopupLink )
-        feedbackPopupLink.addEventListener('click', superPopupOpener );
-    
-    //мини-карта обернута в ссылку
-    let mapPopupLink = document.querySelector('.js-open-popup_map');
-    if( mapPopupLink )
-        mapPopupLink.addEventListener('click', superPopupOpener2 );
-
-
-    //закрывашки popup'ов
-    let popupCloseBtns = document.querySelectorAll('.js-close-popup');
-    if( popupCloseBtns )
-        Array.from( popupCloseBtns )
-             .forEach(btn =>
-                      btn.addEventListener('click',
-                                            evt => { superPopupCloser(evt) }
-                                          ) 
-        );    
 });
 
 
@@ -128,8 +106,121 @@ function superPopupCloser(evt) {
 
 }
 
+/**
+ * @param {HTMLElement} rootElement
+ */
+function popuppify(rootElement = document.body) {
+    const POPUP_ROOT_CLS    = 'js-popuppify-popup';
+    const POPUP_OPEN_CLS    = 'js-popuppify-open';
+    const POPUP_CLOSE_CLS   = 'js-popuppify-close';
+    const POPUP_OVERLAY_CLS = 'js-popuppify-overlay';
+    const DOT               = '.';
+
+    if( !rootElement )
+        return;
+    
+    //find overlay
+    const POPUP_OVERLAY = document.querySelector(DOT + POPUP_OVERLAY_CLS) || generateOverlay();
 
 
+    //find all .popup containers inside root container
+    let popups = rootElement.querySelectorAll(DOT + POPUP_ROOT_CLS);
+    Array.from( popups ).forEach( popup => registerPopupHandlers(popup) );
+
+
+    /**
+     * @param {HTMLElement} popupRoot
+    */
+    function registerPopupHandlers(popupRoot) {
+        if( !popupRoot )
+            return;
+        
+        registerOpenPopupHandlers( popupRoot );
+        registerClosePopupHandlers( popupRoot );
+    }
+
+    /**
+     * @param {HTMLAnchorElementElement|HTMLButtonElement}  link
+     * @param {HTMLElement}                                 popupRoot
+    */
+    function registerLinkHandler(link, popupRoot) {
+        //element is not <a> or <button> - do nothing 
+        if(!( link && (link instanceof HTMLAnchorElement || link instanceof HTMLButtonElement) ))
+            return;
+
+        //if element's property '-data-js-popuppify-name' is empty we can't determine class name of desired popup to be opened
+        if( !( link.dataset.jsPopuppifyName) )
+            return;
+
+        link.addEventListener('click', evt => {
+            evt.preventDefault();
+            openPopupAndOverlay( popupRoot, POPUP_OVERLAY );
+        });
+    }
+
+    function registerCloseButtonHandler(closeBtn) {
+        let element = closeBtn;
+
+        let parent = element;
+        while ( !parent.classList.contains(POPUP_ROOT_CLS)  )
+            parent = parent.parentNode;
+
+        closeBtn.addEventListener('click', evt => {
+            closePopupAndOverlay( parent, POPUP_OVERLAY );
+        });
+    }
+
+    function closePopupAndOverlay( popupRoot, overlay ) {
+        if( popupRoot )
+            popupRoot.classList.add('none');
+        
+        if( overlay )
+            overlay.classList.add('none');
+    }
+
+    function openPopupAndOverlay( popupRoot, overlay ) {
+        if( popupRoot )
+            popupRoot.classList.remove('none');
+        
+        if( overlay )
+            overlay.classList.remove('none');
+    }
+
+    function registerEscKeyboardEvent( popupRoot ) {
+        document.addEventListener('keydown', evt => {
+            if ( !popupRoot.classList.contains('none') ) {
+                let keycode = (typeof evt.keyCode !='undefined' && evt.keyCode) ? evt.keyCode : evt.which;
+                if (keycode === 27) {
+                    closePopupAndOverlay( popupRoot, POPUP_OVERLAY );
+                };
+            }
+        });
+    }
+
+
+    /**
+     * @param {HTMLElement} popupRoot 
+    */
+    function registerClosePopupHandlers( popupRoot ) {
+        closeButtons = popupRoot.querySelectorAll(DOT + POPUP_CLOSE_CLS);
+        Array.from( closeButtons ).forEach( closeBtn => registerCloseButtonHandler(closeBtn) );
+
+        registerEscKeyboardEvent( popupRoot );
+    }
+
+    function registerOpenPopupHandlers( popupRoot ) {
+        let dataAttr = popupRoot.dataset.jsPopuppifyName;
+        if( dataAttr )
+            Array.from( document.querySelectorAll(DOT + POPUP_OPEN_CLS) )
+                 .filter( link => link.dataset.jsPopuppifyName == dataAttr )
+                 .forEach( link => registerLinkHandler(link, popupRoot) );
+    }
+
+
+    function generateOverlay() {
+        //TODO: generate overlay HTML markup + css, add to <body>, return link to element
+    }
+}
 
 
 

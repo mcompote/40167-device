@@ -1254,7 +1254,7 @@ button {
 }
 
 
-.btn-close-popup {
+.btn-close {
     width: 55px;
     height: 55px;
     border: none;
@@ -1265,12 +1265,12 @@ button {
     cursor: pointer;
 }
 
-.btn-close-popup:hover  { opacity: 1.0; }
-.btn-close-popup:active { opacity: 0.3; }
+.btn-close:hover  { opacity: 1.0; }
+.btn-close:active { opacity: 0.3; }
 
 
-.popup-feedback .btn-close-popup,
-.popup-map      .btn-close-popup {
+.popup-feedback .btn-close,
+.popup-map      .btn-close {
     position: absolute;
     top:   22px;
     right: 22px;
@@ -2222,9 +2222,13 @@ button {
 .js-sorting-criteria-by-popularity    {}
 .js-sorting-criteria-ascending        {}
 .js-sorting-criteria-descending       {}
-.js-open-popup_feedback               {}
-.js-open-popup_map                    {}
-.js-close-popup                       {}
+.js-popuppify-popup                   {}
+.js-popuppify-open                    {}
+.js-popuppify-close                   {}
+.js-popuppify-overlay                 {}
+.js-sliderify-slider                  {}
+.js-sliderify-slide                   {}
+.js-sliderify-control                 {}
 /* --------------------------------------------------------------- */
 /* ----------      END     OF JAVASCRIPT-CLASSES        ---------- */
 /* --------------------------------------------------------------- */

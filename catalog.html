@@ -470,14 +470,14 @@
     
     
         <div class="footer-row-bottom column-full column-flexbox pad-lr-20px">
-    
+        
             <div class="column-three-tenths">
                 <p class="footer-address">г. Москва, ул. Строителей, 15</p>
             </div>
-    
+        
             <div class="column-four-tenths">
                 <nav class="footer-nav">
-    
+        
                     <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
                     <ul class="footer-nav-list column-flexbox">
                         <li class="footer-nav-item">
@@ -490,24 +490,23 @@
                             <a class="footer-nav-item-link" href="#">Контакты</a>
                         </li>
                     </ul>
-    
+        
                 </nav>
-    
-    
-                    <ul class="footer-social-list column-flexbox column-one-third">
-                        <li class="footer-social-item">
-                            <a class="btn-social btn-social-fb" href="#">Вконтакте</a>
-                        </li>
-                        <li class="footer-social-item">
-                            <a class="btn-social btn-social-insta" href="#">Фейсбук</a>
-                        </li>
-                        <li class="footer-social-item">
-                            <a class="btn-social btn-social-twitter" href="#">Инстаграм</a>
-                        </li>
-                    </ul>
-    
+        
+                <ul class="footer-social-list column-flexbox column-one-third">
+                    <li class="footer-social-item">
+                        <a class="btn-social btn-social-fb" href="#">Вконтакте</a>
+                    </li>
+                    <li class="footer-social-item">
+                        <a class="btn-social btn-social-insta" href="#">Фейсбук</a>
+                    </li>
+                    <li class="footer-social-item">
+                        <a class="btn-social btn-social-twitter" href="#">Инстаграм</a>
+                    </li>
+                </ul>
+        
             </div>
-    
+        
             <div class="footer-contacts-and-copyright column-three-tenths column-flexbox">
                 <p class="footer-contacts">
                     <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
@@ -516,64 +515,64 @@
                     <b class="visually-hidden">Разработчик сайта:</b>
                     <a class="btn-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
                 </p>
-    
+        
             </div>
-    
+        
         </div>
-    </footer>
+        </footer>
 
 
-    <div class="column-full popup none">
-        <section class="popup-map column-four-fifths column-center">
-      
-          <h2 class="visually-hidden">Мы на карте</h2>
-          <!-- TODO: здесь будет карта когда-нибудь завтра или послезавтра, ну, выпоняли -->
-      
-          <div>
-            <img src="img/content/map-contacts-full.jpg" alt="фото местонахождения интернет-магазина DEVICE"  width="960" height="559">
-          </div>
-      
-          <!-- закрывающий форму крестик -->
-          <button class="btn-close-popup js-close-popup">Закрыть всплывающую форму</button>
-        </section>
-      </div>
-    
-      <div class="column-full popup none">
-        <section class="popup-feedback column-four-fifths column-center">
-          <h2 class="visually-hidden">Пишите нам</h2>
-    
-          <form class="form-feedback column-flexbox" id="form_feedback" action="/api/feedback" method="POST">
-    
-            <div class="form-feedback-component">
-              <label class="form-feedback-label">
-                Ваше имя:
-                <input class="form-feedback-input-text" type="text" name="name" placeholder="Имя Фамилия" required>
-              </label>
-            </div>
-    
-            <div class="form-feedback-component">
-              <label class="form-feedback-label">
-                Ваш email:
-                <input class="form-feedback-input-text" type="email" name="email" placeholder="email@example.com" required>
-              </label>
-            </div>
-    
-            <div class="form-feedback-component">
-              <label class="form-feedback-label">
-                Текст письма:
-                <textarea class="form-feedback-textarea" name="feedback" cols="30" rows="10" placeholder="В свободной форме" required></textarea>
-              </label>
-            </div>
-    
-            <button type="submit" class="btn btn-animated btn-200px">Отправить</button>
-          </form>
-    
-          <!-- закрывающий форму крестик -->
-          <button class="btn-close-popup js-close-popup">Закрыть всплывающую форму</button>
-        </section>
-      </div>
-    
-      <div id="overlay" class="overlay none"></div>
+        <div class="column-full popup none js-popuppify-popup" data-js-popuppify-name="map">
+            <section class="popup-map column-four-fifths column-center">
+        
+                <h2 class="visually-hidden">Мы на карте</h2>
+                <!-- TODO: здесь будет карта когда-нибудь завтра или послезавтра, ну, выпоняли -->
+        
+                <div>
+                    <img src="img/content/map-contacts-full.jpg" alt="фото местонахождения интернет-магазина DEVICE" width="960" height="559">
+                </div>
+        
+                <!-- закрывающий форму крестик -->
+                <button class="btn-close js-popuppify-close">Закрыть всплывающую форму</button>
+            </section>
+        </div>
+        
+        <div class="column-full popup none js-popuppify-popup" data-js-popuppify-name="feedback">
+            <section class="popup-feedback column-four-fifths column-center">
+                <h2 class="visually-hidden">Пишите нам</h2>
+        
+                <form class="form-feedback column-flexbox" id="form_feedback" action="/api/feedback" method="POST">
+        
+                    <div class="form-feedback-component">
+                        <label class="form-feedback-label">
+                            Ваше имя:
+                            <input class="form-feedback-input-text" type="text" name="name" placeholder="Имя Фамилия">
+                        </label>
+                    </div>
+        
+                    <div class="form-feedback-component">
+                        <label class="form-feedback-label">
+                            Ваш email:
+                            <input class="form-feedback-input-text" type="email" name="email" placeholder="email@example.com">
+                        </label>
+                    </div>
+        
+                    <div class="form-feedback-component">
+                        <label class="form-feedback-label">
+                            Текст письма:
+                            <textarea class="form-feedback-textarea" name="feedback" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+                        </label>
+                    </div>
+        
+                    <button type="submit" class="btn btn-animated btn-200px">Отправить</button>
+                </form>
+        
+                <!-- закрывающий форму крестик -->
+                <button class="btn-close js-popuppify-close">Закрыть всплывающую форму</button>
+            </section>
+        </div>
+        
+        <div id="overlay" class="overlay none js-popuppify-overlay"></div>
 
 
     <script src="js/script.js"></script>
