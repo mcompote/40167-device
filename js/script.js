@@ -330,7 +330,9 @@ function gMapsInitialize( selector='.popup-map-container' ) {
         let gMap = new google.maps.Map( mapContainer, {
                                         center: mskPosition,
                                         zoom: 17,
-                                        zoomControl: false
+                                        zoomControl: false,
+                                        streetViewControl: false,
+                                        fullscreenControl: false
                                     });
         let marker = new google.maps.Marker({position: mskPosition, map: gMap});
     });
