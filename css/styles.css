@@ -1480,15 +1480,20 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
 }
 
-.popular-item {}
+.popular-item {
+    margin-bottom: 40px;
+}
+
+.popular-item:not(:nth-child(6n)) {
+    margin-right: 40px;
+}
 
 .carrier-list {
     margin-top: 66px;
@@ -2054,6 +2059,10 @@ button {
 }
 
 .form-filter-checkbox:checked + .checkbox-indicator {
+    background-image: url('../img/svg/checkbox-on.svg');
+}
+
+.form-filter-checkbox:disabled + .checkbox-indicator {
     background-image: url('../img/svg/checkbox-on.svg');
 }
 
