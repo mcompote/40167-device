@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function(evt) {
     let uglyRangeBlock   = document.querySelector('.form-filter-input-range-pretty');
     let prettyRangeBlock = document.querySelector('.form-filter-input-range-ugly');
     if( uglyRangeBlock && prettyRangeBlock ) {
-        uglyRangeBlock.classList.toggle('none');
+        uglyRangeBlock.classList.toggle('visually-hidden');
         prettyRangeBlock.classList.toggle('none');
     }
 
