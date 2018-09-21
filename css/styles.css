@@ -1064,18 +1064,14 @@ button {
 }
 
 .btn-animated    {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: inline-block;
+    vertical-align: baseline;
     min-height: 40px;    /* see styleguide.psd */
-    padding: 0 1.25em 0;
 
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 1.25em;
+    padding-left:  1.25em;
 
     font-family: 'Gilroy', 'Arial', sans-serif;
     font-weight: 800;
@@ -1083,6 +1079,7 @@ button {
     line-height: 24px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    text-align: center;
 
     border: none;
     outline: none;

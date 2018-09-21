@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function(evt) {
 
 
     //убрать ugly-block, показать pretty-block в фильтре товаров на catalog.html
-    let uglyRangeBlock   = document.querySelector('.form-filter-input-range-pretty');
-    let prettyRangeBlock = document.querySelector('.form-filter-input-range-ugly');
+    let uglyRangeBlock   = document.querySelector('.form-filter-input-range-ugly');
+    let prettyRangeBlock = document.querySelector('.form-filter-input-range-pretty');
     if( uglyRangeBlock && prettyRangeBlock ) {
         uglyRangeBlock.classList.toggle('visually-hidden');
         prettyRangeBlock.classList.toggle('none');
@@ -38,7 +38,7 @@ function popuppify(rootElement = document.body, options = {}) {
     const DOT               = '.';
 
     if( !rootElement )
-    return;
+        return;
     
     //find overlay
     const POPUP_OVERLAY = document.querySelector(DOT + POPUP_OVERLAY_CLS) || generateOverlay();
