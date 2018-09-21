@@ -60,7 +60,6 @@
 /* --------------------------------------------------------------- */
 
 /* Set box-sizing: border-box for entire project */
-/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -74,7 +73,7 @@ body {
     min-width: 1200px;
     background-color: white;
     color: black;
-    font-family: 'Open Sans', 'Arial', sans-serif;   /* text - Open Sans, headings - Gilroy */
+    font-family: 'Open Sans', 'Arial', sans-serif;  /* text - Open Sans, headings - Gilroy */
     font-weight: 300;
     font-size: 15px;
     line-height: 30px;
@@ -93,8 +92,7 @@ img {
 }
 
 button {
-    /* по умолчанию в Chrome для <button> используется background-color: buttonface; */
-    background: transparent;
+    background: transparent;  /* по умолчанию в Chrome для <button> используется background-color: buttonface; */
 }
 /* --------------------------------------------------------------- */
 /* ----------  END   OF GLOBAL styles (html, body, etc.) --------- */
@@ -310,9 +308,14 @@ button {
     min-height: 299px;
 }
 
-.header .logo-container { margin-top: -18px; }
-.footer .logo-container { position: relative; top: 18px; }
+.header .logo-container { 
+    margin-top: -18px; 
+}
 
+.footer .logo-container { 
+    position: relative; 
+    top: 18px; 
+}
 
 .search-container {
     position: relative;
@@ -654,6 +657,8 @@ button {
 
 
 .catalog-item-image-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     min-height: 380px;
     position: relative;
@@ -1372,7 +1377,8 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1417,7 +1423,8 @@ button {
 }
 
 .breadcrumbs-list {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .breadcrumbs-item-link {
@@ -1554,22 +1561,35 @@ button {
 }
 
 .animation-fade-in {
-    animation: fadeIn 0.1s ease-in;
+    -webkit-animation: fadeIn 0.1s ease-in;
+            animation: fadeIn 0.1s ease-in;
 }
 
 .animation-fade-out {
-    animation: fadeOut 0.1s ease-in;
+    -webkit-animation: fadeOut 0.1s ease-in;
+            animation: fadeOut 0.1s ease-in;
+}
+
+@-webkit-keyframes fadeIn {
+    0%   {  -webkit-transform: translate(-50%, -50%) scale(0.0);  transform: translate(-50%, -50%) scale(0.0);  }
+    50%  {  -webkit-transform: translate(-50%, -50%) scale(0.5);  transform: translate(-50%, -50%) scale(0.5);  }
+    100% {  -webkit-transform: translate(-50%, -50%) scale(1.0);  transform: translate(-50%, -50%) scale(1.0);  }
 }
 
 @keyframes fadeIn {
-    0%   {  transform: translate(-50%, -50%) scale(0.0);  }
-    50%  {  transform: translate(-50%, -50%) scale(0.5);  }
-    100% {  transform: translate(-50%, -50%) scale(1.0);  }
+    0%   {  -webkit-transform: translate(-50%, -50%) scale(0.0);  transform: translate(-50%, -50%) scale(0.0);  }
+    50%  {  -webkit-transform: translate(-50%, -50%) scale(0.5);  transform: translate(-50%, -50%) scale(0.5);  }
+    100% {  -webkit-transform: translate(-50%, -50%) scale(1.0);  transform: translate(-50%, -50%) scale(1.0);  }
+}
+@-webkit-keyframes fadeOut {
+    0%   {  -webkit-transform: translate(-50%, -50%) scale(1.0);  transform: translate(-50%, -50%) scale(1.0);  }
+    50%  {  -webkit-transform: translate(-50%, -50%) scale(0.5);  transform: translate(-50%, -50%) scale(0.5);  }
+    100% {  -webkit-transform: translate(-50%, -50%) scale(0.0);  transform: translate(-50%, -50%) scale(0.0);  }
 }
 @keyframes fadeOut {
-    0%   {  transform: translate(-50%, -50%) scale(1.0);  }
-    50%  {  transform: translate(-50%, -50%) scale(0.5);  }
-    100% {  transform: translate(-50%, -50%) scale(0.0);  }
+    0%   {  -webkit-transform: translate(-50%, -50%) scale(1.0);  transform: translate(-50%, -50%) scale(1.0);  }
+    50%  {  -webkit-transform: translate(-50%, -50%) scale(0.5);  transform: translate(-50%, -50%) scale(0.5);  }
+    100% {  -webkit-transform: translate(-50%, -50%) scale(0.0);  transform: translate(-50%, -50%) scale(0.0);  }
 }
 /* --------------------------------------------------------------- */
 /* ---------------         END     OF POPUPS        -------------- */
