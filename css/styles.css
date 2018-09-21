@@ -1,3 +1,6 @@
+/* --------------------------------------------------------------- */
+/* ----------          BEGIN OF @IMPORT SECTION          --------- */
+/* --------------------------------------------------------------- */
 
 /* Gilroy Light */
 @font-face {
@@ -46,9 +49,9 @@
          url('../fonts/opensanslight.woff2'),
          url('../fonts/opensanslight.woff'); 
 }
-
-
-
+/* --------------------------------------------------------------- */
+/* ----------          END   OF @IMPORT SECTION          --------- */
+/* --------------------------------------------------------------- */
 
 
 
@@ -66,7 +69,6 @@ html {
     -webkit-box-sizing: inherit;
             box-sizing: inherit;
 }
-
 
 body {
     min-width: 1200px;
@@ -94,439 +96,17 @@ button {
     /* по умолчанию в Chrome для <button> используется background-color: buttonface; */
     background: transparent;
 }
-
-
 /* --------------------------------------------------------------- */
 /* ----------  END   OF GLOBAL styles (html, body, etc.) --------- */
 /* --------------------------------------------------------------- */
 
 
 
-
-
-
-/* ----------------------------------ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
-/* ----------------------------------ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ >>> */
-
-.header   { 
-    position: relative;
-    min-height: 186px;
-    
-    margin-top: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 60px;
-    padding-right: 60px;
-
-    display: -webkit-box;
-
-    display: -ms-flexbox;
-
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
-    
-    background-color: #f7e296; 
-    letter-spacing: 0.01em;
-}
-
-.main-page .header {
-    min-height: 299px;
-}
-
-/* меняем прозрачность логотипа, обернутого в ссылку (значения в header'е и footer'е одинаковые) */
-.logo-container svg        { opacity: 1.0; }
-.logo-container svg:hover  { opacity: 0.6; }
-.logo-container svg:active { opacity: 0.3; }
-
-/* У ссылок в шапке декоративные картинки добавлены через псевдо-элементы */
-.header [class*='btn']:hover,   .header [class*='link']:hover   { opacity: 0.6;  } 
-.header [class*='btn']:active,  .header [class*='link']:active  { opacity: 0.3;  } 
-/* переопределяем поведение для кнопки поиска и для ссылки на каталог товаров */
-.header [class*='link'][class~='plus-sign']:hover        { opacity: 1; color: rgba(0,0,0,0.6);  } 
-.header [class*='link'][class~='plus-sign']:active       { opacity: 1; color: rgba(0,0,0,0.3);  } 
-.header [class*='btn'][class~='btn-search']:hover  { opacity: 1; }
-.header [class*='btn'][class~='btn-search']:active { opacity: 1; }
-
-
-
-.header-nav-item-link, .footer-nav-item-link {
-    font-family: 'Gilroy', 'Arial', sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-}
-
-
-.header-catalogue-item-link {
-    line-height: 36px;
-}
-
-
-/* <main пошёл> */
-
-/* два класса для большего приоритета, т.к. далее .huge-heading переопределяет line-height */
-.promo-article .promo-article-heading {
-    line-height: 56px;
-    margin-bottom: 20px;
-}
-
-
-.promo-article-contents {
-    margin-bottom: 44px; 
-
-    letter-spacing: 0.01em;
-}
-
-
-
-
-.popular-list {
-    font-family: 'Gilroy', 'Arial', sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0.01em;
-}
-
-
-
-.popular-item-image-box {
-    width: 100%;
-    height: 160px;
-    margin-bottom: 32px;   
-    background-color: #f7e296;
-}
-
-.popular-item-image-box::before {
-    content: '';
-    display: block;
-    background-image: none;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-}  
-
-
-
-.popular-item-link {
-    display: block;
-}
-
-.popular-item-link:hover .popular-item-image-box {
-    background-color: #f0c52e;
-}
-
-.popular-item-link:active {
-    color: rgba(0, 0, 0, 0.3); 
-}
-
-.popular-item-link:active .popular-item-image-box::before {
-   opacity: 0.3;
-}
-
-.popular-item.popular-cat-vr .popular-item-image-box::before {
-    background-image: url('../img/svg/popular/popular-vr.svg');
-}
-
-.popular-item.popular-cat-monopod .popular-item-image-box::before {
-    background-position: bottom center;
-    background-image: url('../img/svg/popular/popular-monopod.svg');
-}
-
-.popular-item.popular-cat-actioncam .popular-item-image-box::before {
-    background-image: url('../img/svg/popular/popular-actioncam.svg');
-}
-
-.popular-item.popular-cat-fitnesstracker .popular-item-image-box::before {
-    background-image: url('../img/svg/popular/popular-fitnesstracker.svg');
-}
-
-.popular-item.popular-cat-smartwatch .popular-item-image-box::before {
-    background-image: url('../img/svg/popular/popular-smartwatch.svg');
-}
-
-.popular-item.popular-cat-quadcopter .popular-item-image-box::before {
-    background-image: url('../img/svg/popular/popular-quadcopter.svg');
-}
-
-
-.services-item_active {
-    background: black;
-}
-
-.service-description-heading {
-    margin-bottom: 35px;
-}
-
-.service-description-contents { 
-    position: relative;
-    letter-spacing: 0.01em; 
-}
-
-
-.service-description-contents::after {
-    content: '';
-    display: block;
-    width: 260px;
-    height: 260px;
-    
-    background-image: none;
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-}
-.services-description-box:nth-of-type(1) .service-description-contents::after {
-    background-image: url('../img/svg/delivery.svg');
-    right: -9px;
-    bottom: -6px;
-}
-
-.services-description-box:nth-of-type(2) .service-description-contents::after {
-    background-image: url('../img/svg/warranty.svg');
-    right: -30px;
-    bottom: -13px;
-}
-.services-description-box:nth-of-type(3) .service-description-contents::after {
-    background-image: url('../img/svg/credit.svg');
-    right: -7px;
-    bottom: -6px;
-}
-
-/* обесцвечиваем изображения логотипов */
-.brands-gallery-item-logo-wrapper {
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-    opacity: 0.2;
-}
-
-.brands-gallery-item-logo-wrapper:hover {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-    opacity: 1;
-}
-
-.brands-gallery-item-logo-wrapper img {
-    display: block;
-    margin: 0 auto;
-}
-
-
-
-
-
-/* задаем инверсию цветов фона и текста для футера */
-.footer {
-    background: #464646;
-    color: #fff;
-}
-
-/* переопределяем глобально заданный цвет у ссылки */
-.footer a, .footer a:hover, .footer a:active, .footer a:visited {
-    color: #fff;
-}
-
-.footer .logo-container, .footer .user-nav {
-    margin-top: 48px;
-}
-
-
-
-
-.footer-nav-list .footer-nav-item {
-    font-family: 'Gilroy', 'Arial', sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 24px;   
-}
-
-
-
-/*  Доставка, гарантия, контакты, логотип device, логотип htmlacademy, иконки в user-navigation 
-    в футере они имеют одинаковые состояния прозрачности при наведении и клике
-*/
-.footer-nav            [class*='btn']:hover,  .footer-nav       [class*='link']:hover,
-.footer-copyright      [class*='btn']:hover,  .footer-copyright [class*='link']:hover     { opacity: 0.6; }
-.footer-nav            [class*='btn']:active, .footer-nav       [class*='link']:active,
-.footer-copyright      [class*='btn']:active, .footer-copyright [class*='link']:active    { opacity: 0.3; }
-
-
-/* Кнопки соц сетей */
-.footer-social-list [class*='btn'],        .footer-social-list [class*='link']            { opacity: 0.3; }
-.footer-social-list [class*='btn']:hover,  .footer-social-list [class*='link']:hover      { opacity: 0.6; }  
-.footer-social-list [class*='btn']:active, .footer-social-list [class*='link']:active     { opacity: 0.1; }  
-
-/* Логин, Пользователь, Выйти, Cравнить, Корзина */
-.user-nav.footer-user-nav  [class*='btn'],        .user-nav.footer-user-nav  [class*='link']        { color:rgba(255, 255, 255, 0.7) }
-.user-nav.footer-user-nav  [class*='btn']:hover,  .user-nav.footer-user-nav  [class*='link']:hover  { color:rgba(255, 255, 255, 1.0) }
-.user-nav.footer-user-nav  [class*='btn']:active, .user-nav.footer-user-nav  [class*='link']:active { color:rgba(255, 255, 255, 0.3) }
-/* у SVG-иконок внутри ссылок "логин", "пользователь", "выйти", "сравнить", "корзина" 
-   другие состояния прозрачности, отличные от текста ссылок */
-.footer-user-nav  [class*='btn']        svg, .footer-user-nav  [class*='link']        svg  { opacity: 1.0; }
-.footer-user-nav  [class*='btn']:hover  svg, .footer-user-nav  [class*='link']:hover  svg  { opacity: 0.6; }
-.footer-user-nav  [class*='btn']:active svg, .footer-user-nav  [class*='link']:active svg  { opacity: 0.3; }
-
-
-
-.footer-contacts-and-copyright {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-
-    padding-bottom: 66px;
-}
-
-
-/* htmlacademy svg */
-.btn-htmlacademy:hover  { opacity: 0.6; }
-.btn-htmlacademy:active { opacity: 0.3; }
-
-
-
-
-.form-feedback-label {
-    font-family: 'Gilroy', 'Arial', sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 24px;       
-}
-
-.form-feedback input, .form-feedback textarea {
-    font-family: 'Open Sans', 'Arial', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;        
-}
-
-
-/*  ---2ая стр. пошла--- */
-
-/* breadcrumbs: меняем цвет текста в состояниях :hover, :active */
-.breadcrumbs [class*='btn'],        .breadcrumbs [class*='link'], .breadcrumbs .breadcrumbs-item_active { color: rgba(0, 0, 0, 0.3); }
-.breadcrumbs [class*='btn']:hover,  .breadcrumbs [class*='link']:hover                                  { color: rgba(0, 0, 0, 0.6); }
-.breadcrumbs [class*='btn']:active, .breadcrumbs [class*='link']:active                                 { color: rgba(0, 0, 0, 0.1); }
-
-
-/* при наведении на кнопки упорядочивания и сортировки - изменяется прозрачность элементов  */
-.sorting-methods-item.sorting-methods-item_active [class*='btn'],        .sorting-methods-item.sorting-methods-item_active [class*='link'],                           
-.sorting-methods-item.sorting-methods-item_active [class*='btn']:hover,  .sorting-methods-item.sorting-methods-item_active [class*='link']:hover,                           
-.sorting-methods-item.sorting-methods-item_active [class*='btn']:active, .sorting-methods-item.sorting-methods-item_active [class*='link']:active                          
-                                                                                             { opacity: 1.0; }
-.sorting-methods-item [class*='btn'],         .sorting-methods-item [class*='link']          { opacity: 0.3; }
-.sorting-methods-item [class*='btn']:hover,   .sorting-methods-item [class*='link']:hover    { opacity: 0.6; }
-.sorting-methods-item [class*='btn']:active,  .sorting-methods-item [class*='link']:active   { opacity: 1.0; }
-
-
-.ordering-methods-item.ordering-methods-item_active [class*='triangle'],
-.ordering-methods-item.ordering-methods-item_active [class*='triangle']:hover,
-.ordering-methods-item.ordering-methods-item_active [class*='triangle']:active               { opacity: 1.0; }
-.ordering-methods-item [class*='triangle']                                                   { opacity: 0.2; }
-.ordering-methods-item [class*='triangle']:hover                                             { opacity: 0.4; }
-.ordering-methods-item [class*='triangle']:active                                            { opacity: 1.0; }
-
-
-
-
-
-
-
-.catalog-item { 
-    position: relative;
-    margin-bottom: 47px;
-
-    font-family: 'Gilroy', 'Arial', sans-serif; 
-    line-height: 24px; 
-    letter-spacing: 0.01em; 
-}
-
-.catalog-item-name-link  { 
-    max-width: 72%;              
-    font-weight: 800; 
-    font-size: 18px; 
-}
-.catalog-item-price      { 
-    max-width: 28%; 
-    margin: 0; 
-    font-weight: 300; 
-    font-size: 16px; 
-    color: #464646;
-}
-
-/* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ---------------------------------- */
-/* <<< ВРЕМЕННО ВСЕ КЛАССЫ СЮДА СВАЛИВАЕМ---------------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* --------------------------------------------------------------- */
-/* ----------    BEGIN OF visibility control classes    ---------- */
+/* ----------          BEGIN OF LAYOUT CLASSES           --------- */
 /* --------------------------------------------------------------- */
 
-/* visible to a screen reader, but visually hidden */
-/* from: https://css-tricks.com/small-tweaks-can-make-huge-impact-websites-accessibility/#article-header-id-2 */
-.visually-hidden    { 
-    display: block;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px);
-    clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(1px);
-            clip-path: inset(1px);
-    white-space: nowrap;
-    position: absolute;
- }
-
-/* for popups and other temporarily hidden objects on the page */
-.hidden             { visibility:   hidden;  }
-.visible            { visibility:   visible; }
-.none               { display:      none;    }
-.block              { display:      block;   }
-
-/* --------------------------------------------------------------- */
-/* ----------    END   OF visibility control classes    ---------- */
-/* --------------------------------------------------------------- */
-
-
-
-
-/* --------------------------------------------------------------- */
-/* ---------- BEGIN OF containers (div,section,article) ---------- */
-/* --------------------------------------------------------------- */
-
+/* -----------------------      columns       -------------------- */
 /* container's width = 1/1 full layout width  = 1200px */
 /* for header, footer and main content, i.e. for almost everything */
 .col-1200px { 
@@ -588,9 +168,7 @@ button {
 /* for .catalog-item in catalog.html */
 .col-nine-twenties  { width: 45.000%; }
 
-
-
-
+/* ----------------------      alignment       ------------------- */
 /* stick element to the right corner of container */
 .col-right      { margin-left: auto; }
 
@@ -600,18 +178,12 @@ button {
 /* align element in the center of container */
 .col-center     { margin-right: auto; margin-left: auto; }
 
-
+/* ---------------------       flexbox         ------------------- */
 .col-flexbox { 
     display: -webkit-box; 
     display: -ms-flexbox; 
     display: flex; 
 }    
-
-/* NO MORE IN USE */
-.fx-no-shrink {
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-}
 
 .fx-grow-1 {
     -webkit-box-flex: 1;
@@ -632,9 +204,7 @@ button {
             flex-direction: column;
 }
 
-
-
-
+/* ------------------     paddings & margins      ---------------- */
 .pad-l-20px {
     padding-left: 20px;
 }
@@ -674,55 +244,70 @@ button {
 .mar-t-79px-neg {
     margin-top: -79px;
 }
+/* --------------------------------------------------------------- */
+/* ----------          END   OF LAYOUT CLASSES           --------- */
+/* --------------------------------------------------------------- */
 
 
 
-/* container for filter box */
-.wrapper-filter-box { 
-    /* 348px - see .col-348px */
-    min-width: 348px;
-    width: calc( 348px + (( 100% - 1200px )/2) );
-    background-color: #eee;
-}
+/* --------------------------------------------------------------- */
+/* ----------    BEGIN OF visibility control classes    ---------- */
+/* --------------------------------------------------------------- */
 
-/* container's width for sorting box and content box */
-.wrapper-sorting-box-and-content { 
-    /* 852px - see .col-852px */
-    min-width: 852px;
-    width: calc( 852px + (( 100% - 1200px )/2) );
-}
+/* visible to a screen reader, but visually hidden */
+/* from: https://css-tricks.com/small-tweaks-can-make-huge-impact-websites-accessibility/#article-header-id-2 */
+.visually-hidden    { 
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(1px);
+            clip-path: inset(1px);
+    white-space: nowrap;
+    position: absolute;
+ }
 
-/* ------------------------------------ */
+/* for popups and other temporarily hidden objects on the page */
+.hidden             { visibility:   hidden;  }
+.visible            { visibility:   visible; }
+.none               { display:      none;    }
+.block              { display:      block;   }
+/* --------------------------------------------------------------- */
+/* ----------    END   OF visibility control classes    ---------- */
+/* --------------------------------------------------------------- */
 
 
 
+/* --------------------------------------------------------------- */
+/* ---------- BEGIN OF containers (div,section,article) ---------- */
+/* --------------------------------------------------------------- */
 
-
-.user-nav {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;    
-}
-
-.header-user-nav [class*="link"]:not([class="link-user-cart"]) {
+.header   { 
+    position: relative;
+    min-height: 186px;
+    
+    margin-top: 40px;
+    margin-left: 20px;
     margin-right: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    
+    background-color: #f7e296; 
+    letter-spacing: 0.01em;
 }
 
-.footer-user-nav [class*="link"]:not([class="link-user-cart"]) {
-    margin-right: 40px;
-}
-
-
-.header-user-nav {
-    margin-top: 43px;
-}
-
-.header-nav { 
-    margin-top: 36px;
-    width: 100%; 
+.main-page .header {
+    min-height: 299px;
 }
 
 .header .logo-container { margin-top: -18px; }
@@ -734,14 +319,106 @@ button {
     top: 16px;
 }
 
-.login-container { letter-spacing: 0.01em; }
+.user-nav {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;    
+}
 
-.promo-article { display: -webkit-box; display: -ms-flexbox; display: flex; }
+.header-user-nav {
+    margin-top: 43px;
+}
 
+.header-nav { 
+    margin-top: 36px;
+    width: 100%; 
+}
+
+.login-container { 
+    letter-spacing: 0.01em; 
+}
+
+.promo {
+    position: relative;
+    margin-top: -32px;
+    margin-bottom: 89px;
+}
+
+.promo-article { 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex; 
+}
+
+/* два класса для большего приоритета, т.к. далее .huge-heading переопределяет line-height */
+.promo-article .promo-article-heading {
+    line-height: 56px;
+    margin-bottom: 20px;
+}
+
+.promo-article-contents {
+    margin-bottom: 44px; 
+
+    letter-spacing: 0.01em;
+}
 
 .popular {
     margin-bottom: 82px;     
 }
+
+.popular-item-image-box {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 32px;   
+    background-color: #f7e296;
+}
+
+.popular-item-image-box::before {
+    content: '';
+    display: block;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}  
+
+.popular-item-link:hover .popular-item-image-box {
+    background-color: #f0c52e;
+}
+
+.popular-item-link:active .popular-item-image-box::before {
+    opacity: 0.3;
+ }
+ 
+ .popular-item.popular-cat-vr .popular-item-image-box::before {
+     background-image: url('../img/svg/popular/popular-vr.svg');
+ }
+ 
+ .popular-item.popular-cat-monopod .popular-item-image-box::before {
+     background-position: bottom center;
+     background-image: url('../img/svg/popular/popular-monopod.svg');
+ }
+ 
+ .popular-item.popular-cat-actioncam .popular-item-image-box::before {
+     background-image: url('../img/svg/popular/popular-actioncam.svg');
+ }
+ 
+ .popular-item.popular-cat-fitnesstracker .popular-item-image-box::before {
+     background-image: url('../img/svg/popular/popular-fitnesstracker.svg');
+ }
+ 
+ .popular-item.popular-cat-smartwatch .popular-item-image-box::before {
+     background-image: url('../img/svg/popular/popular-smartwatch.svg');
+ }
+ 
+ .popular-item.popular-cat-quadcopter .popular-item-image-box::before {
+     background-image: url('../img/svg/popular/popular-quadcopter.svg');
+ }
 
 .services { 
     margin-top: 142px;  
@@ -759,10 +436,61 @@ button {
     display: block;
 }
 
+.service-description-heading {
+    margin-bottom: 35px;
+}
 
+.service-description-contents { 
+    position: relative;
+    letter-spacing: 0.01em; 
+}
+
+.service-description-contents::after {
+    content: '';
+    display: block;
+    width: 260px;
+    height: 260px;
+    
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.services-description-box:nth-of-type(1) .service-description-contents::after {
+    background-image: url('../img/svg/delivery.svg');
+    right: -9px;
+    bottom: -6px;
+}
+
+.services-description-box:nth-of-type(2) .service-description-contents::after {
+    background-image: url('../img/svg/warranty.svg');
+    right: -30px;
+    bottom: -13px;
+}
+.services-description-box:nth-of-type(3) .service-description-contents::after {
+    background-image: url('../img/svg/credit.svg');
+    right: -7px;
+    bottom: -6px;
+}
 
 .brands-gallery { 
     margin-top: 105px;
+}
+
+/* обесцвечиваем изображения логотипов */
+.brands-gallery-item-logo-wrapper {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    opacity: 0.2;
+}
+
+.brands-gallery-item-logo-wrapper:hover {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+    opacity: 1;
 }
 
 .info {
@@ -770,18 +498,15 @@ button {
     
 }
 
-
 .contacts {
     margin-top: 160px;
 }
 
-.contacts-map { 
-    margin-top: 40px;    /* на 10px больше, чем у вышестоящего <p> */
-    margin-bottom: 13px; 
-}
-
+/* задаем инверсию цветов фона и текста для футера */
 .footer { 
     margin-top: 82px; 
+    background: #464646;
+    color: #fff;
 }
 
 .catalog-page .footer {
@@ -796,13 +521,30 @@ button {
     margin-bottom: 64px;
 }
 
-.footer-copyright {}
+.footer .logo-container, .footer .user-nav {
+    margin-top: 48px;
+}
 
 .breadcrumbs { 
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.01em;
     margin-bottom: 46px; 
+}
+
+/* container for filter box */
+.wrapper-filter-box { 
+    /* 348px - see .col-348px */
+    min-width: 348px;
+    width: calc( 348px + (( 100% - 1200px )/2) );
+    background-color: #eee;
+}
+
+/* container's width for sorting box and content box */
+.wrapper-sorting-box-and-content { 
+    /* 852px - see .col-852px */
+    min-width: 852px;
+    width: calc( 852px + (( 100% - 1200px )/2) );
 }
 
 .filter-box  { 
@@ -820,7 +562,6 @@ button {
         -ms-flex-pack: justify;
             justify-content: space-between;
 }
-
 
 .filter-box-heading-block, .sorting-box-heading-block {      
     min-height: 4.375em;
@@ -843,7 +584,6 @@ button {
     background-color: #dbdbdb; 
 }
 
-
 .filter-box-heading-block-content {
     height: 70px; /* due to IE11 bugs */
     min-height: inherit;
@@ -855,22 +595,17 @@ button {
             align-items: center;
 }
 
-
-
 .catalog-items-box { 
     padding-left: 52px;
 }
 
-.catalog-item-image-box {
-    display: flex;
-    min-height: 380px;
+.catalog-item { 
     position: relative;
-    background-color: #eee;
-}
+    margin-bottom: 47px;
 
-.catalog-item-image-box img {
-    display: block;
-    margin: auto;
+    font-family: 'Gilroy', 'Arial', sans-serif; 
+    line-height: 24px; 
+    letter-spacing: 0.01em; 
 }
 
 .catalog-item-onhover-block { 
@@ -918,6 +653,12 @@ button {
  }
 
 
+.catalog-item-image-box {
+    display: flex;
+    min-height: 380px;
+    position: relative;
+    background-color: #eee;
+}
 
 .pagination {
     margin-top: -12px; /* компенсация margin'ов у последних блоков .catalog-item */
@@ -929,18 +670,6 @@ button {
             justify-content: space-between;
     background: rgba(0, 0, 0, 0.08);
 }
-
-
-.popup-feedback, .popup-map {
-    position: relative;
-    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
-            box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
-}
-
-.popup-map-container {
-    min-height: 559px;
-    width: 100%;
-}
 /* --------------------------------------------------------------- */
 /* ---------- END   OF containers (div,section,article) ---------- */
 /* --------------------------------------------------------------- */
@@ -950,9 +679,150 @@ button {
 
 
 
+
+.footer-nav-list .footer-nav-item {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;   
+}
+
+/*  Доставка, гарантия, контакты, логотип device, логотип htmlacademy, иконки в user-navigation 
+    в футере они имеют одинаковые состояния прозрачности при наведении и клике
+*/
+.footer-nav       [class*='btn']:hover,  
+.footer-nav       [class*='link']:hover,
+.footer-copyright [class*='btn']:hover,  
+.footer-copyright [class*='link']:hover { 
+    opacity: 0.6; 
+}
+
+.footer-nav       [class*='btn']:active, 
+.footer-nav       [class*='link']:active,
+.footer-copyright [class*='btn']:active, 
+.footer-copyright [class*='link']:active { 
+    opacity: 0.3; 
+}
+
+
+/* Кнопки соц сетей */
+.footer-social-list [class*='btn'],        
+.footer-social-list [class*='link']            { opacity: 0.3; }
+.footer-social-list [class*='btn']:hover,  
+.footer-social-list [class*='link']:hover      { opacity: 0.6; }  
+.footer-social-list [class*='btn']:active, 
+.footer-social-list [class*='link']:active     { opacity: 0.1; }  
+
+/* Логин, Пользователь, Выйти, Cравнить, Корзина */
+.user-nav.footer-user-nav  [class*='btn'],        
+.user-nav.footer-user-nav  [class*='link']        { color:rgba(255, 255, 255, 0.7) }
+.user-nav.footer-user-nav  [class*='btn']:hover,  
+.user-nav.footer-user-nav  [class*='link']:hover  { color:rgba(255, 255, 255, 1.0) }
+.user-nav.footer-user-nav  [class*='btn']:active, 
+.user-nav.footer-user-nav  [class*='link']:active { color:rgba(255, 255, 255, 0.3) }
+
+/* у SVG-иконок внутри ссылок "логин", "пользователь", "выйти", "сравнить", "корзина" 
+   другие состояния прозрачности, отличные от текста ссылок */
+.footer-user-nav  [class*='btn']        svg, 
+.footer-user-nav  [class*='link']        svg  { opacity: 1.0; }
+.footer-user-nav  [class*='btn']:hover  svg, 
+.footer-user-nav  [class*='link']:hover  svg  { opacity: 0.6; }
+.footer-user-nav  [class*='btn']:active svg, 
+.footer-user-nav  [class*='link']:active svg  { opacity: 0.3; }
+
+
+
+.footer-contacts-and-copyright {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+
+    padding-bottom: 66px;
+}
+
+.form-feedback-label {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;       
+}
+
+.form-feedback input, .form-feedback textarea {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;        
+}
+
+/* breadcrumbs: меняем цвет текста в состояниях :hover, :active */
+.breadcrumbs [class*='btn'],        .breadcrumbs [class*='link'], .breadcrumbs .breadcrumbs-item_active { color: rgba(0, 0, 0, 0.3); }
+.breadcrumbs [class*='btn']:hover,  .breadcrumbs [class*='link']:hover                                  { color: rgba(0, 0, 0, 0.6); }
+.breadcrumbs [class*='btn']:active, .breadcrumbs [class*='link']:active                                 { color: rgba(0, 0, 0, 0.1); }
+
+/* при наведении на кнопки упорядочивания и сортировки - изменяется прозрачность элементов  */
+.sorting-methods-item.sorting-methods-item_active [class*='btn'],        .sorting-methods-item.sorting-methods-item_active [class*='link'],                           
+.sorting-methods-item.sorting-methods-item_active [class*='btn']:hover,  .sorting-methods-item.sorting-methods-item_active [class*='link']:hover,                           
+.sorting-methods-item.sorting-methods-item_active [class*='btn']:active, .sorting-methods-item.sorting-methods-item_active [class*='link']:active                          
+                                                                                             { opacity: 1.0; }
+.sorting-methods-item [class*='btn'],         .sorting-methods-item [class*='link']          { opacity: 0.3; }
+.sorting-methods-item [class*='btn']:hover,   .sorting-methods-item [class*='link']:hover    { opacity: 0.6; }
+.sorting-methods-item [class*='btn']:active,  .sorting-methods-item [class*='link']:active   { opacity: 1.0; }
+
+.ordering-methods-item.ordering-methods-item_active [class*='triangle'],
+.ordering-methods-item.ordering-methods-item_active [class*='triangle']:hover,
+.ordering-methods-item.ordering-methods-item_active [class*='triangle']:active               { opacity: 1.0; }
+.ordering-methods-item [class*='triangle']                                                   { opacity: 0.2; }
+.ordering-methods-item [class*='triangle']:hover                                             { opacity: 0.4; }
+.ordering-methods-item [class*='triangle']:active                                            { opacity: 1.0; }
+
+
+
+
+
+
+
+
+
 /* --------------------------------------------------------------- */
 /* ----------          BEGIN OF BUTTONS & LINKS         ---------- */
 /* --------------------------------------------------------------- */
+
+/* У ссылок в шапке декоративные картинки добавлены через псевдо-элементы */
+.header [class*='btn']:hover,   .header [class*='link']:hover   { opacity: 0.6;  } 
+.header [class*='btn']:active,  .header [class*='link']:active  { opacity: 0.3;  } 
+/* переопределяем поведение для кнопки поиска и для ссылки на каталог товаров */
+.header [class*='link'][class~='plus-sign']:hover        { opacity: 1; color: rgba(0,0,0,0.6);  } 
+.header [class*='link'][class~='plus-sign']:active       { opacity: 1; color: rgba(0,0,0,0.3);  } 
+.header [class*='btn'][class~='btn-search']:hover  { opacity: 1; }
+.header [class*='btn'][class~='btn-search']:active { opacity: 1; }
+
+.header-user-nav [class*="link"]:not([class="link-user-cart"]) {
+    margin-right: 20px;
+}
+
+.footer-user-nav [class*="link"]:not([class="link-user-cart"]) {
+    margin-right: 40px;
+}
+
+.header-nav-item-link, .footer-nav-item-link {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.header-catalogue-item-link {
+    line-height: 36px;
+}
 
 .link-user-cart {
     display: block;
@@ -1023,8 +893,6 @@ button {
     display: block; 
 }
 
-
-
 .header-nav-item-link {
     /* FF adds paddings 8px from left and right sides */
     padding: 0;
@@ -1053,7 +921,18 @@ button {
     display: flex;
 }
 
+.popular-item-link {
+    display: block;
+}
 
+.popular-item-link:active {
+    color: rgba(0, 0, 0, 0.3); 
+}
+
+/* переопределяем глобально заданный цвет у ссылки */
+.footer a, .footer a:hover, .footer a:active, .footer a:visited {
+    color: #fff;
+}
 
 
 .btn-200px {
@@ -1130,6 +1009,12 @@ button {
 
 .form-feedback .btn-animated {
     cursor: pointer;
+}
+
+.catalog-item-name-link  { 
+    max-width: 72%;              
+    font-weight: 800; 
+    font-size: 18px; 
 }
 
 .btn-back, .btn-forth {
@@ -1267,7 +1152,6 @@ button {
     cursor: pointer;
 }
 
-
 .btn-close {
     width: 55px;
     height: 55px;
@@ -1282,22 +1166,19 @@ button {
 .btn-close:hover  { opacity: 1.0; }
 .btn-close:active { opacity: 0.3; }
 
-
 .popup-feedback .btn-close,
 .popup-map      .btn-close {
     position: absolute;
     top:   22px;
     right: 22px;
 }
+
+/* htmlacademy button */
+.btn-htmlacademy:hover  { opacity: 0.6; }
+.btn-htmlacademy:active { opacity: 0.3; }
 /* --------------------------------------------------------------- */
 /* ----------          END   OF BUTTONS & LINKS         ---------- */
 /* --------------------------------------------------------------- */
-
-
-
-
-
-
 
 
 
@@ -1317,7 +1198,6 @@ button {
     display: -ms-flexbox;
     display: flex;
 }
-.header-nav-item {}
 
 .header-nav-item.col-one-half + .header-nav-item {
     margin-left: 20px;
@@ -1368,7 +1248,6 @@ button {
     content: '\00a0';   /* non-breaking space */
 }
 
-
 .header-nav-item_last {
     margin-left: auto;
     position: relative;
@@ -1384,9 +1263,6 @@ button {
 .footer-nav .footer-nav-list {
     margin-top: 6px;
 }
-
-.footer-nav-item {}
-
 
 .user-cart-list { 
     -webkit-box-pack: end; 
@@ -1440,6 +1316,13 @@ button {
     color: white; 
 }
 
+.popular-list {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+}
 
 .brands-gallery-list {
     -ms-flex-pack: distribute;
@@ -1448,10 +1331,6 @@ button {
         -ms-flex-align: center;
             align-items: center;
 }
-
-.brands-gallery-item {}
-
-
 
 .services-list {
     margin-top: -100px;
@@ -1471,6 +1350,10 @@ button {
             align-items: center;
     min-height: 40px;
     margin-bottom: 24px;
+}
+
+.services-item_active {
+    background: black;
 }
 
 .services-item:last-child {
@@ -1555,8 +1438,6 @@ button {
     background-position: 12px 6px;
 }
 
-.breadcrumbs-item_active {}
-
 .ordering-methods-list {
     min-width: 60px;
     margin-left: 20px;
@@ -1575,7 +1456,6 @@ button {
     margin-right: 19px;
 }
 
-.sorting-methods-list {}
 .sorting-methods-item:not(:last-child) {
     margin-right: 8px;
 }
@@ -1640,11 +1520,10 @@ button {
 
 
 
+/* --------------------------------------------------------------- */
+/* ---------------         BEGIN   OF POPUPS        -------------- */
+/* --------------------------------------------------------------- */
 
-
-
-
-/* ------ popus ------ */
 .popup {
     position: fixed;
     top: 50%;
@@ -1652,6 +1531,17 @@ button {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     z-index: 200;
+}
+
+.popup-feedback, .popup-map {
+    position: relative;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
+}
+
+.popup-map-container {
+    min-height: 559px;
+    width: 100%;
 }
 
 .overlay { 
@@ -1681,24 +1571,21 @@ button {
     50%  {  transform: translate(-50%, -50%) scale(0.5);  }
     100% {  transform: translate(-50%, -50%) scale(0.0);  }
 }
+/* --------------------------------------------------------------- */
+/* ---------------         END     OF POPUPS        -------------- */
+/* --------------------------------------------------------------- */
 
 
 
+/* --------------------------------------------------------------- */
+/* ---------------      BEGIN   OF IMGs & SVGs      -------------- */
+/* --------------------------------------------------------------- */
 
-/* sliders */
+/* меняем прозрачность логотипа, обернутого в ссылку (значения в header'е и footer'е одинаковые) */
+.logo-container svg        { opacity: 1.0; }
+.logo-container svg:hover  { opacity: 0.6; }
+.logo-container svg:active { opacity: 0.3; }
 
-.promo {
-    position: relative;
-
-    margin-top: -32px;
-    margin-bottom: 89px;
-}
-
-
-
-
-
-/*  images  */
 .promo-item-pic {
     display: block;
     margin: 0 auto;
@@ -1718,6 +1605,25 @@ button {
     position: relative;
     left: 2px;
 }
+
+.brands-gallery-item-logo-wrapper img {
+    display: block;
+    margin: 0 auto;
+}
+
+.contacts-map { 
+    margin-top: 40px;    /* на 10px больше, чем у вышестоящего <p> */
+    margin-bottom: 13px; 
+}
+
+.catalog-item-image-box img {
+    display: block;
+    margin: auto;
+}
+/* --------------------------------------------------------------- */
+/* ---------------      END     OF IMGs & SVGs      -------------- */
+/* --------------------------------------------------------------- */
+
 
 
 /* --------------------------------------------------------------- */
@@ -1779,10 +1685,6 @@ button {
 
 
 
-
-
-
-
 /* --------------------------------------------------------------- */
 /* ----------      BEGIN OF        decorating stuff     ---------- */
 /* --------------------------------------------------------------- */
@@ -1832,7 +1734,6 @@ button {
     margin-bottom: 61px;
 }
 
-
 .catalog-item_new::before {
             content: 'NEW';
             display: -webkit-box;
@@ -1863,7 +1764,13 @@ button {
             right: 27px; 
 }
 
-
+.catalog-item-price  { 
+    max-width: 28%; 
+    margin: 0; 
+    font-weight: 300; 
+    font-size: 16px; 
+    color: #464646;
+}
 
 .main-catalogue-heading {
     padding-left: 80px;
@@ -1919,28 +1826,25 @@ button {
     font-size: 0;
 }
 
-.triangle-reversed  { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
-
+.triangle-reversed  { 
+    -webkit-transform: rotate(180deg); 
+    transform: rotate(180deg); 
+}
 
 /* отсутпы сверху и снизу у главного заголовка в каталоге товаров */
 .heading-current-section {
     margin-top: 36px;
     margin-bottom: 24px;
 }
-
 /* --------------------------------------------------------------- */
 /* ----------      END OF          decorating stuff     ---------- */
 /* --------------------------------------------------------------- */
 
 
 
-
-
-
 /* --------------------------------------------------------------- */
 /* ----------               BEGIN OF FORMS              ---------- */
 /* --------------------------------------------------------------- */
-
 
 /* -----------      форма поиска в шапке      ----------- */
 .form-search {
@@ -2016,10 +1920,6 @@ button {
     color: rgba(255, 255, 255, 0.3);
 }
 
-
-
-
-
 /* -----------      форма фильтрации в catalog.html      ----------- */
 .form-filter {
     padding-top: 70px;
@@ -2075,7 +1975,6 @@ button {
     line-height: 24px; 
     letter-spacing: 0.01em;    
 }
-
 
 .checkbox-indicator, .radio-indicator {
     display: inline-block;
@@ -2150,19 +2049,9 @@ input.form-filter-radio:disabled     + .form-filter-label  {
     display: block;
 }
 
-
-
 .form-filter-input-range {
     width: 100%;
 }
-
-
-.form-filter-input-range-ugly {}
-.form-filter-input-range-pretty {}
-.form-filter-radio {}
-
-
-
 
 .drag-slider {
     padding-top: 18px; 
@@ -2197,9 +2086,8 @@ input.form-filter-radio:disabled     + .form-filter-label  {
 
             box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
 }
-.drag-slider-handle-left {
 
-}
+
 .drag-slider-handle-right {
     left: 107px;
 }
@@ -2219,9 +2107,7 @@ input.form-filter-radio:disabled     + .form-filter-label  {
     right: 11px; 
 }
 
-
 /* ----------- форма обратной связи в popup-feedback   ----------- */
-
 .form-feedback {
     padding-left: 100px;
     padding-right: 100px;
@@ -2309,25 +2195,4 @@ input.form-filter-radio:disabled     + .form-filter-label  {
 }
 /* --------------------------------------------------------------- */
 /* ----------               END   OF FORMS              ---------- */
-/* --------------------------------------------------------------- */
-
-
-
-/* --------------------------------------------------------------- */
-/* ----------      BEGIN   OF JAVASCRIPT-CLASSES        ---------- */
-/* --------------------------------------------------------------- */
-.js-sorting-criteria-by-price         {}
-.js-sorting-criteria-by-type          {}
-.js-sorting-criteria-by-popularity    {}
-.js-sorting-criteria-ascending        {}
-.js-sorting-criteria-descending       {}
-.js-popuppify-popup                   {}
-.js-popuppify-open                    {}
-.js-popuppify-close                   {}
-.js-popuppify-overlay                 {}
-.js-sliderify-slider                  {}
-.js-sliderify-slide                   {}
-.js-sliderify-control                 {}
-/* --------------------------------------------------------------- */
-/* ----------      END     OF JAVASCRIPT-CLASSES        ---------- */
 /* --------------------------------------------------------------- */
