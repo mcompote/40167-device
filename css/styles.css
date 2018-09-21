@@ -832,7 +832,7 @@ button {
 
 .sorting-box-heading-block { 
     min-width: 160px; 
-    margin-right: 20px; 
+    margin-right: 32px; 
 }
 .filter-box-heading-block  { 
     display: block; 
@@ -855,14 +855,15 @@ button {
 }
 
 .catalog-item-image-box {
+    display: flex;
     min-height: 380px;
-    background-color: #eee;
     position: relative;
+    background-color: #eee;
 }
 
 .catalog-item-image-box img {
     display: block;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .catalog-item-onhover-block { 
@@ -1545,7 +1546,7 @@ button {
     right:0;
     background-image: url('../img/svg/nav-arrow.svg');
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 12px 6px;
 }
 
 .breadcrumbs-item_active {}
@@ -1569,7 +1570,9 @@ button {
 }
 
 .sorting-methods-list {}
-.sorting-methods-item {}
+.sorting-methods-item:not(:last-child) {
+    margin-right: 8px;
+}
 
 .catalog-list { 
     width: 100%;
