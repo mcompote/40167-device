@@ -198,7 +198,7 @@ button {
 .popular-item-image-box {
     width: 100%;
     height: 160px;
-    margin-bottom: 32px;     /* FIXME: примерно */
+    margin-bottom: 32px;   
     background-color: #f7e296;
 }
 
@@ -231,29 +231,29 @@ button {
    opacity: 0.3;
 }
 
-.popular-item:nth-of-type(1) .popular-item-image-box::before {
-    background-image: url('../img/svg/popular-1.svg');
+.popular-item.popular-cat-vr .popular-item-image-box::before {
+    background-image: url('../img/svg/popular/popular-vr.svg');
 }
 
-.popular-item:nth-of-type(2) .popular-item-image-box::before {
+.popular-item.popular-cat-monopod .popular-item-image-box::before {
     background-position: bottom center;
-    background-image: url('../img/svg/popular-2.svg');
+    background-image: url('../img/svg/popular/popular-monopod.svg');
 }
 
-.popular-item:nth-of-type(3) .popular-item-image-box::before {
-    background-image: url('../img/svg/popular-3.svg');
+.popular-item.popular-cat-actioncam .popular-item-image-box::before {
+    background-image: url('../img/svg/popular/popular-actioncam.svg');
 }
 
-.popular-item:nth-of-type(4) .popular-item-image-box::before {
-    background-image: url('../img/svg/popular-4.svg');
+.popular-item.popular-cat-fitnesstracker .popular-item-image-box::before {
+    background-image: url('../img/svg/popular/popular-fitnesstracker.svg');
 }
 
-.popular-item:nth-of-type(5) .popular-item-image-box::before {
-    background-image: url('../img/svg/popular-5.svg');
+.popular-item.popular-cat-smartwatch .popular-item-image-box::before {
+    background-image: url('../img/svg/popular/popular-smartwatch.svg');
 }
 
-.popular-item:nth-of-type(6) .popular-item-image-box::before {
-    background-image: url('../img/svg/popular-6.svg');
+.popular-item.popular-cat-quadcopter .popular-item-image-box::before {
+    background-image: url('../img/svg/popular/popular-quadcopter.svg');
 }
 
 
