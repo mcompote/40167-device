@@ -1033,14 +1033,16 @@ button {
 }
 
 .header-nav-item-link.plus-sign {
-    padding-right: 30px;
+    display: block;
+    width: 50%;
     position: relative;
+    top: 3px;
 }
 
 .header-nav-item-link.plus-sign::before,
 .header-nav-item-link.plus-sign::after {
-    top: 10px;
-    right: 11px;
+    top: 11px;
+    right: 14px;
 }
 
 .header-nav-item-link.plus-sign:hover + .header-catalogue-list,
@@ -1114,6 +1116,8 @@ button {
 
 .promo-article .btn-animated {
     margin-bottom: 50px;
+    position: relative;
+    top: -2px;
 }
 
 .services-item_active .btn-blackened,
@@ -1401,8 +1405,8 @@ button {
     
     position: absolute;
     z-index: 2;
-    top: 250px;
-    right: 100px;
+    top: 248px;
+    right: 103px;
 }
 
 .promo-list { 
