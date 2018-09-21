@@ -529,100 +529,103 @@ button {
 
 /* container's width = 1/1 full layout width  = 1200px */
 /* for header, footer and main content, i.e. for almost everything */
-.column-full       { 
+.col-1200px { 
     width: 1200px; 
     margin-left: auto;
     margin-right: auto;
 }
 
-/* container's width = 1/2 of parent's width,  1/2 of layout  = 600px */
-.column-one-half   { width: 50%; }
-
-/* container's width = 1/3 of parent's width,  1/3 of layout  = 400px  */
-/* for .services > left block (buttons) */
-.column-one-third  { width: 33.3334%; } 
-
-/* container's width = 1/4 of parent's width,  1/4 of layout = 300px */
-/* for brand image contaners */
-.column-one-fourth  { width: 25%; } 
-
-/* container's width = 2/3 of parent's width,  2/3 of layout  = 800px  */
-/* for .services > right block (content) */
-.column-two-thirds { width: 66.6667%; } 
-
-/* container's width = 1/6 of parent's width,  1/6 oflayout   = 200px */
-/* for items in .popular container */
-.column-one-sixth  { width: 16.6667%; } 
-
-/* container's width = 2/15 of parent's width, 2/15 of layout  = 160px */
-/* for items inside .popular container WITHOUT margins and paddings */
-.column-two-fifteenth  { width: 13.3334%; } 
-
-/* container's width = 4/5 of parent's width,  4/5 of layout   = 960px */
-/* for popups 'write-us' and 'map' containers */
-.column-four-fifths  { width: 80%; }
-
-/* container's width = 0.4 of parent's width, 4/10 of layout   = 480px */
-/* for footer's central block  */
-.column-four-tenths  { width: 40%; }
-
-/* container's width = 0.3 of parent's width, 3/10 of layout   = 360px */
-/* for footer's central block */
-.column-three-tenths  { width: 30%; }
-
-/* container's width = 5/12 of parent's width, 5/12 of layout  = 500px  */
-/* for .info block */
-.column-five-twenteeth { width : 41.6667%; }
-
-
-/* container's width = 0.45=9.20 of parent's width  */
-/* for .catalog-item in catalog.html */
-.column-nine-twenties  { width: 45.000%; }
-
-
-.column-29-percent {
+.col-348px {
     /* 29 процентов от "базовой" ширины в 1200px */
     width: 348px;
 }
-.column-71-percent {
+
+.col-852px {
     /* 71 процент от "базовой" ширины в 1200px */
     width: 852px;
 }
 
+/* container's width = 1/2 of parent's width,  1/2 of layout  = 600px */
+.col-one-half   { width: 50%; }
+
+/* container's width = 1/3 of parent's width,  1/3 of layout  = 400px  */
+/* for .services > left block (buttons) */
+.col-one-third  { width: 33.3334%; } 
+
+/* container's width = 1/4 of parent's width,  1/4 of layout = 300px */
+/* for brand image contaners */
+.col-one-fourth  { width: 25%; } 
+
+/* container's width = 2/3 of parent's width,  2/3 of layout  = 800px  */
+/* for .services > right block (content) */
+.col-two-thirds { width: 66.6667%; } 
+
+/* container's width = 1/6 of parent's width,  1/6 oflayout   = 200px */
+/* NO MORE IN USE */
+.col-one-sixth  { width: 16.6667%; } 
+
+/* container's width = 2/15 of parent's width, 2/15 of layout  = 160px */
+/* NO MORE IN USE */
+.col-two-fifteenth  { width: 13.3334%; } 
+
+/* container's width = 4/5 of parent's width,  4/5 of layout   = 960px */
+/* for popups 'feedback' and 'map' containers */
+.col-four-fifths  { width: 80%; }
+
+/* container's width = 0.4 of parent's width, 4/10 of layout   = 480px */
+/* for footer's central block  */
+.col-four-tenths  { width: 40%; }
+
+/* container's width = 0.3 of parent's width, 3/10 of layout   = 360px */
+/* for footer's central block */
+.col-three-tenths  { width: 30%; }
+
+/* container's width = 5/12 of parent's width, 5/12 of layout  = 500px  */
+/* for .footer-user-nav block */
+.col-five-twenteeth { width : 41.6667%; }
+
+/* container's width = 0.45=9.20 of parent's width  */
+/* for .catalog-item in catalog.html */
+.col-nine-twenties  { width: 45.000%; }
+
+
+
+
 /* stick element to the right corner of container */
-.column-right      { margin-left: auto; }
+.col-right      { margin-left: auto; }
 
 /* stick element to the left corner of container */
-.column-left       { margin-right: auto; }
+.col-left       { margin-right: auto; }
 
 /* align element in the center of container */
-.column-center     { margin-right: auto; margin-left: auto; }
+.col-center     { margin-right: auto; margin-left: auto; }
 
 
-.column-flexbox { 
+.col-flexbox { 
     display: -webkit-box; 
     display: -ms-flexbox; 
     display: flex; 
 }    
 
-.flex-no-shrink {
+/* NO MORE IN USE */
+.fx-no-shrink {
     -ms-flex-negative: 0;
         flex-shrink: 0;
 }
 
-.flex-grow-1 {
+.fx-grow-1 {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
 }
 
-.flex-h-middle { 
+.fx-h-middle { 
     -webkit-box-align: center; 
         -ms-flex-align: center; 
             align-items: center;
 }
 
-.flex-dir-col { 
+.fx-dir-col { 
     -webkit-box-orient: vertical; 
     -webkit-box-direction: normal; 
         -ms-flex-direction: column; 
@@ -676,7 +679,7 @@ button {
 
 /* container for filter box */
 .wrapper-filter-box { 
-    /* 348px - see .column-29-percent */
+    /* 348px - see .col-348px */
     min-width: 348px;
     width: calc( 348px + (( 100% - 1200px )/2) );
     background-color: #eee;
@@ -684,7 +687,7 @@ button {
 
 /* container's width for sorting box and content box */
 .wrapper-sorting-box-and-content { 
-    /* 852px - see .column-71-percent */
+    /* 852px - see .col-852px */
     min-width: 852px;
     width: calc( 852px + (( 100% - 1200px )/2) );
 }
@@ -1313,7 +1316,7 @@ button {
 }
 .header-nav-item {}
 
-.header-nav-item.column-one-half + .header-nav-item {
+.header-nav-item.col-one-half + .header-nav-item {
     margin-left: 20px;
     margin-right: 2.2em;
 }

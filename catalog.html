@@ -10,10 +10,10 @@
 </head>
 
 <body class="catalog-page">
-    <div class="column-full">
+    <div class="col-1200px">
         <header class="header">
     
-            <div class="column-one-half">
+            <div class="col-one-half">
     
                 <!-- логотип -->
                 <div class="logo-container">
@@ -35,10 +35,10 @@
     
             </div>
     
-            <div class="user-nav header-user-nav column-one-half pad-l-20px column-flexbox">
+            <div class="user-nav header-user-nav col-one-half pad-l-20px col-flexbox">
     
                 <!-- элементы "Пользователь" и "Выйти" -->
-                <div class="login-container column-flexbox flex-grow-1">
+                <div class="login-container col-flexbox fx-grow-1">
                     <a class="link-user-name" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
                             <defs>
@@ -56,7 +56,7 @@
                 </div>
     
                 <!-- элементы "сравнить" и "корзина" -->
-                <ul class="user-cart-list column-flexbox">
+                <ul class="user-cart-list col-flexbox">
                     <li class="user-cart-item">
                         <a class="link-compare" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
@@ -82,7 +82,7 @@
     
             <nav class="header-nav">
                 <ul class="header-nav-list">
-                    <li class="header-nav-item column-one-half">
+                    <li class="header-nav-item col-one-half">
     
                         <a class="header-nav-item-link plus-sign">
                             Каталог товаров
@@ -141,14 +141,14 @@
     </div>
 
     <main>
-        <div class="column-full">
+        <div class="col-1200px">
             <!-- main heading -->
             <h1 class="heading-current-section huge-heading pad-l-80px">Моноподы для селфи</h1>
 
             <!-- breadcrumbs -->
             <section class="breadcrumbs pad-l-80px">
                 <h2 class="visually-hidden">Навигационная цепочка</h2>
-                <ul class="breadcrumbs-list column-flexbox">
+                <ul class="breadcrumbs-list col-flexbox">
                     <li class="breadcrumbs-item">
                         <a class="breadcrumbs-item-link" href="index.html">Главная</a>
                     </li>
@@ -162,28 +162,28 @@
             </section>
         </div>
 
-        <section class="column-flexbox">
+        <section class="col-flexbox">
             <h2 class="visually-hidden">Список товаров, фильтр отбора товаров, сортировка отобранных товаров</h2>           
             <div class="wrapper-filter-box">
                 <div class="filter-box">
                     <h3 class="visually-hidden">Фильтры для отбора товаров</h3>
                     <div class="filter-box-heading-block">
-                        <div class="filter-box-heading-block-content column-29-percent column-right pad-l-80px">
+                        <div class="filter-box-heading-block-content col-348px col-right pad-l-80px">
                             Фильтр:
                         </div>
                     </div>
 
-                    <form class="form-filter column-29-percent column-right pad-l-80px" id="form_filter" action="/api/catalog" method="get">
+                    <form class="form-filter col-348px col-right pad-l-80px" id="form_filter" action="/api/catalog" method="get">
                        
                         <fieldset class="form-filter-component">
                                 <legend class="form-filter-heading">Стоимость</legend>
                             <div class="form-filter-input-range-ugly">
-                                <label class="form-filter-label flex-dir-col">
+                                <label class="form-filter-label fx-dir-col">
                                     Минимальная Стоимость (от 0 руб.)
                                     <input class="form-filter-input-range" type="range" id="form_filter__min_cost_input" name="min_cost" min="0" max="1000000" value="0">
                                 </label>
                                 
-                                <label class="form-filter-label flex-dir-col">
+                                <label class="form-filter-label fx-dir-col">
                                     Максимальная Стоимость (до 1000000 руб.)
                                     <input class="form-filter-input-range" type="range" id="form_filter__max_cost_input" name="max_cost" min="0" max="1000000" value="500000">
                                 </label>
@@ -191,7 +191,7 @@
 
                             <!-- заглушка для модного input-range, который скорее всего ч/з js работает -->
                             <div class="form-filter-input-range-pretty none">
-                                <div class="drag-slider column-flexbox">
+                                <div class="drag-slider col-flexbox">
                                     <div class="drag-slider-body">
                                         <div class="drag-slider-line"></div>
                                         <div class="drag-slider-handle drag-slider-handle-left" draggable="true"></div>
@@ -281,17 +281,17 @@
                 </div>
             </div>
 
-            <div class="wrapper-sorting-box-and-content column-left">
+            <div class="wrapper-sorting-box-and-content col-left">
                 <h3 class="visually-hidden">Список товаров и критерии их сортировки</h3>
 
                 <div class="sorting-box">
-                    <div class="sorting-box-top-row column-71-percent column-flexbox flex-h-middle">
+                    <div class="sorting-box-top-row col-852px col-flexbox fx-h-middle">
                         <h4 class="visually-hidden">Критерии сортировки товаров</h4>
                         
-                        <div class="sorting-box-heading-block column-flexbox flex-h-middle">
+                        <div class="sorting-box-heading-block col-flexbox fx-h-middle">
                             Сортировка:
                         </div>
-                        <ul class="sorting-methods-list column-flexbox flex-grow-1">
+                        <ul class="sorting-methods-list col-flexbox fx-grow-1">
                             <li class="sorting-methods-item sorting-methods-item_active">
                                 <button class="link-sorting-criteria js-sorting-criteria-by-price">По цене</button>
                             </li>
@@ -318,11 +318,11 @@
                     </div>
                 </div>
 
-                <div class="catalog-items-box column-71-percent padding-left-52px">
+                <div class="catalog-items-box col-852px padding-left-52px">
                     <h4 class="visually-hidden">Отсортированный список товаров</h4>
 
-                    <ul class="catalog-list column-flexbox">
-                        <li class="catalog-item column-nine-twenties">
+                    <ul class="catalog-list col-flexbox">
+                        <li class="catalog-item col-nine-twenties">
                             <div class="catalog-item-image-box">
                                 <img src="img/content/catalog-items/catalog-item-amateur-selfie-stick.jpg" alt="Любительская селфи-палка" width="250" height="325">
                                 <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
@@ -335,12 +335,12 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="catalog-item-description-box column-flexbox">
+                            <div class="catalog-item-description-box col-flexbox">
                                 <a class="catalog-item-name-link" href="/catalog?q=amateur-selfie-stick">Любительская селфи-палка</a>
                                 <p class="catalog-item-price">500 руб.</p>
                             </div>
                         </li>
-                        <li class="catalog-item column-nine-twenties">
+                        <li class="catalog-item col-nine-twenties">
                             <div class="catalog-item-image-box">
                                 <img src="img/content/catalog-items/catalog-item-professional-selfie-stick.jpg" alt="Профессиональная селфи-палка" width="250" height="325">
                                 <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
@@ -353,12 +353,12 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="catalog-item-description-box column-flexbox">
+                            <div class="catalog-item-description-box col-flexbox">
                                 <a class="catalog-item-name-link" href="/catalog?q=professional-selfie-stick">Профессиональная <span class="nowrap">селфи-палка</span></a>
                                 <p class="catalog-item-price">1500 руб.</p>
                             </div>
                         </li>
-                        <li class="catalog-item column-nine-twenties">
+                        <li class="catalog-item col-nine-twenties">
                             <div class="catalog-item-image-box">
                                 <img src="img/content/catalog-items/catalog-item-waterproof-selfie-stick.jpg" alt="Непотопляемая селфи-палка" width="250" height="325">
                                 <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
@@ -371,12 +371,12 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="catalog-item-description-box column-flexbox">
+                            <div class="catalog-item-description-box col-flexbox">
                                 <a class="catalog-item-name-link" href="/catalog?q=waterproof-selfie-stick">Непотопляемая селфи-палка</a>
                                 <p class="catalog-item-price">2500 руб.</p>
                             </div>
                         </li>
-                        <li class="catalog-item catalog-item_new column-nine-twenties">
+                        <li class="catalog-item catalog-item_new col-nine-twenties">
                             <div class="catalog-item-image-box">
                                 <img src="img/content/catalog-items/catalog-item-followme-selfie-stick.jpg" alt="Селфи-палка «Следуй за мной»" width="250" height="325">
                                 <!-- При наведении показываются кнопки "в корзину" и "сравнить" -->
@@ -389,7 +389,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="catalog-item-description-box column-flexbox">
+                            <div class="catalog-item-description-box col-flexbox">
                                 <a class="catalog-item-name-link">Селфи-палка «Следуй за мной»</a>
                                 <p class="catalog-item-price">4900 руб.</p>
                             </div>
@@ -397,9 +397,9 @@
                     </ul>
 
                     <!-- блок, отвечающий за "пагинацию" -->
-                    <div class="pagination column-flexbox">
+                    <div class="pagination col-flexbox">
                         <button class="btn-back">Назад</button>
-                        <ul class="pagination-list column-flexbox">
+                        <ul class="pagination-list col-flexbox">
                             <li class="pagination-item pagination-item_active">
                                 <button class="page-link">
                                     1
@@ -428,9 +428,9 @@
 
     <footer class="footer">
     
-        <div class="footer-row-top column-full column-flexbox pad-lr-20px">
+        <div class="footer-row-top col-1200px col-flexbox pad-lr-20px">
             <!-- логотип -->
-            <div class="logo-container line-bottom column-left">
+            <div class="logo-container line-bottom col-left">
                 <a href="index.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="163.281" height="34.938" aria-label="логотип интернет-магазина DEVICE">
                         <use xlink:href="#svg_logo" fill="#ffc600"></use>
@@ -438,10 +438,10 @@
                 </a>
             </div>
     
-            <div class="user-nav footer-user-nav column-five-twenteeth column-flexbox">
+            <div class="user-nav footer-user-nav col-five-twenteeth col-flexbox">
     
                 <!-- элемент "логин" -->
-                <div class="login-container column-flexbox flex-grow-1">
+                <div class="login-container col-flexbox fx-grow-1">
     
                     <a class="link-user-name" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
@@ -450,13 +450,13 @@
                         Валентин Петухов
                     </a>
     
-                    <a class="link-logout column-right" href="auth/logout">
+                    <a class="link-logout col-right" href="auth/logout">
                         Выйти
                     </a>
                 </div>
     
                 <!-- элементы "сравнить" и "корзина" -->
-                <ul class="user-cart-list column-flexbox">
+                <ul class="user-cart-list col-flexbox">
                     <li class="user-cart-item">
                         <a class="link-compare" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
@@ -480,17 +480,17 @@
         </div>
     
     
-        <div class="footer-row-bottom column-full column-flexbox pad-lr-20px">
+        <div class="footer-row-bottom col-1200px col-flexbox pad-lr-20px">
         
-            <div class="column-three-tenths">
+            <div class="col-three-tenths">
                 <p class="footer-address">г. Москва, ул. Строителей, 15</p>
             </div>
         
-            <div class="column-four-tenths">
+            <div class="col-four-tenths">
                 <nav class="footer-nav">
         
                     <!-- Ссылки "Доставка", "Гарантия", "Контакты" -->
-                    <ul class="footer-nav-list column-flexbox">
+                    <ul class="footer-nav-list col-flexbox">
                         <li class="footer-nav-item">
                             <a class="footer-nav-item-link" href="#">Доставка</a>
                         </li>
@@ -504,7 +504,7 @@
         
                 </nav>
         
-                <ul class="footer-social-list column-flexbox column-one-third">
+                <ul class="footer-social-list col-flexbox col-one-third">
                     <li class="footer-social-item">
                         <a class="btn-social btn-social-fb" href="#">Вконтакте</a>
                     </li>
@@ -518,7 +518,7 @@
         
             </div>
         
-            <div class="footer-contacts-and-copyright column-three-tenths column-flexbox">
+            <div class="footer-contacts-and-copyright col-three-tenths col-flexbox">
                 <p class="footer-contacts">
                     <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
                 </p>
@@ -533,8 +533,8 @@
         </footer>
 
 
-        <div class="column-full popup none js-popuppify-popup" data-js-popuppify-name="map">
-            <section class="popup-map column-four-fifths column-center">
+        <div class="col-1200px popup none js-popuppify-popup" data-js-popuppify-name="map">
+            <section class="popup-map col-four-fifths col-center">
         
                 <h2 class="visually-hidden">Мы на карте</h2>
                 <!-- TODO: здесь будет карта когда-нибудь завтра или послезавтра, ну, выпоняли -->
@@ -548,11 +548,11 @@
             </section>
         </div>
         
-        <div class="column-full popup none js-popuppify-popup" data-js-popuppify-name="feedback">
-            <section class="popup-feedback column-four-fifths column-center">
+        <div class="col-1200px popup none js-popuppify-popup" data-js-popuppify-name="feedback">
+            <section class="popup-feedback col-four-fifths col-center">
                 <h2 class="visually-hidden">Пишите нам</h2>
         
-                <form class="form-feedback column-flexbox" id="form_feedback" action="/api/feedback" method="POST">
+                <form class="form-feedback col-flexbox" id="form_feedback" action="/api/feedback" method="POST">
         
                     <div class="form-feedback-component">
                         <label class="form-feedback-label">
